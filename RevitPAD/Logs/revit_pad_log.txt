@@ -268,3 +268,32 @@ C:\PADApps\RevitPAD\Exports
 [2025-11-25 22:32:31] Export complete: 27 files exported to
 C:\PADApps\RevitPAD\Exports
 [2025-11-25 22:44:46] Command cleared from JSON file.
+[2025-11-26 17:38:25] Command Watcher active.
+[2025-11-26 17:38:28] Cached UIApplication
+[2025-11-26 17:38:28] Command received: export_sheets_to_json
+[2025-11-26 17:38:28] IMPORTING: export_sheets_to_json
+[2025-11-26 17:38:28] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-26 17:38:28] ✅ Exported 26 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-26 17:38:36] Command cleared from JSON file.
+[2025-11-26 17:38:55] Command received: export_sheets_to_cad
+[2025-11-26 17:38:55] IMPORTING: export_sheets_to_cad
+[2025-11-26 17:38:55] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-26 17:38:55] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-26 17:38:55] Format: dwg | Sheets: 14
+[2025-11-26 17:39:05] Exported: C:\PADApps\RevitPAD\Exports\E100_POWERPLANPARKING.dwg
+[2025-11-26 17:39:13] Exported: C:\PADApps\RevitPAD\Exports\E101_POWERPLANL1.dwg
+[2025-11-26 17:39:21] Exported: C:\PADApps\RevitPAD\Exports\E102_POWERPLANL2.dwg
+[2025-11-26 17:39:35] Exported: C:\PADApps\RevitPAD\Exports\E103_POWERPLANL3.dwg
+[2025-11-26 17:39:45] Exported: C:\PADApps\RevitPAD\Exports\E104_POWERPLANL4.dwg
+[2025-11-26 17:39:55] Exported: C:\PADApps\RevitPAD\Exports\E105_POWERPLANL5.dwg
+[2025-11-26 17:40:02] Exported: C:\PADApps\RevitPAD\Exports\E200_LIGHTINGPLANPARKING.dwg
+[2025-11-26 17:40:08] Exported: C:\PADApps\RevitPAD\Exports\E201_LIGHTINGPLANL1.dwg
+[2025-11-26 17:40:16] Exported: C:\PADApps\RevitPAD\Exports\E202_LIGHTINGPLANL2.dwg
+[2025-11-26 17:40:23] Exported: C:\PADApps\RevitPAD\Exports\E203_LIGHTINGPLANL3.dwg
+[2025-11-26 17:40:28] Exported: C:\PADApps\RevitPAD\Exports\E204_LIGHTINGPLANL4.dwg
+[2025-11-26 17:40:35] Exported: C:\PADApps\RevitPAD\Exports\E205_LIGHTINGPLANL5.dwg
+[2025-11-26 17:40:41] Exported: C:\PADApps\RevitPAD\Exports\E106_POWERPLANROOF.dwg
+[2025-11-26 17:40:47] Exported: C:\PADApps\RevitPAD\Exports\E107_ENLARGEDPLANS.dwg
+[2025-11-26 17:40:47] Export complete: 14 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-26 18:16:10] Command cleared from JSON file.
