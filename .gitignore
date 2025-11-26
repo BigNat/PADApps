@@ -1,0 +1,49 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Installer files
+installers/
+*.exe
+*.msi
+*.zip
+
+# files
+*.dwg
+*.pcp
+*.pdf
+*.jpg
+*.png
+*.tif
+*.gif
+*.rvt
+*.xls
+*.csv
+
+# Logs
+logs/
+*.log
+
+# Local/editor configs
+.vscode/
+.idea/
+
+# Temp / output
+output/
+demo_content/
+test_env*/
+mock_projects/
+setup/build/
+setup/dist/
+setup/Output/
