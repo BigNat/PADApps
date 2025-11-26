@@ -1,0 +1,8 @@
+{
+  "layer": "Hyd_Pipe_Water_CW",
+  "service": "CW",
+  "description": "\ud83d\udca7 CW - Cold Water",
+  "color": 5,
+  "weight": 50,
+  "linetype": "HYD_COLD_WATER"
+}

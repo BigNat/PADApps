@@ -1,0 +1,10 @@
+{
+  "make_bylayer": true,
+  "change_lineweight": true,
+  "delete_text": false,
+  "delete_text_match": false,
+  "delete_blocks": false,
+  "delete_dimensions": true,
+  "delete_hatching": true,
+  "delete_ucs": true
+}

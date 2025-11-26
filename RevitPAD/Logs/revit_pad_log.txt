@@ -1,0 +1,270 @@
+[2025-11-25 16:16:22] Command Watcher active.
+[2025-11-25 16:16:43] Command Watcher active.
+[2025-11-25 16:16:52] Cached UIApplication
+[2025-11-25 16:16:52] Command received: test_command
+[2025-11-25 16:16:52] IMPORTING: test_command
+[2025-11-25 16:16:52] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 16:16:52] Running TEST COMMAND
+[2025-11-25 16:16:54] Test command completed.
+[2025-11-25 16:16:54] Command cleared from JSON file.
+[2025-11-25 16:22:41] Command Watcher active.
+[2025-11-25 16:22:50] Cached UIApplication
+[2025-11-25 16:22:50] Command received: export_sheets_to_json
+[2025-11-25 16:22:50] IMPORTING: export_sheets_to_json
+[2025-11-25 16:22:50] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 16:22:50] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\revit_sheets.json
+[2025-11-25 16:22:52] Command cleared from JSON file.
+[2025-11-25 16:23:43] Command Watcher active.
+[2025-11-25 21:00:20] Command Watcher active.
+[2025-11-25 21:00:53] Cached UIApplication
+[2025-11-25 21:00:54] Command received: export_sheets_to_json
+[2025-11-25 21:00:54] IMPORTING: export_sheets_to_json
+[2025-11-25 21:00:54] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:00:54] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:00:56] Command cleared from JSON file.
+[2025-11-25 21:06:58] Command Watcher active.
+[2025-11-25 21:06:58] Cached UIApplication
+[2025-11-25 21:06:58] Command received: export_sheets_to_json
+[2025-11-25 21:06:58] IMPORTING: export_sheets_to_json
+[2025-11-25 21:06:58] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:06:58] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:07:04] Command cleared from JSON file.
+[2025-11-25 21:11:40] Command received: test_command
+[2025-11-25 21:11:40] IMPORTING: test_command
+[2025-11-25 21:11:40] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 21:11:40] Running TEST COMMAND
+[2025-11-25 21:11:42] Test command completed.
+[2025-11-25 21:11:42] Command cleared from JSON file.
+[2025-11-25 21:11:46] Command received: export_sheets_to_json
+[2025-11-25 21:11:46] IMPORTING: export_sheets_to_json
+[2025-11-25 21:11:46] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:11:46] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:11:49] Command cleared from JSON file.
+[2025-11-25 21:11:51] Command received: test_command
+[2025-11-25 21:11:51] IMPORTING: test_command
+[2025-11-25 21:11:51] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 21:11:51] Running TEST COMMAND
+[2025-11-25 21:11:52] Test command completed.
+[2025-11-25 21:11:52] Command cleared from JSON file.
+[2025-11-25 21:26:12] Command received: export_sheets_to_json
+[2025-11-25 21:26:12] IMPORTING: export_sheets_to_json
+[2025-11-25 21:26:12] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:26:12] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:26:41] Command cleared from JSON file.
+[2025-11-25 21:28:04] Command received: test_command
+[2025-11-25 21:28:04] IMPORTING: test_command
+[2025-11-25 21:28:04] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 21:28:04] Running TEST COMMAND
+[2025-11-25 21:28:05] Test command completed.
+[2025-11-25 21:28:05] Command cleared from JSON file.
+[2025-11-25 21:28:07] Command received: export_sheets_to_json
+[2025-11-25 21:28:07] IMPORTING: export_sheets_to_json
+[2025-11-25 21:28:07] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:28:07] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:28:09] Command cleared from JSON file.
+[2025-11-25 21:29:18] Command received: test_command
+[2025-11-25 21:29:18] IMPORTING: test_command
+[2025-11-25 21:29:18] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 21:29:18] Running TEST COMMAND
+[2025-11-25 21:29:21] Test command completed.
+[2025-11-25 21:29:21] Command cleared from JSON file.
+[2025-11-25 21:29:24] Command received: export_sheets_to_json
+[2025-11-25 21:29:24] IMPORTING: export_sheets_to_json
+[2025-11-25 21:29:24] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:29:24] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:29:27] Command cleared from JSON file.
+[2025-11-25 21:30:21] Command received: test_command
+[2025-11-25 21:30:21] IMPORTING: test_command
+[2025-11-25 21:30:21] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 21:30:21] Running TEST COMMAND
+[2025-11-25 21:30:22] Test command completed.
+[2025-11-25 21:30:22] Command cleared from JSON file.
+[2025-11-25 21:30:24] Command received: export_sheets_to_json
+[2025-11-25 21:30:24] IMPORTING: export_sheets_to_json
+[2025-11-25 21:30:24] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:30:24] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:30:32] Command cleared from JSON file.
+[2025-11-25 21:45:08] Command received: test_command
+[2025-11-25 21:45:08] IMPORTING: test_command
+[2025-11-25 21:45:08] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 21:45:08] Running TEST COMMAND
+[2025-11-25 21:45:10] Test command completed.
+[2025-11-25 21:45:10] Command cleared from JSON file.
+[2025-11-25 21:45:14] Command received: export_sheets_to_json
+[2025-11-25 21:45:14] IMPORTING: export_sheets_to_json
+[2025-11-25 21:45:14] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:45:14] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:45:16] Command cleared from JSON file.
+[2025-11-25 21:48:03] Command received: test_command
+[2025-11-25 21:48:03] IMPORTING: test_command
+[2025-11-25 21:48:03] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
+[2025-11-25 21:48:03] Running TEST COMMAND
+[2025-11-25 21:48:07] Test command completed.
+[2025-11-25 21:48:07] Command cleared from JSON file.
+[2025-11-25 21:48:42] Command received: export_sheets_to_json
+[2025-11-25 21:48:42] IMPORTING: export_sheets_to_json
+[2025-11-25 21:48:42] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:48:42] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:48:51] Command cleared from JSON file.
+[2025-11-25 21:52:06] Command received: export_sheets_to_cad
+[2025-11-25 21:52:06] IMPORTING: export_sheets_to_cad
+[2025-11-25 21:52:06] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-25 21:52:06] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:52:06] Format: dwg | Sheets: 1
+[2025-11-25 21:52:32] Exported: C:\PADApps\RevitPAD\Exports\SD106_RoofPlan.dwg
+[2025-11-25 21:52:32] Export complete: 1 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:52:35] Command cleared from JSON file.
+[2025-11-25 21:53:33] Command received: export_sheets_to_json
+[2025-11-25 21:53:33] IMPORTING: export_sheets_to_json
+[2025-11-25 21:53:33] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:53:33] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:53:44] Command cleared from JSON file.
+[2025-11-25 21:54:01] Command received: export_sheets_to_cad
+[2025-11-25 21:54:01] IMPORTING: export_sheets_to_cad
+[2025-11-25 21:54:01] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-25 21:54:01] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:54:01] Format: dwg | Sheets: 1
+[2025-11-25 21:54:04] Exported: C:\PADApps\RevitPAD\Exports\SD103_ThirdFloorPlan.dwg
+[2025-11-25 21:54:04] Export complete: 1 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:54:06] Command cleared from JSON file.
+[2025-11-25 21:54:16] Command received: export_sheets_to_json
+[2025-11-25 21:54:16] IMPORTING: export_sheets_to_json
+[2025-11-25 21:54:16] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:54:16] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:54:28] Command cleared from JSON file.
+[2025-11-25 21:54:36] Command received: export_sheets_to_cad
+[2025-11-25 21:54:36] IMPORTING: export_sheets_to_cad
+[2025-11-25 21:54:36] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-25 21:54:36] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:54:36] Format: dwg | Sheets: 1
+[2025-11-25 21:54:45] Exported: C:\PADApps\RevitPAD\Exports\A106_GreenRoof.dwg
+[2025-11-25 21:54:45] Export complete: 1 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:54:47] Command cleared from JSON file.
+[2025-11-25 21:54:51] Command received: export_sheets_to_json
+[2025-11-25 21:54:51] IMPORTING: export_sheets_to_json
+[2025-11-25 21:54:51] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 21:54:51] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 21:55:06] Command cleared from JSON file.
+[2025-11-25 21:55:16] Command received: export_sheets_to_cad
+[2025-11-25 21:55:16] IMPORTING: export_sheets_to_cad
+[2025-11-25 21:55:16] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-25 21:55:16] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:55:16] Format: dwg | Sheets: 1
+[2025-11-25 21:55:21] Exported: C:\PADApps\RevitPAD\Exports\A200_ExistingConditionsElevations.dwg
+[2025-11-25 21:55:21] Export complete: 1 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-25 21:55:22] Command cleared from JSON file.
+[2025-11-25 22:01:58] Command Watcher active.
+[2025-11-25 22:02:13] Cached UIApplication
+[2025-11-25 22:02:13] Command received: export_sheets_to_json
+[2025-11-25 22:02:13] IMPORTING: export_sheets_to_json
+[2025-11-25 22:02:13] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 22:02:13] ✅ Exported 12 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 22:03:53] Command cleared from JSON file.
+[2025-11-25 22:04:40] Command received: export_sheets_to_cad
+[2025-11-25 22:04:40] IMPORTING: export_sheets_to_cad
+[2025-11-25 22:04:40] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-25 22:04:40] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-25 22:04:40] Format: dwg | Sheets: 12
+[2025-11-25 22:04:42] Exported: C:\PADApps\RevitPAD\Exports\S101_Parking.dwg
+[2025-11-25 22:04:43] Exported: C:\PADApps\RevitPAD\Exports\S100_Foundation.dwg
+[2025-11-25 22:04:44] Exported: C:\PADApps\RevitPAD\Exports\S102_MainLevel.dwg
+[2025-11-25 22:04:46] Exported: C:\PADApps\RevitPAD\Exports\S103_SecondLevel.dwg
+[2025-11-25 22:04:48] Exported: C:\PADApps\RevitPAD\Exports\S104_ThirdLevel.dwg
+[2025-11-25 22:04:49] Exported: C:\PADApps\RevitPAD\Exports\S105_FourthLevel.dwg
+[2025-11-25 22:04:50] Exported: C:\PADApps\RevitPAD\Exports\S106_FifthLevel.dwg
+[2025-11-25 22:04:52] Exported: C:\PADApps\RevitPAD\Exports\S107_Roof.dwg
+[2025-11-25 22:04:52] Exported: C:\PADApps\RevitPAD\Exports\S108_StairTowers.dwg
+[2025-11-25 22:04:53] Exported: C:\PADApps\RevitPAD\Exports\S600_Details.dwg
+[2025-11-25 22:05:32] Exported: C:\PADApps\RevitPAD\Exports\S000_CoverSheet.dwg
+[2025-11-25 22:05:40] Exported: C:\PADApps\RevitPAD\Exports\S001_Learnaboutthisproject.dwg
+[2025-11-25 22:05:40] Export complete: 12 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-25 22:05:45] Command cleared from JSON file.
+[2025-11-25 22:08:11] Command received: export_sheets_to_json
+[2025-11-25 22:08:11] IMPORTING: export_sheets_to_json
+[2025-11-25 22:08:11] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 22:08:11] ✅ Exported 17 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 22:08:11] Command Watcher active.
+[2025-11-25 22:08:18] Command cleared from JSON file.
+[2025-11-25 22:08:23] Cached UIApplication
+[2025-11-25 22:08:23] Command received: export_sheets_to_json
+[2025-11-25 22:08:23] IMPORTING: export_sheets_to_json
+[2025-11-25 22:08:23] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 22:08:23] ✅ Exported 17 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 22:08:26] Command cleared from JSON file.
+[2025-11-25 22:08:35] Command received: export_sheets_to_cad
+[2025-11-25 22:08:35] IMPORTING: export_sheets_to_cad
+[2025-11-25 22:08:35] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-25 22:08:35] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-25 22:08:35] Format: dwg | Sheets: 17
+[2025-11-25 22:08:38] Exported: C:\PADApps\RevitPAD\Exports\M100_PlanHVACL0Parking.dwg
+[2025-11-25 22:08:46] Exported: C:\PADApps\RevitPAD\Exports\M101_PlanHVACL1.dwg
+[2025-11-25 22:08:55] Exported: C:\PADApps\RevitPAD\Exports\M102_PlanHVACL2.dwg
+[2025-11-25 22:09:06] Exported: C:\PADApps\RevitPAD\Exports\M103_PlanHVACL3.dwg
+[2025-11-25 22:09:52] Exported: C:\PADApps\RevitPAD\Exports\M104_PlanHVACL4.dwg
+[2025-11-25 22:10:21] Exported: C:\PADApps\RevitPAD\Exports\M105_PlanHVACL5.dwg
+[2025-11-25 22:10:31] Exported: C:\PADApps\RevitPAD\Exports\M106_PlanHVACRoof.dwg
+[2025-11-25 22:10:32] Exported: C:\PADApps\RevitPAD\Exports\M200_RCPHVACL0Parking.dwg
+[2025-11-25 22:10:47] Exported: C:\PADApps\RevitPAD\Exports\M201_RCPHVACL1.dwg
+[2025-11-25 22:11:00] Exported: C:\PADApps\RevitPAD\Exports\M202_RCPHVACL2.dwg
+[2025-11-25 22:11:08] Exported: C:\PADApps\RevitPAD\Exports\M203_RCPHVACL3.dwg
+[2025-11-25 22:11:15] Exported: C:\PADApps\RevitPAD\Exports\M204_RCPHVACL4.dwg
+[2025-11-25 22:11:21] Exported: C:\PADApps\RevitPAD\Exports\M205_RCPHVACL5.dwg
+[2025-11-25 22:11:23] Exported: C:\PADApps\RevitPAD\Exports\M206_RCPHVACRoof.dwg
+[2025-11-25 22:13:29] Exported: C:\PADApps\RevitPAD\Exports\M000_CoverSheet.dwg
+[2025-11-25 22:13:30] Exported: C:\PADApps\RevitPAD\Exports\M002_NotesSymbolsSchedules.dwg
+[2025-11-25 22:13:32] Exported: C:\PADApps\RevitPAD\Exports\M001_Learnaboutthisproject.dwg
+[2025-11-25 22:13:32] Export complete: 17 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-25 22:13:34] Command cleared from JSON file.
+[2025-11-25 22:15:22] Command Watcher active.
+[2025-11-25 22:15:37] Cached UIApplication
+[2025-11-25 22:15:37] Command received: export_sheets_to_json
+[2025-11-25 22:15:37] IMPORTING: export_sheets_to_json
+[2025-11-25 22:15:37] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 22:15:37] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 22:16:32] Command cleared from JSON file.
+[2025-11-25 22:16:36] Command received: export_sheets_to_json
+[2025-11-25 22:16:36] IMPORTING: export_sheets_to_json
+[2025-11-25 22:16:36] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 22:16:36] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 22:16:38] Command cleared from JSON file.
+[2025-11-25 22:16:46] Command received: export_sheets_to_cad
+[2025-11-25 22:16:46] IMPORTING: export_sheets_to_cad
+[2025-11-25 22:16:46] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
+[2025-11-25 22:16:46] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
+[2025-11-25 22:16:46] Format: dwg | Sheets: 27
+[2025-11-25 22:16:49] Exported: C:\PADApps\RevitPAD\Exports\P100_PLAN-L0SANITARY.dwg
+[2025-11-25 22:16:55] Exported: C:\PADApps\RevitPAD\Exports\P101_PLAN-L1SANITARY.dwg
+[2025-11-25 22:16:59] Exported: C:\PADApps\RevitPAD\Exports\P102_PLAN-L2SANITARY.dwg
+[2025-11-25 22:17:05] Exported: C:\PADApps\RevitPAD\Exports\P103_PLAN-L3SANITARY.dwg
+[2025-11-25 22:17:10] Exported: C:\PADApps\RevitPAD\Exports\P104_PLAN-L4SANITARY.dwg
+[2025-11-25 22:17:16] Exported: C:\PADApps\RevitPAD\Exports\P105_PLAN-L5SANITARY.dwg
+[2025-11-25 22:17:24] Exported: C:\PADApps\RevitPAD\Exports\P106_PLAN-ROOFSANITARY.dwg
+[2025-11-25 22:17:28] Exported: C:\PADApps\RevitPAD\Exports\P200_RCP-L0SANITARY.dwg
+[2025-11-25 22:17:35] Exported: C:\PADApps\RevitPAD\Exports\P201_RCP-L1SANITARY.dwg
+[2025-11-25 22:17:41] Exported: C:\PADApps\RevitPAD\Exports\P202_RCP-L2SANITARY.dwg
+[2025-11-25 22:17:50] Exported: C:\PADApps\RevitPAD\Exports\P203_RCP-L3SANITARY.dwg
+[2025-11-25 22:17:59] Exported: C:\PADApps\RevitPAD\Exports\P204_RCP-L4SANITARY.dwg
+[2025-11-25 22:18:06] Exported: C:\PADApps\RevitPAD\Exports\P205_RCP-L5SANITARY.dwg
+[2025-11-25 22:18:38] Exported: C:\PADApps\RevitPAD\Exports\P206_RCP-ROOFSANITARY.dwg
+[2025-11-25 22:20:15] Exported: C:\PADApps\RevitPAD\Exports\P300_SECTIONSSANITARYRISERS.dwg
+[2025-11-25 22:22:10] Exported: C:\PADApps\RevitPAD\Exports\P301_SECTIONSSANITARYRISERS.dwg
+[2025-11-25 22:23:07] Exported: C:\PADApps\RevitPAD\Exports\P302_SECTIONSSANITARYRISERS.dwg
+[2025-11-25 22:25:09] Exported: C:\PADApps\RevitPAD\Exports\P303_SECTIONSSANITARYRISERS.dwg
+[2025-11-25 22:25:26] Exported: C:\PADApps\RevitPAD\Exports\P400_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-25 22:25:45] Exported: C:\PADApps\RevitPAD\Exports\P401_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-25 22:25:50] Exported: C:\PADApps\RevitPAD\Exports\P402_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-25 22:25:55] Exported: C:\PADApps\RevitPAD\Exports\P403_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-25 22:26:00] Exported: C:\PADApps\RevitPAD\Exports\P404_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-25 22:26:05] Exported: C:\PADApps\RevitPAD\Exports\P405_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-25 22:26:11] Exported: C:\PADApps\RevitPAD\Exports\P406_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-25 22:32:23] Exported: C:\PADApps\RevitPAD\Exports\P000_COVERSHEET.dwg
+[2025-11-25 22:32:31] Exported: C:\PADApps\RevitPAD\Exports\P001_Learnaboutthisproject.dwg
+[2025-11-25 22:32:31] Export complete: 27 files exported to
+C:\PADApps\RevitPAD\Exports
+[2025-11-25 22:44:46] Command cleared from JSON file.

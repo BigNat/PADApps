@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "version": "1.1",
+    "description": "HydrauliCAD Tool configuration"
+  },
+  "tools": [
+    "DESIGNER",
+    "LIGHT_TABLE",
+    "INVERTS",
+    "LEVELS",
+    "SETTINGS"
+  ]
+}

@@ -1,0 +1,2022 @@
+[2025-38-21 14:38:36] \U+D83E\U+DDE9 Designer_Pipe command started.
+[2025-38-21 14:38:36] ℹ️ Layer already loaded: Hyd_Pipe_Water_RE
+[2025-38-21 14:38:36] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-38-21 14:38:36] 📏 Drawing pipe line...
+[2025-38-21 14:38:36] ✅ Designer_Pipe command completed.
+[2025-39-21 14:39:30] 🧩 Designer_Pipe command started.
+[2025-39-21 14:39:30] ℹ️ Layer already loaded: Hyd_Pipe_Water_RE
+[2025-39-21 14:39:30] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-39-21 14:39:30] 📏 Drawing pipe line...
+[2025-39-21 14:39:30] ✅ Designer_Pipe command completed.
+[2025-39-21 14:39:57] 🧩 Designer_Pipe command started.
+[2025-39-21 14:39:57] ℹ️ Layer already loaded: Hyd_Pipe_Water_CW
+[2025-39-21 14:39:57] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-39-21 14:39:57] 📏 Drawing pipe line...
+[2025-39-21 14:39:57] ✅ Designer_Pipe command completed.
+[2025-40-21 14:40:02] 🧩 Designer_Pipe command started.
+[2025-40-21 14:40:02] 📏 Linetype loaded → HYD_GAS
+[2025-40-21 14:40:02] 🎨 Created new layer: Hyd_Pipe_Gas_G
+[2025-40-21 14:40:02] 🎨 Created missing layer: Hyd_Pipe_Gas_G
+[2025-40-21 14:40:02] ✅ Current layer set → Hyd_Pipe_Gas_G
+[2025-40-21 14:40:02] 📏 Drawing pipe line...
+[2025-40-21 14:40:02] ✅ Designer_Pipe command completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-41-21 14:41:08
+============================================================
+[2025-41-21 14:41:08] 🚀 Starting HydrauliCAD Loader...
+[2025-41-21 14:41:08] ✅ Loaded hc_designer_commands.lsp
+[2025-41-21 14:41:08] ✅ Loaded hc_json.lsp
+[2025-41-21 14:41:08] ✅ Loaded hc_layer.lsp
+[2025-41-21 14:41:08] ✅ Loaded hc_service.lsp
+[2025-41-21 14:41:08] ✅ Loaded hc_test.lsp
+[2025-41-21 14:41:08] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-41-21 14:41:15
+============================================================
+[2025-41-21 14:41:15] 🚀 Starting HydrauliCAD Loader...
+[2025-41-21 14:41:15] ✅ Loaded hc_designer_commands.lsp
+[2025-41-21 14:41:15] ✅ Loaded hc_json.lsp
+[2025-41-21 14:41:15] ✅ Loaded hc_layer.lsp
+[2025-41-21 14:41:15] ✅ Loaded hc_service.lsp
+[2025-41-21 14:41:15] ✅ Loaded hc_test.lsp
+[2025-41-21 14:41:15] ✅ HydrauliCAD startup complete.
+[2025-41-21 14:41:20] 🧩 Designer_Pipe command started.
+[2025-41-21 14:41:22] ℹ️ Layer already loaded: Hyd_Pipe_Water_CW
+[2025-41-21 14:41:22] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-41-21 14:41:22] 📏 Drawing pipe line...
+[2025-41-21 14:41:22] ✅ Designer_Pipe command completed.
+[2025-44-21 14:44:12] 🧩 Designer_Pipe command started.
+[2025-44-21 14:44:12] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-44-21 14:44:12] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-44-21 14:44:12]    BEFORE → Color:132 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-44-21 14:44:12]    🖌️ Color changed: 132 → 140
+[2025-44-21 14:44:12]    ℹ️ Lineweight already correct.
+[2025-44-21 14:44:12]    ℹ️ Linetype already correct.
+[2025-44-21 14:44:12] ✅ AFTER → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-44-21 14:44:12] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-44-21 14:44:12] 📏 Drawing pipe line...
+[2025-44-21 14:44:12] ✅ Designer_Pipe command completed.
+[2025-44-21 14:44:16] 🧩 Designer_Pipe command started.
+[2025-44-21 14:44:16] ℹ️ Linetype already available: HYD_RE_USE
+[2025-44-21 14:44:16] 🧱 Updating existing layer: Hyd_Pipe_Water_RE
+[2025-44-21 14:44:16]    BEFORE → Color:93 | Weight:50 | Linetype:HYD_RE_USE
+[2025-44-21 14:44:16]    🖌️ Color changed: 93 → 90
+[2025-44-21 14:44:16]    ℹ️ Lineweight already correct.
+[2025-44-21 14:44:16]    ℹ️ Linetype already correct.
+[2025-44-21 14:44:16] ✅ AFTER → Color:90 | Weight:50 | Linetype:HYD_RE_USE
+[2025-44-21 14:44:16] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-44-21 14:44:16] 📏 Drawing pipe line...
+[2025-44-21 14:44:16] ✅ Designer_Pipe command completed.
+[2025-44-21 14:44:21] 🧩 Designer_Pipe command started.
+[2025-44-21 14:44:21] ℹ️ Linetype already available: HYD_HOT_WATER
+[2025-44-21 14:44:21] 🧱 Updating existing layer: Hyd_Pipe_Water_HW
+[2025-44-21 14:44:21]    BEFORE → Color:21 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-44-21 14:44:21]    🖌️ Color changed: 21 → 10
+[2025-44-21 14:44:21]    ℹ️ Lineweight already correct.
+[2025-44-21 14:44:21]    ℹ️ Linetype already correct.
+[2025-44-21 14:44:21] ✅ AFTER → Color:10 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-44-21 14:44:21] ✅ Current layer set → Hyd_Pipe_Water_HW
+[2025-44-21 14:44:21] 📏 Drawing pipe line...
+[2025-44-21 14:44:21] ✅ Designer_Pipe command completed.
+[2025-53-21 14:53:07] 🧩 Designer_Pipe command started.
+[2025-53-21 14:53:07] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-53-21 14:53:07] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-53-21 14:53:07]    BEFORE → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-53-21 14:53:07]    🖌️ Color changed: 140 → 132
+[2025-53-21 14:53:07]    ℹ️ Lineweight already correct.
+[2025-53-21 14:53:07]    ℹ️ Linetype already correct.
+[2025-53-21 14:53:07] ✅ AFTER → Color:132 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-53-21 14:53:07] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-53-21 14:53:07] 📏 Drawing pipe line...
+[2025-53-21 14:53:07] ✅ Designer_Pipe command completed.
+[2025-53-21 14:53:34] 🧩 Designer_Pipe command started.
+[2025-53-21 14:53:34] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-53-21 14:53:34] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-53-21 14:53:34]    BEFORE → Color:132 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-53-21 14:53:34]    🖌️ Color changed: 132 → 5
+[2025-53-21 14:53:34]    ℹ️ Lineweight already correct.
+[2025-53-21 14:53:34]    ℹ️ Linetype already correct.
+[2025-53-21 14:53:34] ✅ AFTER → Color:5 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-53-21 14:53:34] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-53-21 14:53:34] 📏 Drawing pipe line...
+[2025-53-21 14:53:34] ✅ Designer_Pipe command completed.
+[2025-53-21 14:53:39] 🧩 Designer_Pipe command started.
+[2025-53-21 14:53:39] ℹ️ Linetype already available: HYD_RE_USE
+[2025-53-21 14:53:39] 🧱 Updating existing layer: Hyd_Pipe_Water_RE
+[2025-53-21 14:53:39]    BEFORE → Color:90 | Weight:50 | Linetype:HYD_RE_USE
+[2025-53-21 14:53:39]    🖌️ Color changed: 90 → 192
+[2025-53-21 14:53:39]    ℹ️ Lineweight already correct.
+[2025-53-21 14:53:39]    ℹ️ Linetype already correct.
+[2025-53-21 14:53:39] ✅ AFTER → Color:192 | Weight:50 | Linetype:HYD_RE_USE
+[2025-53-21 14:53:39] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-53-21 14:53:39] 📏 Drawing pipe line...
+[2025-53-21 14:53:39] ✅ Designer_Pipe command completed.
+[2025-53-21 14:53:41] 🧩 Designer_Pipe command started.
+[2025-53-21 14:53:41] ℹ️ Linetype already available: HYD_HOT_WATER
+[2025-53-21 14:53:41] 🧱 Updating existing layer: Hyd_Pipe_Water_HW
+[2025-53-21 14:53:41]    BEFORE → Color:10 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-53-21 14:53:41]    🖌️ Color changed: 10 → 1
+[2025-53-21 14:53:41]    ℹ️ Lineweight already correct.
+[2025-53-21 14:53:41]    ℹ️ Linetype already correct.
+[2025-53-21 14:53:43] ✅ AFTER → Color:1 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-53-21 14:53:43] ✅ Current layer set → Hyd_Pipe_Water_HW
+[2025-53-21 14:53:43] 📏 Drawing pipe line...
+[2025-53-21 14:53:43] ✅ Designer_Pipe command completed.
+[2025-53-21 14:53:46] 🧩 Designer_Pipe command started.
+[2025-53-21 14:53:46] 📏 Linetype loaded → HYD_HOT_WATER_RETURN
+[2025-53-21 14:53:46] 🎨 Created new layer: Hyd_Pipe_Water_HWR  [Color: 1 | Weight: 50 | Linetype: HYD_HOT_WATER_RETURN]
+[2025-53-21 14:53:46] ✅ Current layer set → Hyd_Pipe_Water_HWR
+[2025-53-21 14:53:46] 📏 Drawing pipe line...
+[2025-53-21 14:53:46] ✅ Designer_Pipe command completed.
+[2025-53-21 14:53:51] 🧩 Designer_Pipe command started.
+[2025-53-21 14:53:51] 📏 Linetype loaded → HYD_WARM_WATER
+[2025-53-21 14:53:51] 🎨 Created new layer: Hyd_Pipe_Water_WW  [Color: 200 | Weight: 50 | Linetype: HYD_WARM_WATER]
+[2025-53-21 14:53:51] ✅ Current layer set → Hyd_Pipe_Water_WW
+[2025-53-21 14:53:51] 📏 Drawing pipe line...
+[2025-53-21 14:53:51] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:06] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:06] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-54-21 14:54:06] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-54-21 14:54:06]    BEFORE → Color:5 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-54-21 14:54:06]    🖌️ Color changed: 5 → 140
+[2025-54-21 14:54:06]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:06]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:06] ✅ AFTER → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-54-21 14:54:06] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-54-21 14:54:06] 📏 Drawing pipe line...
+[2025-54-21 14:54:06] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:10] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:10] ℹ️ Linetype already available: HYD_RE_USE
+[2025-54-21 14:54:10] 🧱 Updating existing layer: Hyd_Pipe_Water_RE
+[2025-54-21 14:54:10]    BEFORE → Color:192 | Weight:50 | Linetype:HYD_RE_USE
+[2025-54-21 14:54:10]    🖌️ Color changed: 192 → 90
+[2025-54-21 14:54:10]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:10]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:10] ✅ AFTER → Color:90 | Weight:50 | Linetype:HYD_RE_USE
+[2025-54-21 14:54:10] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-54-21 14:54:10] 📏 Drawing pipe line...
+[2025-54-21 14:54:10] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:13] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:13] ℹ️ Linetype already available: HYD_HOT_WATER
+[2025-54-21 14:54:13] 🧱 Updating existing layer: Hyd_Pipe_Water_HW
+[2025-54-21 14:54:13]    BEFORE → Color:1 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-54-21 14:54:13]    🖌️ Color changed: 1 → 10
+[2025-54-21 14:54:13]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:13]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:13] ✅ AFTER → Color:10 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-54-21 14:54:13] ✅ Current layer set → Hyd_Pipe_Water_HW
+[2025-54-21 14:54:13] 📏 Drawing pipe line...
+[2025-54-21 14:54:13] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:18] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:18] ℹ️ Linetype already available: HYD_HOT_WATER_RETURN
+[2025-54-21 14:54:18] 🧱 Updating existing layer: Hyd_Pipe_Water_HWR
+[2025-54-21 14:54:18]    BEFORE → Color:1 | Weight:50 | Linetype:HYD_HOT_WATER_RETURN
+[2025-54-21 14:54:18]    🖌️ Color changed: 1 → 20
+[2025-54-21 14:54:18]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:18]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:18] ✅ AFTER → Color:20 | Weight:50 | Linetype:HYD_HOT_WATER_RETURN
+[2025-54-21 14:54:18] ✅ Current layer set → Hyd_Pipe_Water_HWR
+[2025-54-21 14:54:18] 📏 Drawing pipe line...
+[2025-54-21 14:54:18] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:26] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:26] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-54-21 14:54:26] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-54-21 14:54:26]    BEFORE → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-54-21 14:54:26]    🖌️ Color changed: 140 → 151
+[2025-54-21 14:54:26]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:26]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:26] ✅ AFTER → Color:151 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-54-21 14:54:26] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-54-21 14:54:26] 📏 Drawing pipe line...
+[2025-54-21 14:54:26] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:30] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:30] ℹ️ Linetype already available: HYD_RE_USE
+[2025-54-21 14:54:30] 🧱 Updating existing layer: Hyd_Pipe_Water_RE
+[2025-54-21 14:54:30]    BEFORE → Color:90 | Weight:50 | Linetype:HYD_RE_USE
+[2025-54-21 14:54:30]    🖌️ Color changed: 90 → 83
+[2025-54-21 14:54:30]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:30]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:30] ✅ AFTER → Color:83 | Weight:50 | Linetype:HYD_RE_USE
+[2025-54-21 14:54:30] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-54-21 14:54:30] 📏 Drawing pipe line...
+[2025-54-21 14:54:30] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:33] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:33] ℹ️ Linetype already available: HYD_HOT_WATER
+[2025-54-21 14:54:33] 🧱 Updating existing layer: Hyd_Pipe_Water_HW
+[2025-54-21 14:54:33]    BEFORE → Color:10 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-54-21 14:54:33]    🖌️ Color changed: 10 → 22
+[2025-54-21 14:54:33]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:33]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:33] ✅ AFTER → Color:22 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-54-21 14:54:33] ✅ Current layer set → Hyd_Pipe_Water_HW
+[2025-54-21 14:54:33] 📏 Drawing pipe line...
+[2025-54-21 14:54:33] ✅ Designer_Pipe command completed.
+[2025-54-21 14:54:36] 🧩 Designer_Pipe command started.
+[2025-54-21 14:54:36] ℹ️ Linetype already available: HYD_HOT_WATER_RETURN
+[2025-54-21 14:54:36] 🧱 Updating existing layer: Hyd_Pipe_Water_HWR
+[2025-54-21 14:54:36]    BEFORE → Color:20 | Weight:50 | Linetype:HYD_HOT_WATER_RETURN
+[2025-54-21 14:54:36]    🖌️ Color changed: 20 → 33
+[2025-54-21 14:54:36]    ℹ️ Lineweight already correct.
+[2025-54-21 14:54:36]    ℹ️ Linetype already correct.
+[2025-54-21 14:54:36] ✅ AFTER → Color:33 | Weight:50 | Linetype:HYD_HOT_WATER_RETURN
+[2025-54-21 14:54:36] ✅ Current layer set → Hyd_Pipe_Water_HWR
+[2025-54-21 14:54:36] 📏 Drawing pipe line...
+[2025-54-21 14:54:36] ✅ Designer_Pipe command completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-57-21 20:57:25
+============================================================
+[2025-57-21 20:57:25] 🚀 Starting HydrauliCAD Loader...
+[2025-57-21 20:57:27] ✅ Loaded hc_designer_commands.lsp
+[2025-57-21 20:57:27] ✅ Loaded hc_json.lsp
+[2025-57-21 20:57:27] ✅ Loaded hc_layer.lsp
+[2025-57-21 20:57:27] ✅ Loaded hc_service.lsp
+[2025-57-21 20:57:27] ✅ Loaded hc_test.lsp
+[2025-57-21 20:57:27] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-57-21 20:57:35
+============================================================
+[2025-57-21 20:57:35] 🚀 Starting HydrauliCAD Loader...
+[2025-57-21 20:57:35] ✅ Loaded hc_designer_commands.lsp
+[2025-57-21 20:57:35] ✅ Loaded hc_json.lsp
+[2025-57-21 20:57:35] ✅ Loaded hc_layer.lsp
+[2025-57-21 20:57:35] ✅ Loaded hc_service.lsp
+[2025-57-21 20:57:35] ✅ Loaded hc_test.lsp
+[2025-57-21 20:57:35] ✅ HydrauliCAD startup complete.
+[2025-11-21 21:11:48] 🧩 Designer_Pipe command started.
+[2025-11-21 21:11:49] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-11-21 21:11:49] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-11-21 21:11:49]    BEFORE → Color:151 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-11-21 21:11:49]    🖌️ Color changed: 151 → 140
+[2025-11-21 21:11:49]    ℹ️ Lineweight already correct.
+[2025-11-21 21:11:49]    ℹ️ Linetype already correct.
+[2025-11-21 21:11:49] ✅ AFTER → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-11-21 21:11:49] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-11-21 21:11:49] 📏 Drawing pipe line...
+[2025-11-21 21:11:49] ✅ Designer_Pipe command completed.
+[2025-11-21 21:11:58] 🧩 Designer_Pipe command started.
+[2025-11-21 21:11:58] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-11-21 21:11:58] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-11-21 21:11:58]    BEFORE → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-11-21 21:11:58]    🖌️ Color changed: 140 → 151
+[2025-11-21 21:11:58]    ℹ️ Lineweight already correct.
+[2025-11-21 21:11:58]    ℹ️ Linetype already correct.
+[2025-11-21 21:11:58] ✅ AFTER → Color:151 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-11-21 21:11:58] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-11-21 21:11:58] 📏 Drawing pipe line...
+[2025-11-21 21:11:58] ✅ Designer_Pipe command completed.
+[2025-12-21 21:12:08] 🧩 Designer_Pipe command started.
+[2025-12-21 21:12:08] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-12-21 21:12:08] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-12-21 21:12:08]    BEFORE → Color:151 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-12-21 21:12:08]    🖌️ Color changed: 151 → 132
+[2025-12-21 21:12:08]    ℹ️ Lineweight already correct.
+[2025-12-21 21:12:08]    ℹ️ Linetype already correct.
+[2025-12-21 21:12:08] ✅ AFTER → Color:132 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-12-21 21:12:08] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-12-21 21:12:08] 📏 Drawing pipe line...
+[2025-12-21 21:12:08] ✅ Designer_Pipe command completed.
+[2025-12-21 21:12:21] 🧩 Designer_Pipe command started.
+[2025-12-21 21:12:21] ℹ️ Linetype already available: HYD_RE_USE
+[2025-12-21 21:12:21] 🧱 Updating existing layer: Hyd_Pipe_Water_RE
+[2025-12-21 21:12:21]    BEFORE → Color:83 | Weight:50 | Linetype:HYD_RE_USE
+[2025-12-21 21:12:21]    🖌️ Color changed: 83 → 93
+[2025-12-21 21:12:21]    ℹ️ Lineweight already correct.
+[2025-12-21 21:12:21]    ℹ️ Linetype already correct.
+[2025-12-21 21:12:21] ✅ AFTER → Color:93 | Weight:50 | Linetype:HYD_RE_USE
+[2025-12-21 21:12:21] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-12-21 21:12:21] 📏 Drawing pipe line...
+[2025-12-21 21:12:21] ✅ Designer_Pipe command completed.
+[2025-12-21 21:12:26] 🧩 Designer_Pipe command started.
+[2025-12-21 21:12:26] ℹ️ Linetype already available: HYD_HOT_WATER
+[2025-12-21 21:12:26] 🧱 Updating existing layer: Hyd_Pipe_Water_HW
+[2025-12-21 21:12:26]    BEFORE → Color:22 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-12-21 21:12:26]    🖌️ Color changed: 22 → 21
+[2025-12-21 21:12:26]    ℹ️ Lineweight already correct.
+[2025-12-21 21:12:26]    ℹ️ Linetype already correct.
+[2025-12-21 21:12:26] ✅ AFTER → Color:21 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-12-21 21:12:26] ✅ Current layer set → Hyd_Pipe_Water_HW
+[2025-12-21 21:12:26] 📏 Drawing pipe line...
+[2025-12-21 21:12:26] ✅ Designer_Pipe command completed.
+[2025-12-21 21:12:28] 🧩 Designer_Pipe command started.
+[2025-12-21 21:12:28] ℹ️ Linetype already available: HYD_HOT_WATER_RETURN
+[2025-12-21 21:12:28] 🧱 Updating existing layer: Hyd_Pipe_Water_HWR
+[2025-12-21 21:12:28]    BEFORE → Color:33 | Weight:50 | Linetype:HYD_HOT_WATER_RETURN
+[2025-12-21 21:12:28]    🖌️ Color changed: 33 → 32
+[2025-12-21 21:12:28]    ℹ️ Lineweight already correct.
+[2025-12-21 21:12:28]    ℹ️ Linetype already correct.
+[2025-12-21 21:12:28] ✅ AFTER → Color:32 | Weight:50 | Linetype:HYD_HOT_WATER_RETURN
+[2025-12-21 21:12:28] ✅ Current layer set → Hyd_Pipe_Water_HWR
+[2025-12-21 21:12:28] 📏 Drawing pipe line...
+[2025-12-21 21:12:28] ✅ Designer_Pipe command completed.
+[2025-48-21 22:48:29] 🧩 Designer_Pipe command started.
+[2025-48-21 22:48:29] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-48-21 22:48:29] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-48-21 22:48:29]    BEFORE → Color:132 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-48-21 22:48:29]    🖌️ Color changed: 132 → 140
+[2025-48-21 22:48:29]    ℹ️ Lineweight already correct.
+[2025-48-21 22:48:29]    ℹ️ Linetype already correct.
+[2025-48-21 22:48:29] ✅ AFTER → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-48-21 22:48:29] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-48-21 22:48:29] 📏 Drawing pipe line...
+[2025-48-21 22:48:29] ✅ Designer_Pipe command completed.
+[2025-48-21 22:48:41] 🧩 Designer_Pipe command started.
+[2025-48-21 22:48:41] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-48-21 22:48:41] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-48-21 22:48:41]    BEFORE → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-48-21 22:48:41]    🖌️ Color changed: 140 → 5
+[2025-48-21 22:48:41]    ℹ️ Lineweight already correct.
+[2025-48-21 22:48:41]    ℹ️ Linetype already correct.
+[2025-48-21 22:48:41] ✅ AFTER → Color:5 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-48-21 22:48:41] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-48-21 22:48:41] 📏 Drawing pipe line...
+[2025-48-21 22:48:41] ✅ Designer_Pipe command completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-21-21 23:21:52
+============================================================
+[2025-21-21 23:21:52] 🚀 Starting HydrauliCAD Loader...
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup_text.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_designer_commands.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_json.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_layer.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_service.lsp
+[2025-21-21 23:21:52] ✅ Loaded hc_test.lsp
+[2025-21-21 23:21:52] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-25-21 23:25:18
+============================================================
+[2025-25-21 23:25:18] 🚀 Starting HydrauliCAD Loader...
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup_text.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_designer_commands.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_json.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_layer.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_service.lsp
+[2025-25-21 23:25:18] ✅ Loaded hc_test.lsp
+[2025-25-21 23:25:18] ✅ HydrauliCAD startup complete.
+[2025-25-21 23:25:38] 🧹 MakeByLayer started.
+[2025-25-21 23:25:38] ✅ MakeByLayer completed.
+[2025-25-21 23:25:42] 🧹 ChangeLineWeight started.
+[2025-25-21 23:25:42] ✅ ChangeLineWeight completed.
+[2025-25-21 23:25:54] 🧹 DeleteUCS started.
+[2025-25-21 23:25:54] ✅ DeleteUCS completed.
+[2025-26-21 23:26:12] 🧹 DeleteDimensions started.
+[2025-26-21 23:26:12] ✅ DeleteDimensions completed.
+[2025-26-21 23:26:15] 🧹 DeleteDimensions started.
+[2025-26-21 23:26:15] ✅ DeleteDimensions completed.
+[2025-26-21 23:26:17] 🧹 DeleteHatching started.
+[2025-26-21 23:26:17] ✅ DeleteHatching completed.
+[2025-26-21 23:26:19] 🧹 DeleteText started.
+[2025-26-21 23:26:19] ✅ DeleteText completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-23-22 17:23:10
+============================================================
+[2025-23-22 17:23:10] 🚀 Starting HydrauliCAD Loader...
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup_text.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_designer_commands.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_json.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_layer.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_service.lsp
+[2025-23-22 17:23:10] ✅ Loaded hc_test.lsp
+[2025-23-22 17:23:10] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-23-22 17:23:23
+============================================================
+[2025-23-22 17:23:23] 🚀 Starting HydrauliCAD Loader...
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup_text.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_designer_commands.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_json.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_layer.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_service.lsp
+[2025-23-22 17:23:23] ✅ Loaded hc_test.lsp
+[2025-23-22 17:23:23] ✅ HydrauliCAD startup complete.
+[2025-24-22 17:24:29] 🧹 MakeByLayer started.
+[2025-24-22 17:24:29] ✅ MakeByLayer completed.
+[2025-24-22 17:24:29] 🧹 ChangeLineWeight started.
+[2025-24-22 17:24:29] ✅ ChangeLineWeight completed.
+[2025-31-22 17:31:26] 🧹 MakeByLayer started.
+[2025-31-22 17:31:26] ✅ MakeByLayer completed.
+[2025-31-22 17:31:28] 🧹 ChangeLineWeight started.
+[2025-31-22 17:31:28] ✅ ChangeLineWeight completed.
+[2025-31-22 17:31:28] 🧹 DeleteDimensions started.
+[2025-31-22 17:31:28] ✅ DeleteDimensions completed.
+[2025-31-22 17:31:28] 🧹 DeleteHatching started.
+[2025-31-22 17:31:28] ✅ DeleteHatching completed.
+[2025-31-22 17:31:29] 🧹 DeleteUCS started.
+[2025-31-22 17:31:29] ✅ DeleteUCS completed.
+[2025-31-22 17:31:35] 🧹 MakeByLayer started.
+[2025-31-22 17:31:35] ✅ MakeByLayer completed.
+[2025-31-22 17:31:36] 🧹 ChangeLineWeight started.
+[2025-31-22 17:31:36] ✅ ChangeLineWeight completed.
+[2025-31-22 17:31:36] 🧹 DeleteDimensions started.
+[2025-31-22 17:31:36] ✅ DeleteDimensions completed.
+[2025-31-22 17:31:36] 🧹 DeleteHatching started.
+[2025-31-22 17:31:36] ✅ DeleteHatching completed.
+[2025-31-22 17:31:36] 🧹 DeleteUCS started.
+[2025-31-22 17:31:36] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-50-22 17:50:03
+============================================================
+[2025-50-22 17:50:03] 🚀 Starting HydrauliCAD Loader...
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup_text.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_designer_commands.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_json.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_layer.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_service.lsp
+[2025-50-22 17:50:03] ✅ Loaded hc_test.lsp
+[2025-50-22 17:50:03] ✅ HydrauliCAD startup complete.
+[2025-50-22 17:50:03] 🧹 MakeByLayer started.
+[2025-50-22 17:50:03] ✅ MakeByLayer completed.
+[2025-50-22 17:50:05] 🧹 ChangeLineWeight started.
+[2025-50-22 17:50:05] 🧹 DeleteDimensions started.
+[2025-50-22 17:50:05] ✅ DeleteDimensions completed.
+[2025-50-22 17:50:05] 🧹 DeleteHatching started.
+[2025-50-22 17:50:05] ✅ DeleteHatching completed.
+[2025-50-22 17:50:06] 🧹 DeleteUCS started.
+[2025-50-22 17:50:06] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-50-22 17:50:06
+============================================================
+[2025-50-22 17:50:06] 🚀 Starting HydrauliCAD Loader...
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup_text.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_designer_commands.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_json.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_layer.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_service.lsp
+[2025-50-22 17:50:06] ✅ Loaded hc_test.lsp
+[2025-50-22 17:50:06] ✅ HydrauliCAD startup complete.
+[2025-50-22 17:50:08] 🧹 MakeByLayer started.
+[2025-50-22 17:50:08] ✅ MakeByLayer completed.
+[2025-50-22 17:50:08] 🧹 ChangeLineWeight started.
+[2025-50-22 17:50:08] ✅ ChangeLineWeight completed.
+[2025-50-22 17:50:08] 🧹 DeleteDimensions started.
+[2025-50-22 17:50:08] ✅ DeleteDimensions completed.
+[2025-50-22 17:50:08] 🧹 DeleteHatching started.
+[2025-50-22 17:50:08] ✅ DeleteHatching completed.
+[2025-50-22 17:50:08] 🧹 DeleteUCS started.
+[2025-50-22 17:50:08] ✅ DeleteUCS completed.
+[2025-50-22 17:50:23] 🧹 MakeByLayer started.
+[2025-50-22 17:50:23] ✅ MakeByLayer completed.
+[2025-50-22 17:50:25] 🧹 ChangeLineWeight started.
+[2025-50-22 17:50:25] ✅ ChangeLineWeight completed.
+[2025-50-22 17:50:25] 🧹 DeleteDimensions started.
+[2025-50-22 17:50:25] ✅ DeleteDimensions completed.
+[2025-50-22 17:50:25] 🧹 DeleteHatching started.
+[2025-50-22 17:50:25] ✅ DeleteHatching completed.
+[2025-50-22 17:50:25] 🧹 DeleteUCS started.
+[2025-50-22 17:50:25] ✅ DeleteUCS completed.
+[2025-01-22 18:01:33] 🧹 MakeByLayer started.
+[2025-01-22 18:01:33] ✅ MakeByLayer completed.
+[2025-01-22 18:01:33] 🧹 ChangeLineWeight started.
+[2025-01-22 18:01:33] 🧹 DeleteDimensions started.
+[2025-01-22 18:01:33] ✅ DeleteDimensions completed.
+[2025-01-22 18:01:33] 🧹 DeleteHatching started.
+[2025-01-22 18:01:33] ✅ DeleteHatching completed.
+[2025-01-22 18:01:33] 🧹 DeleteUCS started.
+[2025-01-22 18:01:33] ✅ DeleteUCS completed.
+[2025-01-22 18:01:35] 🧹 MakeByLayer started.
+[2025-01-22 18:01:35] ✅ MakeByLayer completed.
+[2025-01-22 18:01:35] 🧹 ChangeLineWeight started.
+[2025-01-22 18:01:35] ✅ ChangeLineWeight completed.
+[2025-01-22 18:01:35] 🧹 DeleteDimensions started.
+[2025-01-22 18:01:35] ✅ DeleteDimensions completed.
+[2025-01-22 18:01:35] 🧹 DeleteHatching started.
+[2025-01-22 18:01:35] ✅ DeleteHatching completed.
+[2025-01-22 18:01:35] 🧹 DeleteUCS started.
+[2025-01-22 18:01:35] ✅ DeleteUCS completed.
+[2025-01-22 18:01:38] 🧹 MakeByLayer started.
+[2025-01-22 18:01:38] ✅ MakeByLayer completed.
+[2025-01-22 18:01:38] 🧹 ChangeLineWeight started.
+[2025-01-22 18:01:38] 🧹 DeleteDimensions started.
+[2025-01-22 18:01:38] ✅ DeleteDimensions completed.
+[2025-01-22 18:01:38] 🧹 DeleteHatching started.
+[2025-01-22 18:01:38] ✅ DeleteHatching completed.
+[2025-01-22 18:01:38] 🧹 DeleteUCS started.
+[2025-01-22 18:01:38] ✅ DeleteUCS completed.
+[2025-01-22 18:01:40] 🧹 MakeByLayer started.
+[2025-01-22 18:01:40] ✅ MakeByLayer completed.
+[2025-01-22 18:01:40] 🧹 ChangeLineWeight started.
+[2025-01-22 18:01:40] ✅ ChangeLineWeight completed.
+[2025-01-22 18:01:40] 🧹 DeleteDimensions started.
+[2025-01-22 18:01:40] ✅ DeleteDimensions completed.
+[2025-01-22 18:01:40] 🧹 DeleteHatching started.
+[2025-01-22 18:01:40] ✅ DeleteHatching completed.
+[2025-01-22 18:01:42] 🧹 DeleteUCS started.
+[2025-01-22 18:01:42] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-01-22 18:01:45
+============================================================
+[2025-01-22 18:01:45] 🚀 Starting HydrauliCAD Loader...
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup_text.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_designer_commands.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_json.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_layer.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_service.lsp
+[2025-01-22 18:01:45] ✅ Loaded hc_test.lsp
+[2025-01-22 18:01:45] ✅ HydrauliCAD startup complete.
+[2025-01-22 18:01:47] 🧹 MakeByLayer started.
+[2025-01-22 18:01:47] ✅ MakeByLayer completed.
+[2025-01-22 18:01:47] 🧹 ChangeLineWeight started.
+[2025-01-22 18:01:47] 🧹 DeleteDimensions started.
+[2025-01-22 18:01:48] ✅ DeleteDimensions completed.
+[2025-01-22 18:01:48] 🧹 DeleteHatching started.
+[2025-01-22 18:01:48] ✅ DeleteHatching completed.
+[2025-01-22 18:01:48] 🧹 DeleteUCS started.
+[2025-01-22 18:01:48] ✅ DeleteUCS completed.
+[2025-02-22 18:02:05] 🧹 MakeByLayer started.
+[2025-02-22 18:02:05] ✅ MakeByLayer completed.
+[2025-02-22 18:02:05] 🧹 ChangeLineWeight started.
+[2025-02-22 18:02:05] 🧹 DeleteDimensions started.
+[2025-02-22 18:02:05] ✅ DeleteDimensions completed.
+[2025-02-22 18:02:05] 🧹 DeleteHatching started.
+[2025-02-22 18:02:05] ✅ DeleteHatching completed.
+[2025-02-22 18:02:05] 🧹 DeleteUCS started.
+[2025-02-22 18:02:05] ✅ DeleteUCS completed.
+[2025-02-22 18:02:34] 🧹 MakeByLayer started.
+[2025-02-22 18:02:34] ✅ MakeByLayer completed.
+[2025-02-22 18:02:34] 🧹 ChangeLineWeight started.
+[2025-02-22 18:02:34] 🧹 DeleteDimensions started.
+[2025-02-22 18:02:34] ✅ DeleteDimensions completed.
+[2025-02-22 18:02:34] 🧹 DeleteHatching started.
+[2025-02-22 18:02:34] ✅ DeleteHatching completed.
+[2025-02-22 18:02:34] 🧹 DeleteUCS started.
+[2025-02-22 18:02:34] ✅ DeleteUCS completed.
+[2025-03-22 18:03:03] 🧹 MakeByLayer started.
+[2025-03-22 18:03:04] ✅ MakeByLayer completed.
+[2025-03-22 18:03:06] 🧹 ChangeLineWeight started.
+[2025-03-22 18:03:16] 🧹 MakeByLayer started.
+[2025-03-22 18:03:16] ✅ MakeByLayer completed.
+[2025-03-22 18:03:28] 🧹 ChangeLineWeight started.
+[2025-03-22 18:03:54] 🧹 DeleteUCS started.
+[2025-03-22 18:03:54] ✅ DeleteUCS completed.
+[2025-04-22 18:04:02] 🧹 DeleteDimensions started.
+[2025-04-22 18:04:02] ✅ DeleteDimensions completed.
+[2025-04-22 18:04:04] 🧹 DeleteHatching started.
+[2025-04-22 18:04:04] ✅ DeleteHatching completed.
+[2025-04-22 18:04:07] 🧹 DeleteText started.
+[2025-04-22 18:04:07] ✅ DeleteText completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-48-22 21:48:11
+============================================================
+[2025-48-22 21:48:11] 🚀 Starting HydrauliCAD Loader...
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup_text.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-48-22 21:48:11] ✅ Loaded hc_designer_commands.lsp
+[2025-48-22 21:48:13] ✅ Loaded hc_json.lsp
+[2025-48-22 21:48:13] ✅ Loaded hc_layer.lsp
+[2025-48-22 21:48:13] ✅ Loaded hc_service.lsp
+[2025-48-22 21:48:13] ✅ Loaded hc_test.lsp
+[2025-48-22 21:48:13] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-48-22 21:48:33
+============================================================
+[2025-48-22 21:48:33] 🚀 Starting HydrauliCAD Loader...
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup_text.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_designer_commands.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_json.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_layer.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_service.lsp
+[2025-48-22 21:48:33] ✅ Loaded hc_test.lsp
+[2025-48-22 21:48:33] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-49-22 21:49:42
+============================================================
+[2025-49-22 21:49:42] 🚀 Starting HydrauliCAD Loader...
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup_text.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_designer_commands.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_json.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_layer.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_service.lsp
+[2025-49-22 21:49:42] ✅ Loaded hc_test.lsp
+[2025-49-22 21:49:42] ✅ HydrauliCAD startup complete.
+[2025-55-22 21:55:37] 📦 LT_LIST_XREFS started — scanning blocks for XREFs...
+[2025-56-22 21:56:41] 📦 LT_LIST_XREFS started — scanning blocks for XREFs...
+[2025-56-22 21:56:41] 🔗 Found XREF → LT_XREF_ARCH
+[2025-56-22 21:56:41] 🔗 Found XREF → LT_XREF_SURVEY
+[2025-56-22 21:56:41] 🔗 Found XREF → LT_XREF_MISC1
+[2025-56-22 21:56:41] 🔗 Found XREF → LT_XREF_MISC2
+[2025-56-22 21:56:41] 🔗 Found XREF → XZ-Titleblock_A1
+[2025-56-22 21:56:42] ✅ Total XREFs found: 5
+[2025-56-22 21:56:42] 📄 LT_LIST_XREFS completed successfully.
+[2025-58-22 21:58:47] 📦 LT_LIST_XREFS started — scanning blocks for XREFs...
+[2025-58-22 21:58:47] 🔗 Found XREF → LT_XREF_ARCH
+[2025-58-22 21:58:47] 🔗 Found XREF → LT_XREF_SURVEY
+[2025-58-22 21:58:47] 🔗 Found XREF → LT_XREF_MISC1
+[2025-58-22 21:58:47] 🔗 Found XREF → LT_XREF_MISC2
+[2025-58-22 21:58:47] 🔗 Found XREF → XZ-Titleblock_A1
+[2025-58-22 21:58:47] 🔗 Found XREF → XA-L01
+[2025-58-22 21:58:47] ✅ Total XREFs found: 6
+[2025-58-22 21:58:47] 📄 LT_LIST_XREFS completed successfully.
+[2025-59-22 21:59:14] 📦 LT_LIST_XREFS started — scanning blocks for XREFs...
+[2025-59-22 21:59:14] 🔗 Found XREF → LT_XREF_ARCH
+[2025-59-22 21:59:14] 🔗 Found XREF → LT_XREF_SURVEY
+[2025-59-22 21:59:14] 🔗 Found XREF → LT_XREF_MISC1
+[2025-59-22 21:59:14] 🔗 Found XREF → LT_XREF_MISC2
+[2025-59-22 21:59:14] 🔗 Found XREF → XZ-Titleblock_A1
+[2025-59-22 21:59:14] 🔗 Found XREF → XA-L01
+[2025-59-22 21:59:14] 🔗 Found XREF → XM-L01
+[2025-59-22 21:59:14] ✅ Total XREFs found: 7
+[2025-59-22 21:59:16] 📄 LT_LIST_XREFS completed successfully.
+[2025-03-22 22:03:02] 📦 LT_LIST_XREFS started.
+[2025-03-22 22:03:02] 🔍 get_xrefs → scanning blocks for XREFs...
+[2025-03-22 22:03:02]    🔗 Found XREF: LT_XREF_ARCH
+[2025-03-22 22:03:02]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-03-22 22:03:02]    🔗 Found XREF: LT_XREF_MISC1
+[2025-03-22 22:03:02]    🔗 Found XREF: LT_XREF_MISC2
+[2025-03-22 22:03:02]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-03-22 22:03:02]    🔗 Found XREF: XA-L01
+[2025-03-22 22:03:02]    🔗 Found XREF: XM-L01
+[2025-03-22 22:03:02] 📊 get_xrefs → total XREFs found: 7
+[2025-03-22 22:03:02] 📄 LT_LIST_XREFS completed successfully.
+[2025-05-22 22:05:56] 📦 LT_LIST_XREFS started.
+[2025-05-22 22:05:56] 🔍 lt_get_xrefs → scanning blocks for Light Table XREFs...
+[2025-05-22 22:05:56]    💡 Found Light Table XREF: LT_XREF_ARCH
+[2025-05-22 22:05:56]    💡 Found Light Table XREF: LT_XREF_SURVEY
+[2025-05-22 22:05:56]    💡 Found Light Table XREF: LT_XREF_MISC1
+[2025-05-22 22:05:56]    💡 Found Light Table XREF: LT_XREF_MISC2
+[2025-05-22 22:05:56] 📊 lt_get_xrefs → total Light Table XREFs found: 4
+[2025-05-22 22:05:56] 📄 LT_LIST_XREFS completed successfully.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-16-22 22:16:29
+============================================================
+[2025-16-22 22:16:29] 🚀 Starting HydrauliCAD Loader...
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup_text.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_designer_commands.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_json.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_layer.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_service.lsp
+[2025-16-22 22:16:29] ✅ Loaded hc_test.lsp
+[2025-16-22 22:16:29] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-17-22 22:17:01
+============================================================
+[2025-17-22 22:17:01] 🚀 Starting HydrauliCAD Loader...
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup_text.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_designer_commands.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_json.lsp
+[2025-17-22 22:17:01] ✅ Loaded hc_layer.lsp
+[2025-17-22 22:17:03] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-17-22 22:17:03] ✅ Loaded hc_service.lsp
+[2025-17-22 22:17:03] ✅ Loaded hc_test.lsp
+[2025-17-22 22:17:03] ✅ HydrauliCAD startup complete.
+[2025-17-22 22:17:06] 📦 LT_LIST_XREFS started.
+[2025-17-22 22:17:06] 🔍 lt_get_xrefs → scanning blocks for Light Table XREFs...
+[2025-17-22 22:17:06]    💡 Found Light Table XREF: LT_XREF_ARCH
+[2025-17-22 22:17:06]    💡 Found Light Table XREF: LT_XREF_SURVEY
+[2025-17-22 22:17:06]    💡 Found Light Table XREF: LT_XREF_MISC1
+[2025-17-22 22:17:06]    💡 Found Light Table XREF: LT_XREF_MISC2
+[2025-17-22 22:17:06] 📊 lt_get_xrefs → total Light Table XREFs found: 4
+[2025-17-22 22:17:06] 📄 LT_LIST_XREFS completed successfully.
+[2025-24-22 22:24:48] 📦 LT_LIST_XREFS started.
+[2025-24-22 22:24:48] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-24-22 22:24:48]    🔗 Found XREF: LT_XREF_ARCH
+[2025-24-22 22:24:48]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-24-22 22:24:48]    🔗 Found XREF: LT_XREF_MISC1
+[2025-24-22 22:24:48]    🔗 Found XREF: LT_XREF_MISC2
+[2025-24-22 22:24:48]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-24-22 22:24:48]    🔗 Found XREF: XA-L01
+[2025-24-22 22:24:48]    🔗 Found XREF: XM-L01
+[2025-24-22 22:24:48] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-24-22 22:24:48] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-24-22 22:24:48] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-24-22 22:24:48] ✅ lt_write_bridge → bridge written successfully.
+[2025-24-22 22:24:48] 📄 LT_LIST_XREFS completed successfully.
+[2025-31-22 22:31:06] 📦 LT_LIST_XREFS started.
+[2025-31-22 22:31:06] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-31-22 22:31:06]    🔗 Found XREF: LT_XREF_ARCH
+[2025-31-22 22:31:06]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-31-22 22:31:06]    🔗 Found XREF: LT_XREF_MISC1
+[2025-31-22 22:31:06]    🔗 Found XREF: LT_XREF_MISC2
+[2025-31-22 22:31:06]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-31-22 22:31:06]    🔗 Found XREF: XA-L01
+[2025-31-22 22:31:06]    🔗 Found XREF: XM-L01
+[2025-31-22 22:31:06] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-31-22 22:31:06] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-31-22 22:31:06] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-31-22 22:31:06] ✅ lt_write_bridge → bridge written successfully.
+[2025-31-22 22:31:06] 📄 LT_LIST_XREFS completed successfully.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-31-22 22:31:54
+============================================================
+[2025-31-22 22:31:54] 🚀 Starting HydrauliCAD Loader...
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup_text.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_designer_commands.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_json.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_layer.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_service.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_test.lsp
+[2025-31-22 22:31:54] ✅ Loaded hc_xref.lsp
+[2025-31-22 22:31:54] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-32-22 22:32:05
+============================================================
+[2025-32-22 22:32:05] 🚀 Starting HydrauliCAD Loader...
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup_text.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_designer_commands.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_json.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_layer.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_service.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_test.lsp
+[2025-32-22 22:32:05] ✅ Loaded hc_xref.lsp
+[2025-32-22 22:32:05] ✅ HydrauliCAD startup complete.
+[2025-32-22 22:32:07] 📦 LT_LIST_XREFS started.
+[2025-32-22 22:32:07] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-32-22 22:32:07]    🔗 Found XREF: LT_XREF_ARCH
+[2025-32-22 22:32:07]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-32-22 22:32:07]    🔗 Found XREF: LT_XREF_MISC1
+[2025-32-22 22:32:07]    🔗 Found XREF: LT_XREF_MISC2
+[2025-32-22 22:32:07]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-32-22 22:32:07]    🔗 Found XREF: XA-L01
+[2025-32-22 22:32:07]    🔗 Found XREF: XM-L01
+[2025-32-22 22:32:07] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-32-22 22:32:07] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-32-22 22:32:07] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-36-22 22:36:03
+============================================================
+[2025-36-22 22:36:03] 🚀 Starting HydrauliCAD Loader...
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup_text.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_designer_commands.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_json.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_layer.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_service.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_test.lsp
+[2025-36-22 22:36:03] ✅ Loaded hc_xref.lsp
+[2025-36-22 22:36:03] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-36-22 22:36:15
+============================================================
+[2025-36-22 22:36:15] 🚀 Starting HydrauliCAD Loader...
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup_text.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_designer_commands.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_json.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_layer.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_service.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_test.lsp
+[2025-36-22 22:36:15] ✅ Loaded hc_xref.lsp
+[2025-36-22 22:36:15] ✅ HydrauliCAD startup complete.
+[2025-36-22 22:36:19] 📦 LT_LIST_XREFS started.
+[2025-36-22 22:36:19] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-36-22 22:36:19]    🔗 Found XREF: LT_XREF_ARCH
+[2025-36-22 22:36:19]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-36-22 22:36:19]    🔗 Found XREF: LT_XREF_MISC1
+[2025-36-22 22:36:19]    🔗 Found XREF: LT_XREF_MISC2
+[2025-36-22 22:36:19]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-36-22 22:36:19]    🔗 Found XREF: XA-L01
+[2025-36-22 22:36:19]    🔗 Found XREF: XM-L01
+[2025-36-22 22:36:19] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-36-22 22:36:19] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-36-22 22:36:19] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-36-22 22:36:19] ✅ lt_write_bridge → bridge written successfully.
+[2025-36-22 22:36:19] 📄 LT_LIST_XREFS completed successfully.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-22 22:40:42
+============================================================
+[2025-40-22 22:40:42] 🚀 Starting HydrauliCAD Loader...
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_designer_commands.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_json.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_layer.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_service.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_test.lsp
+[2025-40-22 22:40:42] ✅ Loaded hc_xref.lsp
+[2025-40-22 22:40:42] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-22 22:40:52
+============================================================
+[2025-40-22 22:40:52] 🚀 Starting HydrauliCAD Loader...
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_designer_commands.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_json.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_layer.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_service.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_test.lsp
+[2025-40-22 22:40:52] ✅ Loaded hc_xref.lsp
+[2025-40-22 22:40:52] ✅ HydrauliCAD startup complete.
+[2025-40-22 22:40:57] 📦 LT_LIST_XREFS started.
+[2025-40-22 22:40:57] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-40-22 22:40:57]    🔗 Found XREF: LT_XREF_ARCH
+[2025-40-22 22:40:57]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-40-22 22:40:57]    🔗 Found XREF: LT_XREF_MISC1
+[2025-40-22 22:40:57]    🔗 Found XREF: LT_XREF_MISC2
+[2025-40-22 22:40:57]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-40-22 22:40:57]    🔗 Found XREF: XA-L01
+[2025-40-22 22:40:57]    🔗 Found XREF: XM-L01
+[2025-40-22 22:40:57] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-40-22 22:40:57] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-40-22 22:40:57] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-40-22 22:40:57] ✅ lt_write_bridge → bridge written successfully.
+[2025-40-22 22:40:57] 📄 LT_LIST_XREFS completed successfully.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-51-22 22:51:33
+============================================================
+[2025-51-22 22:51:33] 🚀 Starting HydrauliCAD Loader...
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup_text.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_designer_commands.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_json.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_layer.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_service.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_test.lsp
+[2025-51-22 22:51:33] ✅ Loaded hc_xref.lsp
+[2025-51-22 22:51:33] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-51-22 22:51:45
+============================================================
+[2025-51-22 22:51:45] 🚀 Starting HydrauliCAD Loader...
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup_text.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_designer_commands.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_json.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_layer.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_service.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_test.lsp
+[2025-51-22 22:51:45] ✅ Loaded hc_xref.lsp
+[2025-51-22 22:51:45] ✅ HydrauliCAD startup complete.
+[2025-51-22 22:51:48] 📦 LT_LIST_XREFS started.
+[2025-51-22 22:51:48] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-51-22 22:51:48]    🔗 Found XREF: LT_XREF_ARCH
+[2025-51-22 22:51:48]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-51-22 22:51:48]    🔗 Found XREF: LT_XREF_MISC1
+[2025-51-22 22:51:48]    🔗 Found XREF: LT_XREF_MISC2
+[2025-51-22 22:51:48]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-51-22 22:51:48]    🔗 Found XREF: XA-L01
+[2025-51-22 22:51:48]    🔗 Found XREF: XM-L01
+[2025-51-22 22:51:48] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-51-22 22:51:48] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-51-22 22:51:48] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-53-22 22:53:16] 📦 LT_LIST_XREFS started.
+[2025-53-22 22:53:16] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-53-22 22:53:16]    🔗 Found XREF: LT_XREF_ARCH
+[2025-53-22 22:53:16]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-53-22 22:53:16]    🔗 Found XREF: LT_XREF_MISC1
+[2025-53-22 22:53:16]    🔗 Found XREF: LT_XREF_MISC2
+[2025-53-22 22:53:16]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-53-22 22:53:16]    🔗 Found XREF: XA-L01
+[2025-53-22 22:53:16]    🔗 Found XREF: XM-L01
+[2025-53-22 22:53:16] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-53-22 22:53:16] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-53-22 22:53:16] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-53-22 22:53:16]    💡 Captured XREF: LT_XREF_ARCH
+[2025-53-22 22:53:16]    💡 Captured XREF: LT_XREF_SURVEY
+[2025-53-22 22:53:16]    💡 Captured XREF: LT_XREF_MISC1
+[2025-53-22 22:53:16]    💡 Captured XREF: LT_XREF_MISC2
+[2025-53-22 22:53:16]    💡 Captured XREF: XZ-Titleblock_A1
+[2025-53-22 22:53:16]    💡 Captured XREF: XA-L01
+[2025-53-22 22:53:16]    💡 Captured XREF: XM-L01
+[2025-53-22 22:53:16] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-53-22 22:53:16] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-56-22 22:56:42] 📦 LT_LIST_XREFS started.
+[2025-56-22 22:56:42] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-56-22 22:56:42]    🔗 Found XREF: LT_XREF_ARCH
+[2025-56-22 22:56:42]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-56-22 22:56:42]    🔗 Found XREF: LT_XREF_MISC1
+[2025-56-22 22:56:42]    🔗 Found XREF: LT_XREF_MISC2
+[2025-56-22 22:56:42]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-56-22 22:56:42]    🔗 Found XREF: XA-L01
+[2025-56-22 22:56:42]    🔗 Found XREF: XM-L01
+[2025-56-22 22:56:42] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-56-22 22:56:42] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-56-22 22:56:42] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-56-22 22:56:42]    💡 Captured XREF: LT_XREF_ARCH
+[2025-56-22 22:56:42]    💡 Captured XREF: LT_XREF_SURVEY
+[2025-56-22 22:56:42]    💡 Captured XREF: LT_XREF_MISC1
+[2025-56-22 22:56:42]    💡 Captured XREF: LT_XREF_MISC2
+[2025-56-22 22:56:42]    💡 Captured XREF: XZ-Titleblock_A1
+[2025-56-22 22:56:42]    💡 Captured XREF: XA-L01
+[2025-56-22 22:56:42]    💡 Captured XREF: XM-L01
+[2025-56-22 22:56:42] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-56-22 22:56:44] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-57-22 22:57:44] 📦 LT_LIST_XREFS started.
+[2025-57-22 22:57:44] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-57-22 22:57:44]    🔗 Found XREF: LT_XREF_ARCH
+[2025-57-22 22:57:44]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-57-22 22:57:44]    🔗 Found XREF: LT_XREF_MISC1
+[2025-57-22 22:57:44]    🔗 Found XREF: LT_XREF_MISC2
+[2025-57-22 22:57:44]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-57-22 22:57:44]    🔗 Found XREF: XA-L01
+[2025-57-22 22:57:44]    🔗 Found XREF: XM-L01
+[2025-57-22 22:57:44] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-57-22 22:57:44] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-57-22 22:57:44] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-57-22 22:57:44]    💡 Captured XREF: LT_XREF_ARCH
+[2025-57-22 22:57:44]    💡 Captured XREF: LT_XREF_SURVEY
+[2025-57-22 22:57:44]    💡 Captured XREF: LT_XREF_MISC1
+[2025-57-22 22:57:44]    💡 Captured XREF: LT_XREF_MISC2
+[2025-57-22 22:57:44]    💡 Captured XREF: XZ-Titleblock_A1
+[2025-57-22 22:57:44]    💡 Captured XREF: XA-L01
+[2025-57-22 22:57:44]    💡 Captured XREF: XM-L01
+[2025-57-22 22:57:44] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-57-22 22:57:44] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-02-22 23:02:01] 📦 LT_LIST_XREFS started.
+[2025-02-22 23:02:01] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-02-22 23:02:01]    🔗 Found XREF: LT_XREF_ARCH
+[2025-02-22 23:02:01]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-02-22 23:02:01]    🔗 Found XREF: LT_XREF_MISC1
+[2025-02-22 23:02:01]    🔗 Found XREF: LT_XREF_MISC2
+[2025-02-22 23:02:01]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-02-22 23:02:01]    🔗 Found XREF: XA-L01
+[2025-02-22 23:02:01]    🔗 Found XREF: XM-L01
+[2025-02-22 23:02:01] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-02-22 23:02:01] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-02-22 23:02:01] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-02-22 23:02:01]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISLOADED
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISRESOLVED
+[2025-02-22 23:02:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-02-22 23:02:01]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-02-22 23:02:01]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISLOADED
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISRESOLVED
+[2025-02-22 23:02:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-02-22 23:02:01]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-02-22 23:02:01]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISLOADED
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISRESOLVED
+[2025-02-22 23:02:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-02-22 23:02:01]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-02-22 23:02:01]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISLOADED
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISRESOLVED
+[2025-02-22 23:02:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-02-22 23:02:01]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-02-22 23:02:01]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISLOADED
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISRESOLVED
+[2025-02-22 23:02:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-02-22 23:02:01]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-02-22 23:02:01]    🔹 Processing XREF: XA-L01
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISLOADED
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISRESOLVED
+[2025-02-22 23:02:01]       ✅ PATH = .\XA-L01.dwg
+[2025-02-22 23:02:01]    💡 Captured XREF entry: XA-L01
+[2025-02-22 23:02:01]    🔹 Processing XREF: XM-L01
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISLOADED
+[2025-02-22 23:02:01]       ⚠️ Property access failed: ISRESOLVED
+[2025-02-22 23:02:01]       ✅ PATH = .\XM-L01.dwg
+[2025-02-22 23:02:01]    💡 Captured XREF entry: XM-L01
+[2025-02-22 23:02:01] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-02-22 23:02:01] 📄 LT_LIST_XREFS completed successfully.
+[2025-04-22 23:04:35] 📦 LT_LIST_XREFS started.
+[2025-04-22 23:04:35] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-04-22 23:04:35]    🔗 Found XREF: LT_XREF_ARCH
+[2025-04-22 23:04:35]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-04-22 23:04:35]    🔗 Found XREF: LT_XREF_MISC1
+[2025-04-22 23:04:35]    🔗 Found XREF: LT_XREF_MISC2
+[2025-04-22 23:04:35]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-04-22 23:04:35]    🔗 Found XREF: XA-L01
+[2025-04-22 23:04:35]    🔗 Found XREF: XM-L01
+[2025-04-22 23:04:35] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-04-22 23:04:35] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-04-22 23:04:35] 🔍 hc_get_xref_details → scanning ModelSpace for Light Table XREFs...
+[2025-04-22 23:04:35] 📊 hc_get_xref_details → total Light Table XREFs captured: 0
+[2025-04-22 23:04:35] 📄 LT_LIST_XREFS completed successfully.
+[2025-05-22 23:05:50] 📦 LT_LIST_XREFS started.
+[2025-05-22 23:05:50] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-05-22 23:05:50]    🔗 Found XREF: LT_XREF_ARCH
+[2025-05-22 23:05:50]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-05-22 23:05:50]    🔗 Found XREF: LT_XREF_MISC1
+[2025-05-22 23:05:50]    🔗 Found XREF: LT_XREF_MISC2
+[2025-05-22 23:05:50]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-05-22 23:05:50]    🔗 Found XREF: XA-L01
+[2025-05-22 23:05:50]    🔗 Found XREF: XM-L01
+[2025-05-22 23:05:50] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-05-22 23:05:50] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-05-22 23:05:50] 🔍 hc_get_xref_details → scanning ModelSpace for Light Table XREFs...
+[2025-05-22 23:05:50] 📊 hc_get_xref_details → total Light Table XREFs captured: 0
+[2025-05-22 23:05:50] 📄 LT_LIST_XREFS completed successfully.
+[2025-06-22 23:06:36] 📦 LT_LIST_XREFS started.
+[2025-06-22 23:06:36] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-06-22 23:06:36]    🔗 Found XREF: LT_XREF_ARCH
+[2025-06-22 23:06:36]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-06-22 23:06:36]    🔗 Found XREF: LT_XREF_MISC1
+[2025-06-22 23:06:36]    🔗 Found XREF: LT_XREF_MISC2
+[2025-06-22 23:06:36]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-06-22 23:06:36]    🔗 Found XREF: XA-L01
+[2025-06-22 23:06:36]    🔗 Found XREF: XM-L01
+[2025-06-22 23:06:36] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-06-22 23:06:36] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-06-22 23:06:36] 🔍 hc_get_xref_details → scanning ModelSpace and Blocks for Light Table XREFs...
+[2025-06-22 23:06:36]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-06-22 23:06:36]       ⚠️ ISLOADED failed
+[2025-06-22 23:06:36]       ⚠️ ISRESOLVED failed
+[2025-06-22 23:06:36]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-06-22 23:06:36]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-06-22 23:06:36]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-06-22 23:06:36]       ⚠️ ISLOADED failed
+[2025-06-22 23:06:36]       ⚠️ ISRESOLVED failed
+[2025-06-22 23:06:36]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-06-22 23:06:36]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-06-22 23:06:36]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-06-22 23:06:36]       ⚠️ ISLOADED failed
+[2025-06-22 23:06:36]       ⚠️ ISRESOLVED failed
+[2025-06-22 23:06:36]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-06-22 23:06:36]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-06-22 23:06:36]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-06-22 23:06:36]       ⚠️ ISLOADED failed
+[2025-06-22 23:06:36]       ⚠️ ISRESOLVED failed
+[2025-06-22 23:06:36]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-06-22 23:06:36]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-06-22 23:06:36]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-06-22 23:06:36]       ⚠️ ISLOADED failed
+[2025-06-22 23:06:36]       ⚠️ ISRESOLVED failed
+[2025-06-22 23:06:36]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-06-22 23:06:36]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-06-22 23:06:36]    🔹 Processing XREF: XA-L01
+[2025-06-22 23:06:36]       ⚠️ ISLOADED failed
+[2025-06-22 23:06:36]       ⚠️ ISRESOLVED failed
+[2025-06-22 23:06:36]       ✅ PATH = .\XA-L01.dwg
+[2025-06-22 23:06:36]    💡 Captured XREF entry: XA-L01
+[2025-06-22 23:06:36]    🔹 Processing XREF: XM-L01
+[2025-06-22 23:06:36]       ⚠️ ISLOADED failed
+[2025-06-22 23:06:36]       ⚠️ ISRESOLVED failed
+[2025-06-22 23:06:36]       ✅ PATH = .\XM-L01.dwg
+[2025-06-22 23:06:36]    💡 Captured XREF entry: XM-L01
+[2025-06-22 23:06:36] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-06-22 23:06:36] 📄 LT_LIST_XREFS completed successfully.
+[2025-08-22 23:08:09] 📦 LT_LIST_XREFS started.
+[2025-08-22 23:08:09] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-08-22 23:08:09]    🔗 Found XREF: LT_XREF_ARCH
+[2025-08-22 23:08:09]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-08-22 23:08:09]    🔗 Found XREF: LT_XREF_MISC1
+[2025-08-22 23:08:09]    🔗 Found XREF: LT_XREF_MISC2
+[2025-08-22 23:08:09]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-08-22 23:08:09]    🔗 Found XREF: XA-L01
+[2025-08-22 23:08:09]    🔗 Found XREF: XM-L01
+[2025-08-22 23:08:09] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-08-22 23:08:09] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-09-22 23:09:33] 📦 LT_LIST_XREFS started.
+[2025-09-22 23:09:33] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-09-22 23:09:33]    🔗 Found XREF: LT_XREF_ARCH
+[2025-09-22 23:09:33]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-09-22 23:09:33]    🔗 Found XREF: LT_XREF_MISC1
+[2025-09-22 23:09:33]    🔗 Found XREF: LT_XREF_MISC2
+[2025-09-22 23:09:33]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-09-22 23:09:33]    🔗 Found XREF: XA-L01
+[2025-09-22 23:09:33]    🔗 Found XREF: XM-L01
+[2025-09-22 23:09:33] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-09-22 23:09:33] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-09-22 23:09:33] 🔍 hc_get_xref_details → scanning Database XRefs collection...
+[2025-10-22 23:10:44] 📦 LT_LIST_XREFS started.
+[2025-10-22 23:10:44] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-10-22 23:10:44]    🔗 Found XREF: LT_XREF_ARCH
+[2025-10-22 23:10:44]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-10-22 23:10:44]    🔗 Found XREF: LT_XREF_MISC1
+[2025-10-22 23:10:44]    🔗 Found XREF: LT_XREF_MISC2
+[2025-10-22 23:10:44]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-10-22 23:10:44]    🔗 Found XREF: XA-L01
+[2025-10-22 23:10:44]    🔗 Found XREF: XM-L01
+[2025-10-22 23:10:44] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-10-22 23:10:44] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-10-22 23:10:44] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-10-22 23:10:44]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISLOADED
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISRESOLVED
+[2025-10-22 23:10:44]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-10-22 23:10:44]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-10-22 23:10:44]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISLOADED
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISRESOLVED
+[2025-10-22 23:10:44]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-10-22 23:10:44]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-10-22 23:10:44]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISLOADED
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISRESOLVED
+[2025-10-22 23:10:44]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-10-22 23:10:44]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-10-22 23:10:44]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISLOADED
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISRESOLVED
+[2025-10-22 23:10:44]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-10-22 23:10:44]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-10-22 23:10:44]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISLOADED
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISRESOLVED
+[2025-10-22 23:10:44]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-10-22 23:10:44]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-10-22 23:10:44]    🔹 Processing XREF: XA-L01
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISLOADED
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISRESOLVED
+[2025-10-22 23:10:44]       ✅ PATH = .\XA-L01.dwg
+[2025-10-22 23:10:44]    💡 Captured XREF entry: XA-L01
+[2025-10-22 23:10:44]    🔹 Processing XREF: XM-L01
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISLOADED
+[2025-10-22 23:10:44]       ⚠️ Property access failed: ISRESOLVED
+[2025-10-22 23:10:44]       ✅ PATH = .\XM-L01.dwg
+[2025-10-22 23:10:44]    💡 Captured XREF entry: XM-L01
+[2025-10-22 23:10:44] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-10-22 23:10:44] 📄 LT_LIST_XREFS completed successfully.
+[2025-12-22 23:12:14] 📦 LT_LIST_XREFS started.
+[2025-12-22 23:12:14] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-12-22 23:12:14]    🔗 Found XREF: LT_XREF_ARCH
+[2025-12-22 23:12:14]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-12-22 23:12:14]    🔗 Found XREF: LT_XREF_MISC1
+[2025-12-22 23:12:14]    🔗 Found XREF: LT_XREF_MISC2
+[2025-12-22 23:12:14]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-12-22 23:12:14]    🔗 Found XREF: XA-L01
+[2025-12-22 23:12:14]    🔗 Found XREF: XM-L01
+[2025-12-22 23:12:14] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-12-22 23:12:14] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-12-22 23:12:14] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-12-22 23:12:14]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-12-22 23:12:14]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-12-22 23:12:14]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-12-22 23:12:14]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-12-22 23:12:14]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-12-22 23:12:14]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-12-22 23:12:14]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-12-22 23:12:14]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-12-22 23:12:14]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-12-22 23:12:14]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-12-22 23:12:14]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-12-22 23:12:14]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-12-22 23:12:14]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-12-22 23:12:14]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-12-22 23:12:14]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-12-22 23:12:14]    🔹 Processing XREF: XA-L01
+[2025-12-22 23:12:14]       ✅ PATH = .\XA-L01.dwg
+[2025-12-22 23:12:14]    💡 Captured XREF entry: XA-L01
+[2025-12-22 23:12:14]    🔹 Processing XREF: XM-L01
+[2025-12-22 23:12:14]       ✅ PATH = .\XM-L01.dwg
+[2025-12-22 23:12:14]    💡 Captured XREF entry: XM-L01
+[2025-12-22 23:12:14] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-12-22 23:12:14] 📄 LT_LIST_XREFS completed successfully.
+[2025-12-22 23:12:42] 📦 LT_LIST_XREFS started.
+[2025-12-22 23:12:42] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-12-22 23:12:42]    🔗 Found XREF: LT_XREF_ARCH
+[2025-12-22 23:12:42]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-12-22 23:12:42]    🔗 Found XREF: LT_XREF_MISC1
+[2025-12-22 23:12:42]    🔗 Found XREF: LT_XREF_MISC2
+[2025-12-22 23:12:42]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-12-22 23:12:42]    🔗 Found XREF: XA-L01
+[2025-12-22 23:12:42]    🔗 Found XREF: XM-L01
+[2025-12-22 23:12:42] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-12-22 23:12:42] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-12-22 23:12:42] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-12-22 23:12:42]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-12-22 23:12:42]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-12-22 23:12:42]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-12-22 23:12:42]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-12-22 23:12:42]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-12-22 23:12:42]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-12-22 23:12:42]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-12-22 23:12:42]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-12-22 23:12:42]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-12-22 23:12:42]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-12-22 23:12:42]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-12-22 23:12:42]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-12-22 23:12:42]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-12-22 23:12:42]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-12-22 23:12:42]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-12-22 23:12:42]    🔹 Processing XREF: XA-L01
+[2025-12-22 23:12:42]       ✅ PATH = .\XA-L01.dwg
+[2025-12-22 23:12:42]    💡 Captured XREF entry: XA-L01
+[2025-12-22 23:12:42]    🔹 Processing XREF: XM-L01
+[2025-12-22 23:12:42]       ✅ PATH = .\XM-L01.dwg
+[2025-12-22 23:12:42]    💡 Captured XREF entry: XM-L01
+[2025-12-22 23:12:42] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-12-22 23:12:42] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-14-22 23:14:00] 📦 LT_LIST_XREFS started.
+[2025-14-22 23:14:00] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-14-22 23:14:00]    🔗 Found XREF: LT_XREF_ARCH
+[2025-14-22 23:14:00]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-14-22 23:14:01]    🔗 Found XREF: LT_XREF_MISC1
+[2025-14-22 23:14:01]    🔗 Found XREF: LT_XREF_MISC2
+[2025-14-22 23:14:01]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-14-22 23:14:01]    🔗 Found XREF: XA-L01
+[2025-14-22 23:14:01]    🔗 Found XREF: XM-L01
+[2025-14-22 23:14:01] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-14-22 23:14:01] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-14-22 23:14:01] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-14-22 23:14:01]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-14-22 23:14:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-14-22 23:14:01]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-14-22 23:14:01]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-14-22 23:14:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-14-22 23:14:01]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-14-22 23:14:01]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-14-22 23:14:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-14-22 23:14:01]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-14-22 23:14:01]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-14-22 23:14:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-14-22 23:14:01]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-14-22 23:14:01]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-14-22 23:14:01]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-14-22 23:14:01]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-14-22 23:14:01]    🔹 Processing XREF: XA-L01
+[2025-14-22 23:14:01]       ✅ PATH = .\XA-L01.dwg
+[2025-14-22 23:14:01]    💡 Captured XREF entry: XA-L01
+[2025-14-22 23:14:01]    🔹 Processing XREF: XM-L01
+[2025-14-22 23:14:01]       ✅ PATH = .\XM-L01.dwg
+[2025-14-22 23:14:01]    💡 Captured XREF entry: XM-L01
+[2025-14-22 23:14:01] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-14-22 23:14:01] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+[2025-16-22 23:16:30] 📦 LT_LIST_XREFS started.
+[2025-16-22 23:16:30] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-16-22 23:16:30]    🔗 Found XREF: LT_XREF_ARCH
+[2025-16-22 23:16:30]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-16-22 23:16:30]    🔗 Found XREF: LT_XREF_MISC1
+[2025-16-22 23:16:30]    🔗 Found XREF: LT_XREF_MISC2
+[2025-16-22 23:16:30]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-16-22 23:16:30]    🔗 Found XREF: XA-L01
+[2025-16-22 23:16:30]    🔗 Found XREF: XM-L01
+[2025-16-22 23:16:30] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-16-22 23:16:30] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-16-22 23:16:30] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-16-22 23:16:30]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-16-22 23:16:30]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-16-22 23:16:30]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-16-22 23:16:30]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-16-22 23:16:30]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-16-22 23:16:30]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-16-22 23:16:30]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-16-22 23:16:30]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-16-22 23:16:30]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-16-22 23:16:30]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-16-22 23:16:30]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-16-22 23:16:30]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-16-22 23:16:30]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-16-22 23:16:30]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-16-22 23:16:30]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-16-22 23:16:30]    🔹 Processing XREF: XA-L01
+[2025-16-22 23:16:30]       ✅ PATH = .\XA-L01.dwg
+[2025-16-22 23:16:30]    💡 Captured XREF entry: XA-L01
+[2025-16-22 23:16:30]    🔹 Processing XREF: XM-L01
+[2025-16-22 23:16:30]       ✅ PATH = .\XM-L01.dwg
+[2025-16-22 23:16:30]    💡 Captured XREF entry: XM-L01
+[2025-16-22 23:16:30] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-16-22 23:16:30] 🧩 lt_write_bridge → writing Light Table bridge for: C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Design\AH-SITE.DWG
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-24-22 23:24:01
+============================================================
+[2025-24-22 23:24:01] 🚀 Starting HydrauliCAD Loader...
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup_text.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_designer_commands.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_json.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_layer.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_service.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_test.lsp
+[2025-24-22 23:24:01] ✅ Loaded hc_xref.lsp
+[2025-24-22 23:24:01] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-24-22 23:24:12
+============================================================
+[2025-24-22 23:24:12] 🚀 Starting HydrauliCAD Loader...
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup_text.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_designer_commands.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_json.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_layer.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_service.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_test.lsp
+[2025-24-22 23:24:12] ✅ Loaded hc_xref.lsp
+[2025-24-22 23:24:12] ✅ HydrauliCAD startup complete.
+[2025-24-22 23:24:16] 📦 LT_LIST_XREFS started.
+[2025-24-22 23:24:16] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-24-22 23:24:16]    🔗 Found XREF: LT_XREF_ARCH
+[2025-24-22 23:24:16]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-24-22 23:24:16]    🔗 Found XREF: LT_XREF_MISC1
+[2025-24-22 23:24:16]    🔗 Found XREF: LT_XREF_MISC2
+[2025-24-22 23:24:16]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-24-22 23:24:16]    🔗 Found XREF: XA-L01
+[2025-24-22 23:24:16]    🔗 Found XREF: XM-L01
+[2025-24-22 23:24:16] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-24-22 23:24:16] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-24-22 23:24:16] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-24-22 23:24:16]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-24-22 23:24:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-24-22 23:24:16]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-24-22 23:24:16]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-24-22 23:24:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-24-22 23:24:16]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-24-22 23:24:16]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-24-22 23:24:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-24-22 23:24:16]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-24-22 23:24:16]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-24-22 23:24:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-24-22 23:24:16]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-24-22 23:24:16]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-24-22 23:24:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-24-22 23:24:16]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-24-22 23:24:16]    🔹 Processing XREF: XA-L01
+[2025-24-22 23:24:16]       ✅ PATH = .\XA-L01.dwg
+[2025-24-22 23:24:16]    💡 Captured XREF entry: XA-L01
+[2025-24-22 23:24:16]    🔹 Processing XREF: XM-L01
+[2025-24-22 23:24:16]       ✅ PATH = .\XM-L01.dwg
+[2025-24-22 23:24:16]    💡 Captured XREF entry: XM-L01
+[2025-24-22 23:24:16] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-25-22 23:25:01
+============================================================
+[2025-25-22 23:25:01] 🚀 Starting HydrauliCAD Loader...
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup_text.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_designer_commands.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_json.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_layer.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_service.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_test.lsp
+[2025-25-22 23:25:01] ✅ Loaded hc_xref.lsp
+[2025-25-22 23:25:01] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-25-22 23:25:13
+============================================================
+[2025-25-22 23:25:13] 🚀 Starting HydrauliCAD Loader...
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup_text.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_designer_commands.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_json.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_layer.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_service.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_test.lsp
+[2025-25-22 23:25:13] ✅ Loaded hc_xref.lsp
+[2025-25-22 23:25:13] ✅ HydrauliCAD startup complete.
+[2025-25-22 23:25:16] 📦 LT_LIST_XREFS started.
+[2025-25-22 23:25:16] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-25-22 23:25:17]    🔗 Found XREF: LT_XREF_ARCH
+[2025-25-22 23:25:17]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-25-22 23:25:17]    🔗 Found XREF: LT_XREF_MISC1
+[2025-25-22 23:25:17]    🔗 Found XREF: LT_XREF_MISC2
+[2025-25-22 23:25:17]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-25-22 23:25:17]    🔗 Found XREF: XA-L01
+[2025-25-22 23:25:17]    🔗 Found XREF: XM-L01
+[2025-25-22 23:25:17] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-25-22 23:25:17] 🔍 lt_filter_xrefs → 4 Light Table XREF(s) found.
+[2025-25-22 23:25:17] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-25-22 23:25:17]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-25-22 23:25:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-25-22 23:25:17]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-25-22 23:25:17]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-25-22 23:25:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-25-22 23:25:17]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-25-22 23:25:17]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-25-22 23:25:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-25-22 23:25:17]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-25-22 23:25:17]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-25-22 23:25:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-25-22 23:25:17]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-25-22 23:25:17]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-25-22 23:25:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-25-22 23:25:17]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-25-22 23:25:17]    🔹 Processing XREF: XA-L01
+[2025-25-22 23:25:17]       ✅ PATH = .\XA-L01.dwg
+[2025-25-22 23:25:17]    💡 Captured XREF entry: XA-L01
+[2025-25-22 23:25:17]    🔹 Processing XREF: XM-L01
+[2025-25-22 23:25:17]       ✅ PATH = .\XM-L01.dwg
+[2025-25-22 23:25:17]    💡 Captured XREF entry: XM-L01
+[2025-25-22 23:25:17] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-25-22 23:25:17] ✅ lt_write_bridge → bridge written successfully.
+[2025-25-22 23:25:17] 📄 LT_LIST_XREFS completed successfully.
+[2025-28-22 23:28:47] 📦 LT_LIST_XREFS started.
+[2025-28-22 23:28:47] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-28-22 23:28:47]    🔗 Found XREF: LT_XREF_ARCH
+[2025-28-22 23:28:47]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-28-22 23:28:47]    🔗 Found XREF: LT_XREF_MISC1
+[2025-28-22 23:28:47]    🔗 Found XREF: LT_XREF_MISC2
+[2025-28-22 23:28:47]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-28-22 23:28:47]    🔗 Found XREF: XA-L01
+[2025-28-22 23:28:47]    🔗 Found XREF: XM-L01
+[2025-28-22 23:28:47] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-28-22 23:28:47] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-28-22 23:28:47]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-28-22 23:28:47]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-28-22 23:28:47]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-28-22 23:28:47]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-28-22 23:28:47]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-28-22 23:28:47]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-28-22 23:28:47]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-28-22 23:28:47]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-28-22 23:28:47]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-28-22 23:28:47]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-28-22 23:28:47]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-28-22 23:28:47]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-28-22 23:28:47]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-28-22 23:28:47]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-28-22 23:28:47]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-28-22 23:28:47]    🔹 Processing XREF: XA-L01
+[2025-28-22 23:28:47]       ✅ PATH = .\XA-L01.dwg
+[2025-28-22 23:28:47]    💡 Captured XREF entry: XA-L01
+[2025-28-22 23:28:47]    🔹 Processing XREF: XM-L01
+[2025-28-22 23:28:47]       ✅ PATH = .\XM-L01.dwg
+[2025-28-22 23:28:47]    💡 Captured XREF entry: XM-L01
+[2025-28-22 23:28:47] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-28-22 23:28:47] ✅ lt_write_bridge → bridge written successfully.
+[2025-28-22 23:28:47] 📄 LT_LIST_XREFS completed successfully.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-30-22 23:30:03
+============================================================
+[2025-30-22 23:30:03] 🚀 Starting HydrauliCAD Loader...
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup_text.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_designer_commands.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_json.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_layer.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_service.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_test.lsp
+[2025-30-22 23:30:03] ✅ Loaded hc_xref.lsp
+[2025-30-22 23:30:03] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-30-22 23:30:13
+============================================================
+[2025-30-22 23:30:13] 🚀 Starting HydrauliCAD Loader...
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup_text.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_designer_commands.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_json.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_layer.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_service.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_test.lsp
+[2025-30-22 23:30:13] ✅ Loaded hc_xref.lsp
+[2025-30-22 23:30:13] ✅ HydrauliCAD startup complete.
+[2025-30-22 23:30:17] 📦 LT_LIST_XREFS started.
+[2025-30-22 23:30:17] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-30-22 23:30:17]    🔗 Found XREF: LT_XREF_ARCH
+[2025-30-22 23:30:17]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-30-22 23:30:17]    🔗 Found XREF: LT_XREF_MISC1
+[2025-30-22 23:30:17]    🔗 Found XREF: LT_XREF_MISC2
+[2025-30-22 23:30:17]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-30-22 23:30:17]    🔗 Found XREF: XA-L01
+[2025-30-22 23:30:17]    🔗 Found XREF: XM-L01
+[2025-30-22 23:30:17] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-30-22 23:30:17] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-30-22 23:30:17]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-30-22 23:30:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-30-22 23:30:17]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-30-22 23:30:17]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-30-22 23:30:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-30-22 23:30:17]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-30-22 23:30:17]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-30-22 23:30:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-30-22 23:30:17]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-30-22 23:30:17]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-30-22 23:30:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-30-22 23:30:17]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-30-22 23:30:17]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-30-22 23:30:17]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-30-22 23:30:17]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-30-22 23:30:17]    🔹 Processing XREF: XA-L01
+[2025-30-22 23:30:17]       ✅ PATH = .\XA-L01.dwg
+[2025-30-22 23:30:17]    💡 Captured XREF entry: XA-L01
+[2025-30-22 23:30:17]    🔹 Processing XREF: XM-L01
+[2025-30-22 23:30:17]       ✅ PATH = .\XM-L01.dwg
+[2025-30-22 23:30:17]    💡 Captured XREF entry: XM-L01
+[2025-30-22 23:30:18] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-30-22 23:30:18] ✅ lt_write_bridge → bridge written successfully.
+[2025-30-22 23:30:18] 📄 LT_LIST_XREFS completed successfully.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-31-22 23:31:04
+============================================================
+[2025-31-22 23:31:04] 🚀 Starting HydrauliCAD Loader...
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup_text.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_designer_commands.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_json.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_layer.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_light_table_dump_state.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_service.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_test.lsp
+[2025-31-22 23:31:04] ✅ Loaded hc_xref.lsp
+[2025-31-22 23:31:04] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-37-22 23:37:31
+============================================================
+[2025-37-22 23:37:31] 🚀 Starting HydrauliCAD Loader...
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup_text.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_designer_commands.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_json.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_layer.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_service.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_test.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_xref.lsp
+[2025-37-22 23:37:31] ✅ Loaded hc_xref_bridge.lsp
+[2025-37-22 23:37:31] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-37-22 23:37:42
+============================================================
+[2025-37-22 23:37:42] 🚀 Starting HydrauliCAD Loader...
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup_text.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_designer_commands.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_json.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_layer.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_service.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_test.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_xref.lsp
+[2025-37-22 23:37:42] ✅ Loaded hc_xref_bridge.lsp
+[2025-37-22 23:37:42] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-37-22 23:37:54
+============================================================
+[2025-37-22 23:37:54] 🚀 Starting HydrauliCAD Loader...
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup_text.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_designer_commands.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_json.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_layer.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_service.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_test.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_xref.lsp
+[2025-37-22 23:37:54] ✅ Loaded hc_xref_bridge.lsp
+[2025-37-22 23:37:54] ✅ HydrauliCAD startup complete.
+[2025-37-22 23:37:57] 📦 hc_write_xref_data started.
+[2025-37-22 23:37:57] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-37-22 23:37:57]    🔗 Found XREF: LT_XREF_ARCH
+[2025-37-22 23:37:57]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-37-22 23:37:57]    🔗 Found XREF: LT_XREF_MISC1
+[2025-37-22 23:37:57]    🔗 Found XREF: LT_XREF_MISC2
+[2025-37-22 23:37:57]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-37-22 23:37:57]    🔗 Found XREF: XA-L01
+[2025-37-22 23:37:57]    🔗 Found XREF: XM-L01
+[2025-37-22 23:37:57] 📊 hc_get_xrefs → total XREFs found: 7
+[2025-37-22 23:37:57] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-37-22 23:37:57]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-37-22 23:37:57]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-37-22 23:37:58]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-37-22 23:37:58]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-37-22 23:37:58]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-37-22 23:37:58]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-37-22 23:37:58]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-37-22 23:37:58]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-37-22 23:37:58]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-37-22 23:37:58]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-37-22 23:37:58]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-37-22 23:37:58]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-37-22 23:37:58]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-37-22 23:37:58]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-37-22 23:37:58]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-37-22 23:37:58]    🔹 Processing XREF: XA-L01
+[2025-37-22 23:37:58]       ✅ PATH = .\XA-L01.dwg
+[2025-37-22 23:37:58]    💡 Captured XREF entry: XA-L01
+[2025-37-22 23:37:58]    🔹 Processing XREF: XM-L01
+[2025-37-22 23:37:58]       ✅ PATH = .\XM-L01.dwg
+[2025-37-22 23:37:58]    💡 Captured XREF entry: XM-L01
+[2025-37-22 23:37:58] 📊 hc_get_xref_details → total Light Table XREFs captured: 7
+[2025-37-22 23:37:58] ✅ hc_write_bridge → bridge written successfully.
+[2025-37-22 23:37:58] 📄 hc_write_xref_data completed successfully.
+[2025-38-22 23:38:16] 📦 hc_write_xref_data started.
+[2025-38-22 23:38:16] 🔍 hc_get_xrefs → scanning drawing for XREFs...
+[2025-38-22 23:38:16]    🔗 Found XREF: LT_XREF_ARCH
+[2025-38-22 23:38:16]    🔗 Found XREF: LT_XREF_SURVEY
+[2025-38-22 23:38:16]    🔗 Found XREF: LT_XREF_MISC1
+[2025-38-22 23:38:16]    🔗 Found XREF: LT_XREF_MISC2
+[2025-38-22 23:38:16]    🔗 Found XREF: XZ-Titleblock_A1
+[2025-38-22 23:38:16] 📊 hc_get_xrefs → total XREFs found: 5
+[2025-38-22 23:38:16] 🔍 hc_get_xref_details → scanning blocks for Light Table XREFs...
+[2025-38-22 23:38:16]    🔹 Processing XREF: LT_XREF_ARCH
+[2025-38-22 23:38:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-SITE.DWG
+[2025-38-22 23:38:16]    💡 Captured XREF entry: LT_XREF_ARCH
+[2025-38-22 23:38:16]    🔹 Processing XREF: LT_XREF_SURVEY
+[2025-38-22 23:38:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XSURVEY.DWG
+[2025-38-22 23:38:16]    💡 Captured XREF entry: LT_XREF_SURVEY
+[2025-38-22 23:38:16]    🔹 Processing XREF: LT_XREF_MISC1
+[2025-38-22 23:38:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-GND.DWG
+[2025-38-22 23:38:16]    💡 Captured XREF entry: LT_XREF_MISC1
+[2025-38-22 23:38:16]    🔹 Processing XREF: LT_XREF_MISC2
+[2025-38-22 23:38:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XA-CARPORT.DWG
+[2025-38-22 23:38:16]    💡 Captured XREF entry: LT_XREF_MISC2
+[2025-38-22 23:38:16]    🔹 Processing XREF: XZ-Titleblock_A1
+[2025-38-22 23:38:16]       ✅ PATH = H:\25031 - Johnny Lee House - FREE\3. Project Outputs\2.1 Drawings\XZ-Titleblock_A1.dwg
+[2025-38-22 23:38:16]    💡 Captured XREF entry: XZ-Titleblock_A1
+[2025-38-22 23:38:16] 📊 hc_get_xref_details → total Light Table XREFs captured: 5
+[2025-38-22 23:38:16] ✅ hc_write_bridge → bridge written successfully.
+[2025-38-22 23:38:16] 📄 hc_write_xref_data completed successfully.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-38-22 23:38:45
+============================================================
+[2025-38-22 23:38:45] 🚀 Starting HydrauliCAD Loader...
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup_text.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_designer_commands.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_json.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_layer.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_service.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_test.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_xref.lsp
+[2025-38-22 23:38:45] ✅ Loaded hc_xref_bridge.lsp
+[2025-38-22 23:38:45] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-32-25 22:32:34
+============================================================
+[2025-32-25 22:32:34] 🚀 Starting HydrauliCAD Loader...
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup_text.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_designer_commands.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_json.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_layer.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_service.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_test.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_xref.lsp
+[2025-32-25 22:32:34] ✅ Loaded hc_xref_bridge.lsp
+[2025-32-25 22:32:34] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-32-25 22:32:43
+============================================================
+[2025-32-25 22:32:43] 🚀 Starting HydrauliCAD Loader...
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup_text.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_designer_commands.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_json.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_layer.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_service.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_test.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_xref.lsp
+[2025-32-25 22:32:43] ✅ Loaded hc_xref_bridge.lsp
+[2025-32-25 22:32:43] ✅ HydrauliCAD startup complete.
+[2025-32-25 22:32:44] 🧩 Designer_Pipe command started.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-25 22:34:14
+============================================================
+[2025-34-25 22:34:14] 🚀 Starting HydrauliCAD Loader...
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_designer_commands.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_json.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_layer.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_service.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_test.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_xref.lsp
+[2025-34-25 22:34:14] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-25 22:34:14] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-25 22:34:26
+============================================================
+[2025-34-25 22:34:26] 🚀 Starting HydrauliCAD Loader...
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_designer_commands.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_json.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_layer.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_service.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_test.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_xref.lsp
+[2025-34-25 22:34:26] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-25 22:34:26] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-25 22:34:37
+============================================================
+[2025-34-25 22:34:37] 🚀 Starting HydrauliCAD Loader...
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_designer_commands.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_json.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_layer.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_service.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_test.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_xref.lsp
+[2025-34-25 22:34:37] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-25 22:34:37] ✅ HydrauliCAD startup complete.
+[2025-34-25 22:34:39] 🧩 Designer_Pipe command started.
+[2025-35-25 22:35:03] 🧩 Designer_Pipe command started.
+[2025-37-25 22:37:41] 🧩 Designer_Pipe command started.
+[2025-37-25 22:37:51] 🧩 Designer_Pipe command started.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-58-26 15:58:22
+============================================================
+[2025-58-26 15:58:22] 🚀 Starting HydrauliCAD Loader...
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup_text.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_designer_commands.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_json.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_layer.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_service.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_test.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_xref.lsp
+[2025-58-26 15:58:22] ✅ Loaded hc_xref_bridge.lsp
+[2025-58-26 15:58:22] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-58-26 15:58:32
+============================================================
+[2025-58-26 15:58:32] 🚀 Starting HydrauliCAD Loader...
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup_text.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_designer_commands.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_json.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_layer.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_service.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_test.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_xref.lsp
+[2025-58-26 15:58:32] ✅ Loaded hc_xref_bridge.lsp
+[2025-58-26 15:58:32] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-59-26 15:59:16
+============================================================
+[2025-59-26 15:59:16] 🚀 Starting HydrauliCAD Loader...
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup_text.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_designer_commands.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_json.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_layer.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_service.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_test.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_xref.lsp
+[2025-59-26 15:59:16] ✅ Loaded hc_xref_bridge.lsp
+[2025-59-26 15:59:16] ✅ HydrauliCAD startup complete.

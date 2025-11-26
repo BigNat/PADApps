@@ -1,0 +1,21 @@
+{
+  "light_table_categories": [
+    { "service": "GRID",          "category": "Reference" },
+    { "service": "ARCH",          "category": "Architecture" },
+    { "service": "STRUCT",        "category": "Structure" },
+    { "service": "UPPER_ARCH",    "category": "Architecture" },
+    { "service": "LOWER_ARCH",    "category": "Architecture" },
+    { "service": "UPPER_SERVICE", "category": "Services" },
+    { "service": "LOWER_SERVICE", "category": "Services" },
+    { "service": "ELECT",         "category": "Services" },
+    { "service": "FIRE",          "category": "Services" },
+    { "service": "HYD",           "category": "Services" },
+    { "service": "MECH",          "category": "Services" },
+    { "service": "CEILING",       "category": "Architecture" },
+    { "service": "SURVEY",        "category": "Reference" },
+    { "service": "PENO",          "category": "Coordination" },
+    { "service": "MISC1",         "category": "Misc" },
+    { "service": "MISC2",         "category": "Misc" },
+    { "service": "MISC3",         "category": "Misc" }
+  ]
+}

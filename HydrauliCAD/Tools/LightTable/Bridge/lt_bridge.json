@@ -1,0 +1,27 @@
+{
+  "dwg_path": "C:/Users/nweck/Dropbox/HydrauliCAD-BT/Demo/Design/AH-SITE.DWG",
+  "xref_count": 5,
+  "xrefs": [
+    {
+      "name": "LT_XREF_ARCH",
+      "path": "H:\\25031 - Johnny Lee House - FREE\\3. Project Outputs\\2.1 Drawings\\XA-SITE.DWG"
+    },
+    {
+      "name": "LT_XREF_SURVEY",
+      "path": "H:\\25031 - Johnny Lee House - FREE\\3. Project Outputs\\2.1 Drawings\\XSURVEY.DWG"
+    },
+    {
+      "name": "LT_XREF_MISC1",
+      "path": "H:\\25031 - Johnny Lee House - FREE\\3. Project Outputs\\2.1 Drawings\\XA-GND.DWG"
+    },
+    {
+      "name": "LT_XREF_MISC2",
+      "path": "H:\\25031 - Johnny Lee House - FREE\\3. Project Outputs\\2.1 Drawings\\XA-CARPORT.DWG"
+    },
+    {
+      "name": "XZ-Titleblock_A1",
+      "path": "H:\\25031 - Johnny Lee House - FREE\\3. Project Outputs\\2.1 Drawings\\XZ-Titleblock_A1.dwg"
+    }
+  ],
+  "summary": "5 XREFs found and documented."
+}

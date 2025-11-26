@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "version": "1.1",
+    "description": "HydrauliCAD Tool configuration"
+  },
+  "tools": [
+    "LIGHT_TABLE",
+    "CLEAN_UP",
+    "DRAWINGS",
+    "SETTINGS"
+  ]
+}

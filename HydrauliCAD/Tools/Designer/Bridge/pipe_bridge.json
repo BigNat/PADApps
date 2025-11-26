@@ -1,0 +1,8 @@
+{
+  "layer": "Hyd_Pipe_Water_RE",
+  "service": "RE",
+  "description": "Re-use",
+  "color": 90,
+  "weight": 50,
+  "linetype": "HYD_RE_USE"
+}

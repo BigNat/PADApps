@@ -1,0 +1,21 @@
+{
+  "search_terms": [
+    { "service": "GRID",          "search_term": "xg*.dwg" },
+    { "service": "ARCH",          "search_term": "xa-*.dwg" },
+    { "service": "STRUCT",        "search_term": "xs-*.dwg" },
+    { "service": "UPPER_ARCH",    "search_term": "xa-*.dwg" },
+    { "service": "LOWER_ARCH",    "search_term": "xa-*.dwg" },
+    { "service": "UPPER_SERVICE", "search_term": "ah-*.dwg" },
+    { "service": "LOWER_SERVICE", "search_term": "ah-*.dwg" },
+    { "service": "ELECT",         "search_term": "xe-*.dwg" },
+    { "service": "FIRE",          "search_term": "xf-*.dwg" },
+    { "service": "HYD",           "search_term": "xh-*.dwg" },
+    { "service": "MECH",          "search_term": "xm-*.dwg" },
+    { "service": "CEILING",       "search_term": "xac*.dwg" },
+    { "service": "SURVEY",        "search_term": "xsur.dwg" },
+    { "service": "PENO",          "search_term": "ap.dwg" },
+    { "service": "MISC1",         "search_term": "*.dwg" },
+    { "service": "MISC2",         "search_term": "*.dwg" },
+    { "service": "MISC3",         "search_term": "*.dwg" }
+  ]
+}

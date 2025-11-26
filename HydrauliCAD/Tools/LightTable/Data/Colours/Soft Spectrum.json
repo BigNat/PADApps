@@ -1,0 +1,21 @@
+{
+  "light_table_colours": [
+    { "service": "GRID",          "color": 253 },
+    { "service": "ARCH",          "color": 30 },
+    { "service": "STRUCT",        "color": 100 },
+    { "service": "UPPER_ARCH",    "color": 93 },
+    { "service": "LOWER_ARCH",    "color": 82 },
+    { "service": "UPPER_SERVICE", "color": 174 },
+    { "service": "LOWER_SERVICE", "color": 171 },
+    { "service": "ELECT",         "color": 92 },
+    { "service": "FIRE",          "color": 14 },
+    { "service": "HYD",           "color": 132 },
+    { "service": "MECH",          "color": 11 },
+    { "service": "CEILING",       "color": 91 },
+    { "service": "SURVEY",        "color": 21 },
+    { "service": "PENO",          "color": 222 },
+    { "service": "MISC1",         "color": 8 },
+    { "service": "MISC2",         "color": 132 },
+    { "service": "MISC3",         "color": 253 }
+  ]
+}

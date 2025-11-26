@@ -1,0 +1,20 @@
+{
+  "meta": { "version": "1.0", "description": "HydrauliCAD service definitions" },
+  "services": [
+    {"emoji": "💧", "abbr": "CW", "input": "C", "name": "Cold Water", "system": "Water", "block_size": 150 },
+    {"emoji": "🌱", "abbr": "RE", "input": "RE", "name": "Re-use", "system": "Water", "block_size": 150 },
+    {"emoji": "♨️", "abbr": "HW", "input": "H", "name": "Hot Water", "system": "Water", "block_size": 150 },
+    {"emoji": "♾️", "abbr": "HWR", "input": "R", "name": "Hot Water Return", "system": "Water", "block_size": 150 },
+    {"emoji": "🚿", "abbr": "WW", "input": "WW", "name": "Warm Water", "system": "Water", "block_size": 150 },
+    {"emoji": "⚡", "abbr": "G", "input": "G", "name": "Gas", "system": "Gas", "block_size": 150 },
+    {"emoji": "🌧️", "abbr": "STW", "input": "S", "name": "Stormwater", "system": "Stormwater", "block_size": 200 },
+    {"emoji": "🧭", "abbr": "SS", "input": "SS", "name": "Sub-soil", "system": "Stormwater", "block_size": 200 },
+    {"emoji": "🏗️", "abbr": "SD", "input": "D", "name": "Drainage", "system": "Sanitary", "block_size": 200 },
+    {"emoji": "🛣️", "abbr": "SP", "input": "P", "name": "Plumbing", "system": "Sanitary", "block_size": 200 },
+    {"emoji": "🏛️", "abbr": "TW", "input": "T", "name": "Trade Waste", "system": "Sanitary", "block_size": 200 },
+    {"emoji": "📌", "abbr": "VP", "input": "V", "name": "Vent", "system": "Sanitary", "block_size": 200 },
+    {"emoji": "🧯", "abbr": "FH", "input": "F", "name": "Fire Hydrant", "system": "Fire", "block_size": 150 },
+    {"emoji": "🌀", "abbr": "FHR", "input": "O", "name": "Fire Hose Reel", "system": "Fire", "block_size": 150 },
+    {"emoji": "🔥", "abbr": "FS", "input": "FS", "name": "Fire Sprinkler", "system": "Fire", "block_size": 150 }
+  ]
+}

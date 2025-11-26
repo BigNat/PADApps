@@ -1,0 +1,521 @@
+INDEX
+=====
+
+hc_designer_commands.lsp
+hc_json.lsp
+hc_layer.lsp
+hc_loader.lsp
+hc_log.lsp
+hc_paths.lsp
+hc_service.lsp
+hc_test.lsp
+Test\doc_events.lsp
+──────────────────────────────────────────────────────────────────────
+################################################################################
+### hc_designer_commands.lsp
+################################################################################
+
+
+
+(defun c:Designer_Pipe ( / )
+  (hc-log "🧩 Designer_Pipe command started.")
+  (set_layer_from_bridge)
+  (hc-log "📏 Drawing pipe line...")
+  (command "_.LINE")
+  (hc-log "✅ Designer_Pipe command completed.")
+  (princ)
+)
+
+
+
+
+
+(defun c:hc_designer_snap (/ a ang)
+  (setvar "cmdecho" 0)
+  (setvar "orthomode" 1)
+  (setq SNAPANG? (getvar "snapang"))
+  (setq sang SNAPANG?)
+  (cond
+    ((= sang 0)
+      (setvar "snapang" 0.785398)
+      (princ "\nSnap 45° – crosshairs rotated to 45 degrees"))
+    ((= sang 0.785398)
+      (setvar "snapang" 0)
+      (princ "\nSnap 0° – crosshairs rotated to 0 degrees"))
+    (t
+      (setvar "snapang" 0)
+      (princ "\nSnap reset to 0 degrees"))
+  )
+  (princ)
+)
+
+################################################################################
+### hc_json.lsp
+################################################################################
+;; ===============================================================
+;; hc_json.lsp — HydrauliCAD JSON Read/Write Utility (Generic)
+;; ===============================================================
+
+(defun hc-json-get (path key / jsonObj val)
+  (setq jsonObj (vlax-create-object "HydrauliCAD.JsonBridge"))
+  (setq val (vlax-invoke jsonObj 'GetValue path key))
+  (vlax-release-object jsonObj)
+  val
+)
+
+################################################################################
+### hc_layer.lsp
+################################################################################
+(defun hc-create-layer (layer_name color weight line_type / doc layers layer oldColor oldWeight oldType)
+  (hc-ensure-linetype-loaded line_type)
+  (setq doc (vla-get-ActiveDocument (vlax-get-Acad-Object)))
+  (setq layers (vla-get-Layers doc))
+
+  ;; Validate color input
+  (if (or (not (numberp color)) (< color 1) (> color 255))
+    (setq color 7)
+  )
+
+  ;; Create or get the layer
+  (if (tblsearch "LAYER" layer_name)
+    (progn
+      (setq layer (vla-Item layers layer_name))
+      (setq oldColor (vla-get-Color layer))
+      (setq oldWeight (vla-get-LineWeight layer))
+      (setq oldType (vla-get-Linetype layer))
+
+      (hc-log (strcat "🧱 Updating existing layer: " layer_name))
+      (hc-log (strcat "   BEFORE → Color:" (itoa oldColor)
+                      " | Weight:" (itoa oldWeight)
+                      " | Linetype:" oldType))
+
+      ;; Only apply changes if different (and log which change applied)
+      (if (/= oldColor color)
+        (progn
+          (vla-put-Color layer color)
+          (hc-log (strcat "   🖌️ Color changed: " (itoa oldColor) " → " (itoa color)))
+        )
+        (hc-log "   ℹ️ Color already correct.")
+      )
+
+      (if (/= oldWeight weight)
+        (progn
+          (vla-put-LineWeight layer (vlax-make-variant weight))
+          (hc-log (strcat "   ⚖️ Lineweight changed: " (itoa oldWeight) " → " (itoa weight)))
+        )
+        (hc-log "   ℹ️ Lineweight already correct.")
+      )
+
+      (if (and oldType (/= (strcase oldType) (strcase line_type)))
+        (progn
+          (if (tblsearch "LTYPE" line_type)
+            (vla-put-Linetype layer line_type)
+            (vla-put-Linetype layer "Continuous"))
+          (hc-log (strcat "   📏 Linetype changed: " oldType " → " line_type))
+        )
+        (hc-log "   ℹ️ Linetype already correct.")
+      )
+
+      ;; Verify after update
+      (hc-log (strcat "✅ AFTER → Color:" (itoa (vla-get-Color layer))
+                      " | Weight:" (itoa (vla-get-LineWeight layer))
+                      " | Linetype:" (vla-get-Linetype layer)))
+    )
+    (progn
+      (setq layer (vla-Add layers layer_name))
+      (vla-put-Color layer color)
+      (vla-put-LineWeight layer (vlax-make-variant weight))
+      (if (tblsearch "LTYPE" line_type)
+        (vla-put-Linetype layer line_type)
+        (vla-put-Linetype layer "Continuous"))
+      (hc-log (strcat "🎨 Created new layer: " layer_name
+                      "  [Color: " (itoa color)
+                      " | Weight: " (itoa weight)
+                      " | Linetype: " (if (tblsearch "LTYPE" line_type) line_type "Continuous")
+                      "]"))
+    )
+  )
+
+  ;; Refresh to display changes
+  (vla-Regen doc acAllViewports)
+)
+
+
+
+
+
+
+
+(defun hc-ensure-linetype-loaded (line_type / doc)
+  (setq doc (vla-get-ActiveDocument (vlax-get-acad-object)))
+  (if (not (tblsearch "LTYPE" line_type))
+    (progn
+      (command "_.-linetype" "_load" line_type "C:\\HydrauliCAD\\Tools\\Designer\\Support\\Designer.lin" "")
+      (hc-log (strcat "📏 Linetype loaded → " line_type))
+    )
+    (hc-log (strcat "ℹ️ Linetype already available: " line_type))
+  )
+)
+
+
+
+(defun set_layer_from_bridge ( / jsonfile layer_name line_type color weight)
+  (setq jsonfile (hc-get-bridge-json-path))
+  (setq layer_name (hc-json-get jsonfile "layer"))
+  (setq line_type (hc-json-get jsonfile "linetype"))
+  (setq color (atoi (hc-json-get jsonfile "color")))
+  (setq weight (atoi (hc-json-get jsonfile "weight")))
+
+  (if (not layer_name) (setq layer_name "Hyd_Pipe_Default"))
+  (if (not line_type) (setq line_type "Continuous"))
+  (if (not color) (setq color 7))
+  (if (not weight) (setq weight 25))
+
+  (hc-create-layer layer_name color weight line_type)
+
+  (setvar "clayer" layer_name)
+  (hc-log (strcat "✅ Current layer set → " layer_name))
+  (princ)
+)
+
+################################################################################
+### hc_loader.lsp
+################################################################################
+;;; ---------------------------------------------------------------
+;;; hc_loader.lsp – Auto-loader for HydrauliCAD (with logging order)
+;;; ---------------------------------------------------------------
+(vl-load-com)
+(load "hc_paths.lsp")
+
+(defun c:hc_loader ( / hc_path files full)
+  (setq hc_path (hc-get-lisp-path))
+
+  (if (not (vl-file-directory-p hc_path))
+    (progn
+      (princ (strcat "\n⚠️ HydrauliCAD folder not found: " hc_path))
+      (exit)
+    )
+  )
+
+  ;; ------------------------------------------------------------
+  ;; 1️⃣ Always load logger first (safe dependency)
+  ;; ------------------------------------------------------------
+  (setq full (strcat hc_path "hc_paths.lsp"))
+  (if (findfile full)
+    (progn
+      (load full)
+    )
+    (princ "\n⚠️ Paths file not found — hc_paths.lsp missing")
+  )
+  
+  (setq full (strcat hc_path "hc_log.lsp"))
+  (if (findfile full)
+    (progn
+      (load full)
+      (princ "\n✅ Loaded hc_log.lsp (logger initialized)")
+      (hc-log-init)
+      (hc-log "🚀 Starting HydrauliCAD Loader...")
+    )
+    (princ "\n⚠️ Logger not found — hc_log.lsp missing")
+  )
+
+  ;; ------------------------------------------------------------
+  ;; 2️⃣ Load all other .lsp files except this loader and logger
+  ;; ------------------------------------------------------------
+  (setq files
+        (vl-remove-if
+          '(lambda (x) (member x '("hc_loader.lsp" "hc_log.lsp" "hc_paths.lsp")))
+          (vl-directory-files hc_path "*.lsp" 1)
+        )
+  )
+
+  (foreach f files
+    (setq full (strcat hc_path f))
+    (if (findfile full)
+      (progn
+        (load full)
+        (hc-log (strcat "✅ Loaded " f))
+      )
+      (hc-log (strcat "⚠️ Missing " full))
+    )
+  )
+
+  (hc-log "✅ HydrauliCAD startup complete.")
+  (princ "\nHydrauliCAD startup complete.")
+  (princ)
+)
+
+;;; ------------------------------------------------------------
+;;; Run only once per AutoCAD session
+;;; ------------------------------------------------------------
+(if (not (boundp '*hc_loader_initialized*))
+  (progn
+    (setq *hc_loader_initialized* T)
+    (c:hc_loader)
+  )
+)
+(princ)
+
+################################################################################
+### hc_log.lsp
+################################################################################
+;; ===============================================================
+;; hc_log.lsp — HydrauliCAD Logging Utility (Session-Aware)
+;; ===============================================================
+
+(defun hc-log-init ( / file session-line)
+  (setq file (hc-get-logs-file))
+  (setq session-line
+        (strcat
+          "\n============================================================\n"
+          "🕓 New HydrauliCAD Session: "
+          (menucmd "M=$(edtime,$(getvar,date),YYYY-MM-DD HH:MM:SS)")
+          "\n============================================================"))
+  (setq f (open file "a"))
+  (if f (progn (write-line session-line f) (close f)))
+  (princ "\n🪵 Log session started.")
+)
+
+(defun hc-log-clear ( / file)
+  (setq file (hc-get-logs-file))
+  (if (findfile file)
+    (progn
+      (setq f (open file "w"))
+      (write-line "🧹 Cleared previous HydrauliCAD log." f)
+      (close f)
+      (princ "\n🧹 Log file cleared."))
+  )
+)
+
+(defun hc-log (msg / f tstamp line file)
+  (setq file (hc-get-logs-file))
+  (setq tstamp (menucmd "M=$(edtime,$(getvar,date),YYYY-MM-DD HH:MM:SS)"))
+  (setq line (strcat "[" tstamp "] " msg))
+  (setq f (open file "a"))
+  (if f (progn (write-line line f) (close f)))
+  (princ (strcat "\n🪵 " line))
+)
+(princ)
+
+################################################################################
+### hc_paths.lsp
+################################################################################
+;; ===============================================================
+;; hc_paths.lsp — HydrauliCAD Path Utilities 
+;; ===============================================================
+
+;; ---------------------------------------------------------------
+;; Get HydrauliCAD root installation path 
+
+(defun hc-get-root-path ( / path )
+  (setq path "C:/HydrauliCAD/")
+  path
+)
+
+;; ---------------------------------------------------------------
+;; Get HydrauliCAD data path
+(defun hc-get-data-path ( / path )
+  (setq path (strcat (hc-get-root-path) "Data/"))
+  path
+)
+
+;; ---------------------------------------------------------------
+;; Get HydrauliCAD lisp path
+(defun hc-get-lisp-path ( / path )
+  (setq path (strcat (hc-get-root-path) "Lisp/"))
+  path
+)
+;; ---------------------------------------------------------------
+
+;; Get HydrauliCAD Blocks path
+(defun hc-get-blocks-path ( / path )
+  (setq path (strcat (hc-get-root-path) "Blocks/"))
+  path
+)
+;; ---------------------------------------------------------------
+
+;; Get HydrauliCAD Support path
+(defun hc-get-support-path ( / path )
+  (setq path (strcat (hc-get-root-path) "Support/"))
+  path
+)
+;; ---------------------------------------------------------------
+
+;; Get HydrauliCAD Logs path
+(defun hc-get-logs-path ( / path )
+  (setq path (strcat (hc-get-root-path) "Logs/"))
+  path
+)
+
+(defun hc-get-logs-file ( / path )
+  (setq path (strcat (hc-get-logs-path) "hc_log.txt"))
+  path
+)
+
+;; ---------------------------------------------------------------
+
+
+(defun hc-get-service-json-path ()
+  (strcat (hc-get-data-path) "services.json")
+)
+
+(defun hc-get-layer-json-path ()
+  (strcat (hc-get-data-path) "layers.json")
+)
+
+
+(defun hc-get-bridge-json-path ()
+  (strcat (hc-get-root-path) "Bridge/bridge.json")
+)
+
+
+(defun hc-get-layer-config ()
+  (strcat (hc-get-root-path) "Bridge/layer_config.json")
+)
+
+
+
+
+(princ)
+
+################################################################################
+### hc_service.lsp
+################################################################################
+
+
+################################################################################
+### hc_test.lsp
+################################################################################
+
+
+(defun c:t1 ( / jsonfile txt layer_name service desc)
+  (setq jsonfile (hc-get-bridge-json-path))
+  (setq txt (hc-json-read jsonfile))
+  
+  (hc-log "📦 Bridge data loaded.")
+  (hc-log (strcat "📄 JSON preview: " (substr txt 1 1000)))
+
+  (setq layer_name (hc-parse-json-value txt "layer"))
+  (setq line_type (hc-parse-json-value txt "linetype"))
+  (setq color (atoi (hc-parse-json-value txt "color")))
+  (setq weight (atoi (hc-parse-json-value txt "weight")))
+  (setq plot/ (vlax-make-variant T))
+  
+  (setq service (hc-parse-json-value txt "service"))
+  (setq desc (hc-parse-json-value txt "description"))
+
+  (hc-log (strcat "💧 Service → " service " (" desc ")"))
+  (hc-log (strcat "🧱 Target layer → " layer_name))
+  (hc-log (strcat "🎨 Layer properties → Color: " (itoa color)
+                  " | Weight: " (itoa weight)
+                  " | Linetype: " line_type
+                  " | Plot: " (if plot/ "Yes" "No")))
+  (hc-log "✅ Test completed successfully.")
+  (princ)
+)
+
+
+(defun c:t2 ( / value )
+  (setq value (hc-json-get (hc-get-bridge-json-path) "color"))
+  (princ (strcat "\nColor: " value))
+  (princ)
+)
+
+################################################################################
+### Test\doc_events.lsp
+################################################################################
+;; ===============================================================
+;; doc_timer.lsp — HydrauliCAD Open Drawing Tracker (Universal Timer)
+;; ===============================================================
+
+(vl-load-com)
+
+;; ---------------------------------------------------------------
+;; Utility: Write to HydrauliCAD log
+;; ---------------------------------------------------------------
+(defun hyd-log (msg / f tstamp line file)
+  (setq file "C:/HydrauliCAD/Data/hydraulicad_log.txt")
+  (setq tstamp (menucmd "M=$(edtime,$(getvar,date),YYYY-MM-DD HH:MM:SS)"))
+  (setq line (strcat "[" tstamp "] " msg))
+  (setq f (open file "a"))
+  (if f (progn (write-line line f) (close f)))
+  (princ (strcat "\n🪵 " line))
+)
+
+;; ---------------------------------------------------------------
+;; Utility: Collect and write JSON
+;; ---------------------------------------------------------------
+(defun hyd-write-open-json ( / file drawlist current f jsontext app docs )
+  (setq file "C:/HydrauliCAD/Data/open_drawings.json")
+  (setq app (vlax-get-acad-object))
+  (setq docs (vla-get-Documents app))
+  (setq drawlist '())
+  (vlax-for d docs
+    (setq drawlist (cons (vla-get-FullName d) drawlist))
+  )
+  (setq drawlist (reverse drawlist))
+  (setq current (strcat (getvar "DWGPREFIX") (getvar "DWGNAME")))
+
+  ;; Build JSON
+  (setq jsontext "{\n  \"current\": \"")
+  (setq jsontext (strcat jsontext (vl-string-translate "\\" "/" current) "\",\n"))
+  (setq jsontext (strcat jsontext "  \"open\": [\n"))
+  (foreach dwg drawlist
+    (if (/= dwg "")
+      (setq jsontext (strcat jsontext "    \"" (vl-string-translate "\\" "/" dwg) "\",\n"))
+    )
+  )
+  (if (> (strlen jsontext) 6)
+    (setq jsontext (substr jsontext 1 (- (strlen jsontext) 2)))
+  )
+  (setq jsontext (strcat jsontext "\n  ]\n}\n"))
+
+  (setq f (open file "w"))
+  (if f (progn (write-line jsontext f) (close f)))
+  (hyd-log (strcat "📘 Updated open_drawings.json (" (itoa (length drawlist)) " drawings)"))
+)
+
+;; ---------------------------------------------------------------
+;; Heartbeat function
+;; ---------------------------------------------------------------
+(defun hyd-heartbeat-loop ( / delay )
+  (setq delay 2000) ;; 2 seconds
+  (while *HydHeartbeatActive*
+    (vl-catch-all-apply 'hyd-write-open-json)
+    (command "_delay" delay)
+  )
+)
+
+;; ---------------------------------------------------------------
+;; Commands
+;; ---------------------------------------------------------------
+(defun c:HYD_TIMER_START ( / )
+  (if (not *HydHeartbeatActive*)
+    (progn
+      (setq *HydHeartbeatActive* T)
+      (hyd-log "▶ Starting HydrauliCAD timer loop (2 sec)...")
+      (hyd-write-open-json)
+      (hyd-heartbeat-loop)
+    )
+    (hyd-log "⚠ Timer already running.")
+  )
+  (princ)
+)
+
+(defun c:HYD_TIMER_STOP ( / )
+  (if *HydHeartbeatActive*
+    (progn
+      (setq *HydHeartbeatActive* nil)
+      (hyd-log "⏹ HydrauliCAD timer stopped.")
+    )
+    (hyd-log "⚠ Timer not active.")
+  )
+  (princ)
+)
+
+;; ---------------------------------------------------------------
+;; Load message
+;; ---------------------------------------------------------------
+(hyd-log "🔄 HydrauliCAD simple timer tracker loaded.")
+(princ "\nType HYD_TIMER_START to begin 2-second tracking, HYD_TIMER_STOP to end.")
+(princ)

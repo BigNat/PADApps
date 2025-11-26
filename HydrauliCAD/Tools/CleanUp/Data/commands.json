@@ -1,0 +1,12 @@
+{
+  "commands": {
+    "make_bylayer": "HC_MAKEBYLAYER",
+    "change_lineweight": "HC_CHANGELINEWEIGHT",
+    "delete_text": "HC_DELETETEXT",
+    "delete_text_match": "HC_DELETETEXTMATCH",
+    "delete_blocks": "HC_DELETEBLOCKS",
+    "delete_dimensions": "HC_DELETEDIMENSIONS",
+    "delete_hatching": "HC_DELETEHATCHING",
+    "delete_ucs": "HC_DELETEUCS"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "light_table_layers": [
+    { "service": "GRID",          "layer": "LT_XREF_GRID" },
+    { "service": "ARCH",          "layer": "LT_XREF_ARCH" },
+    { "service": "STRUCT",        "layer": "LT_XREF_STRUCT" },
+    { "service": "UPPER_ARCH",    "layer": "LT_XREF_UPPER_ARCH" },
+    { "service": "LOWER_ARCH",    "layer": "LT_XREF_LOWER_ARCH" },
+    { "service": "UPPER_SERVICE", "layer": "LT_XREF_UPPER_SERVICE" },
+    { "service": "LOWER_SERVICE", "layer": "LT_XREF_LOWER_SERVICE" },
+    { "service": "ELECT",         "layer": "LT_XREF_ELECT" },
+    { "service": "FIRE",          "layer": "LT_XREF_FIRE" },
+    { "service": "HYD",           "layer": "LT_XREF_HYD" },
+    { "service": "MECH",          "layer": "LT_XREF_MECH" },
+    { "service": "CEILING",       "layer": "LT_XREF_CEILING" },
+    { "service": "SURVEY",        "layer": "LT_XREF_SURVEY" },
+    { "service": "PENO",          "layer": "LT_XREF_PENO" },
+    { "service": "MISC1",         "layer": "LT_XREF_MISC1" },
+    { "service": "MISC2",         "layer": "LT_XREF_MISC2" },
+    { "service": "MISC3",         "layer": "LT_XREF_MISC3" }
+  ]
+}

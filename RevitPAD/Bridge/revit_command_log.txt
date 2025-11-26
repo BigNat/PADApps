@@ -1,0 +1,5 @@
+[2025-11-25 16:23:46] Command received: export_sheets_to_json
+[2025-11-25 16:23:46] IMPORTING: export_sheets_to_json
+[2025-11-25 16:23:46] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
+[2025-11-25 16:23:46] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
+[2025-11-25 16:23:49] Command cleared from JSON file.
