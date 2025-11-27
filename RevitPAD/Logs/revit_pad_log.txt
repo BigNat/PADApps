@@ -1,400 +1,93 @@
-[2025-11-27 00:55:41] Command Watcher active.
-[2025-11-27 00:56:01] Cached UIApplication
-[2025-11-27 00:56:01] Command received: stop_watcher
-[2025-11-27 00:56:01] Received stop_watcher command. Stopping loop.
-[2025-11-27 00:56:01] stop_watcher cleared from JSON file.
-[2025-11-27 00:56:01] Watcher loop stopping during sleep.
-[2025-11-27 01:06:01] Command Watcher active.
-[2025-11-27 01:06:31] Cached UIApplication
-[2025-11-27 01:06:32] Command received: stop_watcher
-[2025-11-27 01:06:32] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:06:32] Watcher lock file removed.
-[2025-11-27 01:06:32] stop_watcher cleared from JSON file.
-[2025-11-27 01:06:32] Watcher loop stopping during sleep.
-[2025-11-27 01:06:55] Command Watcher active.
-[2025-11-27 01:07:04] Cached UIApplication
-[2025-11-27 01:07:04] Command received: stop_watcher
-[2025-11-27 01:07:04] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:07:04] Watcher lock file removed.
-[2025-11-27 01:07:04] stop_watcher cleared from JSON file.
-[2025-11-27 01:07:04] Watcher loop stopping during sleep.
-[2025-11-27 01:09:00] Command Watcher active.
-[2025-11-27 01:09:07] Cached UIApplication
-[2025-11-27 01:09:07] Command received: export_sheets_to_json
-[2025-11-27 01:09:07] IMPORTING: export_sheets_to_json
-[2025-11-27 01:09:07] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:09:07] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:09:10] Command cleared from JSON file.
-[2025-11-27 01:12:28] Command received: export_sheets_to_pdf
-[2025-11-27 01:12:28] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:12:28] ⚠ Command failed (export_sheets_to_pdf): Cannot import name Autodesk
-[2025-11-27 01:14:00] Command received: stop_watcher
-[2025-11-27 01:14:00] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:14:00] Watcher lock file removed.
-[2025-11-27 01:14:00] stop_watcher cleared from JSON file.
-[2025-11-27 01:14:00] Watcher loop stopping during sleep.
-[2025-11-27 01:14:21] Command Watcher active.
-[2025-11-27 01:14:21] Cached UIApplication
-[2025-11-27 01:14:21] Command received: export_sheets_to_json
-[2025-11-27 01:14:21] IMPORTING: export_sheets_to_json
-[2025-11-27 01:14:21] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:14:21] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:14:23] Command cleared from JSON file.
-[2025-11-27 01:14:27] Command received: export_sheets_to_pdf
-[2025-11-27 01:14:27] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:14:27] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:14:27] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:14:27] Sheets to export: 1
-[2025-11-27 01:14:27] 💥 Error in export_sheets_to_pdf: CombinedFile property cannot be set to false when the Print Range is Current/Visible!
-[2025-11-27 01:14:27] Command cleared from JSON file.
-[2025-11-27 01:14:33] Command received: export_sheets_to_json
-[2025-11-27 01:14:33] IMPORTING: export_sheets_to_json
-[2025-11-27 01:14:33] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:14:33] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:14:34] Command cleared from JSON file.
-[2025-11-27 01:14:39] Command received: export_sheets_to_pdf
-[2025-11-27 01:14:39] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:14:39] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:14:39] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:14:39] Sheets to export: 1
-[2025-11-27 01:14:39] 💥 Error in export_sheets_to_pdf: CombinedFile property cannot be set to false when the Print Range is Current/Visible!
-[2025-11-27 01:14:39] Command cleared from JSON file.
-[2025-11-27 01:16:43] Command received: export_sheets_to_json
-[2025-11-27 01:16:43] IMPORTING: export_sheets_to_json
-[2025-11-27 01:16:43] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:16:43] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:16:44] Command cleared from JSON file.
-[2025-11-27 01:16:52] Command received: export_sheets_to_pdf
-[2025-11-27 01:16:52] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:16:52] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:16:52] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:16:52] Sheets to export: 1
-[2025-11-27 01:16:52] → Exporting PDF: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:17:59] ✔ PDF Exported: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:17:59] PDF Export Complete → 1 files
-C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:17:59] Command cleared from JSON file.
-[2025-11-27 01:25:22] Command received: export_sheets_to_json
-[2025-11-27 01:25:22] IMPORTING: export_sheets_to_json
-[2025-11-27 01:25:22] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:25:22] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:25:31] Command cleared from JSON file.
-[2025-11-27 01:26:57] Command received: stop_watcher
-[2025-11-27 01:26:57] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:26:57] Watcher lock file removed.
-[2025-11-27 01:26:57] stop_watcher cleared from JSON file.
-[2025-11-27 01:26:57] Watcher loop stopping during sleep.
-[2025-11-27 01:27:05] Command Watcher active.
-[2025-11-27 01:27:05] Cached UIApplication
-[2025-11-27 01:27:05] Command received: export_sheets_to_json
-[2025-11-27 01:27:05] IMPORTING: export_sheets_to_json
-[2025-11-27 01:27:05] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:27:05] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:27:07] Command cleared from JSON file.
-[2025-11-27 01:27:17] Command received: export_sheets_to_pdf
-[2025-11-27 01:27:17] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:27:17] ⚠ Command failed (export_sheets_to_pdf): invalid syntax
-[2025-11-27 01:30:12] Command received: export_sheets_to_json
-[2025-11-27 01:30:12] IMPORTING: export_sheets_to_json
-[2025-11-27 01:30:12] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:30:12] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:30:19] Command cleared from JSON file.
-[2025-11-27 01:30:25] Command received: export_sheets_to_pdf
-[2025-11-27 01:30:25] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:30:25] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:30:25] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:30:25] Sheets to export: 1
-[2025-11-27 01:30:25] → Exporting PDF: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:30:53] ✔ PDF Exported: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:30:53] PDF Export complete: 1 files
-C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:30:56] Command cleared from JSON file.
-[2025-11-27 01:37:09] Command received: export_sheets_to_json
-[2025-11-27 01:37:09] IMPORTING: export_sheets_to_json
-[2025-11-27 01:37:09] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:37:09] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:37:11] Command cleared from JSON file.
-[2025-11-27 01:37:15] Command received: export_sheets_to_pdf
-[2025-11-27 01:37:15] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:37:15] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:37:15] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:37:15] Sheets to export: 1
-[2025-11-27 01:37:15] → Exporting PDF: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:37:43] ✔ PDF Exported: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:37:43] PDF Export complete: 1 files
-C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:37:46] Command cleared from JSON file.
-[2025-11-27 01:39:29] Command received: export_sheets_to_json
-[2025-11-27 01:39:29] IMPORTING: export_sheets_to_json
-[2025-11-27 01:39:29] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:39:29] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:39:38] Command cleared from JSON file.
-[2025-11-27 01:39:57] Command received: stop_watcher
-[2025-11-27 01:39:57] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:39:57] Watcher lock file removed.
-[2025-11-27 01:39:57] stop_watcher cleared from JSON file.
-[2025-11-27 01:39:57] Watcher loop stopping during sleep.
-[2025-11-27 01:40:07] Command Watcher active.
-[2025-11-27 01:40:07] Cached UIApplication
-[2025-11-27 01:40:07] Command received: export_sheets_to_json
-[2025-11-27 01:40:07] IMPORTING: export_sheets_to_json
-[2025-11-27 01:40:07] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:40:08] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:40:09] Command cleared from JSON file.
-[2025-11-27 01:40:14] Command received: export_sheets_to_pdf
-[2025-11-27 01:40:14] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:40:14] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:40:14] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:40:14] Sheets to export: 1
-[2025-11-27 01:40:14] → Exporting PDF: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:40:40] ✔ PDF Exported: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:40:40] PDF Export complete: 1 files
-C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:42:43] Command cleared from JSON file.
-[2025-11-27 01:44:40] Command received: stop_watcher
-[2025-11-27 01:44:40] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:44:40] Watcher lock file removed.
-[2025-11-27 01:44:40] stop_watcher cleared from JSON file.
-[2025-11-27 01:44:40] Watcher loop stopping during sleep.
-[2025-11-27 01:45:00] Command Watcher active.
-[2025-11-27 01:45:00] Cached UIApplication
-[2025-11-27 01:45:00] Command received: export_sheets_to_json
-[2025-11-27 01:45:00] IMPORTING: export_sheets_to_json
-[2025-11-27 01:45:00] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:45:00] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:45:02] Command cleared from JSON file.
-[2025-11-27 01:45:10] Command received: export_sheets_to_pdf
-[2025-11-27 01:45:10] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:45:10] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:45:10] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:45:10] Sheet IDs: [1522428]
-[2025-11-27 01:45:10] Filtered sheets count = 1
-[2025-11-27 01:45:10] → Exporting: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:45:10] 💥 Error in export_sheets_to_pdf: global name 'Autodesk' is not defined
-[2025-11-27 01:45:16] Command cleared from JSON file.
-[2025-11-27 01:47:24] Command received: export_sheets_to_json
-[2025-11-27 01:47:24] IMPORTING: export_sheets_to_json
-[2025-11-27 01:47:24] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:47:24] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:47:29] Command cleared from JSON file.
-[2025-11-27 01:47:33] Command received: export_sheets_to_pdf
-[2025-11-27 01:47:33] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:47:33] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:47:33] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:47:33] Sheet IDs: [1522428]
-[2025-11-27 01:47:33] Filtered sheets count = 1
-[2025-11-27 01:47:33] → Exporting: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:48:27] ✔ Exported: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:48:27] PDF Export complete → 1 files exported
-[2025-11-27 01:48:31] Command cleared from JSON file.
-[2025-11-27 01:52:23] Command received: export_sheets_to_json
-[2025-11-27 01:52:23] IMPORTING: export_sheets_to_json
-[2025-11-27 01:52:23] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:52:23] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:52:26] Command cleared from JSON file.
-[2025-11-27 01:52:35] Command received: export_sheets_to_pdf
-[2025-11-27 01:52:35] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:52:35] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:52:35] Reload warning: Cannot import name ViewSheetSetElement
-[2025-11-27 01:52:35] Starting export_sheets_to_pdf → C:\PADApps\RevitPAD\ExportsPDF
-[2025-11-27 01:52:35] Sheet IDs: [1522428]
-[2025-11-27 01:52:35] Filtered sheets count = 1
-[2025-11-27 01:52:35] → Exporting: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:53:03] ✔ Exported: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 01:53:03] PDF Export complete → 1 files exported
-[2025-11-27 01:53:19] Command cleared from JSON file.
-[2025-11-27 01:55:43] Command received: export_sheets_to_json
-[2025-11-27 01:55:43] IMPORTING: export_sheets_to_json
-[2025-11-27 01:55:43] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:55:43] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:55:48] Command cleared from JSON file.
-[2025-11-27 01:56:11] Command received: stop_watcher
-[2025-11-27 01:56:11] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:56:11] Watcher lock file removed.
-[2025-11-27 01:56:11] stop_watcher cleared from JSON file.
-[2025-11-27 01:56:11] Watcher loop stopping during sleep.
-[2025-11-27 01:56:20] Command Watcher active.
-[2025-11-27 01:56:20] Cached UIApplication
-[2025-11-27 01:56:20] Command received: export_sheets_to_json
-[2025-11-27 01:56:20] IMPORTING: export_sheets_to_json
-[2025-11-27 01:56:20] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:56:20] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:56:21] Command cleared from JSON file.
-[2025-11-27 01:56:26] Command received: export_sheets_to_pdf
-[2025-11-27 01:56:26] IMPORTING: export_sheets_to_pdf
-[2025-11-27 01:56:26] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 01:56:26] Starting PRINT-CURRENT-WINDOW workflow
-[2025-11-27 01:56:26] Sheet IDs: [1522428]
-[2025-11-27 01:56:26] Matched sheets: 1
-[2025-11-27 01:56:26] ERROR: Cannot change the active view of a modifiable document (with a transaction curently open).
-[2025-11-27 01:56:38] Command cleared from JSON file.
-[2025-11-27 01:58:09] Command received: export_sheets_to_json
-[2025-11-27 01:58:09] IMPORTING: export_sheets_to_json
-[2025-11-27 01:58:09] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:58:09] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:58:14] Command cleared from JSON file.
-[2025-11-27 01:58:43] Command received: stop_watcher
-[2025-11-27 01:58:43] Received stop_watcher command. Stopping loop.
-[2025-11-27 01:58:43] Watcher lock file removed.
-[2025-11-27 01:58:43] stop_watcher cleared from JSON file.
-[2025-11-27 01:58:43] Watcher loop stopping during sleep.
-[2025-11-27 01:58:50] Command Watcher active.
-[2025-11-27 01:58:50] Cached UIApplication
-[2025-11-27 01:58:50] Command received: export_sheets_to_json
-[2025-11-27 01:58:50] IMPORTING: export_sheets_to_json
-[2025-11-27 01:58:50] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 01:58:50] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 01:58:55] Command cleared from JSON file.
-[2025-11-27 01:59:27] Command received: export_sheets_to_cad
-[2025-11-27 01:59:27] IMPORTING: export_sheets_to_cad
-[2025-11-27 01:59:28] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-27 01:59:28] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-27 01:59:28] Format: dwg | Sheets: 0
-[2025-11-27 01:59:30] Exported: C:\PADApps\RevitPAD\Exports\P100_PLAN-L0SANITARY.dwg
-[2025-11-27 01:59:31] Exported: C:\PADApps\RevitPAD\Exports\P101_PLAN-L1SANITARY.dwg
-[2025-11-27 01:59:32] Exported: C:\PADApps\RevitPAD\Exports\P102_PLAN-L2SANITARY.dwg
-[2025-11-27 01:59:34] Exported: C:\PADApps\RevitPAD\Exports\P103_PLAN-L3SANITARY.dwg
-[2025-11-27 01:59:35] Exported: C:\PADApps\RevitPAD\Exports\P104_PLAN-L4SANITARY.dwg
-[2025-11-27 01:59:36] Exported: C:\PADApps\RevitPAD\Exports\P105_PLAN-L5SANITARY.dwg
-[2025-11-27 01:59:38] Exported: C:\PADApps\RevitPAD\Exports\P106_PLAN-ROOFSANITARY.dwg
-[2025-11-27 01:59:40] Exported: C:\PADApps\RevitPAD\Exports\P200_RCP-L0SANITARY.dwg
-[2025-11-27 01:59:42] Exported: C:\PADApps\RevitPAD\Exports\P201_RCP-L1SANITARY.dwg
-[2025-11-27 01:59:43] Exported: C:\PADApps\RevitPAD\Exports\P202_RCP-L2SANITARY.dwg
-[2025-11-27 01:59:45] Exported: C:\PADApps\RevitPAD\Exports\P203_RCP-L3SANITARY.dwg
-[2025-11-27 01:59:53] Exported: C:\PADApps\RevitPAD\Exports\P204_RCP-L4SANITARY.dwg
-[2025-11-27 02:00:04] Exported: C:\PADApps\RevitPAD\Exports\P205_RCP-L5SANITARY.dwg
-[2025-11-27 02:00:11] Exported: C:\PADApps\RevitPAD\Exports\P206_RCP-ROOFSANITARY.dwg
-[2025-11-27 02:00:17] Exported: C:\PADApps\RevitPAD\Exports\P300_SECTIONSSANITARYRISERS.dwg
-[2025-11-27 02:00:27] Exported: C:\PADApps\RevitPAD\Exports\P302_SECTIONSSANITARYRISERS.dwg
-[2025-11-27 02:00:34] Exported: C:\PADApps\RevitPAD\Exports\P400_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-27 02:00:35] Exported: C:\PADApps\RevitPAD\Exports\P401_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-27 02:00:37] Exported: C:\PADApps\RevitPAD\Exports\P402_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-27 02:00:39] Exported: C:\PADApps\RevitPAD\Exports\P403_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-27 02:00:40] Exported: C:\PADApps\RevitPAD\Exports\P404_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-27 02:00:43] Exported: C:\PADApps\RevitPAD\Exports\P405_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-27 02:00:45] Exported: C:\PADApps\RevitPAD\Exports\P406_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-27 02:09:00] Command Watcher active.
-[2025-11-27 02:09:00] Cached UIApplication
-[2025-11-27 02:09:00] Command received: stop_watcher
-[2025-11-27 02:09:00] Received stop_watcher command. Stopping loop.
-[2025-11-27 02:09:00] Watcher lock file removed.
-[2025-11-27 02:09:00] stop_watcher cleared from JSON file.
-[2025-11-27 02:09:00] Watcher loop stopping during sleep.
-[2025-11-27 02:10:41] Command Watcher active.
-[2025-11-27 02:12:49] Cached UIApplication
-[2025-11-27 02:12:50] Command received: stop_watcher
-[2025-11-27 02:12:50] Received stop_watcher command. Stopping loop.
-[2025-11-27 02:12:50] Watcher lock file removed.
-[2025-11-27 02:12:50] stop_watcher cleared from JSON file.
-[2025-11-27 02:12:50] Watcher loop stopping during sleep.
-[2025-11-27 02:12:56] Command Watcher active.
-[2025-11-27 02:12:56] Cached UIApplication
-[2025-11-27 02:12:56] Command received: export_sheets_to_json
-[2025-11-27 02:12:56] IMPORTING: export_sheets_to_json
-[2025-11-27 02:12:56] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 02:12:56] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 02:12:58] Command cleared from JSON file.
-[2025-11-27 02:15:45] Command received: export_sheets_to_pdf
-[2025-11-27 02:15:45] IMPORTING: export_sheets_to_pdf
-[2025-11-27 02:15:45] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 02:15:45] PRINT-CURRENT-WINDOW mode started
-[2025-11-27 02:15:45] Sheet IDs received: [1522428]
-[2025-11-27 02:15:45] Filtered sheets = 1
-[2025-11-27 02:15:45] → Activating sheet P100
-[2025-11-27 02:15:45] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 02:15:46] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
-[2025-11-27 02:15:46] PDF Export complete → 1 files
-[2025-11-27 02:15:49] Command cleared from JSON file.
-[2025-11-27 02:16:15] Command received: export_sheets_to_json
-[2025-11-27 02:16:15] IMPORTING: export_sheets_to_json
-[2025-11-27 02:16:15] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 02:16:15] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 02:16:17] Command cleared from JSON file.
-[2025-11-27 02:16:30] Command received: export_sheets_to_pdf
-[2025-11-27 02:16:30] IMPORTING: export_sheets_to_pdf
-[2025-11-27 02:16:30] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 02:16:30] PRINT-CURRENT-WINDOW mode started
-[2025-11-27 02:16:30] Sheet IDs received: [1523179]
-[2025-11-27 02:16:30] Filtered sheets = 1
-[2025-11-27 02:16:30] → Activating sheet P103
-[2025-11-27 02:16:31] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P103_PLAN-L3SANITARY.pdf
-[2025-11-27 02:16:31] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P103_PLAN-L3SANITARY.pdf
-[2025-11-27 02:16:31] PDF Export complete → 1 files
-[2025-11-27 02:16:33] Command cleared from JSON file.
-[2025-11-27 02:18:57] Command received: export_sheets_to_json
-[2025-11-27 02:18:57] IMPORTING: export_sheets_to_json
-[2025-11-27 02:18:57] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 02:18:57] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 02:19:03] Command cleared from JSON file.
-[2025-11-27 02:19:09] Command received: export_sheets_to_pdf
-[2025-11-27 02:19:09] IMPORTING: export_sheets_to_pdf
-[2025-11-27 02:19:09] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 02:19:09] PRINT-CURRENT-WINDOW mode started
-[2025-11-27 02:19:09] Sheet IDs received: [1523229]
-[2025-11-27 02:19:09] Filtered sheets = 1
-[2025-11-27 02:19:09] → Activating sheet P105
-[2025-11-27 02:19:10] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P105_PLAN-L5SANITARY.pdf
-[2025-11-27 02:19:10] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P105_PLAN-L5SANITARY.pdf
-[2025-11-27 02:19:10] PDF Export complete → 1 files
-[2025-11-27 02:19:12] Command cleared from JSON file.
-[2025-11-27 02:19:59] Command received: stop_watcher
-[2025-11-27 02:19:59] Received stop_watcher command. Stopping loop.
-[2025-11-27 02:19:59] Watcher lock file removed.
-[2025-11-27 02:19:59] stop_watcher cleared from JSON file.
-[2025-11-27 02:19:59] Watcher loop stopping during sleep.
-[2025-11-27 02:20:07] Command Watcher active.
-[2025-11-27 02:20:07] Cached UIApplication
-[2025-11-27 02:20:07] Command received: export_sheets_to_json
-[2025-11-27 02:20:07] IMPORTING: export_sheets_to_json
-[2025-11-27 02:20:07] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 02:20:07] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 02:20:09] Command cleared from JSON file.
-[2025-11-27 02:20:13] Command received: export_sheets_to_json
-[2025-11-27 02:20:13] IMPORTING: export_sheets_to_json
-[2025-11-27 02:20:13] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_json.py
-[2025-11-27 02:20:13] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-27 02:20:14] Command cleared from JSON file.
-[2025-11-27 02:20:22] Command received: export_sheets_to_pdf
-[2025-11-27 02:20:22] IMPORTING: export_sheets_to_pdf
-[2025-11-27 02:20:22] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 02:20:22] PRINT-CURRENT-WINDOW mode started
-[2025-11-27 02:20:22] Sheet IDs received: [1526300]
-[2025-11-27 02:20:22] Filtered sheets = 1
-[2025-11-27 02:20:22] → Activating sheet P300
-[2025-11-27 02:20:22] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
-[2025-11-27 02:20:23] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
-[2025-11-27 02:20:23] PDF Export complete → 1 files
-[2025-11-27 02:20:25] Command cleared from JSON file.
-[2025-11-27 02:20:31] Command received: export_sheets_to_pdf
-[2025-11-27 02:20:31] IMPORTING: export_sheets_to_pdf
-[2025-11-27 02:20:31] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 02:20:31] PRINT-CURRENT-WINDOW mode started
-[2025-11-27 02:20:31] Sheet IDs received: [1670486]
-[2025-11-27 02:20:31] Filtered sheets = 1
-[2025-11-27 02:20:31] → Activating sheet P405
-[2025-11-27 02:20:31] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P405_DOMESTICWATERPLAN-L0PARKING.pdf
-[2025-11-27 02:20:32] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P405_DOMESTICWATERPLAN-L0PARKING.pdf
-[2025-11-27 02:20:32] PDF Export complete → 1 files
-[2025-11-27 02:20:33] Command cleared from JSON file.
-[2025-11-27 02:20:40] Command received: export_sheets_to_pdf
-[2025-11-27 02:20:40] IMPORTING: export_sheets_to_pdf
-[2025-11-27 02:20:40] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 02:20:40] PRINT-CURRENT-WINDOW mode started
-[2025-11-27 02:20:40] Sheet IDs received: [1706262]
-[2025-11-27 02:20:40] Filtered sheets = 1
-[2025-11-27 02:20:40] → Activating sheet P000
-[2025-11-27 02:20:40] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P000_COVERSHEET.pdf
-[2025-11-27 02:20:41] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P000_COVERSHEET.pdf
-[2025-11-27 02:20:41] PDF Export complete → 1 files
-[2025-11-27 02:20:42] Command cleared from JSON file.
-[2025-11-27 02:20:49] Command received: export_sheets_to_pdf
-[2025-11-27 02:20:49] IMPORTING: export_sheets_to_pdf
-[2025-11-27 02:20:49] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
-[2025-11-27 02:20:49] PRINT-CURRENT-WINDOW mode started
-[2025-11-27 02:20:49] Sheet IDs received: [1523669]
-[2025-11-27 02:20:49] Filtered sheets = 1
-[2025-11-27 02:20:49] → Activating sheet P206
-[2025-11-27 02:20:49] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P206_RCP-ROOFSANITARY.pdf
-[2025-11-27 02:20:50] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P206_RCP-ROOFSANITARY.pdf
-[2025-11-27 02:20:50] PDF Export complete → 1 files
-[2025-11-27 02:20:51] Command cleared from JSON file.
+[2025-11-27 23:21:29] Command received: get-sheet-data
+[2025-11-27 23:21:29] IMPORTING: get_sheet_data
+[2025-11-27 23:21:29] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:21:29] Returned sheet data: 27 sheets
+[2025-11-27 23:21:29] Command cleared from JSON file.
+[2025-11-27 23:21:33] Command received: get-model-path
+[2025-11-27 23:21:33] IMPORTING: get_model_path
+[2025-11-27 23:21:33] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:21:33] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:21:33] Command cleared from JSON file.
+[2025-11-27 23:21:36] Command received: export_sheets_to_pdf
+[2025-11-27 23:21:36] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:21:36] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:21:36] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:21:36] Sheet IDs received: [1522428]
+[2025-11-27 23:21:36] Filtered sheets = 1
+[2025-11-27 23:21:36] → Activating sheet P100
+[2025-11-27 23:21:40] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:21:40] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:21:40] PDF Export complete → 1 files
+[2025-11-27 23:21:42] Command cleared from JSON file.
+[2025-11-27 23:27:38] Command received: get-sheet-data
+[2025-11-27 23:27:38] IMPORTING: get_sheet_data
+[2025-11-27 23:27:38] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:27:38] Returned sheet data: 27 sheets
+[2025-11-27 23:27:38] Command cleared from JSON file.
+[2025-11-27 23:27:41] Command received: get-model-path
+[2025-11-27 23:27:41] IMPORTING: get_model_path
+[2025-11-27 23:27:41] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:27:41] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:27:41] Command cleared from JSON file.
+[2025-11-27 23:27:44] Command received: export_sheets_to_pdf
+[2025-11-27 23:27:44] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:27:44] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:27:44] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:27:44] Sheet IDs received: [1522428]
+[2025-11-27 23:27:45] Filtered sheets = 1
+[2025-11-27 23:27:45] → Activating sheet P100
+[2025-11-27 23:27:45] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:27:47] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:27:47] PDF Export complete → 1 files
+[2025-11-27 23:27:50] Command cleared from JSON file.
+[2025-11-27 23:28:03] Command received: get-sheet-data
+[2025-11-27 23:28:03] IMPORTING: get_sheet_data
+[2025-11-27 23:28:03] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:28:03] Returned sheet data: 27 sheets
+[2025-11-27 23:28:03] Command cleared from JSON file.
+[2025-11-27 23:28:06] Command received: get-model-path
+[2025-11-27 23:28:06] IMPORTING: get_model_path
+[2025-11-27 23:28:06] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:28:06] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:28:06] Command cleared from JSON file.
+[2025-11-27 23:28:09] Command received: export_sheets_to_pdf
+[2025-11-27 23:28:09] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:28:09] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:28:09] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:28:09] Sheet IDs received: [1523229]
+[2025-11-27 23:28:09] Filtered sheets = 1
+[2025-11-27 23:28:09] → Activating sheet P105
+[2025-11-27 23:28:09] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P105_PLAN-L5SANITARY.pdf
+[2025-11-27 23:28:10] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P105_PLAN-L5SANITARY.pdf
+[2025-11-27 23:28:10] PDF Export complete → 1 files
+[2025-11-27 23:28:11] Command cleared from JSON file.
+[2025-11-27 23:31:57] Command received: get-sheet-data
+[2025-11-27 23:31:57] IMPORTING: get_sheet_data
+[2025-11-27 23:31:57] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:31:57] Returned sheet data: 27 sheets
+[2025-11-27 23:31:57] Command cleared from JSON file.
+[2025-11-27 23:32:03] Command received: get-model-path
+[2025-11-27 23:32:03] IMPORTING: get_model_path
+[2025-11-27 23:32:03] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:32:03] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:32:03] Command cleared from JSON file.
+[2025-11-27 23:32:06] Command received: export_sheets_to_pdf
+[2025-11-27 23:32:06] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:32:06] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:32:06] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:32:06] Sheet IDs received: [1526300, 1526404, 1526802, 1526819]
+[2025-11-27 23:32:06] → Activating sheet P300
+[2025-11-27 23:32:07] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:07] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:07] → Activating sheet P301
+[2025-11-27 23:32:08] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P301_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:08] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P301_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:08] → Activating sheet P302
+[2025-11-27 23:32:09] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P302_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:09] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P302_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:09] → Activating sheet P303
+[2025-11-27 23:32:10] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P303_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:11] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P303_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:11] Response.json written.
+[2025-11-27 23:32:11] PDF Export complete → 4 files
+[2025-11-27 23:32:11] Command cleared from JSON file.
