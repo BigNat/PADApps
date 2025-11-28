@@ -51,19 +51,32 @@ HydrauliCAD\Tools\LightTable\Data\layers.json
 HydrauliCAD\Tools\LightTable\Data\search.json
 RevitPAD\___folder_snapshot.py.py
 RevitPAD\Bridge\revit_command.json
-RevitPAD\Bridge\revit_command_log.txt
+RevitPAD\Bridge\revit_heartbeat.json
 RevitPAD\commands\commands.json
 RevitPAD\commands\send_export_sheets_to_cad.py
 RevitPAD\commands\send_export_sheets_to_json.py
 RevitPAD\commands\send_start_watching.py
 RevitPAD\commands\send_stop_watching.py
 RevitPAD\commands\send_test_command.py
+RevitPAD\Core\commands\export_sheets_to_cad.py
+RevitPAD\Core\commands\export_sheets_to_pdf.py
+RevitPAD\Core\commands\export_views_to_nwc.py
+RevitPAD\Core\commands\open_view_by_id.py
+RevitPAD\Core\commands\test_command.py
+RevitPAD\Core\CommandWatcherHelper.py
+RevitPAD\Core\requests\get_3d_views.py
+RevitPAD\Core\requests\get_active_view.py
+RevitPAD\Core\requests\get_all_views.py
+RevitPAD\Core\requests\get_model_path.py
+RevitPAD\Core\requests\get_sheet_data.py
 RevitPAD\Data\current_tool.json
 RevitPAD\Data\current_tool_config.json
 RevitPAD\Data\data.json
+RevitPAD\Data\response.json
 RevitPAD\Data\tool_configs\All.json
 RevitPAD\Data\tool_configs\Design.json
 RevitPAD\Data\tool_configs\Set Up.json
+RevitPAD\Exports\Drawing_Schedule.txt
 RevitPAD\folder_structure.txt
 RevitPAD\Logs\revit_pad_log.txt
 RevitPAD\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_cad.py
@@ -4094,18 +4107,12 @@ if __name__ == "__main__":
 ################################################################################
 ### RevitPAD\Bridge\revit_command.json
 ################################################################################
-{
-  "command": "export_sheets_to_json"
-}
+{}
 
 ################################################################################
-### RevitPAD\Bridge\revit_command_log.txt
+### RevitPAD\Bridge\revit_heartbeat.json
 ################################################################################
-[2025-11-25 16:23:46] Command received: export_sheets_to_json
-[2025-11-25 16:23:46] IMPORTING: export_sheets_to_json
-[2025-11-25 16:23:46] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 16:23:46] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 16:23:49] Command cleared from JSON file.
+{"status": "alive", "timestamp": 1764334508.5565033}
 
 ################################################################################
 ### RevitPAD\commands\commands.json
@@ -4230,6 +4237,938 @@ print("Sent command: test_command")
 time.sleep(0.2)
 
 ################################################################################
+### RevitPAD\Core\commands\export_sheets_to_cad.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os, json, clr
+from pyrevit import forms
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    BuiltInCategory,
+    ViewSheet,
+    DWGExportOptions,
+    DXFExportOptions,
+    ElementId
+)
+
+# Add System.Collections.Generic for List[ElementId]
+clr.AddReference("System")
+from System.Collections.Generic import List
+
+# --------------------------------------------------------------------------
+# RESPONSE PATH
+# --------------------------------------------------------------------------
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def write_response(payload, log):
+    """Write response.json for DWG export (success or error)."""
+    try:
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(payload, f, indent=2)
+        log("DWG response.json written.")
+    except Exception as e:
+        log("ERROR writing DWG response.json: {}".format(e))
+
+
+# --------------------------------------------------------------------------
+# MAIN ENTRY POINT
+# --------------------------------------------------------------------------
+def run(uiapp, data, log):
+    """Exports selected Revit sheets to DWG or DXF and writes response.json."""
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+
+        # Extract parameters
+        sheet_ids = data.get("sheet_ids", [])
+        cad_format = data.get("cad_format", "dwg").lower()
+        export_path = data.get("path", r"C:\PADApps\RevitPAD\ExportsDWG")
+
+        if not os.path.exists(export_path):
+            os.makedirs(export_path)
+
+        log("Starting export_sheets_to_cad -> {}".format(export_path))
+        log("Format: {} | Sheets: {}".format(cad_format, len(sheet_ids)))
+
+        # Choose export options
+        if cad_format == "dxf":
+            options = DXFExportOptions()
+        else:
+            options = DWGExportOptions()
+
+        # Options cleanup & safety
+        try: options.ExportViewsAsExternalReferences = False
+        except: pass
+        try: options.MergedViews = True
+        except: pass
+        try: options.SharedCoords = False
+        except: pass
+        try: options.ExportingAreas = False
+        except: pass
+
+        # Collect sheets
+        all_sheets = FilteredElementCollector(doc).OfCategory(BuiltInCategory.OST_Sheets)
+
+        if not sheet_ids:
+            export_sheets = all_sheets
+        else:
+            export_sheets = [s for s in all_sheets if s.Id.IntegerValue in sheet_ids]
+
+        if not export_sheets:
+            msg = "No matching sheets found for DWG export."
+            log(msg)
+            write_response({"error": msg}, log)
+            return
+
+        exported = []
+
+        # ----------------------------------------------------------------------
+        # EXPORT LOOP
+        # ----------------------------------------------------------------------
+        for sheet in export_sheets:
+            try:
+                sheetnum = sheet.SheetNumber
+                sheetname = sheet.Name
+
+                # Safe filename
+                combined = "{}_{}".format(sheetnum, sheetname)
+                safe_name = "".join([c for c in combined if c.isalnum() or c in ("_", "-")])
+
+                views = List[ElementId]([sheet.Id])
+                result = doc.Export(export_path, safe_name, views, options)
+
+                if result:
+                    file_path = os.path.join(export_path, safe_name + "." + cad_format)
+                    exported.append(file_path)
+                    log("Exported: {}".format(file_path))
+
+            except Exception as e:
+                log("Failed to export sheet {}: {}".format(sheet.SheetNumber, e))
+
+        # ----------------------------------------------------------------------
+        # WRITE SUCCESS RESPONSE
+        # ----------------------------------------------------------------------
+        payload = {
+            "status": "ok",
+            "exported_count": len(exported),
+            "exported_files": exported
+        }
+
+        write_response(payload, log)
+        log("DWG Export complete: {} files".format(len(exported)))
+
+    except Exception as e:
+        err = "DWG Export error: {}".format(e)
+        log(err)
+        write_response({"error": err}, log)
+
+################################################################################
+### RevitPAD\Core\commands\export_sheets_to_pdf.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+from pyrevit import forms
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    BuiltInCategory,
+    PrintRange
+)
+
+PDF_DRIVER = "PDFCreator"
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def write_response(payload, log):
+    """Write ONLY error responses from Revit."""
+    try:
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(payload, f, indent=2)
+        log("Response.json written.")
+    except Exception as e:
+        log("ERROR writing response.json: {}".format(e))
+
+
+def run(uiapp, data, log):
+    """
+    Export sheets to PDF.
+    NOTE:
+        • NO success response is written.
+        • BlueTree will detect, move, and write the final response.
+    """
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+
+        # ---------------------------------------------------
+        # Incoming request data
+        # ---------------------------------------------------
+        sheet_ids = data.get("sheet_ids", [])
+        export_path = data.get("path", r"C:\PADApps\RevitPAD\ExportsPDF")
+
+        if not os.path.exists(export_path):
+            os.makedirs(export_path)
+
+        if not sheet_ids:
+            msg = "No sheet_ids passed to export_sheets_to_pdf"
+            log(msg)
+            write_response({"error": msg}, log)
+            return
+
+        log("PRINT-CURRENT-WINDOW mode started")
+        log("Sheet IDs received: {}".format(sheet_ids))
+
+        # ---------------------------------------------------
+        # Collect matching sheets
+        # ---------------------------------------------------
+        collector = (
+            FilteredElementCollector(doc)
+            .OfCategory(BuiltInCategory.OST_Sheets)
+            .WhereElementIsNotElementType()
+        )
+
+        sheets = [s for s in collector if s.Id.IntegerValue in sheet_ids]
+
+        if not sheets:
+            msg = "No valid sheets found for provided IDs."
+            log(msg)
+            write_response({"error": msg}, log)
+            return
+
+        # ---------------------------------------------------
+        # Configure PDF print driver
+        # ---------------------------------------------------
+        pm = doc.PrintManager
+        pm.SelectNewPrintDriver(PDF_DRIVER)
+        pm.PrintToFile = True
+        pm.PrintRange = PrintRange.Current
+
+        # ---------------------------------------------------
+        # Loop — one sheet per file
+        # (PDFCreator overrides the filename)
+        # ---------------------------------------------------
+        for sheet in sheets:
+            log("→ Activating sheet {}".format(sheet.SheetNumber))
+
+            uidoc.ActiveView = sheet
+
+            num = sheet.SheetNumber
+            name = sheet.Name
+            combined = "{}_{}".format(num, name)
+            safe = "".join([c for c in combined if c.isalnum() or c in ("_", "-")])
+
+            out_file = os.path.join(export_path, safe + ".pdf")
+            log("→ Printing to: {}".format(out_file))
+
+            pm.PrintToFileName = out_file
+            pm.Apply()
+            pm.SubmitPrint()
+
+            log("✔ Printed (PDFCreator may rename): {}".format(out_file))
+
+        # ---------------------------------------------------
+        # IMPORTANT:
+        # NO SUCCESS RESPONSE WRITTEN HERE.
+        # BlueTree detects and moves the files,
+        # then generates the REAL response with correct paths.
+        # ---------------------------------------------------
+
+    except Exception as e:
+        err = "PDF Export error: {}".format(e)
+        log(err)
+        write_response({"error": err}, log)
+
+################################################################################
+### RevitPAD\Core\commands\export_views_to_nwc.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os, json, clr
+from pyrevit import forms
+from Autodesk.Revit.DB import View
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    BuiltInCategory,
+    ElementId,
+    NavisworksExportOptions,
+    NavisworksExportScope,
+    NavisworksCoordinates
+)
+
+# Add System.Collections.Generic for List[ElementId]
+clr.AddReference("System")
+from System.Collections.Generic import List
+
+# --------------------------------------------------------------------------
+# RESPONSE PATH
+# --------------------------------------------------------------------------
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def write_response(payload, log):
+    """Write response.json for NWC export (success or error)."""
+    try:
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(payload, f, indent=2)
+        log("NWC response.json written.")
+    except Exception as e:
+        log("ERROR writing NWC response.json: {}".format(e))
+
+
+# --------------------------------------------------------------------------
+# MAIN ENTRY POINT
+# --------------------------------------------------------------------------
+def run(uiapp, data, log):
+    """Exports selected Revit views to NWC and writes response.json."""
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+
+        # Extract parameters
+        view_ids = data.get("view_ids", [])
+        export_path = data.get("path", r"C:\PADApps\RevitPAD\ExportsNWC")
+
+        if not os.path.exists(export_path):
+            os.makedirs(export_path)
+
+        log("Starting export_views_to_nwc -> {}".format(export_path))
+        log("Views: {}".format(len(view_ids)))
+
+        # Collect all views
+        all_views = FilteredElementCollector(doc).OfClass(View)
+
+
+        if not view_ids:
+            export_views = all_views
+        else:
+            export_views = [v for v in all_views if v.Id.IntegerValue in view_ids]
+
+        if not export_views:
+            msg = "No matching views found for NWC export."
+            log(msg)
+            write_response({"error": msg}, log)
+            return
+
+        exported = []
+
+        # ----------------------------------------------------------------------
+        # EXPORT LOOP
+        # ----------------------------------------------------------------------
+        for view in export_views:
+            try:
+                viewname = view.Name
+                viewnum = view.Id.IntegerValue
+
+                # Safe filename
+                combined = "{}_{}".format(viewnum, viewname)
+                safe_name = "".join([c for c in combined if c.isalnum() or c in ("_", "-")])
+
+                # Options
+                options = NavisworksExportOptions()
+                options.ExportScope = NavisworksExportScope.View
+                options.ViewId = view.Id
+                options.Coordinates = NavisworksCoordinates.Shared
+
+                try:
+                    options.ExportLinks = True
+                except:
+                    pass
+
+                # Export → always add .nwc suffix
+                result = doc.Export(export_path, safe_name, options)
+
+                file_path = os.path.join(export_path, safe_name + ".nwc")
+
+                # Navisworks exporter often returns False even on success, so check file existence
+                if os.path.exists(file_path):
+                    exported.append(file_path)
+                    log("Exported: {}".format(file_path))
+                else:
+                    log("⚠️ Export reported failure (return=False) but file not found.")
+
+            except Exception as e:
+                log("Failed to export view {}: {}".format(view.Id.IntegerValue, e))
+
+        # ----------------------------------------------------------------------
+        # WRITE SUCCESS RESPONSE
+        # ----------------------------------------------------------------------
+        payload = {
+            "status": "ok",
+            "exported_count": len(exported),
+            "exported_files": exported
+        }
+
+        write_response(payload, log)
+        log("NWC Export complete: {} files".format(len(exported)))
+
+    except Exception as e:
+        err = "NWC Export error: {}".format(e)
+        log(err)
+        write_response({"error": err}, log)
+
+################################################################################
+### RevitPAD\Core\commands\open_view_by_id.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+from Autodesk.Revit.DB import ElementId
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Opens a view in Revit by its element ID.
+    """
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+        view_id_int = data.get("id")
+
+        if not view_id_int:
+            raise Exception("Missing 'id' field for open-view-by-id")
+
+        # Correct creation of ElementId
+        eid = ElementId(view_id_int)
+        view_elem = doc.GetElement(eid)
+
+        if not view_elem:
+            raise Exception("No view found with id {0}".format(view_id_int))
+
+        # Switch active view
+        uiapp.ActiveUIDocument.ActiveView = view_elem
+
+        result = {
+            "status": "ok",
+            "opened_view_id": view_id_int,
+            "opened_view_name": view_elem.Name
+        }
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Opened view id {0}: {1}".format(view_id_int, view_elem.Name))
+
+    except Exception as e:
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+        log("Error in open_view_by_id: {0}".format(e))
+
+################################################################################
+### RevitPAD\Core\commands\test_command.py
+################################################################################
+
+from Autodesk.Revit.UI import TaskDialog
+
+def run(uiapp, data, log):
+    try:
+        log("Running TEST COMMAND")
+        TaskDialog.Show("Test Command", "Test command executed successfully.")  
+        log("Test command completed.")
+    except Exception as e:
+        log("Test command error: {0}".format(e))
+
+################################################################################
+### RevitPAD\Core\CommandWatcherHelper.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import sys
+import time
+import threading
+import json
+import importlib
+from pyrevit import forms
+from Autodesk.Revit.UI import IExternalEventHandler
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+BRIDGE_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Bridge")
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+LOG_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Logs")
+
+class CommandWatcherHandler(IExternalEventHandler):
+    """Revit command dispatcher that dynamically loads command modules."""
+
+    def __init__(self, watch_path):
+        self.uiapp_cached = None 
+        self.event_pending = False
+        self.watch_path = watch_path
+        self.last_mod_time = None
+        self.last_command = None
+
+
+        self.keep_running = True
+        base_dir = os.path.dirname(watch_path)
+        self.commands_dir = os.path.join(os.path.dirname(__file__), "commands")
+        self.requests_dir = os.path.join(os.path.dirname(__file__), "requests")
+
+
+
+
+        self.log_path = os.path.join(LOG_FOLDER, "revit_pad_log.txt")
+
+        # Ensure commands directory is in import path
+        if self.commands_dir not in sys.path:
+            sys.path.append(self.commands_dir)
+
+    def log(self, msg):
+        try:
+            ts = time.strftime("%Y-%m-%d %H:%M:%S")
+            with open(self.log_path, "ab") as f:
+                f.write(u"[{0}] {1}\n".format(ts, msg).encode("utf-8", "replace"))
+        except Exception:
+            pass
+
+    def Execute(self, uiapp):
+
+        try:
+            if not os.path.exists(self.watch_path):
+                return
+            
+            if os.path.getsize(self.watch_path) < 5:
+                return
+                
+            if self.uiapp_cached is None:
+                self.uiapp_cached = uiapp
+                self.log("Cached UIApplication")
+
+            mod_time = os.path.getmtime(self.watch_path)
+            if mod_time == self.last_mod_time:
+                return
+            self.last_mod_time = mod_time
+
+            # --- wait for writer to finish ---
+            for _ in range(10):
+                if os.path.getsize(self.watch_path) > 5:
+                    break
+                time.sleep(0.05)
+
+            
+
+            with open(self.watch_path, "r") as f:
+                data = json.load(f)
+
+            cmd = (data.get("command") or data.get("request") or "").strip()
+            if not cmd or cmd == self.last_command:
+                return
+
+            self.last_command = cmd
+            self.log("Command received: {0}".format(cmd))
+            self.run_command(cmd, uiapp, data)
+
+        except Exception as e:
+            self.log("Error in Execute: {0}".format(e))
+
+        finally:
+            self.event_pending = False
+
+
+    def run_command(self, cmd, uiapp, data):
+        
+
+        try:
+            if cmd == "stop_watcher":
+                self.log("Received stop_watcher command. Stopping loop.")
+
+                # Remove the lock file
+                try:
+                    os.remove(os.path.join(BRIDGE_FOLDER, "watcher.lock"))
+                    self.log("Watcher lock file removed.")
+                except:
+                    pass
+
+                # Clear the command file to prevent reprocessing
+                try:
+                    with open(self.watch_path, "w") as f:
+                        f.write("{}")
+                    self.log("stop_watcher cleared from JSON file.")
+                except:
+                    self.log("Failed to clear stop_watcher from JSON file.")
+
+                # Reset last command so nothing lingers
+                self.last_command = None
+
+                # Stop the loop
+                self.keep_running = False
+                return
+
+
+            module_name = cmd.replace("-", "_")
+
+            if "request" in data:
+                module_path = self.requests_dir
+            else:
+                module_path = self.commands_dir
+
+            sys.path.append(module_path)
+
+            self.log("IMPORTING: {0}".format(module_name))
+            module = importlib.import_module(module_name)
+
+            self.log("LOADED FROM: {0}".format(getattr(module, "__file__", "UNKNOWN")))
+
+            # IronPython reload (Python 2 syntax)
+            try:
+                reload(module)
+            except Exception as e:
+                self.log("Reload warning: {0}".format(e))
+
+            if hasattr(module, "run"):
+                data["watch_path"] = self.watch_path
+                module.run(uiapp, data, self.log)
+
+                # NEW: clear file to stop repeats
+                try:
+                    with open(self.watch_path, "w") as f:
+                        f.write("{}")
+                    self.log("Command cleared from JSON file.")
+                except:
+                    self.log("Failed to clear command file.")
+
+                self.last_command = None
+
+        except Exception as e:
+            self.log("⚠ Command failed ({0}): {1}".format(cmd, e))
+            forms.alert("⚠ Command failed:\n{0}\n\n{1}".format(cmd, e),
+                        title="Command Watcher")
+
+
+    def GetName(self):
+        return "Command Watcher Event"
+
+    def start(self, ext_event, interval=3):
+
+        def loop():
+            time.sleep(5)
+            self.log("Command Watcher active.")
+
+            while True:
+                if not self.keep_running:
+                    self.log("Watcher loop exiting cleanly.")
+                    return  # <-- EXIT THREAD IMMEDIATELY
+
+                # HEARTBEAT
+                try:
+                    heartbeat_path = os.path.join(BRIDGE_FOLDER, "revit_heartbeat.json")
+                    with open(heartbeat_path, "w") as hb:
+                        hb.write(json.dumps({"timestamp": time.time(), "status": "alive"}))
+                except:
+                    pass
+
+                # Raise events
+                if not self.event_pending:
+                    self.event_pending = True
+                    try:
+                        ext_event.Raise()
+                    except:
+                        self.event_pending = False
+
+                # Short sleep for responsive shutdown
+                for _ in range(30):   # 30 × 0.1s = 3 seconds total
+                    if not self.keep_running:
+                        self.log("Watcher loop stopping during sleep.")
+                        return
+                    time.sleep(0.1)
+
+
+        t = threading.Thread(target=loop)
+        t.daemon = True
+        t.start()
+
+################################################################################
+### RevitPAD\Core\requests\get_3d_views.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    View3D
+)
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Returns all 3D views in the current Revit document.
+    Includes id, name, view type, and perspective flag.
+    """
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        views = []
+        collector = FilteredElementCollector(doc).OfClass(View3D)
+
+        for v in collector:
+            try:
+                # Skip templates
+                if v.IsTemplate:
+                    continue
+
+                views.append({
+                    "id": v.Id.IntegerValue,
+                    "name": v.Name,
+                    "is_perspective": bool(v.IsPerspective),
+                    "view_type": str(v.ViewType)
+                })
+            except Exception:
+                pass
+
+        result = {"views": views}
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Returned 3D views: {0}".format(len(views)))
+
+    except Exception as e:
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+        log("Error in get_3d_views: {0}".format(e))
+
+################################################################################
+### RevitPAD\Core\requests\get_active_view.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Returns information about the current active view in Revit.
+    """
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+        view = doc.ActiveView
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        result = {
+            "view_name": view.Name,
+            "view_id": view.Id.IntegerValue,
+            "view_type": str(view.ViewType)
+        }
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Returned active view information: {0}".format(view.Name))
+
+    except Exception as e:
+        # Return error in response.json
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+        log("Error in get_active_view: {0}".format(e))
+
+################################################################################
+### RevitPAD\Core\requests\get_all_views.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    View
+)
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Returns ALL non-template views in the model.
+    Grouped by general view type.
+    """
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        # Prepare container for grouping
+        views_by_type = {}
+
+        collector = FilteredElementCollector(doc).OfClass(View)
+
+        for v in collector:
+            try:
+                if v.IsTemplate:
+                    continue
+
+                vtype = str(v.ViewType)
+
+                if vtype not in views_by_type:
+                    views_by_type[vtype] = []
+
+                views_by_type[vtype].append({
+                    "id": v.Id.IntegerValue,
+                    "name": v.Name,
+                    "view_type": vtype
+                })
+
+            except Exception:
+                pass
+
+        result = {"views": views_by_type}
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Returned all views grouped by type.")
+
+    except Exception as e:
+        # Return error
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+        log("Error in get_all_views: {0}".format(e))
+
+################################################################################
+### RevitPAD\Core\requests\get_model_path.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os, json
+from Autodesk.Revit.DB import ModelPathUtils
+
+DATA_FOLDER = r"C:\PADApps\RevitPAD\Data"
+RESPONSE = os.path.join(DATA_FOLDER, "response.json")
+
+def run(uiapp, data, log):
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+
+        # Get absolute model path
+        model_path = doc.PathName
+
+        # Detect parent folder
+        parent = os.path.dirname(model_path) if model_path else ""
+
+        result = {
+            "model_path": model_path,
+            "parent_folder": parent,
+        }
+
+        # Persist response
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        with open(RESPONSE, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Returned model path → {0}".format(model_path))
+
+    except Exception as e:
+        log("Error in get_model_path: {0}".format(e))
+
+################################################################################
+### RevitPAD\Core\requests\get_sheet_data.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    BuiltInCategory,
+    BuiltInParameter,
+    Revision
+)
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Request handler: returns all Revit sheets and revision metadata.
+    Writes output to response.json for BlueTree to read.
+    """
+    try:
+        doc = uiapp.ActiveUIDocument.Document
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        sheets_out = []
+
+        collector = FilteredElementCollector(doc).OfCategory(
+            BuiltInCategory.OST_Sheets
+        )
+
+        for s in collector:
+            try:
+                # --- Current revision number ---
+                rev_param = s.get_Parameter(BuiltInParameter.SHEET_CURRENT_REVISION)
+                current_rev_num = rev_param.AsString() if rev_param else None
+                if not current_rev_num:
+                    current_rev_num = None
+
+                rev_desc = None
+                rev_date = None
+
+                # --- Match the Revision element ---
+                if current_rev_num:
+                    for rev_id in s.GetAllRevisionIds():
+                        rev = doc.GetElement(rev_id)
+                        if isinstance(rev, Revision) and rev.RevisionNumber == current_rev_num:
+                            rev_desc = rev.Description
+                            rev_date = rev.RevisionDate
+                            break
+
+                sheets_out.append({
+                    "id": s.Id.IntegerValue,
+                    "sheet_number": s.SheetNumber,
+                    "sheet_name": s.Name,
+                    "revision_number": current_rev_num,
+                    "revision_description": rev_desc,
+                    "revision_date": rev_date
+                })
+
+            except Exception:
+                pass
+
+        # --- Write request result ---
+        result = {"sheets": sheets_out}
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Returned sheet data: {0} sheets".format(len(sheets_out)))
+
+    except Exception as e:
+        log("Error in get_sheet_data: {0}".format(e))
+
+################################################################################
 ### RevitPAD\Data\current_tool.json
 ################################################################################
 {
@@ -4246,140 +5185,12 @@ time.sleep(0.2)
 ################################################################################
 ### RevitPAD\Data\data.json
 ################################################################################
-{
-  "sheets": [
-    {
-      "sheet_number": "E100", 
-      "id": 1391108, 
-      "sheet_name": "POWER PLAN PARKING"
-    }, 
-    {
-      "sheet_number": "E101", 
-      "id": 1391123, 
-      "sheet_name": "POWER PLAN L1"
-    }, 
-    {
-      "sheet_number": "E102", 
-      "id": 1391147, 
-      "sheet_name": "POWER PLAN L2"
-    }, 
-    {
-      "sheet_number": "E103", 
-      "id": 1391171, 
-      "sheet_name": "POWER PLAN L3"
-    }, 
-    {
-      "sheet_number": "E104", 
-      "id": 1391195, 
-      "sheet_name": "POWER PLAN L4"
-    }, 
-    {
-      "sheet_number": "E105", 
-      "id": 1391219, 
-      "sheet_name": "POWER PLAN L5"
-    }, 
-    {
-      "sheet_number": "E200", 
-      "id": 1391243, 
-      "sheet_name": "LIGHTING PLAN PARKING"
-    }, 
-    {
-      "sheet_number": "E201", 
-      "id": 1391267, 
-      "sheet_name": "LIGHTING PLAN L1"
-    }, 
-    {
-      "sheet_number": "E202", 
-      "id": 1391291, 
-      "sheet_name": "LIGHTING PLAN L2"
-    }, 
-    {
-      "sheet_number": "E203", 
-      "id": 1391315, 
-      "sheet_name": "LIGHTING PLAN L3"
-    }, 
-    {
-      "sheet_number": "E204", 
-      "id": 1391339, 
-      "sheet_name": "LIGHTING PLAN L4"
-    }, 
-    {
-      "sheet_number": "E205", 
-      "id": 1391363, 
-      "sheet_name": "LIGHTING PLAN L5"
-    }, 
-    {
-      "sheet_number": "E002", 
-      "id": 1391394, 
-      "sheet_name": "NOTES, SYMBOLS & SHEET LIST"
-    }, 
-    {
-      "sheet_number": "E106", 
-      "id": 1483940, 
-      "sheet_name": "POWER PLAN ROOF"
-    }, 
-    {
-      "sheet_number": "E301", 
-      "id": 1486780, 
-      "sheet_name": "PANEL SCHEDULES L1"
-    }, 
-    {
-      "sheet_number": "E107", 
-      "id": 1490509, 
-      "sheet_name": "ENLARGED PLANS"
-    }, 
-    {
-      "sheet_number": "E302", 
-      "id": 1533196, 
-      "sheet_name": "PANEL SCHEDULES L2"
-    }, 
-    {
-      "sheet_number": "E303", 
-      "id": 1533247, 
-      "sheet_name": "PANEL SCHEDULES L3"
-    }, 
-    {
-      "sheet_number": "E304", 
-      "id": 1603312, 
-      "sheet_name": "PANEL SCHEDULES L4"
-    }, 
-    {
-      "sheet_number": "E305", 
-      "id": 1603530, 
-      "sheet_name": "PANEL SCHEDULES L4 L5"
-    }, 
-    {
-      "sheet_number": "E306", 
-      "id": 1603548, 
-      "sheet_name": "PHOTOVOLTAIC PANELS"
-    }, 
-    {
-      "sheet_number": "E300", 
-      "id": 1603946, 
-      "sheet_name": "PANEL SCHEDULES L0"
-    }, 
-    {
-      "sheet_number": "E010", 
-      "id": 1661139, 
-      "sheet_name": "CONCEPTUAL POWER DISTRIBUTION"
-    }, 
-    {
-      "sheet_number": "E307", 
-      "id": 1673435, 
-      "sheet_name": "SWITCHBOARD & METER BANKS"
-    }, 
-    {
-      "sheet_number": "E000", 
-      "id": 1709383, 
-      "sheet_name": "COVER SHEET"
-    }, 
-    {
-      "sheet_number": "E001", 
-      "id": 1721604, 
-      "sheet_name": "Learn about this project"
-    }
-  ]
-}
+{}
+
+################################################################################
+### RevitPAD\Data\response.json
+################################################################################
+{}
 
 ################################################################################
 ### RevitPAD\Data\tool_configs\All.json
@@ -4433,6 +5244,25 @@ time.sleep(0.2)
     "SETTINGS"
   ]
 }
+
+################################################################################
+### RevitPAD\Exports\Drawing_Schedule.txt
+################################################################################
+---------------------------------------------------------------------------
+| Sheet No. | Sheet Name                     | Rev | Description  | Date   |
+---------------------------------------------------------------------------
+| P001      | Learn about this project     |  1  | PRELIMINARY  | 27/11/25 |
+| P200      | RCP - L0 SANITARY            |  1  | PRELIMINARY  | 27/11/25 |
+| P201      | RCP - L1 SANITARY            |  1  | PRELIMINARY  | 27/11/25 |
+| P202      | RCP - L2 SANITARY            |  1  | PRELIMINARY  | 27/11/25 |
+| P203      | RCP - L3 SANITARY            |  1  | PRELIMINARY  | 27/11/25 |
+| P204      | RCP - L4 SANITARY            |  1  | PRELIMINARY  | 27/11/25 |
+| P205      | RCP - L5 SANITARY            |  1  | PRELIMINARY  | 27/11/25 |
+| P206      | RCP - ROOF SANITARY          |  1  | PRELIMINARY  | 27/11/25 |
+| P400      | DOMESTIC WATER PLAN - L0 PAR |  2  | INFORMATION  | 28/11/25 |
+| P401      | DOMESTIC WATER PLAN - L0 PAR |  A  | APPROVAL     | 28/11/25 |
+---------------------------------------------------------------------------
+Total revised sheets: 10
 
 ################################################################################
 ### RevitPAD\folder_structure.txt
@@ -4501,305 +5331,1039 @@ time.sleep(0.2)
 ################################################################################
 ### RevitPAD\Logs\revit_pad_log.txt
 ################################################################################
-[2025-11-25 16:16:22] Command Watcher active.
-[2025-11-25 16:16:43] Command Watcher active.
-[2025-11-25 16:16:52] Cached UIApplication
-[2025-11-25 16:16:52] Command received: test_command
-[2025-11-25 16:16:52] IMPORTING: test_command
-[2025-11-25 16:16:52] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 16:16:52] Running TEST COMMAND
-[2025-11-25 16:16:54] Test command completed.
-[2025-11-25 16:16:54] Command cleared from JSON file.
-[2025-11-25 16:22:41] Command Watcher active.
-[2025-11-25 16:22:50] Cached UIApplication
-[2025-11-25 16:22:50] Command received: export_sheets_to_json
-[2025-11-25 16:22:50] IMPORTING: export_sheets_to_json
-[2025-11-25 16:22:50] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 16:22:50] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\revit_sheets.json
-[2025-11-25 16:22:52] Command cleared from JSON file.
-[2025-11-25 16:23:43] Command Watcher active.
-[2025-11-25 21:00:20] Command Watcher active.
-[2025-11-25 21:00:53] Cached UIApplication
-[2025-11-25 21:00:54] Command received: export_sheets_to_json
-[2025-11-25 21:00:54] IMPORTING: export_sheets_to_json
-[2025-11-25 21:00:54] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:00:54] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:00:56] Command cleared from JSON file.
-[2025-11-25 21:06:58] Command Watcher active.
-[2025-11-25 21:06:58] Cached UIApplication
-[2025-11-25 21:06:58] Command received: export_sheets_to_json
-[2025-11-25 21:06:58] IMPORTING: export_sheets_to_json
-[2025-11-25 21:06:58] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:06:58] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:07:04] Command cleared from JSON file.
-[2025-11-25 21:11:40] Command received: test_command
-[2025-11-25 21:11:40] IMPORTING: test_command
-[2025-11-25 21:11:40] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 21:11:40] Running TEST COMMAND
-[2025-11-25 21:11:42] Test command completed.
-[2025-11-25 21:11:42] Command cleared from JSON file.
-[2025-11-25 21:11:46] Command received: export_sheets_to_json
-[2025-11-25 21:11:46] IMPORTING: export_sheets_to_json
-[2025-11-25 21:11:46] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:11:46] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:11:49] Command cleared from JSON file.
-[2025-11-25 21:11:51] Command received: test_command
-[2025-11-25 21:11:51] IMPORTING: test_command
-[2025-11-25 21:11:51] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 21:11:51] Running TEST COMMAND
-[2025-11-25 21:11:52] Test command completed.
-[2025-11-25 21:11:52] Command cleared from JSON file.
-[2025-11-25 21:26:12] Command received: export_sheets_to_json
-[2025-11-25 21:26:12] IMPORTING: export_sheets_to_json
-[2025-11-25 21:26:12] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:26:12] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:26:41] Command cleared from JSON file.
-[2025-11-25 21:28:04] Command received: test_command
-[2025-11-25 21:28:04] IMPORTING: test_command
-[2025-11-25 21:28:04] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 21:28:04] Running TEST COMMAND
-[2025-11-25 21:28:05] Test command completed.
-[2025-11-25 21:28:05] Command cleared from JSON file.
-[2025-11-25 21:28:07] Command received: export_sheets_to_json
-[2025-11-25 21:28:07] IMPORTING: export_sheets_to_json
-[2025-11-25 21:28:07] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:28:07] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:28:09] Command cleared from JSON file.
-[2025-11-25 21:29:18] Command received: test_command
-[2025-11-25 21:29:18] IMPORTING: test_command
-[2025-11-25 21:29:18] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 21:29:18] Running TEST COMMAND
-[2025-11-25 21:29:21] Test command completed.
-[2025-11-25 21:29:21] Command cleared from JSON file.
-[2025-11-25 21:29:24] Command received: export_sheets_to_json
-[2025-11-25 21:29:24] IMPORTING: export_sheets_to_json
-[2025-11-25 21:29:24] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:29:24] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:29:27] Command cleared from JSON file.
-[2025-11-25 21:30:21] Command received: test_command
-[2025-11-25 21:30:21] IMPORTING: test_command
-[2025-11-25 21:30:21] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 21:30:21] Running TEST COMMAND
-[2025-11-25 21:30:22] Test command completed.
-[2025-11-25 21:30:22] Command cleared from JSON file.
-[2025-11-25 21:30:24] Command received: export_sheets_to_json
-[2025-11-25 21:30:24] IMPORTING: export_sheets_to_json
-[2025-11-25 21:30:24] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:30:24] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:30:32] Command cleared from JSON file.
-[2025-11-25 21:45:08] Command received: test_command
-[2025-11-25 21:45:08] IMPORTING: test_command
-[2025-11-25 21:45:08] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 21:45:08] Running TEST COMMAND
-[2025-11-25 21:45:10] Test command completed.
-[2025-11-25 21:45:10] Command cleared from JSON file.
-[2025-11-25 21:45:14] Command received: export_sheets_to_json
-[2025-11-25 21:45:14] IMPORTING: export_sheets_to_json
-[2025-11-25 21:45:14] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:45:14] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:45:16] Command cleared from JSON file.
-[2025-11-25 21:48:03] Command received: test_command
-[2025-11-25 21:48:03] IMPORTING: test_command
-[2025-11-25 21:48:03] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\test_command.py
-[2025-11-25 21:48:03] Running TEST COMMAND
-[2025-11-25 21:48:07] Test command completed.
-[2025-11-25 21:48:07] Command cleared from JSON file.
-[2025-11-25 21:48:42] Command received: export_sheets_to_json
-[2025-11-25 21:48:42] IMPORTING: export_sheets_to_json
-[2025-11-25 21:48:42] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:48:42] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:48:51] Command cleared from JSON file.
-[2025-11-25 21:52:06] Command received: export_sheets_to_cad
-[2025-11-25 21:52:06] IMPORTING: export_sheets_to_cad
-[2025-11-25 21:52:06] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-25 21:52:06] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:52:06] Format: dwg | Sheets: 1
-[2025-11-25 21:52:32] Exported: C:\PADApps\RevitPAD\Exports\SD106_RoofPlan.dwg
-[2025-11-25 21:52:32] Export complete: 1 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:52:35] Command cleared from JSON file.
-[2025-11-25 21:53:33] Command received: export_sheets_to_json
-[2025-11-25 21:53:33] IMPORTING: export_sheets_to_json
-[2025-11-25 21:53:33] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:53:33] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:53:44] Command cleared from JSON file.
-[2025-11-25 21:54:01] Command received: export_sheets_to_cad
-[2025-11-25 21:54:01] IMPORTING: export_sheets_to_cad
-[2025-11-25 21:54:01] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-25 21:54:01] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:54:01] Format: dwg | Sheets: 1
-[2025-11-25 21:54:04] Exported: C:\PADApps\RevitPAD\Exports\SD103_ThirdFloorPlan.dwg
-[2025-11-25 21:54:04] Export complete: 1 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:54:06] Command cleared from JSON file.
-[2025-11-25 21:54:16] Command received: export_sheets_to_json
-[2025-11-25 21:54:16] IMPORTING: export_sheets_to_json
-[2025-11-25 21:54:16] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:54:16] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:54:28] Command cleared from JSON file.
-[2025-11-25 21:54:36] Command received: export_sheets_to_cad
-[2025-11-25 21:54:36] IMPORTING: export_sheets_to_cad
-[2025-11-25 21:54:36] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-25 21:54:36] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:54:36] Format: dwg | Sheets: 1
-[2025-11-25 21:54:45] Exported: C:\PADApps\RevitPAD\Exports\A106_GreenRoof.dwg
-[2025-11-25 21:54:45] Export complete: 1 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:54:47] Command cleared from JSON file.
-[2025-11-25 21:54:51] Command received: export_sheets_to_json
-[2025-11-25 21:54:51] IMPORTING: export_sheets_to_json
-[2025-11-25 21:54:51] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 21:54:51] ✅ Exported 55 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 21:55:06] Command cleared from JSON file.
-[2025-11-25 21:55:16] Command received: export_sheets_to_cad
-[2025-11-25 21:55:16] IMPORTING: export_sheets_to_cad
-[2025-11-25 21:55:16] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-25 21:55:16] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:55:16] Format: dwg | Sheets: 1
-[2025-11-25 21:55:21] Exported: C:\PADApps\RevitPAD\Exports\A200_ExistingConditionsElevations.dwg
-[2025-11-25 21:55:21] Export complete: 1 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-25 21:55:22] Command cleared from JSON file.
-[2025-11-25 22:01:58] Command Watcher active.
-[2025-11-25 22:02:13] Cached UIApplication
-[2025-11-25 22:02:13] Command received: export_sheets_to_json
-[2025-11-25 22:02:13] IMPORTING: export_sheets_to_json
-[2025-11-25 22:02:13] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 22:02:13] ✅ Exported 12 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 22:03:53] Command cleared from JSON file.
-[2025-11-25 22:04:40] Command received: export_sheets_to_cad
-[2025-11-25 22:04:40] IMPORTING: export_sheets_to_cad
-[2025-11-25 22:04:40] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-25 22:04:40] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-25 22:04:40] Format: dwg | Sheets: 12
-[2025-11-25 22:04:42] Exported: C:\PADApps\RevitPAD\Exports\S101_Parking.dwg
-[2025-11-25 22:04:43] Exported: C:\PADApps\RevitPAD\Exports\S100_Foundation.dwg
-[2025-11-25 22:04:44] Exported: C:\PADApps\RevitPAD\Exports\S102_MainLevel.dwg
-[2025-11-25 22:04:46] Exported: C:\PADApps\RevitPAD\Exports\S103_SecondLevel.dwg
-[2025-11-25 22:04:48] Exported: C:\PADApps\RevitPAD\Exports\S104_ThirdLevel.dwg
-[2025-11-25 22:04:49] Exported: C:\PADApps\RevitPAD\Exports\S105_FourthLevel.dwg
-[2025-11-25 22:04:50] Exported: C:\PADApps\RevitPAD\Exports\S106_FifthLevel.dwg
-[2025-11-25 22:04:52] Exported: C:\PADApps\RevitPAD\Exports\S107_Roof.dwg
-[2025-11-25 22:04:52] Exported: C:\PADApps\RevitPAD\Exports\S108_StairTowers.dwg
-[2025-11-25 22:04:53] Exported: C:\PADApps\RevitPAD\Exports\S600_Details.dwg
-[2025-11-25 22:05:32] Exported: C:\PADApps\RevitPAD\Exports\S000_CoverSheet.dwg
-[2025-11-25 22:05:40] Exported: C:\PADApps\RevitPAD\Exports\S001_Learnaboutthisproject.dwg
-[2025-11-25 22:05:40] Export complete: 12 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-25 22:05:45] Command cleared from JSON file.
-[2025-11-25 22:08:11] Command received: export_sheets_to_json
-[2025-11-25 22:08:11] IMPORTING: export_sheets_to_json
-[2025-11-25 22:08:11] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 22:08:11] ✅ Exported 17 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 22:08:11] Command Watcher active.
-[2025-11-25 22:08:18] Command cleared from JSON file.
-[2025-11-25 22:08:23] Cached UIApplication
-[2025-11-25 22:08:23] Command received: export_sheets_to_json
-[2025-11-25 22:08:23] IMPORTING: export_sheets_to_json
-[2025-11-25 22:08:23] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 22:08:23] ✅ Exported 17 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 22:08:26] Command cleared from JSON file.
-[2025-11-25 22:08:35] Command received: export_sheets_to_cad
-[2025-11-25 22:08:35] IMPORTING: export_sheets_to_cad
-[2025-11-25 22:08:35] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-25 22:08:35] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-25 22:08:35] Format: dwg | Sheets: 17
-[2025-11-25 22:08:38] Exported: C:\PADApps\RevitPAD\Exports\M100_PlanHVACL0Parking.dwg
-[2025-11-25 22:08:46] Exported: C:\PADApps\RevitPAD\Exports\M101_PlanHVACL1.dwg
-[2025-11-25 22:08:55] Exported: C:\PADApps\RevitPAD\Exports\M102_PlanHVACL2.dwg
-[2025-11-25 22:09:06] Exported: C:\PADApps\RevitPAD\Exports\M103_PlanHVACL3.dwg
-[2025-11-25 22:09:52] Exported: C:\PADApps\RevitPAD\Exports\M104_PlanHVACL4.dwg
-[2025-11-25 22:10:21] Exported: C:\PADApps\RevitPAD\Exports\M105_PlanHVACL5.dwg
-[2025-11-25 22:10:31] Exported: C:\PADApps\RevitPAD\Exports\M106_PlanHVACRoof.dwg
-[2025-11-25 22:10:32] Exported: C:\PADApps\RevitPAD\Exports\M200_RCPHVACL0Parking.dwg
-[2025-11-25 22:10:47] Exported: C:\PADApps\RevitPAD\Exports\M201_RCPHVACL1.dwg
-[2025-11-25 22:11:00] Exported: C:\PADApps\RevitPAD\Exports\M202_RCPHVACL2.dwg
-[2025-11-25 22:11:08] Exported: C:\PADApps\RevitPAD\Exports\M203_RCPHVACL3.dwg
-[2025-11-25 22:11:15] Exported: C:\PADApps\RevitPAD\Exports\M204_RCPHVACL4.dwg
-[2025-11-25 22:11:21] Exported: C:\PADApps\RevitPAD\Exports\M205_RCPHVACL5.dwg
-[2025-11-25 22:11:23] Exported: C:\PADApps\RevitPAD\Exports\M206_RCPHVACRoof.dwg
-[2025-11-25 22:13:29] Exported: C:\PADApps\RevitPAD\Exports\M000_CoverSheet.dwg
-[2025-11-25 22:13:30] Exported: C:\PADApps\RevitPAD\Exports\M002_NotesSymbolsSchedules.dwg
-[2025-11-25 22:13:32] Exported: C:\PADApps\RevitPAD\Exports\M001_Learnaboutthisproject.dwg
-[2025-11-25 22:13:32] Export complete: 17 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-25 22:13:34] Command cleared from JSON file.
-[2025-11-25 22:15:22] Command Watcher active.
-[2025-11-25 22:15:37] Cached UIApplication
-[2025-11-25 22:15:37] Command received: export_sheets_to_json
-[2025-11-25 22:15:37] IMPORTING: export_sheets_to_json
-[2025-11-25 22:15:37] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 22:15:37] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 22:16:32] Command cleared from JSON file.
-[2025-11-25 22:16:36] Command received: export_sheets_to_json
-[2025-11-25 22:16:36] IMPORTING: export_sheets_to_json
-[2025-11-25 22:16:36] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-25 22:16:36] ✅ Exported 27 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-25 22:16:38] Command cleared from JSON file.
-[2025-11-25 22:16:46] Command received: export_sheets_to_cad
-[2025-11-25 22:16:46] IMPORTING: export_sheets_to_cad
-[2025-11-25 22:16:46] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-25 22:16:46] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-25 22:16:46] Format: dwg | Sheets: 27
-[2025-11-25 22:16:49] Exported: C:\PADApps\RevitPAD\Exports\P100_PLAN-L0SANITARY.dwg
-[2025-11-25 22:16:55] Exported: C:\PADApps\RevitPAD\Exports\P101_PLAN-L1SANITARY.dwg
-[2025-11-25 22:16:59] Exported: C:\PADApps\RevitPAD\Exports\P102_PLAN-L2SANITARY.dwg
-[2025-11-25 22:17:05] Exported: C:\PADApps\RevitPAD\Exports\P103_PLAN-L3SANITARY.dwg
-[2025-11-25 22:17:10] Exported: C:\PADApps\RevitPAD\Exports\P104_PLAN-L4SANITARY.dwg
-[2025-11-25 22:17:16] Exported: C:\PADApps\RevitPAD\Exports\P105_PLAN-L5SANITARY.dwg
-[2025-11-25 22:17:24] Exported: C:\PADApps\RevitPAD\Exports\P106_PLAN-ROOFSANITARY.dwg
-[2025-11-25 22:17:28] Exported: C:\PADApps\RevitPAD\Exports\P200_RCP-L0SANITARY.dwg
-[2025-11-25 22:17:35] Exported: C:\PADApps\RevitPAD\Exports\P201_RCP-L1SANITARY.dwg
-[2025-11-25 22:17:41] Exported: C:\PADApps\RevitPAD\Exports\P202_RCP-L2SANITARY.dwg
-[2025-11-25 22:17:50] Exported: C:\PADApps\RevitPAD\Exports\P203_RCP-L3SANITARY.dwg
-[2025-11-25 22:17:59] Exported: C:\PADApps\RevitPAD\Exports\P204_RCP-L4SANITARY.dwg
-[2025-11-25 22:18:06] Exported: C:\PADApps\RevitPAD\Exports\P205_RCP-L5SANITARY.dwg
-[2025-11-25 22:18:38] Exported: C:\PADApps\RevitPAD\Exports\P206_RCP-ROOFSANITARY.dwg
-[2025-11-25 22:20:15] Exported: C:\PADApps\RevitPAD\Exports\P300_SECTIONSSANITARYRISERS.dwg
-[2025-11-25 22:22:10] Exported: C:\PADApps\RevitPAD\Exports\P301_SECTIONSSANITARYRISERS.dwg
-[2025-11-25 22:23:07] Exported: C:\PADApps\RevitPAD\Exports\P302_SECTIONSSANITARYRISERS.dwg
-[2025-11-25 22:25:09] Exported: C:\PADApps\RevitPAD\Exports\P303_SECTIONSSANITARYRISERS.dwg
-[2025-11-25 22:25:26] Exported: C:\PADApps\RevitPAD\Exports\P400_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-25 22:25:45] Exported: C:\PADApps\RevitPAD\Exports\P401_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-25 22:25:50] Exported: C:\PADApps\RevitPAD\Exports\P402_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-25 22:25:55] Exported: C:\PADApps\RevitPAD\Exports\P403_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-25 22:26:00] Exported: C:\PADApps\RevitPAD\Exports\P404_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-25 22:26:05] Exported: C:\PADApps\RevitPAD\Exports\P405_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-25 22:26:11] Exported: C:\PADApps\RevitPAD\Exports\P406_DOMESTICWATERPLAN-L0PARKING.dwg
-[2025-11-25 22:32:23] Exported: C:\PADApps\RevitPAD\Exports\P000_COVERSHEET.dwg
-[2025-11-25 22:32:31] Exported: C:\PADApps\RevitPAD\Exports\P001_Learnaboutthisproject.dwg
-[2025-11-25 22:32:31] Export complete: 27 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-25 22:44:46] Command cleared from JSON file.
-[2025-11-26 17:38:25] Command Watcher active.
-[2025-11-26 17:38:28] Cached UIApplication
-[2025-11-26 17:38:28] Command received: export_sheets_to_json
-[2025-11-26 17:38:28] IMPORTING: export_sheets_to_json
-[2025-11-26 17:38:28] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_json.py
-[2025-11-26 17:38:28] ✅ Exported 26 sheets → C:\PADApps\RevitPAD\Data\data.json
-[2025-11-26 17:38:36] Command cleared from JSON file.
-[2025-11-26 17:38:55] Command received: export_sheets_to_cad
-[2025-11-26 17:38:55] IMPORTING: export_sheets_to_cad
-[2025-11-26 17:38:55] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher 3.pushbutton\commands\export_sheets_to_cad.py
-[2025-11-26 17:38:55] Starting export_sheets_to_cad -> C:\PADApps\RevitPAD\Exports
-[2025-11-26 17:38:55] Format: dwg | Sheets: 14
-[2025-11-26 17:39:05] Exported: C:\PADApps\RevitPAD\Exports\E100_POWERPLANPARKING.dwg
-[2025-11-26 17:39:13] Exported: C:\PADApps\RevitPAD\Exports\E101_POWERPLANL1.dwg
-[2025-11-26 17:39:21] Exported: C:\PADApps\RevitPAD\Exports\E102_POWERPLANL2.dwg
-[2025-11-26 17:39:35] Exported: C:\PADApps\RevitPAD\Exports\E103_POWERPLANL3.dwg
-[2025-11-26 17:39:45] Exported: C:\PADApps\RevitPAD\Exports\E104_POWERPLANL4.dwg
-[2025-11-26 17:39:55] Exported: C:\PADApps\RevitPAD\Exports\E105_POWERPLANL5.dwg
-[2025-11-26 17:40:02] Exported: C:\PADApps\RevitPAD\Exports\E200_LIGHTINGPLANPARKING.dwg
-[2025-11-26 17:40:08] Exported: C:\PADApps\RevitPAD\Exports\E201_LIGHTINGPLANL1.dwg
-[2025-11-26 17:40:16] Exported: C:\PADApps\RevitPAD\Exports\E202_LIGHTINGPLANL2.dwg
-[2025-11-26 17:40:23] Exported: C:\PADApps\RevitPAD\Exports\E203_LIGHTINGPLANL3.dwg
-[2025-11-26 17:40:28] Exported: C:\PADApps\RevitPAD\Exports\E204_LIGHTINGPLANL4.dwg
-[2025-11-26 17:40:35] Exported: C:\PADApps\RevitPAD\Exports\E205_LIGHTINGPLANL5.dwg
-[2025-11-26 17:40:41] Exported: C:\PADApps\RevitPAD\Exports\E106_POWERPLANROOF.dwg
-[2025-11-26 17:40:47] Exported: C:\PADApps\RevitPAD\Exports\E107_ENLARGEDPLANS.dwg
-[2025-11-26 17:40:47] Export complete: 14 files exported to
-C:\PADApps\RevitPAD\Exports
-[2025-11-26 18:16:10] Command cleared from JSON file.
+[2025-11-27 23:21:29] Command received: get-sheet-data
+[2025-11-27 23:21:29] IMPORTING: get_sheet_data
+[2025-11-27 23:21:29] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:21:29] Returned sheet data: 27 sheets
+[2025-11-27 23:21:29] Command cleared from JSON file.
+[2025-11-27 23:21:33] Command received: get-model-path
+[2025-11-27 23:21:33] IMPORTING: get_model_path
+[2025-11-27 23:21:33] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:21:33] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:21:33] Command cleared from JSON file.
+[2025-11-27 23:21:36] Command received: export_sheets_to_pdf
+[2025-11-27 23:21:36] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:21:36] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:21:36] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:21:36] Sheet IDs received: [1522428]
+[2025-11-27 23:21:36] Filtered sheets = 1
+[2025-11-27 23:21:36] → Activating sheet P100
+[2025-11-27 23:21:40] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:21:40] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:21:40] PDF Export complete → 1 files
+[2025-11-27 23:21:42] Command cleared from JSON file.
+[2025-11-27 23:27:38] Command received: get-sheet-data
+[2025-11-27 23:27:38] IMPORTING: get_sheet_data
+[2025-11-27 23:27:38] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:27:38] Returned sheet data: 27 sheets
+[2025-11-27 23:27:38] Command cleared from JSON file.
+[2025-11-27 23:27:41] Command received: get-model-path
+[2025-11-27 23:27:41] IMPORTING: get_model_path
+[2025-11-27 23:27:41] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:27:41] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:27:41] Command cleared from JSON file.
+[2025-11-27 23:27:44] Command received: export_sheets_to_pdf
+[2025-11-27 23:27:44] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:27:44] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:27:44] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:27:44] Sheet IDs received: [1522428]
+[2025-11-27 23:27:45] Filtered sheets = 1
+[2025-11-27 23:27:45] → Activating sheet P100
+[2025-11-27 23:27:45] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:27:47] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-27 23:27:47] PDF Export complete → 1 files
+[2025-11-27 23:27:50] Command cleared from JSON file.
+[2025-11-27 23:28:03] Command received: get-sheet-data
+[2025-11-27 23:28:03] IMPORTING: get_sheet_data
+[2025-11-27 23:28:03] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:28:03] Returned sheet data: 27 sheets
+[2025-11-27 23:28:03] Command cleared from JSON file.
+[2025-11-27 23:28:06] Command received: get-model-path
+[2025-11-27 23:28:06] IMPORTING: get_model_path
+[2025-11-27 23:28:06] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:28:06] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:28:06] Command cleared from JSON file.
+[2025-11-27 23:28:09] Command received: export_sheets_to_pdf
+[2025-11-27 23:28:09] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:28:09] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:28:09] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:28:09] Sheet IDs received: [1523229]
+[2025-11-27 23:28:09] Filtered sheets = 1
+[2025-11-27 23:28:09] → Activating sheet P105
+[2025-11-27 23:28:09] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P105_PLAN-L5SANITARY.pdf
+[2025-11-27 23:28:10] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P105_PLAN-L5SANITARY.pdf
+[2025-11-27 23:28:10] PDF Export complete → 1 files
+[2025-11-27 23:28:11] Command cleared from JSON file.
+[2025-11-27 23:31:57] Command received: get-sheet-data
+[2025-11-27 23:31:57] IMPORTING: get_sheet_data
+[2025-11-27 23:31:57] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-27 23:31:57] Returned sheet data: 27 sheets
+[2025-11-27 23:31:57] Command cleared from JSON file.
+[2025-11-27 23:32:03] Command received: get-model-path
+[2025-11-27 23:32:03] IMPORTING: get_model_path
+[2025-11-27 23:32:03] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-27 23:32:03] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-27 23:32:03] Command cleared from JSON file.
+[2025-11-27 23:32:06] Command received: export_sheets_to_pdf
+[2025-11-27 23:32:06] IMPORTING: export_sheets_to_pdf
+[2025-11-27 23:32:06] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-27 23:32:06] PRINT-CURRENT-WINDOW mode started
+[2025-11-27 23:32:06] Sheet IDs received: [1526300, 1526404, 1526802, 1526819]
+[2025-11-27 23:32:06] → Activating sheet P300
+[2025-11-27 23:32:07] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:07] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:07] → Activating sheet P301
+[2025-11-27 23:32:08] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P301_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:08] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P301_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:08] → Activating sheet P302
+[2025-11-27 23:32:09] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P302_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:09] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P302_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:09] → Activating sheet P303
+[2025-11-27 23:32:10] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P303_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:11] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P303_SECTIONSSANITARYRISERS.pdf
+[2025-11-27 23:32:11] Response.json written.
+[2025-11-27 23:32:11] PDF Export complete → 4 files
+[2025-11-27 23:32:11] Command cleared from JSON file.
+[2025-11-28 11:13:42] Command Watcher active.
+[2025-11-28 11:13:42] Cached UIApplication
+[2025-11-28 11:13:42] Command received: get-sheet-data
+[2025-11-28 11:13:42] IMPORTING: get_sheet_data
+[2025-11-28 11:13:42] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:13:42] Returned sheet data: 27 sheets
+[2025-11-28 11:13:42] Command cleared from JSON file.
+[2025-11-28 11:13:54] Command received: get-model-path
+[2025-11-28 11:13:54] IMPORTING: get_model_path
+[2025-11-28 11:13:54] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:13:54] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:13:54] Command cleared from JSON file.
+[2025-11-28 11:13:57] Command received: export_sheets_to_pdf
+[2025-11-28 11:13:57] IMPORTING: export_sheets_to_pdf
+[2025-11-28 11:13:57] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-28 11:13:57] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 11:13:57] Sheet IDs received: [1522428]
+[2025-11-28 11:13:57] → Activating sheet P100
+[2025-11-28 11:13:58] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:13:58] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:13:58] Response.json written.
+[2025-11-28 11:13:58] PDF Export complete → 1 files
+[2025-11-28 11:13:58] Command cleared from JSON file.
+[2025-11-28 11:14:51] Command received: get-sheet-data
+[2025-11-28 11:14:51] IMPORTING: get_sheet_data
+[2025-11-28 11:14:51] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:14:51] Returned sheet data: 27 sheets
+[2025-11-28 11:14:51] Command cleared from JSON file.
+[2025-11-28 11:14:54] Command received: get-sheet-data
+[2025-11-28 11:14:54] IMPORTING: get_sheet_data
+[2025-11-28 11:14:54] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:14:54] Returned sheet data: 27 sheets
+[2025-11-28 11:14:54] Command cleared from JSON file.
+[2025-11-28 11:14:57] Command received: get-model-path
+[2025-11-28 11:14:57] IMPORTING: get_model_path
+[2025-11-28 11:14:57] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:14:57] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:14:57] Command cleared from JSON file.
+[2025-11-28 11:15:35] Command received: get-sheet-data
+[2025-11-28 11:15:35] IMPORTING: get_sheet_data
+[2025-11-28 11:15:35] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:15:35] Returned sheet data: 27 sheets
+[2025-11-28 11:15:35] Command cleared from JSON file.
+[2025-11-28 11:15:38] Command received: get-sheet-data
+[2025-11-28 11:15:38] IMPORTING: get_sheet_data
+[2025-11-28 11:15:38] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:15:38] Returned sheet data: 27 sheets
+[2025-11-28 11:15:38] Command cleared from JSON file.
+[2025-11-28 11:15:42] Command received: get-model-path
+[2025-11-28 11:15:42] IMPORTING: get_model_path
+[2025-11-28 11:15:42] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:15:42] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:15:42] Command cleared from JSON file.
+[2025-11-28 11:18:15] Command received: get-sheet-data
+[2025-11-28 11:18:15] IMPORTING: get_sheet_data
+[2025-11-28 11:18:15] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:18:15] Returned sheet data: 27 sheets
+[2025-11-28 11:18:15] Command cleared from JSON file.
+[2025-11-28 11:18:18] Command received: get-sheet-data
+[2025-11-28 11:18:18] IMPORTING: get_sheet_data
+[2025-11-28 11:18:18] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:18:18] Returned sheet data: 27 sheets
+[2025-11-28 11:18:18] Command cleared from JSON file.
+[2025-11-28 11:18:21] Command received: get-model-path
+[2025-11-28 11:18:21] IMPORTING: get_model_path
+[2025-11-28 11:18:21] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:18:21] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:18:21] Command cleared from JSON file.
+[2025-11-28 11:19:50] Command received: get-sheet-data
+[2025-11-28 11:19:50] IMPORTING: get_sheet_data
+[2025-11-28 11:19:50] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:19:50] Returned sheet data: 27 sheets
+[2025-11-28 11:19:50] Command cleared from JSON file.
+[2025-11-28 11:19:53] Command received: get-model-path
+[2025-11-28 11:19:53] IMPORTING: get_model_path
+[2025-11-28 11:19:53] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:19:53] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:19:53] Command cleared from JSON file.
+[2025-11-28 11:20:34] Command received: get-sheet-data
+[2025-11-28 11:20:34] IMPORTING: get_sheet_data
+[2025-11-28 11:20:34] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:20:34] Returned sheet data: 27 sheets
+[2025-11-28 11:20:34] Command cleared from JSON file.
+[2025-11-28 11:20:41] Command received: get-model-path
+[2025-11-28 11:20:41] IMPORTING: get_model_path
+[2025-11-28 11:20:41] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:20:41] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:20:41] Command cleared from JSON file.
+[2025-11-28 11:20:44] Command received: export_sheets_to_pdf
+[2025-11-28 11:20:44] IMPORTING: export_sheets_to_pdf
+[2025-11-28 11:20:44] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-28 11:20:44] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 11:20:44] Sheet IDs received: [1522428]
+[2025-11-28 11:20:44] → Activating sheet P100
+[2025-11-28 11:20:44] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:20:44] ✔ Printed: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:20:44] Response.json written.
+[2025-11-28 11:20:44] PDF Export complete → 1 files
+[2025-11-28 11:20:44] Command cleared from JSON file.
+[2025-11-28 11:39:17] Command received: get-sheet-data
+[2025-11-28 11:39:17] IMPORTING: get_sheet_data
+[2025-11-28 11:39:17] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:39:17] Returned sheet data: 27 sheets
+[2025-11-28 11:39:17] Command cleared from JSON file.
+[2025-11-28 11:39:23] Command received: get-model-path
+[2025-11-28 11:39:23] IMPORTING: get_model_path
+[2025-11-28 11:39:23] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:39:23] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:39:23] Command cleared from JSON file.
+[2025-11-28 11:39:26] Command received: export_sheets_to_pdf
+[2025-11-28 11:39:26] IMPORTING: export_sheets_to_pdf
+[2025-11-28 11:39:26] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-28 11:39:26] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 11:39:26] Sheet IDs received: [1522428]
+[2025-11-28 11:39:26] → Activating sheet P100
+[2025-11-28 11:39:26] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:39:27] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:39:27] Command cleared from JSON file.
+[2025-11-28 11:39:41] Command received: get-sheet-data
+[2025-11-28 11:39:41] IMPORTING: get_sheet_data
+[2025-11-28 11:39:41] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:39:41] Returned sheet data: 27 sheets
+[2025-11-28 11:39:41] Command cleared from JSON file.
+[2025-11-28 11:39:44] Command received: get-model-path
+[2025-11-28 11:39:44] IMPORTING: get_model_path
+[2025-11-28 11:39:44] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:39:44] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:39:44] Command cleared from JSON file.
+[2025-11-28 11:39:47] Command received: export_sheets_to_pdf
+[2025-11-28 11:39:47] IMPORTING: export_sheets_to_pdf
+[2025-11-28 11:39:47] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-28 11:39:47] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 11:39:47] Sheet IDs received: [1522428]
+[2025-11-28 11:39:47] → Activating sheet P100
+[2025-11-28 11:39:47] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:39:48] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 11:39:48] Command cleared from JSON file.
+[2025-11-28 11:40:46] Command received: get-sheet-data
+[2025-11-28 11:40:46] IMPORTING: get_sheet_data
+[2025-11-28 11:40:46] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:40:46] Returned sheet data: 27 sheets
+[2025-11-28 11:40:46] Command cleared from JSON file.
+[2025-11-28 11:40:56] Command received: get-model-path
+[2025-11-28 11:40:56] IMPORTING: get_model_path
+[2025-11-28 11:40:56] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:40:56] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:40:56] Command cleared from JSON file.
+[2025-11-28 11:42:10] Command received: get-sheet-data
+[2025-11-28 11:42:10] IMPORTING: get_sheet_data
+[2025-11-28 11:42:10] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:42:10] Returned sheet data: 27 sheets
+[2025-11-28 11:42:10] Command cleared from JSON file.
+[2025-11-28 11:42:19] Command received: get-model-path
+[2025-11-28 11:42:19] IMPORTING: get_model_path
+[2025-11-28 11:42:19] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:42:19] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:42:19] Command cleared from JSON file.
+[2025-11-28 11:42:22] Command received: export_sheets_to_pdf
+[2025-11-28 11:42:22] IMPORTING: export_sheets_to_pdf
+[2025-11-28 11:42:22] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-28 11:42:22] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 11:42:22] Sheet IDs received: [1523259, 1523669]
+[2025-11-28 11:42:22] → Activating sheet P106
+[2025-11-28 11:42:22] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P106_PLAN-ROOFSANITARY.pdf
+[2025-11-28 11:42:23] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P106_PLAN-ROOFSANITARY.pdf
+[2025-11-28 11:42:23] → Activating sheet P206
+[2025-11-28 11:42:23] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P206_RCP-ROOFSANITARY.pdf
+[2025-11-28 11:42:24] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P206_RCP-ROOFSANITARY.pdf
+[2025-11-28 11:42:24] Command cleared from JSON file.
+[2025-11-28 11:46:33] Command received: get-sheet-data
+[2025-11-28 11:46:33] IMPORTING: get_sheet_data
+[2025-11-28 11:46:33] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_sheet_data.py
+[2025-11-28 11:46:33] Returned sheet data: 27 sheets
+[2025-11-28 11:46:33] Command cleared from JSON file.
+[2025-11-28 11:46:40] Command received: get-model-path
+[2025-11-28 11:46:40] IMPORTING: get_model_path
+[2025-11-28 11:46:40] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 11:46:40] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 11:46:40] Command cleared from JSON file.
+[2025-11-28 11:46:43] Command received: export_sheets_to_pdf
+[2025-11-28 11:46:43] IMPORTING: export_sheets_to_pdf
+[2025-11-28 11:46:43] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_pdf.py
+[2025-11-28 11:46:43] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 11:46:43] Sheet IDs received: [1670375, 1670390]
+[2025-11-28 11:46:43] → Activating sheet P400
+[2025-11-28 11:46:47] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P400_DOMESTICWATERPLAN-L0PARKING.pdf
+[2025-11-28 11:46:48] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P400_DOMESTICWATERPLAN-L0PARKING.pdf
+[2025-11-28 11:46:48] → Activating sheet P401
+[2025-11-28 11:46:48] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P401_DOMESTICWATERPLAN-L0PARKING.pdf
+[2025-11-28 11:46:49] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P401_DOMESTICWATERPLAN-L0PARKING.pdf
+[2025-11-28 11:46:49] Command cleared from JSON file.
+[2025-11-28 12:00:38] Command Watcher active.
+[2025-11-28 12:06:05] Command received: get-model-path
+[2025-11-28 12:06:05] IMPORTING: get_model_path
+[2025-11-28 12:06:05] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 12:06:05] Reload warning: module source file not found
+[2025-11-28 12:06:05] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 12:06:05] Command cleared from JSON file.
+[2025-11-28 12:06:21] Command received: get-model-path
+[2025-11-28 12:06:21] IMPORTING: get_model_path
+[2025-11-28 12:06:21] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 12:06:21] Reload warning: module source file not found
+[2025-11-28 12:06:21] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample HVAC.rvt
+[2025-11-28 12:06:21] Command cleared from JSON file.
+[2025-11-28 12:06:30] Command received: get-model-path
+[2025-11-28 12:06:30] IMPORTING: get_model_path
+[2025-11-28 12:06:30] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 12:06:30] Reload warning: module source file not found
+[2025-11-28 12:06:30] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 12:06:30] Command cleared from JSON file.
+[2025-11-28 12:06:54] Command received: get-model-path
+[2025-11-28 12:06:54] IMPORTING: get_model_path
+[2025-11-28 12:06:54] LOADED FROM: C:\Users\nweck\AppData\Roaming\pyRevit-Master\extensions\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\requests\get_model_path.py
+[2025-11-28 12:06:54] Reload warning: module source file not found
+[2025-11-28 12:06:54] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Site.rvt
+[2025-11-28 12:06:54] Command cleared from JSON file.
+[2025-11-28 16:17:41] Command Watcher active.
+[2025-11-28 16:17:41] Cached UIApplication
+[2025-11-28 16:17:41] Command received: get-sheet-data
+[2025-11-28 16:17:41] IMPORTING: get_sheet_data
+[2025-11-28 16:17:41] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:17:41] Returned sheet data: 27 sheets
+[2025-11-28 16:17:41] Command cleared from JSON file.
+[2025-11-28 16:18:15] Command received: get-model-path
+[2025-11-28 16:18:15] IMPORTING: get_model_path
+[2025-11-28 16:18:15] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:18:15] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:18:15] Command cleared from JSON file.
+[2025-11-28 16:18:18] Command received: export_sheets_to_cad
+[2025-11-28 16:18:18] IMPORTING: export_sheets_to_cad
+[2025-11-28 16:18:18] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 16:18:18] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 16:18:18] Format: dwg | Sheets: 1
+[2025-11-28 16:18:20] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P101_PLAN-L1SANITARY.dwg
+[2025-11-28 16:18:20] DWG response.json written.
+[2025-11-28 16:18:20] DWG Export complete: 1 files
+[2025-11-28 16:18:20] Command cleared from JSON file.
+[2025-11-28 16:26:08] Command received: get-sheet-data
+[2025-11-28 16:26:08] IMPORTING: get_sheet_data
+[2025-11-28 16:26:08] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:26:09] Returned sheet data: 27 sheets
+[2025-11-28 16:26:09] Command cleared from JSON file.
+[2025-11-28 16:26:15] Command received: get-model-path
+[2025-11-28 16:26:15] IMPORTING: get_model_path
+[2025-11-28 16:26:15] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:26:15] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:26:15] Command cleared from JSON file.
+[2025-11-28 16:26:18] Command received: export_sheets_to_cad
+[2025-11-28 16:26:18] IMPORTING: export_sheets_to_cad
+[2025-11-28 16:26:18] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 16:26:18] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 16:26:18] Format: dwg | Sheets: 6
+[2025-11-28 16:26:29] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P100_PLAN-L0SANITARY.dwg
+[2025-11-28 16:26:38] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P101_PLAN-L1SANITARY.dwg
+[2025-11-28 16:26:48] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P102_PLAN-L2SANITARY.dwg
+[2025-11-28 16:26:58] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P103_PLAN-L3SANITARY.dwg
+[2025-11-28 16:27:09] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P104_PLAN-L4SANITARY.dwg
+[2025-11-28 16:27:19] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P105_PLAN-L5SANITARY.dwg
+[2025-11-28 16:27:19] DWG response.json written.
+[2025-11-28 16:27:19] DWG Export complete: 6 files
+[2025-11-28 16:27:19] Command cleared from JSON file.
+[2025-11-28 16:32:37] Command received: get-sheet-data
+[2025-11-28 16:32:37] IMPORTING: get_sheet_data
+[2025-11-28 16:32:37] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:32:38] Returned sheet data: 27 sheets
+[2025-11-28 16:32:38] Command cleared from JSON file.
+[2025-11-28 16:32:41] Command received: get-model-path
+[2025-11-28 16:32:41] IMPORTING: get_model_path
+[2025-11-28 16:32:41] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:32:41] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:32:41] Command cleared from JSON file.
+[2025-11-28 16:34:04] Command received: get-sheet-data
+[2025-11-28 16:34:04] IMPORTING: get_sheet_data
+[2025-11-28 16:34:04] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:34:04] Returned sheet data: 27 sheets
+[2025-11-28 16:34:04] Command cleared from JSON file.
+[2025-11-28 16:34:10] Command received: get-model-path
+[2025-11-28 16:34:10] IMPORTING: get_model_path
+[2025-11-28 16:34:10] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:34:10] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:34:10] Command cleared from JSON file.
+[2025-11-28 16:34:14] Command received: export_sheets_to_cad
+[2025-11-28 16:34:14] IMPORTING: export_sheets_to_cad
+[2025-11-28 16:34:14] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 16:34:14] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 16:34:14] Format: dwg | Sheets: 2
+[2025-11-28 16:34:24] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P100_PLAN-L0SANITARY.dwg
+[2025-11-28 16:34:35] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P101_PLAN-L1SANITARY.dwg
+[2025-11-28 16:34:35] DWG response.json written.
+[2025-11-28 16:34:35] DWG Export complete: 2 files
+[2025-11-28 16:34:35] Command cleared from JSON file.
+[2025-11-28 16:39:25] Command received: get-sheet-data
+[2025-11-28 16:39:25] IMPORTING: get_sheet_data
+[2025-11-28 16:39:25] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:39:25] Returned sheet data: 27 sheets
+[2025-11-28 16:39:25] Command cleared from JSON file.
+[2025-11-28 16:39:28] Command received: get-model-path
+[2025-11-28 16:39:28] IMPORTING: get_model_path
+[2025-11-28 16:39:28] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:39:28] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:39:28] Command cleared from JSON file.
+[2025-11-28 16:39:31] Command received: export_sheets_to_cad
+[2025-11-28 16:39:31] IMPORTING: export_sheets_to_cad
+[2025-11-28 16:39:31] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 16:39:31] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 16:39:31] Format: dwg | Sheets: 2
+[2025-11-28 16:39:42] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P100_PLAN-L0SANITARY.dwg
+[2025-11-28 16:39:52] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P101_PLAN-L1SANITARY.dwg
+[2025-11-28 16:39:52] DWG response.json written.
+[2025-11-28 16:39:52] DWG Export complete: 2 files
+[2025-11-28 16:39:52] Command cleared from JSON file.
+[2025-11-28 16:44:47] Command received: get-sheet-data
+[2025-11-28 16:44:47] IMPORTING: get_sheet_data
+[2025-11-28 16:44:47] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:44:47] Returned sheet data: 27 sheets
+[2025-11-28 16:44:47] Command cleared from JSON file.
+[2025-11-28 16:44:54] Command received: get-model-path
+[2025-11-28 16:44:54] IMPORTING: get_model_path
+[2025-11-28 16:44:54] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:44:54] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:44:54] Command cleared from JSON file.
+[2025-11-28 16:44:57] Command received: export_sheets_to_cad
+[2025-11-28 16:44:57] IMPORTING: export_sheets_to_cad
+[2025-11-28 16:44:57] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 16:44:57] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 16:44:57] Format: dwg | Sheets: 3
+[2025-11-28 16:45:08] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P100_PLAN-L0SANITARY.dwg
+[2025-11-28 16:45:18] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P101_PLAN-L1SANITARY.dwg
+[2025-11-28 16:45:27] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P102_PLAN-L2SANITARY.dwg
+[2025-11-28 16:45:27] DWG response.json written.
+[2025-11-28 16:45:27] DWG Export complete: 3 files
+[2025-11-28 16:45:27] Command cleared from JSON file.
+[2025-11-28 16:49:42] Command received: get-sheet-data
+[2025-11-28 16:49:42] IMPORTING: get_sheet_data
+[2025-11-28 16:49:42] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:49:42] Returned sheet data: 27 sheets
+[2025-11-28 16:49:42] Command cleared from JSON file.
+[2025-11-28 16:49:49] Command received: get-model-path
+[2025-11-28 16:49:49] IMPORTING: get_model_path
+[2025-11-28 16:49:49] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:49:49] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:49:49] Command cleared from JSON file.
+[2025-11-28 16:49:52] Command received: export_sheets_to_cad
+[2025-11-28 16:49:52] IMPORTING: export_sheets_to_cad
+[2025-11-28 16:49:52] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 16:49:52] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 16:49:52] Format: dwg | Sheets: 2
+[2025-11-28 16:50:02] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P100_PLAN-L0SANITARY.dwg
+[2025-11-28 16:50:12] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P101_PLAN-L1SANITARY.dwg
+[2025-11-28 16:50:12] DWG response.json written.
+[2025-11-28 16:50:12] DWG Export complete: 2 files
+[2025-11-28 16:50:12] Command cleared from JSON file.
+[2025-11-28 16:57:04] Command received: get-sheet-data
+[2025-11-28 16:57:04] IMPORTING: get_sheet_data
+[2025-11-28 16:57:04] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:57:04] Returned sheet data: 27 sheets
+[2025-11-28 16:57:04] Command cleared from JSON file.
+[2025-11-28 16:57:07] Command received: get-model-path
+[2025-11-28 16:57:07] IMPORTING: get_model_path
+[2025-11-28 16:57:07] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 16:57:07] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 16:57:07] Command cleared from JSON file.
+[2025-11-28 16:57:10] Command received: export_sheets_to_cad
+[2025-11-28 16:57:10] IMPORTING: export_sheets_to_cad
+[2025-11-28 16:57:10] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 16:57:11] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 16:57:11] Format: dwg | Sheets: 1
+[2025-11-28 16:57:21] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P100_PLAN-L0SANITARY.dwg
+[2025-11-28 16:57:21] DWG response.json written.
+[2025-11-28 16:57:21] DWG Export complete: 1 files
+[2025-11-28 16:57:21] Command cleared from JSON file.
+[2025-11-28 16:59:57] Command received: get-sheet-data
+[2025-11-28 16:59:57] IMPORTING: get_sheet_data
+[2025-11-28 16:59:57] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 16:59:57] Returned sheet data: 27 sheets
+[2025-11-28 16:59:57] Command cleared from JSON file.
+[2025-11-28 17:00:04] Command received: get-model-path
+[2025-11-28 17:00:04] IMPORTING: get_model_path
+[2025-11-28 17:00:04] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 17:00:04] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 17:00:04] Command cleared from JSON file.
+[2025-11-28 17:00:07] Command received: export_sheets_to_cad
+[2025-11-28 17:00:07] IMPORTING: export_sheets_to_cad
+[2025-11-28 17:00:07] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 17:00:07] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 17:00:07] Format: dwg | Sheets: 1
+[2025-11-28 17:00:14] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P100_PLAN-L0SANITARY.dwg
+[2025-11-28 17:00:14] DWG response.json written.
+[2025-11-28 17:00:14] DWG Export complete: 1 files
+[2025-11-28 17:00:14] Command cleared from JSON file.
+[2025-11-28 17:01:19] Command received: get-sheet-data
+[2025-11-28 17:01:19] IMPORTING: get_sheet_data
+[2025-11-28 17:01:19] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 17:01:19] Returned sheet data: 27 sheets
+[2025-11-28 17:01:19] Command cleared from JSON file.
+[2025-11-28 17:01:29] Command received: get-model-path
+[2025-11-28 17:01:29] IMPORTING: get_model_path
+[2025-11-28 17:01:29] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 17:01:29] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 17:01:29] Command cleared from JSON file.
+[2025-11-28 17:01:32] Command received: export_sheets_to_cad
+[2025-11-28 17:01:32] IMPORTING: export_sheets_to_cad
+[2025-11-28 17:01:32] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 17:01:32] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 17:01:32] Format: dwg | Sheets: 2
+[2025-11-28 17:01:46] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P200_RCP-L0SANITARY.dwg
+[2025-11-28 17:01:56] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P201_RCP-L1SANITARY.dwg
+[2025-11-28 17:01:56] DWG response.json written.
+[2025-11-28 17:01:56] DWG Export complete: 2 files
+[2025-11-28 17:01:56] Command cleared from JSON file.
+[2025-11-28 17:04:06] Command received: get-sheet-data
+[2025-11-28 17:04:06] IMPORTING: get_sheet_data
+[2025-11-28 17:04:06] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 17:04:06] Returned sheet data: 27 sheets
+[2025-11-28 17:04:06] Command cleared from JSON file.
+[2025-11-28 17:04:16] Command received: get-model-path
+[2025-11-28 17:04:16] IMPORTING: get_model_path
+[2025-11-28 17:04:16] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 17:04:16] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 17:04:16] Command cleared from JSON file.
+[2025-11-28 17:04:19] Command received: export_sheets_to_cad
+[2025-11-28 17:04:19] IMPORTING: export_sheets_to_cad
+[2025-11-28 17:04:19] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 17:04:19] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 17:04:19] Format: dwg | Sheets: 2
+[2025-11-28 17:04:29] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P102_PLAN-L2SANITARY.dwg
+[2025-11-28 17:04:39] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P103_PLAN-L3SANITARY.dwg
+[2025-11-28 17:04:39] DWG response.json written.
+[2025-11-28 17:04:39] DWG Export complete: 2 files
+[2025-11-28 17:04:39] Command cleared from JSON file.
+[2025-11-28 17:06:37] Command received: get-model-path
+[2025-11-28 17:06:37] IMPORTING: get_model_path
+[2025-11-28 17:06:37] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 17:06:37] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 17:06:37] Command cleared from JSON file.
+[2025-11-28 21:12:04] Command Watcher active.
+[2025-11-28 21:12:04] Cached UIApplication
+[2025-11-28 21:12:04] Command received: get-sheet-data
+[2025-11-28 21:12:04] IMPORTING: get_sheet_data
+[2025-11-28 21:12:04] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 21:12:04] Returned sheet data: 27 sheets
+[2025-11-28 21:12:04] Command cleared from JSON file.
+[2025-11-28 21:12:10] Command received: get-model-path
+[2025-11-28 21:12:10] IMPORTING: get_model_path
+[2025-11-28 21:12:10] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 21:12:10] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 21:12:10] Command cleared from JSON file.
+[2025-11-28 21:12:13] Command received: export_sheets_to_pdf
+[2025-11-28 21:12:13] IMPORTING: export_sheets_to_pdf
+[2025-11-28 21:12:13] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 21:12:13] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 21:12:13] Sheet IDs received: [1522428, 1522940]
+[2025-11-28 21:12:13] → Activating sheet P100
+[2025-11-28 21:12:14] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 21:12:14] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 21:12:14] → Activating sheet P101
+[2025-11-28 21:12:15] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P101_PLAN-L1SANITARY.pdf
+[2025-11-28 21:12:15] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P101_PLAN-L1SANITARY.pdf
+[2025-11-28 21:12:15] Command cleared from JSON file.
+[2025-11-28 21:17:40] Command received: get-sheet-data
+[2025-11-28 21:17:40] IMPORTING: get_sheet_data
+[2025-11-28 21:17:40] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 21:17:40] Returned sheet data: 27 sheets
+[2025-11-28 21:17:40] Command cleared from JSON file.
+[2025-11-28 21:17:44] Command received: get-model-path
+[2025-11-28 21:17:44] IMPORTING: get_model_path
+[2025-11-28 21:17:44] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 21:17:44] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 21:17:44] Command cleared from JSON file.
+[2025-11-28 21:17:47] Command received: export_sheets_to_pdf
+[2025-11-28 21:17:47] IMPORTING: export_sheets_to_pdf
+[2025-11-28 21:17:47] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 21:17:47] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 21:17:47] Sheet IDs received: [1522428, 1522940]
+[2025-11-28 21:17:47] → Activating sheet P100
+[2025-11-28 21:17:47] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 21:17:48] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P100_PLAN-L0SANITARY.pdf
+[2025-11-28 21:17:48] → Activating sheet P101
+[2025-11-28 21:17:48] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P101_PLAN-L1SANITARY.pdf
+[2025-11-28 21:17:49] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P101_PLAN-L1SANITARY.pdf
+[2025-11-28 21:17:49] Command cleared from JSON file.
+[2025-11-28 21:21:47] Command received: get-sheet-data
+[2025-11-28 21:21:47] IMPORTING: get_sheet_data
+[2025-11-28 21:21:47] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 21:21:47] Returned sheet data: 27 sheets
+[2025-11-28 21:21:47] Command cleared from JSON file.
+[2025-11-28 21:21:50] Command received: get-model-path
+[2025-11-28 21:21:50] IMPORTING: get_model_path
+[2025-11-28 21:21:50] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 21:21:50] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 21:21:50] Command cleared from JSON file.
+[2025-11-28 21:26:15] Command Watcher active.
+[2025-11-28 21:26:15] Cached UIApplication
+[2025-11-28 21:26:15] Command received: export_sheets_to_pdf
+[2025-11-28 21:26:16] IMPORTING: export_sheets_to_pdf
+[2025-11-28 21:26:16] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 21:26:16] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 21:26:16] Sheet IDs received: [1523145, 1523179]
+[2025-11-28 21:26:16] → Activating sheet P102
+[2025-11-28 21:26:17] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P102_PLAN-L2SANITARY.pdf
+[2025-11-28 21:26:19] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P102_PLAN-L2SANITARY.pdf
+[2025-11-28 21:26:19] → Activating sheet P103
+[2025-11-28 21:26:20] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P103_PLAN-L3SANITARY.pdf
+[2025-11-28 21:26:23] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P103_PLAN-L3SANITARY.pdf
+[2025-11-28 21:26:23] Command cleared from JSON file.
+[2025-11-28 21:29:58] Command Watcher active.
+[2025-11-28 21:31:03] Command received: get-sheet-data
+[2025-11-28 21:31:03] IMPORTING: get_sheet_data
+[2025-11-28 21:31:03] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 21:31:03] Returned sheet data: 27 sheets
+[2025-11-28 21:31:03] Command cleared from JSON file.
+[2025-11-28 21:31:08] Cached UIApplication
+[2025-11-28 21:31:08] Command received: get-model-path
+[2025-11-28 21:31:08] IMPORTING: get_model_path
+[2025-11-28 21:31:08] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 21:31:08] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 21:31:08] Command cleared from JSON file.
+[2025-11-28 21:31:10] Command received: export_sheets_to_pdf
+[2025-11-28 21:31:10] IMPORTING: export_sheets_to_pdf
+[2025-11-28 21:31:10] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 21:31:10] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 21:31:10] Sheet IDs received: [1523402, 1523454]
+[2025-11-28 21:31:10] → Activating sheet P200
+[2025-11-28 21:31:11] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P200_RCP-L0SANITARY.pdf
+[2025-11-28 21:31:16] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P200_RCP-L0SANITARY.pdf
+[2025-11-28 21:31:16] → Activating sheet P201
+[2025-11-28 21:31:17] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P201_RCP-L1SANITARY.pdf
+[2025-11-28 21:31:18] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P201_RCP-L1SANITARY.pdf
+[2025-11-28 21:31:18] Command cleared from JSON file.
+[2025-11-28 21:42:37] Command received: get-sheet-data
+[2025-11-28 21:42:37] IMPORTING: get_sheet_data
+[2025-11-28 21:42:37] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 21:42:37] Returned sheet data: 27 sheets
+[2025-11-28 21:42:37] Command cleared from JSON file.
+[2025-11-28 21:42:40] Command received: get-model-path
+[2025-11-28 21:42:40] IMPORTING: get_model_path
+[2025-11-28 21:42:40] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 21:42:40] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 21:42:40] Command cleared from JSON file.
+[2025-11-28 21:42:42] Command received: export_sheets_to_pdf
+[2025-11-28 21:42:42] IMPORTING: export_sheets_to_pdf
+[2025-11-28 21:42:42] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 21:42:42] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 21:42:42] Sheet IDs received: [1526300, 1526404]
+[2025-11-28 21:42:42] → Activating sheet P300
+[2025-11-28 21:42:48] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
+[2025-11-28 21:42:54] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P300_SECTIONSSANITARYRISERS.pdf
+[2025-11-28 21:42:54] → Activating sheet P301
+[2025-11-28 21:42:58] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P301_SECTIONSSANITARYRISERS.pdf
+[2025-11-28 21:43:03] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P301_SECTIONSSANITARYRISERS.pdf
+[2025-11-28 21:43:03] Command cleared from JSON file.
+[2025-11-28 21:51:13] Command received: get-sheet-data
+[2025-11-28 21:51:13] IMPORTING: get_sheet_data
+[2025-11-28 21:51:13] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 21:51:13] Returned sheet data: 27 sheets
+[2025-11-28 21:51:13] Command cleared from JSON file.
+[2025-11-28 21:51:30] Command received: get-model-path
+[2025-11-28 21:51:30] IMPORTING: get_model_path
+[2025-11-28 21:51:30] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 21:51:30] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 21:51:30] Command cleared from JSON file.
+[2025-11-28 21:51:31] Command received: export_sheets_to_cad
+[2025-11-28 21:51:31] IMPORTING: export_sheets_to_cad
+[2025-11-28 21:51:31] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 21:51:31] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 21:51:31] Format: dwg | Sheets: 2
+[2025-11-28 21:51:39] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P201_RCP-L1SANITARY.dwg
+[2025-11-28 21:51:50] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P203_RCP-L3SANITARY.dwg
+[2025-11-28 21:51:50] DWG response.json written.
+[2025-11-28 21:51:50] DWG Export complete: 2 files
+[2025-11-28 21:51:50] Command cleared from JSON file.
+[2025-11-28 21:56:24] Command received: get-sheet-data
+[2025-11-28 21:56:24] IMPORTING: get_sheet_data
+[2025-11-28 21:56:24] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 21:56:24] Returned sheet data: 27 sheets
+[2025-11-28 21:56:24] Command cleared from JSON file.
+[2025-11-28 21:56:31] Command received: get-model-path
+[2025-11-28 21:56:31] IMPORTING: get_model_path
+[2025-11-28 21:56:31] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 21:56:31] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 21:56:31] Command cleared from JSON file.
+[2025-11-28 21:56:32] Command received: export_sheets_to_cad
+[2025-11-28 21:56:32] IMPORTING: export_sheets_to_cad
+[2025-11-28 21:56:32] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 21:56:32] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 21:56:32] Format: dwg | Sheets: 2
+[2025-11-28 21:56:39] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P405_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-28 21:56:48] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P406_DOMESTICWATERPLAN-L0PARKING.dwg
+[2025-11-28 21:56:48] DWG response.json written.
+[2025-11-28 21:56:48] DWG Export complete: 2 files
+[2025-11-28 21:56:48] Command cleared from JSON file.
+[2025-11-28 22:01:20] Command received: get-sheet-data
+[2025-11-28 22:01:20] IMPORTING: get_sheet_data
+[2025-11-28 22:01:20] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:01:20] Returned sheet data: 27 sheets
+[2025-11-28 22:01:20] Command cleared from JSON file.
+[2025-11-28 22:01:32] Command received: get-model-path
+[2025-11-28 22:01:32] IMPORTING: get_model_path
+[2025-11-28 22:01:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:01:32] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:01:32] Command cleared from JSON file.
+[2025-11-28 22:01:34] Command received: export_sheets_to_cad
+[2025-11-28 22:01:34] IMPORTING: export_sheets_to_cad
+[2025-11-28 22:01:34] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 22:01:34] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 22:01:34] Format: dwg | Sheets: 2
+[2025-11-28 22:01:43] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P106_PLAN-ROOFSANITARY.dwg
+[2025-11-28 22:01:52] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P206_RCP-ROOFSANITARY.dwg
+[2025-11-28 22:01:52] DWG response.json written.
+[2025-11-28 22:01:52] DWG Export complete: 2 files
+[2025-11-28 22:01:52] Command cleared from JSON file.
+[2025-11-28 22:02:01] Command received: get-sheet-data
+[2025-11-28 22:02:01] IMPORTING: get_sheet_data
+[2025-11-28 22:02:01] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:02:02] Returned sheet data: 27 sheets
+[2025-11-28 22:02:02] Command cleared from JSON file.
+[2025-11-28 22:02:06] Command received: get-model-path
+[2025-11-28 22:02:06] IMPORTING: get_model_path
+[2025-11-28 22:02:06] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:02:06] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:02:06] Command cleared from JSON file.
+[2025-11-28 22:02:08] Command received: export_sheets_to_pdf
+[2025-11-28 22:02:08] IMPORTING: export_sheets_to_pdf
+[2025-11-28 22:02:08] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 22:02:08] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 22:02:08] Sheet IDs received: [1523259, 1523669]
+[2025-11-28 22:02:08] → Activating sheet P106
+[2025-11-28 22:02:12] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P106_PLAN-ROOFSANITARY.pdf
+[2025-11-28 22:02:14] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P106_PLAN-ROOFSANITARY.pdf
+[2025-11-28 22:02:14] → Activating sheet P206
+[2025-11-28 22:02:18] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P206_RCP-ROOFSANITARY.pdf
+[2025-11-28 22:02:20] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P206_RCP-ROOFSANITARY.pdf
+[2025-11-28 22:02:20] Command cleared from JSON file.
+[2025-11-28 22:08:03] Command received: get-sheet-data
+[2025-11-28 22:08:03] IMPORTING: get_sheet_data
+[2025-11-28 22:08:03] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:08:03] Returned sheet data: 27 sheets
+[2025-11-28 22:08:03] Command cleared from JSON file.
+[2025-11-28 22:08:10] Command received: get-model-path
+[2025-11-28 22:08:10] IMPORTING: get_model_path
+[2025-11-28 22:08:10] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:08:10] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:08:10] Command cleared from JSON file.
+[2025-11-28 22:08:11] Command received: export_sheets_to_pdf
+[2025-11-28 22:08:11] IMPORTING: export_sheets_to_pdf
+[2025-11-28 22:08:11] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 22:08:11] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 22:08:11] Sheet IDs received: [1706262, 1709612]
+[2025-11-28 22:08:12] → Activating sheet P000
+[2025-11-28 22:08:12] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P000_COVERSHEET.pdf
+[2025-11-28 22:08:18] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P000_COVERSHEET.pdf
+[2025-11-28 22:08:18] → Activating sheet P001
+[2025-11-28 22:08:19] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P001_Learnaboutthisproject.pdf
+[2025-11-28 22:08:26] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P001_Learnaboutthisproject.pdf
+[2025-11-28 22:08:26] Command cleared from JSON file.
+[2025-11-28 22:08:38] Command received: get-sheet-data
+[2025-11-28 22:08:38] IMPORTING: get_sheet_data
+[2025-11-28 22:08:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:08:38] Returned sheet data: 27 sheets
+[2025-11-28 22:08:38] Command cleared from JSON file.
+[2025-11-28 22:08:41] Command received: get-model-path
+[2025-11-28 22:08:41] IMPORTING: get_model_path
+[2025-11-28 22:08:41] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:08:41] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:08:41] Command cleared from JSON file.
+[2025-11-28 22:08:42] Command received: export_sheets_to_cad
+[2025-11-28 22:08:42] IMPORTING: export_sheets_to_cad
+[2025-11-28 22:08:42] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 22:08:42] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 22:08:42] Format: dwg | Sheets: 1
+[2025-11-28 22:10:34] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P000_COVERSHEET.dwg
+[2025-11-28 22:10:34] DWG response.json written.
+[2025-11-28 22:10:34] DWG Export complete: 1 files
+[2025-11-28 22:10:34] Command cleared from JSON file.
+[2025-11-28 22:11:04] Command received: get-sheet-data
+[2025-11-28 22:11:04] IMPORTING: get_sheet_data
+[2025-11-28 22:11:04] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:11:04] Returned sheet data: 27 sheets
+[2025-11-28 22:11:04] Command cleared from JSON file.
+[2025-11-28 22:11:13] Command received: get-model-path
+[2025-11-28 22:11:13] IMPORTING: get_model_path
+[2025-11-28 22:11:13] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:11:13] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:11:13] Command cleared from JSON file.
+[2025-11-28 22:11:14] Command received: export_sheets_to_cad
+[2025-11-28 22:11:14] IMPORTING: export_sheets_to_cad
+[2025-11-28 22:11:14] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 22:11:14] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 22:11:14] Format: dwg | Sheets: 1
+[2025-11-28 22:11:16] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P205_RCP-L5SANITARY.dwg
+[2025-11-28 22:11:16] DWG response.json written.
+[2025-11-28 22:11:16] DWG Export complete: 1 files
+[2025-11-28 22:11:16] Command cleared from JSON file.
+[2025-11-28 22:11:23] Command received: get-sheet-data
+[2025-11-28 22:11:23] IMPORTING: get_sheet_data
+[2025-11-28 22:11:23] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:11:23] Returned sheet data: 27 sheets
+[2025-11-28 22:11:23] Command cleared from JSON file.
+[2025-11-28 22:11:28] Command received: get-model-path
+[2025-11-28 22:11:28] IMPORTING: get_model_path
+[2025-11-28 22:11:28] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:11:28] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:11:28] Command cleared from JSON file.
+[2025-11-28 22:11:29] Command received: export_sheets_to_pdf
+[2025-11-28 22:11:29] IMPORTING: export_sheets_to_pdf
+[2025-11-28 22:11:29] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 22:11:29] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 22:11:29] Sheet IDs received: [1523642]
+[2025-11-28 22:11:29] → Activating sheet P205
+[2025-11-28 22:11:30] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P205_RCP-L5SANITARY.pdf
+[2025-11-28 22:11:30] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P205_RCP-L5SANITARY.pdf
+[2025-11-28 22:11:30] Command cleared from JSON file.
+[2025-11-28 22:33:43] Command received: get-sheet-data
+[2025-11-28 22:33:43] IMPORTING: get_sheet_data
+[2025-11-28 22:33:43] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:33:43] Returned sheet data: 27 sheets
+[2025-11-28 22:33:43] Command cleared from JSON file.
+[2025-11-28 22:33:47] Command received: get-model-path
+[2025-11-28 22:33:47] IMPORTING: get_model_path
+[2025-11-28 22:33:47] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:33:47] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:33:47] Command cleared from JSON file.
+[2025-11-28 22:33:49] Command received: export_sheets_to_pdf
+[2025-11-28 22:33:49] IMPORTING: export_sheets_to_pdf
+[2025-11-28 22:33:49] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_pdf.py
+[2025-11-28 22:33:49] PRINT-CURRENT-WINDOW mode started
+[2025-11-28 22:33:49] Sheet IDs received: [1523564, 1523592]
+[2025-11-28 22:33:49] → Activating sheet P202
+[2025-11-28 22:33:52] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P202_RCP-L2SANITARY.pdf
+[2025-11-28 22:33:56] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P202_RCP-L2SANITARY.pdf
+[2025-11-28 22:33:56] → Activating sheet P203
+[2025-11-28 22:34:00] → Printing to: C:\PADApps\RevitPAD\ExportsPDF\P203_RCP-L3SANITARY.pdf
+[2025-11-28 22:34:05] ✔ Printed (PDFCreator may rename): C:\PADApps\RevitPAD\ExportsPDF\P203_RCP-L3SANITARY.pdf
+[2025-11-28 22:34:05] Command cleared from JSON file.
+[2025-11-28 22:34:20] Command received: get-sheet-data
+[2025-11-28 22:34:20] IMPORTING: get_sheet_data
+[2025-11-28 22:34:20] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:34:20] Returned sheet data: 27 sheets
+[2025-11-28 22:34:20] Command cleared from JSON file.
+[2025-11-28 22:34:27] Command received: get-model-path
+[2025-11-28 22:34:27] IMPORTING: get_model_path
+[2025-11-28 22:34:27] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:34:27] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:34:27] Command cleared from JSON file.
+[2025-11-28 22:34:28] Command received: export_sheets_to_cad
+[2025-11-28 22:34:28] IMPORTING: export_sheets_to_cad
+[2025-11-28 22:34:28] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
+[2025-11-28 22:34:28] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs
+[2025-11-28 22:34:28] Format: dwg | Sheets: 2
+[2025-11-28 22:34:38] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P204_RCP-L4SANITARY.dwg
+[2025-11-28 22:34:43] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWGs\P205_RCP-L5SANITARY.dwg
+[2025-11-28 22:34:43] DWG response.json written.
+[2025-11-28 22:34:43] DWG Export complete: 2 files
+[2025-11-28 22:34:43] Command cleared from JSON file.
+[2025-11-28 22:43:11] Command received: get-sheet-data
+[2025-11-28 22:43:11] IMPORTING: get_sheet_data
+[2025-11-28 22:43:11] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:43:11] Returned sheet data: 27 sheets
+[2025-11-28 22:43:11] Command cleared from JSON file.
+[2025-11-28 22:45:20] Command received: get-sheet-data
+[2025-11-28 22:45:20] IMPORTING: get_sheet_data
+[2025-11-28 22:45:20] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:45:20] Returned sheet data: 27 sheets
+[2025-11-28 22:45:20] Command cleared from JSON file.
+[2025-11-28 22:47:59] Command received: get-sheet-data
+[2025-11-28 22:47:59] IMPORTING: get_sheet_data
+[2025-11-28 22:47:59] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:47:59] Returned sheet data: 27 sheets
+[2025-11-28 22:47:59] Command cleared from JSON file.
+[2025-11-28 22:51:35] Command received: get-sheet-data
+[2025-11-28 22:51:35] IMPORTING: get_sheet_data
+[2025-11-28 22:51:35] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:51:35] Returned sheet data: 27 sheets
+[2025-11-28 22:51:35] Command cleared from JSON file.
+[2025-11-28 22:51:42] Command received: get-sheet-data
+[2025-11-28 22:51:42] IMPORTING: get_sheet_data
+[2025-11-28 22:51:42] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:51:42] Returned sheet data: 27 sheets
+[2025-11-28 22:51:42] Command cleared from JSON file.
+[2025-11-28 22:52:37] Command received: get-sheet-data
+[2025-11-28 22:52:37] IMPORTING: get_sheet_data
+[2025-11-28 22:52:37] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:52:37] Returned sheet data: 27 sheets
+[2025-11-28 22:52:37] Command cleared from JSON file.
+[2025-11-28 22:54:16] Command received: get-sheet-data
+[2025-11-28 22:54:16] IMPORTING: get_sheet_data
+[2025-11-28 22:54:16] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:54:16] Returned sheet data: 27 sheets
+[2025-11-28 22:54:16] Command cleared from JSON file.
+[2025-11-28 22:54:17] Command received: get-model-path
+[2025-11-28 22:54:17] IMPORTING: get_model_path
+[2025-11-28 22:54:17] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:54:17] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:54:17] Command cleared from JSON file.
+[2025-11-28 22:55:32] Command received: get-sheet-data
+[2025-11-28 22:55:32] IMPORTING: get_sheet_data
+[2025-11-28 22:55:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-28 22:55:32] Returned sheet data: 27 sheets
+[2025-11-28 22:55:32] Command cleared from JSON file.
+[2025-11-28 22:55:34] Command received: get-model-path
+[2025-11-28 22:55:34] IMPORTING: get_model_path
+[2025-11-28 22:55:34] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 22:55:34] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 22:55:34] Command cleared from JSON file.
+[2025-11-28 23:16:58] Command received: get-3d-views
+[2025-11-28 23:16:58] IMPORTING: get_3d_views
+[2025-11-28 23:16:58] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:16:58] Returned 3D views: 5
+[2025-11-28 23:16:58] Command cleared from JSON file.
+[2025-11-28 23:20:01] Command received: get-3d-views
+[2025-11-28 23:20:01] IMPORTING: get_3d_views
+[2025-11-28 23:20:01] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:20:01] Returned 3D views: 5
+[2025-11-28 23:20:01] Command cleared from JSON file.
+[2025-11-28 23:20:07] Command received: get-model-path
+[2025-11-28 23:20:07] IMPORTING: get_model_path
+[2025-11-28 23:20:07] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:20:07] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:20:07] Command cleared from JSON file.
+[2025-11-28 23:24:43] Command received: get-3d-views
+[2025-11-28 23:24:43] IMPORTING: get_3d_views
+[2025-11-28 23:24:43] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:24:43] Returned 3D views: 5
+[2025-11-28 23:24:44] Command cleared from JSON file.
+[2025-11-28 23:24:47] Command received: get-model-path
+[2025-11-28 23:24:47] IMPORTING: get_model_path
+[2025-11-28 23:24:47] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:24:47] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:24:47] Command cleared from JSON file.
+[2025-11-28 23:27:32] Command received: get-3d-views
+[2025-11-28 23:27:32] IMPORTING: get_3d_views
+[2025-11-28 23:27:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:27:32] Returned 3D views: 5
+[2025-11-28 23:27:32] Command cleared from JSON file.
+[2025-11-28 23:27:35] Command received: get-model-path
+[2025-11-28 23:27:35] IMPORTING: get_model_path
+[2025-11-28 23:27:35] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:27:35] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:27:35] Command cleared from JSON file.
+[2025-11-28 23:29:39] Command received: get-3d-views
+[2025-11-28 23:29:39] IMPORTING: get_3d_views
+[2025-11-28 23:29:39] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:29:39] Returned 3D views: 5
+[2025-11-28 23:29:39] Command cleared from JSON file.
+[2025-11-28 23:29:43] Command received: get-model-path
+[2025-11-28 23:29:43] IMPORTING: get_model_path
+[2025-11-28 23:29:43] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:29:43] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:29:43] Command cleared from JSON file.
+[2025-11-28 23:30:38] Command received: get-3d-views
+[2025-11-28 23:30:38] IMPORTING: get_3d_views
+[2025-11-28 23:30:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:30:38] Returned 3D views: 5
+[2025-11-28 23:30:38] Command cleared from JSON file.
+[2025-11-28 23:30:41] Command received: get-model-path
+[2025-11-28 23:30:41] IMPORTING: get_model_path
+[2025-11-28 23:30:41] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:30:41] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:30:41] Command cleared from JSON file.
+[2025-11-28 23:30:43] Command received: export_views_to_nwc
+[2025-11-28 23:30:43] IMPORTING: export_views_to_nwc
+[2025-11-28 23:30:43] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
+[2025-11-28 23:30:43] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC
+[2025-11-28 23:30:43] Views: 1
+[2025-11-28 23:30:43] No matching views found for NWC export.
+[2025-11-28 23:30:43] NWC response.json written.
+[2025-11-28 23:30:43] Command cleared from JSON file.
+[2025-11-28 23:35:20] Command received: get-3d-views
+[2025-11-28 23:35:20] IMPORTING: get_3d_views
+[2025-11-28 23:35:20] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:35:20] Returned 3D views: 5
+[2025-11-28 23:35:20] Command cleared from JSON file.
+[2025-11-28 23:35:23] Command received: get-model-path
+[2025-11-28 23:35:23] IMPORTING: get_model_path
+[2025-11-28 23:35:23] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:35:23] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:35:23] Command cleared from JSON file.
+[2025-11-28 23:35:24] Command received: export_views_to_nwc
+[2025-11-28 23:35:24] IMPORTING: export_views_to_nwc
+[2025-11-28 23:35:24] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
+[2025-11-28 23:35:24] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC
+[2025-11-28 23:35:24] Views: 1
+[2025-11-28 23:36:12] NWC response.json written.
+[2025-11-28 23:36:12] NWC Export complete: 0 files
+[2025-11-28 23:36:12] Command cleared from JSON file.
+[2025-11-28 23:40:10] Command received: get-3d-views
+[2025-11-28 23:40:10] IMPORTING: get_3d_views
+[2025-11-28 23:40:10] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:40:10] Returned 3D views: 5
+[2025-11-28 23:40:10] Command cleared from JSON file.
+[2025-11-28 23:40:16] Command received: get-model-path
+[2025-11-28 23:40:16] IMPORTING: get_model_path
+[2025-11-28 23:40:16] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:40:16] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:40:16] Command cleared from JSON file.
+[2025-11-28 23:40:18] Command received: export_views_to_nwc
+[2025-11-28 23:40:18] IMPORTING: export_views_to_nwc
+[2025-11-28 23:40:18] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
+[2025-11-28 23:40:18] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC
+[2025-11-28 23:40:18] Views: 1
+[2025-11-28 23:41:06] NWC response.json written.
+[2025-11-28 23:41:06] NWC Export complete: 0 files
+[2025-11-28 23:41:06] Command cleared from JSON file.
+[2025-11-28 23:44:22] Command received: get-3d-views
+[2025-11-28 23:44:22] IMPORTING: get_3d_views
+[2025-11-28 23:44:22] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:44:22] Returned 3D views: 5
+[2025-11-28 23:44:22] Command cleared from JSON file.
+[2025-11-28 23:44:29] Command received: get-model-path
+[2025-11-28 23:44:29] IMPORTING: get_model_path
+[2025-11-28 23:44:29] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:44:29] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:44:29] Command cleared from JSON file.
+[2025-11-28 23:44:30] Command received: export_views_to_nwc
+[2025-11-28 23:44:30] IMPORTING: export_views_to_nwc
+[2025-11-28 23:44:30] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
+[2025-11-28 23:44:30] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC
+[2025-11-28 23:44:30] Views: 1
+[2025-11-28 23:45:29] NWC response.json written.
+[2025-11-28 23:45:29] NWC Export complete: 0 files
+[2025-11-28 23:45:29] Command cleared from JSON file.
+[2025-11-28 23:47:29] Command received: get-3d-views
+[2025-11-28 23:47:29] IMPORTING: get_3d_views
+[2025-11-28 23:47:29] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-11-28 23:47:30] Returned 3D views: 5
+[2025-11-28 23:47:30] Command cleared from JSON file.
+[2025-11-28 23:47:33] Command received: get-model-path
+[2025-11-28 23:47:33] IMPORTING: get_model_path
+[2025-11-28 23:47:33] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-28 23:47:33] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-11-28 23:47:33] Command cleared from JSON file.
+[2025-11-28 23:47:34] Command received: export_views_to_nwc
+[2025-11-28 23:47:34] IMPORTING: export_views_to_nwc
+[2025-11-28 23:47:34] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
+[2025-11-28 23:47:34] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC
+[2025-11-28 23:47:34] Views: 1
+[2025-11-28 23:48:48] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC\1400366_3DWaterManifold.nwc
+[2025-11-28 23:48:48] NWC response.json written.
+[2025-11-28 23:48:48] NWC Export complete: 1 files
+[2025-11-28 23:48:48] Command cleared from JSON file.
 
 ################################################################################
 ### RevitPAD\ThinkPad.extension\ThinkPad.tab\Automation.panel\Command Watcher.pushbutton\commands\export_sheets_to_cad.py
