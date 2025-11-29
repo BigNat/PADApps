@@ -92,7 +92,7 @@
 
 
 (defun set_layer_from_bridge ( / jsonfile layer_name line_type color weight)
-  (setq jsonfile (hc-get-bridge-json-path))
+  (setq jsonfile (hc-get-designer-bridge-json-path))
   (setq layer_name (hc-json-get jsonfile "layer"))
   (setq line_type (hc-json-get jsonfile "linetype"))
   (setq color (atoi (hc-json-get jsonfile "color")))

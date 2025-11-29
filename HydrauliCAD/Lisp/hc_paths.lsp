@@ -67,6 +67,11 @@
 )
 
 
+(defun hc-get-designer-bridge-json-path ()
+  (strcat (hc-get-root-path) "Tools/Designer/Bridge/pipe_bridge.json")
+)
+
+
 (defun hc-get-layer-config ()
   (strcat (hc-get-root-path) "Bridge/layer_config.json")
 )

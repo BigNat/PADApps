@@ -2188,3 +2188,271 @@
 [2025-39-29 12:39:57] ✅ Loaded hc_xref.lsp
 [2025-39-29 12:39:57] ✅ Loaded hc_xref_bridge.lsp
 [2025-39-29 12:39:57] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-31-29 22:31:06
+============================================================
+[2025-31-29 22:31:06] 🚀 Starting HydrauliCAD Loader...
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup_text.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_designer_commands.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_json.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_layer.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_service.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_test.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_xref.lsp
+[2025-31-29 22:31:06] ✅ Loaded hc_xref_bridge.lsp
+[2025-31-29 22:31:06] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-31-29 22:31:18
+============================================================
+[2025-31-29 22:31:18] 🚀 Starting HydrauliCAD Loader...
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup_text.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_designer_commands.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_json.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_layer.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_service.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_test.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_xref.lsp
+[2025-31-29 22:31:18] ✅ Loaded hc_xref_bridge.lsp
+[2025-31-29 22:31:18] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-31-29 22:31:50
+============================================================
+[2025-31-29 22:31:50] 🚀 Starting HydrauliCAD Loader...
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup_text.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_designer_commands.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_json.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_layer.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_service.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_test.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_xref.lsp
+[2025-31-29 22:31:50] ✅ Loaded hc_xref_bridge.lsp
+[2025-31-29 22:31:50] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-37-29 22:37:36
+============================================================
+[2025-37-29 22:37:36] 🚀 Starting HydrauliCAD Loader...
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup_text.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_designer_commands.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_json.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_layer.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_service.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_test.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_xref.lsp
+[2025-37-29 22:37:36] ✅ Loaded hc_xref_bridge.lsp
+[2025-37-29 22:37:36] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-48-29 22:48:23
+============================================================
+[2025-48-29 22:48:23] 🚀 Starting HydrauliCAD Loader...
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup_text.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_designer_commands.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_json.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_layer.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_service.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_test.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_xref.lsp
+[2025-48-29 22:48:23] ✅ Loaded hc_xref_bridge.lsp
+[2025-48-29 22:48:23] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-18-29 23:18:50
+============================================================
+[2025-18-29 23:18:50] 🚀 Starting HydrauliCAD Loader...
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup_text.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_designer_commands.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_json.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_layer.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_service.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_test.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_xref.lsp
+[2025-18-29 23:18:50] ✅ Loaded hc_xref_bridge.lsp
+[2025-18-29 23:18:50] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-19-29 23:19:00
+============================================================
+[2025-19-29 23:19:00] 🚀 Starting HydrauliCAD Loader...
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup_text.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_designer_commands.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_json.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_layer.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_service.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_test.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_xref.lsp
+[2025-19-29 23:19:00] ✅ Loaded hc_xref_bridge.lsp
+[2025-19-29 23:19:00] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-29 23:34:06
+============================================================
+[2025-34-29 23:34:06] 🚀 Starting HydrauliCAD Loader...
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_designer_commands.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_json.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_layer.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_service.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_test.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_xref.lsp
+[2025-34-29 23:34:06] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-29 23:34:06] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-42-29 23:42:24
+============================================================
+[2025-42-29 23:42:24] 🚀 Starting HydrauliCAD Loader...
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup_text.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_designer_commands.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_json.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_layer.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_service.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_test.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_xref.lsp
+[2025-42-29 23:42:24] ✅ Loaded hc_xref_bridge.lsp
+[2025-42-29 23:42:24] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-42-29 23:42:33
+============================================================
+[2025-42-29 23:42:33] 🚀 Starting HydrauliCAD Loader...
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup_text.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_designer_commands.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_json.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_layer.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_service.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_test.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_xref.lsp
+[2025-42-29 23:42:33] ✅ Loaded hc_xref_bridge.lsp
+[2025-42-29 23:42:33] ✅ HydrauliCAD startup complete.
+[2025-43-29 23:43:38] 🧩 Designer_Pipe command started.
+[2025-48-29 23:48:14] 🧩 Designer_Pipe command started.
+[2025-48-29 23:48:14] 📏 Linetype loaded → 
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-51-29 23:51:53
+============================================================
+[2025-51-29 23:51:53] 🚀 Starting HydrauliCAD Loader...
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup_text.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_designer_commands.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_json.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_layer.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_service.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_test.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_xref.lsp
+[2025-51-29 23:51:53] ✅ Loaded hc_xref_bridge.lsp
+[2025-51-29 23:51:53] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-52-29 23:52:27
+============================================================
+[2025-52-29 23:52:27] 🚀 Starting HydrauliCAD Loader...
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup_text.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_designer_commands.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_json.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_layer.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_service.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_test.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_xref.lsp
+[2025-52-29 23:52:27] ✅ Loaded hc_xref_bridge.lsp
+[2025-52-29 23:52:27] ✅ HydrauliCAD startup complete.
+[2025-52-29 23:52:59] 🧩 Designer_Pipe command started.
+[2025-05-30 00:05:16] 🧩 Designer_Pipe command started.
+[2025-05-30 00:05:16] 📏 Linetype loaded → HYD_COLD_WATER
+[2025-05-30 00:05:16] 🎨 Created new layer: Hyd_Pipe_Water_CW  [Color: 140 | Weight: 50 | Linetype: HYD_COLD_WATER]
+[2025-05-30 00:05:16] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-05-30 00:05:16] 📏 Drawing pipe line...
+[2025-05-30 00:05:16] ✅ Designer_Pipe command completed.
+[2025-05-30 00:05:23] 🧩 Designer_Pipe command started.
+[2025-05-30 00:05:23] 📏 Linetype loaded → HYD_RE_USE
+[2025-05-30 00:05:23] 🎨 Created new layer: Hyd_Pipe_Water_RE  [Color: 90 | Weight: 50 | Linetype: HYD_RE_USE]
+[2025-05-30 00:05:23] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-05-30 00:05:24] 📏 Drawing pipe line...
+[2025-05-30 00:05:24] ✅ Designer_Pipe command completed.

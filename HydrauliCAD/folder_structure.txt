@@ -5,18 +5,33 @@
     Blocks/
     Bridge/
         bridge.json
+        lt_bridge.json
     Data/
         __init__.py
         current_layer_config.json
         current_tool.json
-        layer_config/
+        current_tool_config.json
+        layer_configs/
             AS.json
             Default.json
             KOS.json
             NDPH.json
             __init__.py
+        tool_configs/
+            All.json
+            Design.json
+            Set Up.json
+            __init__.py
     Lisp/
         ___snapshot.py
+        hc_cleanup.lsp
+        hc_cleanup_blocks.lsp
+        hc_cleanup_bylayer.lsp
+        hc_cleanup_dimensions.lsp
+        hc_cleanup_hatching.lsp
+        hc_cleanup_lineweight.lsp
+        hc_cleanup_text.lsp
+        hc_cleanup_ucs.lsp
         hc_designer_commands.lsp
         hc_json.lsp
         hc_layer.lsp
@@ -25,6 +40,8 @@
         hc_paths.lsp
         hc_service.lsp
         hc_test.lsp
+        hc_xref.lsp
+        hc_xref_bridge.lsp
         Test/
             doc_events.lsp
             hc_layer copy.lsp
@@ -41,11 +58,20 @@
             Support/
         CleanUp/
             Blocks/
+            Bridge/
+                batch_bridge.json
+                default_bridge.json
             Data/
+                commands.json
+                clean_up_configs/
+                    Batch CleanUp.json
+                    Quick CleanUp.json
             Lisp/
             Support/
         Designer/
             Blocks/
+            Bridge/
+                pipe_bridge.json
             Data/
                 services.json
             Lisp/
@@ -68,8 +94,15 @@
             Support/
         LightTable/
             Blocks/
+            Bridge/
+                lt_bridge.json
             Data/
-                light_table_config.json
+                categories.json
+                layers.json
+                search.json
+                Colours/
+                    Default.json
+                    Soft Spectrum.json
             Lisp/
             Support/
         Peno/

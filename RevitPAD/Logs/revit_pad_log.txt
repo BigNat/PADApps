@@ -177,3 +177,35 @@
 [2025-11-29 12:30:31] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
 [2025-11-29 12:30:31] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
 [2025-11-29 12:30:31] Command cleared from JSON file.
+[2025-11-29 23:36:11] Command Watcher active.
+[2025-11-29 23:36:11] Cached UIApplication
+[2025-11-29 23:36:11] Command received: get-sheet-data
+[2025-11-29 23:36:11] IMPORTING: get_sheet_data
+[2025-11-29 23:36:11] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-29 23:36:11] Returned sheet data: 0 sheets
+[2025-11-29 23:36:11] Command cleared from JSON file.
+[2025-11-29 23:36:14] Command received: get-sheet-data
+[2025-11-29 23:36:14] IMPORTING: get_sheet_data
+[2025-11-29 23:36:14] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-29 23:36:14] Returned sheet data: 0 sheets
+[2025-11-29 23:36:14] Command cleared from JSON file.
+[2025-11-29 23:36:32] Command received: get-model-path
+[2025-11-29 23:36:32] IMPORTING: get_model_path
+[2025-11-29 23:36:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-29 23:36:32] Returned model path → C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Products\Revit - CAD Details\halgantradewaste\MGTS1000 - 5000\HALGAN MGTS 3000L Grease Trap.rfa
+[2025-11-29 23:36:32] Command cleared from JSON file.
+[2025-11-29 23:36:35] Command received: get-model-path
+[2025-11-29 23:36:35] IMPORTING: get_model_path
+[2025-11-29 23:36:35] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-29 23:36:35] Returned model path → C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Products\Revit - CAD Details\halgantradewaste\MGTS1000 - 5000\HALGAN MGTS 3000L Grease Trap.rfa
+[2025-11-29 23:36:35] Command cleared from JSON file.
+[2025-11-29 23:36:38] Command received: get-model-path
+[2025-11-29 23:36:38] IMPORTING: get_model_path
+[2025-11-29 23:36:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-11-29 23:36:38] Returned model path → C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Products\Revit - CAD Details\halgantradewaste\MGTS1000 - 5000\HALGAN MGTS 3000L Grease Trap.rfa
+[2025-11-29 23:36:38] Command cleared from JSON file.
+[2025-11-29 23:36:54] Command received: get-sheet-data
+[2025-11-29 23:36:54] IMPORTING: get_sheet_data
+[2025-11-29 23:36:54] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-11-29 23:36:54] Returned sheet data: 0 sheets
+[2025-11-29 23:36:54] Command cleared from JSON file.
