@@ -209,3 +209,10 @@
 [2025-11-29 23:36:54] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
 [2025-11-29 23:36:54] Returned sheet data: 0 sheets
 [2025-11-29 23:36:54] Command cleared from JSON file.
+[2025-11-30 22:25:07] Command Watcher active.
+[2025-11-30 22:25:09] Cached UIApplication
+[2025-11-30 22:25:09] Command received: stop_watcher
+[2025-11-30 22:25:09] Received stop_watcher command. Stopping loop.
+[2025-11-30 22:25:09] Watcher lock file removed.
+[2025-11-30 22:25:09] stop_watcher cleared from JSON file.
+[2025-11-30 22:25:09] Watcher loop stopping during sleep.
