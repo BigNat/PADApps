@@ -1,8 +1,8 @@
 {
-  "layer": "Hyd_Pipe_Water_RE",
-  "service": "RE",
-  "description": "Re-use",
-  "color": 90,
+  "layer": "Hyd_Pipe_Water_CW",
+  "service": "CW",
+  "description": "Cold Water",
+  "color": 140,
   "weight": 50,
-  "linetype": "HYD_RE_USE"
+  "linetype": "HYD_COLD_WATER"
 }
