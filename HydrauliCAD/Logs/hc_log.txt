@@ -1,353 +1,126 @@
 
 ============================================================
-\U+D83D\U+DD53 New HydrauliCAD Session: 2025-03-30 16:03:19
+\U+D83D\U+DD53 New HydrauliCAD Session: 2025-09-01 16:09:27
 ============================================================
-[2025-03-30 16:03:19] 🚀 Starting HydrauliCAD Loader...
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup_text.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_designer_commands.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_get_layers.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_json.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_layer.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_service.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_test.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_xref.lsp
-[2025-03-30 16:03:19] ✅ Loaded hc_xref_bridge.lsp
-[2025-03-30 16:03:19] ✅ HydrauliCAD startup complete.
+[2025-09-01 16:09:27] 🚀 Starting HydrauliCAD Loader...
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup_text.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_designer_commands.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_get_current_layer.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_get_layers.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_json.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_layer.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_service.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_test.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_xref.lsp
+[2025-09-01 16:09:27] ✅ Loaded hc_xref_bridge.lsp
+[2025-09-01 16:09:27] ✅ HydrauliCAD startup complete.
 
 ============================================================
-🕓 New HydrauliCAD Session: 2025-03-30 16:03:26
+🕓 New HydrauliCAD Session: 2025-09-01 16:09:40
 ============================================================
-[2025-03-30 16:03:26] 🚀 Starting HydrauliCAD Loader...
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup_text.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_designer_commands.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_get_layers.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_json.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_layer.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_service.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_test.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_xref.lsp
-[2025-03-30 16:03:26] ✅ Loaded hc_xref_bridge.lsp
-[2025-03-30 16:03:26] ✅ HydrauliCAD startup complete.
-[2025-08-30 16:08:06] 📄 HC_GETLAYERS started.
-[2025-08-30 16:08:06] 📑 hc_get_layers_raw → 46 layer(s) found.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-10-30 16:10:26
-============================================================
-[2025-10-30 16:10:26] 🚀 Starting HydrauliCAD Loader...
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup_text.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_designer_commands.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_get_layers.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_json.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_layer.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_service.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_test.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_xref.lsp
-[2025-10-30 16:10:26] ✅ Loaded hc_xref_bridge.lsp
-[2025-10-30 16:10:26] ✅ HydrauliCAD startup complete.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-10-30 16:10:33
-============================================================
-[2025-10-30 16:10:33] 🚀 Starting HydrauliCAD Loader...
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup_text.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_designer_commands.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_get_layers.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_json.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_layer.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_service.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_test.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_xref.lsp
-[2025-10-30 16:10:34] ✅ Loaded hc_xref_bridge.lsp
-[2025-10-30 16:10:34] ✅ HydrauliCAD startup complete.
-[2025-10-30 16:10:46] 📄 HC_GETLAYERS started.
-[2025-10-30 16:10:46] 📑 hc_get_layers_raw → 46 layer(s) found.
-[2025-10-30 16:10:46] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-10-30 16:10:46] 📄 HC_GETLAYERS completed successfully.
-[2025-17-30 16:17:18] 📄 HC_GETLAYERS started.
-[2025-17-30 16:17:18] 📑 hc_get_layers_raw → 46 layer(s) found.
-[2025-17-30 16:17:18] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-17-30 16:17:18] 📄 HC_GETLAYERS completed successfully.
-[2025-20-30 16:20:52] 📄 HC_GETLAYERS started.
-[2025-20-30 16:20:52] 📑 hc_get_layers_raw → 46 layer(s) found.
-[2025-20-30 16:20:52] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-20-30 16:20:52] 📄 HC_GETLAYERS completed successfully.
-[2025-24-30 16:24:57] 📄 HC_GETLAYERS started.
-[2025-24-30 16:24:57] 📑 hc_get_layers_raw → 46 layer(s) found with metadata.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-30-30 16:30:21
-============================================================
-[2025-30-30 16:30:21] 🚀 Starting HydrauliCAD Loader...
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup_text.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_designer_commands.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_get_layers copy.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_get_layers.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_json.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_layer.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_service.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_test.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_xref.lsp
-[2025-30-30 16:30:21] ✅ Loaded hc_xref_bridge.lsp
-[2025-30-30 16:30:21] ✅ HydrauliCAD startup complete.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-30-30 16:30:34
-============================================================
-[2025-30-30 16:30:34] 🚀 Starting HydrauliCAD Loader...
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup_text.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_designer_commands.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_get_layers copy.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_get_layers.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_json.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_layer.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_service.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_test.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_xref.lsp
-[2025-30-30 16:30:34] ✅ Loaded hc_xref_bridge.lsp
-[2025-30-30 16:30:34] ✅ HydrauliCAD startup complete.
-[2025-30-30 16:30:51] 📄 HC_GETLAYERS started.
-[2025-33-30 16:33:43] 📄 HC_GETLAYERS started.
-[2025-35-30 16:35:48] 📄 HC_GETLAYERS started.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-37-30 16:37:48
-============================================================
-[2025-37-30 16:37:48] 🚀 Starting HydrauliCAD Loader...
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup_text.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_designer_commands.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_get_layers copy.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_get_layers.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_json.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_layer.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_service.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_test.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_xref.lsp
-[2025-37-30 16:37:48] ✅ Loaded hc_xref_bridge.lsp
-[2025-37-30 16:37:48] ✅ HydrauliCAD startup complete.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-38-30 16:38:01
-============================================================
-[2025-38-30 16:38:01] 🚀 Starting HydrauliCAD Loader...
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup_text.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_designer_commands.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_get_layers copy.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_get_layers.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_json.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_layer.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_service.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_test.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_xref.lsp
-[2025-38-30 16:38:01] ✅ Loaded hc_xref_bridge.lsp
-[2025-38-30 16:38:01] ✅ HydrauliCAD startup complete.
-[2025-38-30 16:38:15] 📄 HC_GETLAYERS started.
-[2025-38-30 16:38:15] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-38-30 16:38:15] 📄 HC_GETLAYERS completed successfully.
-[2025-47-30 16:47:01] 🧩 Designer_Pipe command started.
-[2025-47-30 16:47:01] 📏 Linetype loaded → HYD_COLD_WATER
-[2025-47-30 16:47:01] 🎨 Created new layer: Hyd_Pipe_Water_CW  [Color: 140 | Weight: 50 | Linetype: HYD_COLD_WATER]
-[2025-47-30 16:47:01] ✅ Current layer set → Hyd_Pipe_Water_CW
-[2025-47-30 16:47:01] 📏 Drawing pipe line...
-[2025-47-30 16:47:01] ✅ Designer_Pipe command completed.
-[2025-47-30 16:47:07] 📄 HC_GETLAYERS started.
-[2025-47-30 16:47:07] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-47-30 16:47:07] 📄 HC_GETLAYERS completed successfully.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-09-30 20:09:55
-============================================================
-[2025-09-30 20:09:55] 🚀 Starting HydrauliCAD Loader...
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup_text.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_designer_commands.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_get_layers copy.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_get_layers.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_json.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_layer.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_service.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_test.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_xref.lsp
-[2025-09-30 20:09:55] ✅ Loaded hc_xref_bridge.lsp
-[2025-09-30 20:09:55] ✅ HydrauliCAD startup complete.
-
-============================================================
-🕓 New HydrauliCAD Session: 2025-18-30 20:18:16
-============================================================
-[2025-18-30 20:18:16] 🚀 Starting HydrauliCAD Loader...
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup_blocks.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup_bylayer.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup_dimensions.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup_hatching.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup_lineweight.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup_text.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_cleanup_ucs.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_designer_commands.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_get_layers copy.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_get_layers.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_json.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_layer.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_service.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_test.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_xref.lsp
-[2025-18-30 20:18:16] ✅ Loaded hc_xref_bridge.lsp
-[2025-18-30 20:18:16] ✅ HydrauliCAD startup complete.
-[2025-18-30 20:18:18] 📄 HC_GETLAYERS started.
-[2025-18-30 20:18:18] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-18-30 20:18:18] 📄 HC_GETLAYERS completed successfully.
-[2025-30-30 20:30:30] 📄 HC_GETLAYERS started.
-[2025-30-30 20:30:30] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-30-30 20:30:30] 📄 HC_GETLAYERS completed successfully.
-[2025-34-30 20:34:33] 📄 HC_GETLAYERS started.
-[2025-34-30 20:34:33] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-34-30 20:34:33] 📄 HC_GETLAYERS completed successfully.
-[2025-39-30 20:39:24] 📄 HC_GETLAYERS started.
-[2025-39-30 20:39:24] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-39-30 20:39:24] 📄 HC_GETLAYERS completed successfully.
-[2025-40-30 20:40:29] 📄 HC_GETLAYERS started.
-[2025-40-30 20:40:29] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-40-30 20:40:29] 📄 HC_GETLAYERS completed successfully.
-[2025-44-30 20:44:15] 📄 HC_GETLAYERS started.
-[2025-44-30 20:44:15] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-44-30 20:44:15] 📄 HC_GETLAYERS completed successfully.
-[2025-44-30 20:44:32] 📄 HC_GETLAYERS started.
-[2025-44-30 20:44:32] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-44-30 20:44:32] 📄 HC_GETLAYERS completed successfully.
-[2025-47-30 20:47:55] 📄 HC_GETLAYERS started.
-[2025-47-30 20:47:55] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-47-30 20:47:55] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:07] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:07] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:07] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:08] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:08] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:08] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:24] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:24] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:24] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:25] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:25] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:25] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:27] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:27] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:27] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:30] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:30] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:30] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:32] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:32] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:32] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:51] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:51] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:51] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:52] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:52] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:52] 📄 HC_GETLAYERS completed successfully.
-[2025-48-30 20:48:59] 📄 HC_GETLAYERS started.
-[2025-48-30 20:48:59] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-48-30 20:48:59] 📄 HC_GETLAYERS completed successfully.
-[2025-51-30 20:51:51] 📄 HC_GETLAYERS started.
-[2025-51-30 20:51:51] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-51-30 20:51:51] 📄 HC_GETLAYERS completed successfully.
-[2025-52-30 20:52:08] 📄 HC_GETLAYERS started.
-[2025-52-30 20:52:08] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-52-30 20:52:08] 📄 HC_GETLAYERS completed successfully.
-[2025-52-30 20:52:11] 📄 HC_GETLAYERS started.
-[2025-52-30 20:52:11] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-52-30 20:52:11] 📄 HC_GETLAYERS completed successfully.
-[2025-52-30 20:52:15] 📄 HC_GETLAYERS started.
-[2025-52-30 20:52:15] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-52-30 20:52:15] 📄 HC_GETLAYERS completed successfully.
-[2025-52-30 20:52:20] 📄 HC_GETLAYERS started.
-[2025-52-30 20:52:20] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-52-30 20:52:20] 📄 HC_GETLAYERS completed successfully.
-[2025-59-30 20:59:42] 📄 HC_GETLAYERS started.
-[2025-59-30 20:59:42] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-59-30 20:59:42] 📄 HC_GETLAYERS completed successfully.
-[2025-00-30 21:00:17] 📄 HC_GETLAYERS started.
-[2025-00-30 21:00:17] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-00-30 21:00:17] 📄 HC_GETLAYERS completed successfully.
-[2025-00-30 21:00:46] 📄 HC_GETLAYERS started.
-[2025-00-30 21:00:46] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-00-30 21:00:46] 📄 HC_GETLAYERS completed successfully.
-[2025-04-30 21:04:22] 📄 HC_GETLAYERS started.
-[2025-04-30 21:04:22] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-04-30 21:04:22] 📄 HC_GETLAYERS completed successfully.
-[2025-04-30 21:04:25] 📄 HC_GETLAYERS started.
-[2025-04-30 21:04:25] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-04-30 21:04:25] 📄 HC_GETLAYERS completed successfully.
-[2025-04-30 21:04:27] 📄 HC_GETLAYERS started.
-[2025-04-30 21:04:27] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-04-30 21:04:27] 📄 HC_GETLAYERS completed successfully.
-[2025-09-30 21:09:02] 📄 HC_GETLAYERS started.
-[2025-09-30 21:09:02] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-09-30 21:09:02] 📄 HC_GETLAYERS completed successfully.
-[2025-09-30 21:09:04] 📄 HC_GETLAYERS started.
-[2025-09-30 21:09:04] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-09-30 21:09:04] 📄 HC_GETLAYERS completed successfully.
-[2025-09-30 21:09:04] 📄 HC_GETLAYERS started.
-[2025-09-30 21:09:04] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
-[2025-09-30 21:09:04] 📄 HC_GETLAYERS completed successfully.
+[2025-09-01 16:09:40] 🚀 Starting HydrauliCAD Loader...
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup_text.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_designer_commands.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_get_current_layer.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_get_layers.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_json.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_layer.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_service.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_test.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_xref.lsp
+[2025-09-01 16:09:40] ✅ Loaded hc_xref_bridge.lsp
+[2025-09-01 16:09:40] ✅ HydrauliCAD startup complete.
+[2025-20-01 16:20:32] 📄 HC_GETLAYERS started.
+[2025-20-01 16:20:32] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-20-01 16:20:32] 📄 HC_GETLAYERS completed successfully.
+[2025-36-01 16:36:54] 📄 HC_GETLAYERS started.
+[2025-36-01 16:36:54] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-36-01 16:36:54] 📄 HC_GETLAYERS completed successfully.
+[2025-40-01 16:40:11] 🧩 Designer_Pipe command started.
+[2025-40-01 16:40:11] 📏 Linetype loaded → HYD_COLD_WATER
+[2025-40-01 16:40:11] 🎨 Created new layer: Hyd_Pipe_Water_CW  [Color: 140 | Weight: 50 | Linetype: HYD_COLD_WATER]
+[2025-40-01 16:40:11] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-40-01 16:40:11] 📏 Drawing pipe line...
+[2025-40-01 16:40:11] ✅ Designer_Pipe command completed.
+[2025-41-01 16:41:22] 📄 HC_GETLAYERS started.
+[2025-41-01 16:41:22] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-41-01 16:41:22] 📄 HC_GETLAYERS completed successfully.
+[2025-41-01 16:41:24] 🧩 Creating layer...
+[2025-41-01 16:41:24] 📏 Linetype loaded → HYD_RE_USE
+[2025-41-01 16:41:24] 🎨 Created new layer: Hyd_Pipe_Water_RE  [Color: 90 | Weight: 50 | Linetype: HYD_RE_USE]
+[2025-41-01 16:41:24] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-42-01 16:42:47] 📄 HC_GETLAYERS started.
+[2025-42-01 16:42:47] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-42-01 16:42:47] 📄 HC_GETLAYERS completed successfully.
+[2025-42-01 16:42:48] 🧩 Creating layer...
+[2025-42-01 16:42:48] 📏 Linetype loaded → HYD_HOT_WATER
+[2025-42-01 16:42:48] 🎨 Created new layer: Hyd_Pipe_Water_HW  [Color: 10 | Weight: 50 | Linetype: HYD_HOT_WATER]
+[2025-42-01 16:42:48] ✅ Current layer set → Hyd_Pipe_Water_HW
+[2025-43-01 16:43:04] 📄 HC_GETLAYERS started.
+[2025-43-01 16:43:04] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-43-01 16:43:04] 📄 HC_GETLAYERS completed successfully.
+[2025-43-01 16:43:04] 🧩 Creating layer...
+[2025-43-01 16:43:04] 📏 Linetype loaded → HYD_HOT_WATER_RETURN
+[2025-43-01 16:43:04] 🎨 Created new layer: Hyd_Pipe_Water_HWR  [Color: 20 | Weight: 50 | Linetype: HYD_HOT_WATER_RETURN]
+[2025-43-01 16:43:04] ✅ Current layer set → Hyd_Pipe_Water_HWR
+[2025-02-01 17:02:35] 🧩 Designer_Pipe command started.
+[2025-02-01 17:02:35] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-02-01 17:02:35] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-02-01 17:02:36]    BEFORE → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-02-01 17:02:36]    ℹ️ Color already correct.
+[2025-02-01 17:02:36]    ℹ️ Lineweight already correct.
+[2025-02-01 17:02:36]    ℹ️ Linetype already correct.
+[2025-02-01 17:02:36] ✅ AFTER → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-02-01 17:02:36] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-02-01 17:02:36] 📏 Drawing pipe line...
+[2025-02-01 17:02:36] ✅ Designer_Pipe command completed.
+[2025-02-01 17:02:41] 🧩 Designer_Pipe command started.
+[2025-02-01 17:02:41] ℹ️ Linetype already available: HYD_RE_USE
+[2025-02-01 17:02:41] 🧱 Updating existing layer: Hyd_Pipe_Water_RE
+[2025-02-01 17:02:41]    BEFORE → Color:90 | Weight:50 | Linetype:HYD_RE_USE
+[2025-02-01 17:02:41]    ℹ️ Color already correct.
+[2025-02-01 17:02:41]    ℹ️ Lineweight already correct.
+[2025-02-01 17:02:41]    ℹ️ Linetype already correct.
+[2025-02-01 17:02:41] ✅ AFTER → Color:90 | Weight:50 | Linetype:HYD_RE_USE
+[2025-02-01 17:02:41] ✅ Current layer set → Hyd_Pipe_Water_RE
+[2025-02-01 17:02:41] 📏 Drawing pipe line...
+[2025-02-01 17:02:41] ✅ Designer_Pipe command completed.
+[2025-02-01 17:02:43] 🧩 Designer_Pipe command started.
+[2025-02-01 17:02:43] ℹ️ Linetype already available: HYD_HOT_WATER
+[2025-02-01 17:02:43] 🧱 Updating existing layer: Hyd_Pipe_Water_HW
+[2025-02-01 17:02:43]    BEFORE → Color:10 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-02-01 17:02:43]    ℹ️ Color already correct.
+[2025-02-01 17:02:43]    ℹ️ Lineweight already correct.
+[2025-02-01 17:02:43]    ℹ️ Linetype already correct.
+[2025-02-01 17:02:43] ✅ AFTER → Color:10 | Weight:50 | Linetype:HYD_HOT_WATER
+[2025-02-01 17:02:43] ✅ Current layer set → Hyd_Pipe_Water_HW
+[2025-02-01 17:02:43] 📏 Drawing pipe line...
+[2025-02-01 17:02:43] ✅ Designer_Pipe command completed.
+[2025-48-01 17:48:46] 📄 HC_GETLAYERS started.
+[2025-48-01 17:48:46] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-48-01 17:48:46] 📄 HC_GETLAYERS completed successfully.
+[2025-48-01 17:48:52] 🧩 Designer_Pipe command started.
+[2025-48-01 17:48:52] ℹ️ Linetype already available: HYD_COLD_WATER
+[2025-48-01 17:48:52] 🧱 Updating existing layer: Hyd_Pipe_Water_CW
+[2025-48-01 17:48:52]    BEFORE → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-48-01 17:48:52]    ℹ️ Color already correct.
+[2025-48-01 17:48:52]    ℹ️ Lineweight already correct.
+[2025-48-01 17:48:52]    ℹ️ Linetype already correct.
+[2025-48-01 17:48:52] ✅ AFTER → Color:140 | Weight:50 | Linetype:HYD_COLD_WATER
+[2025-48-01 17:48:52] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-48-01 17:48:52] 📏 Drawing pipe line...
+[2025-48-01 17:48:52] ✅ Designer_Pipe command completed.

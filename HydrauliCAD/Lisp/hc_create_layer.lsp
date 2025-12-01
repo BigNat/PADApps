@@ -1,0 +1,5 @@
+(defun C:HC_CREATE_LAYER ( / )
+  (hc-log "🧩 Creating layer...")
+  (set_layer_from_bridge)
+  (princ)
+)
