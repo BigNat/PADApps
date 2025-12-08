@@ -1,245 +1,415 @@
-[2025-11-29 12:05:05] Command received: get-sheet-data
-[2025-11-29 12:05:05] IMPORTING: get_sheet_data
-[2025-11-29 12:05:05] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-11-29 12:05:05] Returned sheet data: 27 sheets
-[2025-11-29 12:05:05] Command cleared from JSON file.
-[2025-11-29 12:05:12] Command received: get-model-path
-[2025-11-29 12:05:12] IMPORTING: get_model_path
-[2025-11-29 12:05:12] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:05:12] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
-[2025-11-29 12:05:12] Command cleared from JSON file.
-[2025-11-29 12:05:15] Command received: export_sheets_to_cad
-[2025-11-29 12:05:15] IMPORTING: export_sheets_to_cad
-[2025-11-29 12:05:15] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
-[2025-11-29 12:05:15] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWG
-[2025-11-29 12:05:15] Format: dwg | Sheets: 2
-[2025-11-29 12:05:36] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWG\P300_SECTIONSSANITARYRISERS.dwg
-[2025-11-29 12:05:58] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWG\P301_SECTIONSSANITARYRISERS.dwg
-[2025-11-29 12:05:58] DWG response.json written.
-[2025-11-29 12:05:58] DWG Export complete: 2 files
-[2025-11-29 12:05:58] Command cleared from JSON file.
-[2025-11-29 12:07:48] Command received: get-sheet-data
-[2025-11-29 12:07:48] IMPORTING: get_sheet_data
-[2025-11-29 12:07:48] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-11-29 12:07:48] Returned sheet data: 27 sheets
-[2025-11-29 12:07:48] Command cleared from JSON file.
-[2025-11-29 12:07:55] Command received: get-model-path
-[2025-11-29 12:07:55] IMPORTING: get_model_path
-[2025-11-29 12:07:55] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:07:55] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
-[2025-11-29 12:07:55] Command cleared from JSON file.
-[2025-11-29 12:07:58] Command received: export_sheets_to_cad
-[2025-11-29 12:07:58] IMPORTING: export_sheets_to_cad
-[2025-11-29 12:07:58] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_sheets_to_cad.py
-[2025-11-29 12:07:58] Starting export_sheets_to_cad -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWG
-[2025-11-29 12:07:58] Format: dwg | Sheets: 2
-[2025-11-29 12:08:17] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWG\P300_SECTIONSSANITARYRISERS.dwg
-[2025-11-29 12:08:38] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\DWG\P301_SECTIONSSANITARYRISERS.dwg
-[2025-11-29 12:08:38] DWG response.json written.
-[2025-11-29 12:08:38] DWG Export complete: 2 files
-[2025-11-29 12:08:38] Command cleared from JSON file.
-[2025-11-29 12:09:29] Command received: get-3d-views
-[2025-11-29 12:09:29] IMPORTING: get_3d_views
-[2025-11-29 12:09:29] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-11-29 12:09:29] Returned 3D views: 5
-[2025-11-29 12:09:29] Command cleared from JSON file.
-[2025-11-29 12:09:39] Command received: get-model-path
-[2025-11-29 12:09:39] IMPORTING: get_model_path
-[2025-11-29 12:09:39] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:09:39] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
-[2025-11-29 12:09:39] Command cleared from JSON file.
-[2025-11-29 12:09:42] Command received: export_views_to_nwc
-[2025-11-29 12:09:42] IMPORTING: export_views_to_nwc
-[2025-11-29 12:09:42] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
-[2025-11-29 12:09:42] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC
-[2025-11-29 12:09:42] Views: 1
-[2025-11-29 12:11:57] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC\1400366_3DWaterManifold.nwc
-[2025-11-29 12:11:57] NWC response.json written.
-[2025-11-29 12:11:57] NWC Export complete: 1 files
-[2025-11-29 12:11:57] Command cleared from JSON file.
-[2025-11-29 12:12:59] Command received: get-3d-views
-[2025-11-29 12:12:59] IMPORTING: get_3d_views
-[2025-11-29 12:12:59] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-11-29 12:13:00] Returned 3D views: 5
-[2025-11-29 12:13:00] Command cleared from JSON file.
-[2025-11-29 12:13:03] Command received: get-model-path
-[2025-11-29 12:13:03] IMPORTING: get_model_path
-[2025-11-29 12:13:03] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:13:03] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
-[2025-11-29 12:13:03] Command cleared from JSON file.
-[2025-11-29 12:15:02] Command received: get-3d-views
-[2025-11-29 12:15:02] IMPORTING: get_3d_views
-[2025-11-29 12:15:02] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-11-29 12:15:02] Returned 3D views: 5
-[2025-11-29 12:15:02] Command cleared from JSON file.
-[2025-11-29 12:15:09] Command received: get-model-path
-[2025-11-29 12:15:09] IMPORTING: get_model_path
-[2025-11-29 12:15:09] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:15:09] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
-[2025-11-29 12:15:09] Command cleared from JSON file.
-[2025-11-29 12:15:12] Command received: export_views_to_nwc
-[2025-11-29 12:15:12] IMPORTING: export_views_to_nwc
-[2025-11-29 12:15:12] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
-[2025-11-29 12:15:12] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC
-[2025-11-29 12:15:12] Views: 1
-[2025-11-29 12:15:43] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing\NWC\1400366_3DWaterManifold.nwc
-[2025-11-29 12:15:43] NWC response.json written.
-[2025-11-29 12:15:43] NWC Export complete: 1 files
-[2025-11-29 12:15:43] Command cleared from JSON file.
-[2025-11-29 12:16:38] Command received: get-3d-views
-[2025-11-29 12:16:38] IMPORTING: get_3d_views
-[2025-11-29 12:16:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-11-29 12:16:38] Returned 3D views: 36
-[2025-11-29 12:16:38] Command cleared from JSON file.
-[2025-11-29 12:16:47] Command received: get-model-path
-[2025-11-29 12:16:47] IMPORTING: get_model_path
-[2025-11-29 12:16:47] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:16:47] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural.rvt
-[2025-11-29 12:16:47] Command cleared from JSON file.
-[2025-11-29 12:16:50] Command received: export_views_to_nwc
-[2025-11-29 12:16:50] IMPORTING: export_views_to_nwc
-[2025-11-29 12:16:50] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
-[2025-11-29 12:16:50] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC
-[2025-11-29 12:16:50] Views: 1
-[2025-11-29 12:16:55] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC\789453_Cutaway-Stair2.nwc
-[2025-11-29 12:16:55] NWC response.json written.
-[2025-11-29 12:16:55] NWC Export complete: 1 files
-[2025-11-29 12:16:55] Command cleared from JSON file.
-[2025-11-29 12:18:03] Command received: get-3d-views
-[2025-11-29 12:18:03] IMPORTING: get_3d_views
-[2025-11-29 12:18:03] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-11-29 12:18:03] Returned 3D views: 36
-[2025-11-29 12:18:03] Command cleared from JSON file.
-[2025-11-29 12:18:15] Command received: get-model-path
-[2025-11-29 12:18:15] IMPORTING: get_model_path
-[2025-11-29 12:18:15] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:18:15] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural.rvt
-[2025-11-29 12:18:15] Command cleared from JSON file.
-[2025-11-29 12:18:18] Command received: export_views_to_nwc
-[2025-11-29 12:18:18] IMPORTING: export_views_to_nwc
-[2025-11-29 12:18:18] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
-[2025-11-29 12:18:18] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC
-[2025-11-29 12:18:18] Views: 1
-[2025-11-29 12:18:19] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC\2141690_WV_3DBeamWraps.nwc
-[2025-11-29 12:18:19] NWC response.json written.
-[2025-11-29 12:18:19] NWC Export complete: 1 files
-[2025-11-29 12:18:19] Command cleared from JSON file.
-[2025-11-29 12:18:51] Command received: get-3d-views
-[2025-11-29 12:18:51] IMPORTING: get_3d_views
-[2025-11-29 12:18:51] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-11-29 12:18:51] Returned 3D views: 36
-[2025-11-29 12:18:51] Command cleared from JSON file.
-[2025-11-29 12:19:51] Command received: get-model-path
-[2025-11-29 12:19:51] IMPORTING: get_model_path
-[2025-11-29 12:19:51] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:19:51] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural.rvt
-[2025-11-29 12:19:51] Command cleared from JSON file.
-[2025-11-29 12:19:54] Command received: export_views_to_nwc
-[2025-11-29 12:19:54] IMPORTING: export_views_to_nwc
-[2025-11-29 12:19:54] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
-[2025-11-29 12:19:54] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC
-[2025-11-29 12:19:54] Views: 1
-[2025-11-29 12:20:13] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC\2304727_WalkthroughLobbyStair.nwc
-[2025-11-29 12:20:13] NWC response.json written.
-[2025-11-29 12:20:13] NWC Export complete: 1 files
-[2025-11-29 12:20:13] Command cleared from JSON file.
-[2025-11-29 12:20:56] Command received: get-3d-views
-[2025-11-29 12:20:56] IMPORTING: get_3d_views
-[2025-11-29 12:20:56] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-11-29 12:20:56] Returned 3D views: 36
-[2025-11-29 12:20:56] Command cleared from JSON file.
-[2025-11-29 12:21:23] Command received: get-model-path
-[2025-11-29 12:21:23] IMPORTING: get_model_path
-[2025-11-29 12:21:23] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:21:23] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural.rvt
-[2025-11-29 12:21:23] Command cleared from JSON file.
-[2025-11-29 12:21:26] Command received: export_views_to_nwc
-[2025-11-29 12:21:26] IMPORTING: export_views_to_nwc
-[2025-11-29 12:21:26] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\export_views_to_nwc.py
-[2025-11-29 12:21:26] Starting export_views_to_nwc -> C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC
-[2025-11-29 12:21:26] Views: 1
-[2025-11-29 12:21:29] Exported: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Architectural\NWC\2265711_Coord-ArchResidentialCores.nwc
-[2025-11-29 12:21:29] NWC response.json written.
-[2025-11-29 12:21:29] NWC Export complete: 1 files
-[2025-11-29 12:21:29] Command cleared from JSON file.
-[2025-11-29 12:28:04] Command received: get-sheet-data
-[2025-11-29 12:28:04] IMPORTING: get_sheet_data
-[2025-11-29 12:28:04] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-11-29 12:28:04] Returned sheet data: 27 sheets
-[2025-11-29 12:28:04] Command cleared from JSON file.
-[2025-11-29 12:30:28] Command received: get-sheet-data
-[2025-11-29 12:30:28] IMPORTING: get_sheet_data
-[2025-11-29 12:30:28] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-11-29 12:30:28] Returned sheet data: 27 sheets
-[2025-11-29 12:30:28] Command cleared from JSON file.
-[2025-11-29 12:30:31] Command received: get-model-path
-[2025-11-29 12:30:31] IMPORTING: get_model_path
-[2025-11-29 12:30:31] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 12:30:31] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
-[2025-11-29 12:30:31] Command cleared from JSON file.
-[2025-11-29 23:36:11] Command Watcher active.
-[2025-11-29 23:36:11] Cached UIApplication
-[2025-11-29 23:36:11] Command received: get-sheet-data
-[2025-11-29 23:36:11] IMPORTING: get_sheet_data
-[2025-11-29 23:36:11] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-11-29 23:36:11] Returned sheet data: 0 sheets
-[2025-11-29 23:36:11] Command cleared from JSON file.
-[2025-11-29 23:36:14] Command received: get-sheet-data
-[2025-11-29 23:36:14] IMPORTING: get_sheet_data
-[2025-11-29 23:36:14] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-11-29 23:36:14] Returned sheet data: 0 sheets
-[2025-11-29 23:36:14] Command cleared from JSON file.
-[2025-11-29 23:36:32] Command received: get-model-path
-[2025-11-29 23:36:32] IMPORTING: get_model_path
-[2025-11-29 23:36:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 23:36:32] Returned model path → C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Products\Revit - CAD Details\halgantradewaste\MGTS1000 - 5000\HALGAN MGTS 3000L Grease Trap.rfa
-[2025-11-29 23:36:32] Command cleared from JSON file.
-[2025-11-29 23:36:35] Command received: get-model-path
-[2025-11-29 23:36:35] IMPORTING: get_model_path
-[2025-11-29 23:36:35] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 23:36:35] Returned model path → C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Products\Revit - CAD Details\halgantradewaste\MGTS1000 - 5000\HALGAN MGTS 3000L Grease Trap.rfa
-[2025-11-29 23:36:35] Command cleared from JSON file.
-[2025-11-29 23:36:38] Command received: get-model-path
-[2025-11-29 23:36:38] IMPORTING: get_model_path
-[2025-11-29 23:36:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-11-29 23:36:38] Returned model path → C:\Users\nweck\Dropbox\HydrauliCAD-BT\Demo\Products\Revit - CAD Details\halgantradewaste\MGTS1000 - 5000\HALGAN MGTS 3000L Grease Trap.rfa
-[2025-11-29 23:36:38] Command cleared from JSON file.
-[2025-11-29 23:36:54] Command received: get-sheet-data
-[2025-11-29 23:36:54] IMPORTING: get_sheet_data
-[2025-11-29 23:36:54] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-11-29 23:36:54] Returned sheet data: 0 sheets
-[2025-11-29 23:36:54] Command cleared from JSON file.
-[2025-11-30 22:25:07] Command Watcher active.
-[2025-11-30 22:25:09] Cached UIApplication
-[2025-11-30 22:25:09] Command received: stop_watcher
-[2025-11-30 22:25:09] Received stop_watcher command. Stopping loop.
-[2025-11-30 22:25:09] Watcher lock file removed.
-[2025-11-30 22:25:09] stop_watcher cleared from JSON file.
-[2025-11-30 22:25:09] Watcher loop stopping during sleep.
-[2025-12-02 23:44:37] Command Watcher active.
-[2025-12-02 23:44:37] Cached UIApplication
-[2025-12-02 23:44:37] Command received: get-sheet-data
-[2025-12-02 23:44:37] IMPORTING: get_sheet_data
-[2025-12-02 23:44:37] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-12-02 23:44:37] Returned sheet data: 27 sheets
-[2025-12-02 23:44:37] Command cleared from JSON file.
-[2025-12-02 23:44:46] Command received: get-3d-views
-[2025-12-02 23:44:46] IMPORTING: get_3d_views
-[2025-12-02 23:44:46] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
-[2025-12-02 23:44:46] Returned 3D views: 5
-[2025-12-02 23:44:46] Command cleared from JSON file.
-[2025-12-02 23:44:52] Command received: get-sheet-data
-[2025-12-02 23:44:52] IMPORTING: get_sheet_data
-[2025-12-02 23:44:52] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-12-02 23:44:52] Returned sheet data: 27 sheets
-[2025-12-02 23:44:52] Command cleared from JSON file.
-[2025-12-02 23:44:55] Command received: get-model-path
-[2025-12-02 23:44:55] IMPORTING: get_model_path
-[2025-12-02 23:44:55] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
-[2025-12-02 23:44:55] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
-[2025-12-02 23:44:55] Command cleared from JSON file.
-[2025-12-02 23:45:01] Command received: get-sheet-data
-[2025-12-02 23:45:01] IMPORTING: get_sheet_data
-[2025-12-02 23:45:01] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
-[2025-12-02 23:45:01] Returned sheet data: 27 sheets
-[2025-12-02 23:45:01] Command cleared from JSON file.
+[2025-12-09 01:06:42] Command received: get-model-path
+[2025-12-09 01:06:42] IMPORTING: get_model_path
+[2025-12-09 01:06:42] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:06:42] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:06:42] Command cleared from JSON file.
+[2025-12-09 01:06:57] Command received: get-pipes
+[2025-12-09 01:06:57] IMPORTING: get_pipes
+[2025-12-09 01:06:57] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipes.py
+[2025-12-09 01:06:57] [DEBUG get_pipes] === get_pipes.py START ===
+[2025-12-09 01:06:57] [DEBUG get_pipes] ActiveView: L2
+[2025-12-09 01:06:57] [DEBUG get_pipes] About to call PickObjects...
+[2025-12-09 01:07:02] [DEBUG get_pipes] EXCEPTION TRIGGERED DURING PICK
+[2025-12-09 01:07:02] [DEBUG get_pipes] Exception: The user aborted the pick operation.
+[2025-12-09 01:07:02] [DEBUG get_pipes] Traceback: Traceback (most recent call last):
+  File "C:\PADApps\RevitPAD\Core\requests\get_pipes.py", line 50, in run
+    refs = uidoc.Selection.PickObjects(
+Exception: The user aborted the pick operation.
+
+[2025-12-09 01:07:02] Error in get_pipes: The user aborted the pick operation.
+[2025-12-09 01:07:02] [DEBUG get_pipes] === get_pipes.py END ===
+[2025-12-09 01:07:02] Command cleared from JSON file.
+[2025-12-09 01:07:06] Command received: get-model-path
+[2025-12-09 01:07:06] IMPORTING: get_model_path
+[2025-12-09 01:07:06] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:07:06] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:07:06] Command cleared from JSON file.
+[2025-12-09 01:07:21] Command received: get-pipes
+[2025-12-09 01:07:21] IMPORTING: get_pipes
+[2025-12-09 01:07:21] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipes.py
+[2025-12-09 01:07:21] [DEBUG get_pipes] === get_pipes.py START ===
+[2025-12-09 01:07:21] [DEBUG get_pipes] ActiveView: L2
+[2025-12-09 01:07:21] [DEBUG get_pipes] About to call PickObjects...
+[2025-12-09 01:07:30] [DEBUG get_pipes] EXCEPTION TRIGGERED DURING PICK
+[2025-12-09 01:07:30] [DEBUG get_pipes] Exception: The user aborted the pick operation.
+[2025-12-09 01:07:30] [DEBUG get_pipes] Traceback: Traceback (most recent call last):
+  File "C:\PADApps\RevitPAD\Core\requests\get_pipes.py", line 50, in run
+    refs = uidoc.Selection.PickObjects(
+Exception: The user aborted the pick operation.
+
+[2025-12-09 01:07:30] Error in get_pipes: The user aborted the pick operation.
+[2025-12-09 01:07:30] [DEBUG get_pipes] === get_pipes.py END ===
+[2025-12-09 01:07:30] Command cleared from JSON file.
+[2025-12-09 01:07:36] Command received: get-model-path
+[2025-12-09 01:07:36] IMPORTING: get_model_path
+[2025-12-09 01:07:36] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:07:36] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:07:36] Command cleared from JSON file.
+[2025-12-09 01:07:39] Command received: highlight-pipes-temp
+[2025-12-09 01:07:39] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:07:39] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:07:39] HIGHLIGHT: Applying view overrides to pipes: [1492985, 1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1504487, 1507136, 1507382, 1507398, 1508018]
+[2025-12-09 01:07:39] HIGHLIGHT: Completed for 12 pipe(s)
+[2025-12-09 01:07:39] Command cleared from JSON file.
+[2025-12-09 01:07:42] Command received: get-model-path
+[2025-12-09 01:07:42] IMPORTING: get_model_path
+[2025-12-09 01:07:42] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:07:42] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:07:42] Command cleared from JSON file.
+[2025-12-09 01:07:45] Command received: clear-pipe-highlights
+[2025-12-09 01:07:45] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:07:45] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:07:45] CLEAR HIGHLIGHT: removing overrides for pipes: [1492985, 1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1504487, 1507136, 1507382, 1507398, 1508018]
+[2025-12-09 01:07:45] CLEAR HIGHLIGHT: completed for 12 pipe(s)
+[2025-12-09 01:07:45] Command cleared from JSON file.
+[2025-12-09 01:07:52] Command received: get-model-path
+[2025-12-09 01:07:52] IMPORTING: get_model_path
+[2025-12-09 01:07:52] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:07:52] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:07:52] Command cleared from JSON file.
+[2025-12-09 01:07:55] Command received: highlight-pipes-temp
+[2025-12-09 01:07:55] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:07:55] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:07:55] HIGHLIGHT: Applying view overrides to pipes: [1507136, 1493378, 1507398, 1494375, 1504487, 1494383, 1508018, 1507382, 1492985, 1492986, 1494397, 1494367]
+[2025-12-09 01:07:55] HIGHLIGHT: Completed for 12 pipe(s)
+[2025-12-09 01:07:55] Command cleared from JSON file.
+[2025-12-09 01:07:58] Command received: get-pipes
+[2025-12-09 01:07:58] IMPORTING: get_pipes
+[2025-12-09 01:07:58] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipes.py
+[2025-12-09 01:07:58] [DEBUG get_pipes] === get_pipes.py START ===
+[2025-12-09 01:07:58] [DEBUG get_pipes] ActiveView: L2
+[2025-12-09 01:07:58] [DEBUG get_pipes] About to call PickObjects...
+[2025-12-09 01:08:05] [DEBUG get_pipes] PickObjects returned 4 references
+[2025-12-09 01:08:05] [DEBUG get_pipes]   - Picked Pipe ID: 1509156
+[2025-12-09 01:08:05] [DEBUG get_pipes]   - Picked Pipe ID: 1509158
+[2025-12-09 01:08:05] [DEBUG get_pipes]   - Picked Pipe ID: 1509166
+[2025-12-09 01:08:05] [DEBUG get_pipes]   - Picked Pipe ID: 1509168
+[2025-12-09 01:08:05] [DEBUG get_pipes] Response written successfully.
+[2025-12-09 01:08:05] [DEBUG get_pipes] Pipe IDs: [1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:08:05] [DEBUG get_pipes] Revit selection cleared successfully.
+[2025-12-09 01:08:05] [DEBUG get_pipes] === get_pipes.py END ===
+[2025-12-09 01:08:05] Command cleared from JSON file.
+[2025-12-09 01:08:07] Command received: clear-pipe-highlights
+[2025-12-09 01:08:07] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:08:07] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:08:07] CLEAR HIGHLIGHT: removing overrides for pipes: [1507136, 1493378, 1507398, 1494375, 1504487, 1494383, 1508018, 1507382, 1492985, 1492986, 1494397, 1494367]
+[2025-12-09 01:08:07] CLEAR HIGHLIGHT: completed for 12 pipe(s)
+[2025-12-09 01:08:07] Command cleared from JSON file.
+[2025-12-09 01:08:10] Command received: get-model-path
+[2025-12-09 01:08:10] IMPORTING: get_model_path
+[2025-12-09 01:08:10] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:08:10] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:08:10] Command cleared from JSON file.
+[2025-12-09 01:08:13] Command received: get-model-path
+[2025-12-09 01:08:13] IMPORTING: get_model_path
+[2025-12-09 01:08:13] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:08:13] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:08:13] Command cleared from JSON file.
+[2025-12-09 01:08:16] Command received: highlight-pipes-temp
+[2025-12-09 01:08:16] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:08:16] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:08:16] HIGHLIGHT: Applying view overrides to pipes: [1492985, 1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1504487, 1507136, 1507382, 1507398, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:08:16] HIGHLIGHT: Completed for 16 pipe(s)
+[2025-12-09 01:08:16] Command cleared from JSON file.
+[2025-12-09 01:08:22] Command received: get-model-path
+[2025-12-09 01:08:22] IMPORTING: get_model_path
+[2025-12-09 01:08:22] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:08:22] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:08:22] Command cleared from JSON file.
+[2025-12-09 01:08:25] Command received: clear-pipe-highlights
+[2025-12-09 01:08:25] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:08:25] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:08:25] CLEAR HIGHLIGHT: removing overrides for pipes: [1492985, 1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1504487, 1507136, 1507382, 1507398, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:08:25] CLEAR HIGHLIGHT: completed for 16 pipe(s)
+[2025-12-09 01:08:25] Command cleared from JSON file.
+[2025-12-09 01:08:43] Command received: get-model-path
+[2025-12-09 01:08:43] IMPORTING: get_model_path
+[2025-12-09 01:08:43] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:08:43] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:08:43] Command cleared from JSON file.
+[2025-12-09 01:08:46] Command received: select-pipes-in-current-view
+[2025-12-09 01:08:46] IMPORTING: select_pipes_in_current_view
+[2025-12-09 01:08:46] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-09 01:08:46] FAST MODE: selecting visible pipes from [1492985, 1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1504487, 1507136, 1507382, 1507398, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:08:46] FAST MODE: selected 16 pipe(s)
+[2025-12-09 01:08:46] Command cleared from JSON file.
+[2025-12-09 01:08:55] Command received: get-model-path
+[2025-12-09 01:08:55] IMPORTING: get_model_path
+[2025-12-09 01:08:55] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:08:55] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:08:55] Command cleared from JSON file.
+[2025-12-09 01:08:58] Command received: highlight-pipes-temp
+[2025-12-09 01:08:58] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:08:58] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:08:58] HIGHLIGHT: Applying view overrides to pipes: [1507136, 1493378, 1509156, 1507398, 1494375, 1504487, 1509158, 1509166, 1494383, 1509168, 1508018, 1507382, 1492985, 1492986, 1494397, 1494367]
+[2025-12-09 01:08:58] HIGHLIGHT: Completed for 16 pipe(s)
+[2025-12-09 01:08:58] Command cleared from JSON file.
+[2025-12-09 01:09:01] Command received: get-pipes
+[2025-12-09 01:09:01] IMPORTING: get_pipes
+[2025-12-09 01:09:01] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipes.py
+[2025-12-09 01:09:01] [DEBUG get_pipes] === get_pipes.py START ===
+[2025-12-09 01:09:01] [DEBUG get_pipes] ActiveView: L2
+[2025-12-09 01:09:01] [DEBUG get_pipes] About to call PickObjects...
+[2025-12-09 01:09:18] [DEBUG get_pipes] PickObjects returned 4 references
+[2025-12-09 01:09:18] [DEBUG get_pipes]   - Picked Pipe ID: 1489681
+[2025-12-09 01:09:18] [DEBUG get_pipes]   - Picked Pipe ID: 1489964
+[2025-12-09 01:09:18] [DEBUG get_pipes]   - Picked Pipe ID: 1490778
+[2025-12-09 01:09:18] [DEBUG get_pipes]   - Picked Pipe ID: 1490902
+[2025-12-09 01:09:18] [DEBUG get_pipes] Response written successfully.
+[2025-12-09 01:09:18] [DEBUG get_pipes] Pipe IDs: [1489681, 1489964, 1490778, 1490902]
+[2025-12-09 01:09:18] [DEBUG get_pipes] Revit selection cleared successfully.
+[2025-12-09 01:09:18] [DEBUG get_pipes] === get_pipes.py END ===
+[2025-12-09 01:09:18] Command cleared from JSON file.
+[2025-12-09 01:09:19] Command received: clear-pipe-highlights
+[2025-12-09 01:09:19] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:09:19] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:09:19] CLEAR HIGHLIGHT: removing overrides for pipes: [1507136, 1493378, 1509156, 1507398, 1494375, 1504487, 1509158, 1509166, 1494383, 1509168, 1508018, 1507382, 1492985, 1492986, 1494397, 1494367]
+[2025-12-09 01:09:19] CLEAR HIGHLIGHT: completed for 16 pipe(s)
+[2025-12-09 01:09:19] Command cleared from JSON file.
+[2025-12-09 01:09:22] Command received: get-model-path
+[2025-12-09 01:09:22] IMPORTING: get_model_path
+[2025-12-09 01:09:22] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:09:22] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:09:22] Command cleared from JSON file.
+[2025-12-09 01:09:25] Command received: get-model-path
+[2025-12-09 01:09:25] IMPORTING: get_model_path
+[2025-12-09 01:09:25] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:09:25] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:09:25] Command cleared from JSON file.
+[2025-12-09 01:09:28] Command received: highlight-pipes-temp
+[2025-12-09 01:09:28] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:09:28] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:09:28] HIGHLIGHT: Applying view overrides to pipes: [1489681, 1489964, 1490778, 1490902, 1492985, 1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1504487, 1507136, 1507382, 1507398, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:09:28] HIGHLIGHT: Completed for 20 pipe(s)
+[2025-12-09 01:09:28] Command cleared from JSON file.
+[2025-12-09 01:09:34] Command received: get-model-path
+[2025-12-09 01:09:34] IMPORTING: get_model_path
+[2025-12-09 01:09:34] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:09:34] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:09:34] Command cleared from JSON file.
+[2025-12-09 01:09:37] Command received: clear-pipe-highlights
+[2025-12-09 01:09:37] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:09:37] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:09:37] CLEAR HIGHLIGHT: removing overrides for pipes: [1489681, 1489964, 1490778, 1490902, 1492985, 1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1504487, 1507136, 1507382, 1507398, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:09:37] CLEAR HIGHLIGHT: completed for 20 pipe(s)
+[2025-12-09 01:09:37] Command cleared from JSON file.
+[2025-12-09 01:12:32] Command received: get-model-path
+[2025-12-09 01:12:32] IMPORTING: get_model_path
+[2025-12-09 01:12:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:12:32] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:12:32] Command cleared from JSON file.
+[2025-12-09 01:12:35] Command received: highlight-pipes-temp
+[2025-12-09 01:12:35] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:12:35] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:12:35] HIGHLIGHT: Applying view overrides to pipes: [1493378, 1489681, 1509156, 1509158, 1489964, 1509166, 1509168, 1508018, 1507382, 1507136, 1507398, 1490902, 1490778, 1494367, 1494375, 1504487, 1494383, 1492985, 1492986, 1494397]
+[2025-12-09 01:12:35] HIGHLIGHT: Completed for 20 pipe(s)
+[2025-12-09 01:12:35] Command cleared from JSON file.
+[2025-12-09 01:12:38] Command received: get-pipes
+[2025-12-09 01:12:38] IMPORTING: get_pipes
+[2025-12-09 01:12:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipes.py
+[2025-12-09 01:12:38] [DEBUG get_pipes] === get_pipes.py START ===
+[2025-12-09 01:12:38] [DEBUG get_pipes] ActiveView: L2
+[2025-12-09 01:12:38] [DEBUG get_pipes] About to call PickObjects...
+[2025-12-09 01:12:49] [DEBUG get_pipes] PickObjects returned 7 references
+[2025-12-09 01:12:49] [DEBUG get_pipes]   - Picked Pipe ID: 1492986
+[2025-12-09 01:12:49] [DEBUG get_pipes]   - Picked Pipe ID: 1493378
+[2025-12-09 01:12:49] [DEBUG get_pipes]   - Picked Pipe ID: 1494367
+[2025-12-09 01:12:49] [DEBUG get_pipes]   - Picked Pipe ID: 1494375
+[2025-12-09 01:12:49] [DEBUG get_pipes]   - Picked Pipe ID: 1494383
+[2025-12-09 01:12:49] [DEBUG get_pipes]   - Picked Pipe ID: 1494397
+[2025-12-09 01:12:49] [DEBUG get_pipes]   - Picked Pipe ID: 1507398
+[2025-12-09 01:12:49] [DEBUG get_pipes] Response written successfully.
+[2025-12-09 01:12:49] [DEBUG get_pipes] Pipe IDs: [1492986, 1493378, 1494367, 1494375, 1494383, 1494397, 1507398]
+[2025-12-09 01:12:49] [DEBUG get_pipes] Revit selection cleared successfully.
+[2025-12-09 01:12:49] [DEBUG get_pipes] === get_pipes.py END ===
+[2025-12-09 01:12:49] Command cleared from JSON file.
+[2025-12-09 01:12:50] Command received: clear-pipe-highlights
+[2025-12-09 01:12:50] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:12:50] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:12:50] CLEAR HIGHLIGHT: removing overrides for pipes: [1493378, 1489681, 1509156, 1509158, 1489964, 1509166, 1509168, 1508018, 1507382, 1507136, 1507398, 1490902, 1490778, 1494367, 1494375, 1504487, 1494383, 1492985, 1492986, 1494397]
+[2025-12-09 01:12:50] CLEAR HIGHLIGHT: completed for 20 pipe(s)
+[2025-12-09 01:12:50] Command cleared from JSON file.
+[2025-12-09 01:12:53] Command received: get-model-path
+[2025-12-09 01:12:53] IMPORTING: get_model_path
+[2025-12-09 01:12:53] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:12:53] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:12:53] Command cleared from JSON file.
+[2025-12-09 01:12:56] Command received: get-model-path
+[2025-12-09 01:12:56] IMPORTING: get_model_path
+[2025-12-09 01:12:56] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:12:56] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:12:56] Command cleared from JSON file.
+[2025-12-09 01:12:59] Command received: highlight-pipes-temp
+[2025-12-09 01:12:59] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:12:59] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:12:59] HIGHLIGHT: Applying view overrides to pipes: [1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:12:59] HIGHLIGHT: Completed for 13 pipe(s)
+[2025-12-09 01:12:59] Command cleared from JSON file.
+[2025-12-09 01:13:05] Command received: get-model-path
+[2025-12-09 01:13:05] IMPORTING: get_model_path
+[2025-12-09 01:13:05] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:13:05] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:13:05] Command cleared from JSON file.
+[2025-12-09 01:13:08] Command received: clear-pipe-highlights
+[2025-12-09 01:13:08] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:13:08] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:13:08] CLEAR HIGHLIGHT: removing overrides for pipes: [1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:13:08] CLEAR HIGHLIGHT: completed for 13 pipe(s)
+[2025-12-09 01:13:08] Command cleared from JSON file.
+[2025-12-09 01:13:14] Command received: get-model-path
+[2025-12-09 01:13:14] IMPORTING: get_model_path
+[2025-12-09 01:13:14] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:13:14] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:13:14] Command cleared from JSON file.
+[2025-12-09 01:13:17] Command received: clear-pipe-highlights
+[2025-12-09 01:13:17] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:13:17] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:13:17] CLEAR HIGHLIGHT: removing overrides for pipes: [1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:13:17] CLEAR HIGHLIGHT: completed for 13 pipe(s)
+[2025-12-09 01:13:17] Command cleared from JSON file.
+[2025-12-09 01:13:32] Command received: get-model-path
+[2025-12-09 01:13:32] IMPORTING: get_model_path
+[2025-12-09 01:13:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:13:32] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:13:32] Command cleared from JSON file.
+[2025-12-09 01:13:35] Command received: select-pipes-in-current-view
+[2025-12-09 01:13:35] IMPORTING: select_pipes_in_current_view
+[2025-12-09 01:13:35] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-09 01:13:36] FAST MODE: selecting visible pipes from [1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:13:36] FAST MODE: selected 13 pipe(s)
+[2025-12-09 01:13:36] Command cleared from JSON file.
+[2025-12-09 01:19:33] Command received: get-model-path
+[2025-12-09 01:19:33] IMPORTING: get_model_path
+[2025-12-09 01:19:33] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:19:33] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:19:33] Command cleared from JSON file.
+[2025-12-09 01:19:36] Command received: highlight-pipes-temp
+[2025-12-09 01:19:36] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:19:36] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:19:36] HIGHLIGHT: Applying view overrides to pipes: [1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:19:36] HIGHLIGHT: Completed for 13 pipe(s)
+[2025-12-09 01:19:36] Command cleared from JSON file.
+[2025-12-09 01:19:48] Command received: get-model-path
+[2025-12-09 01:19:48] IMPORTING: get_model_path
+[2025-12-09 01:19:48] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:19:48] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:19:48] Command cleared from JSON file.
+[2025-12-09 01:19:51] Command received: clear-pipe-highlights
+[2025-12-09 01:19:51] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:19:51] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:19:51] CLEAR HIGHLIGHT: removing overrides for pipes: [1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:19:51] CLEAR HIGHLIGHT: completed for 13 pipe(s)
+[2025-12-09 01:19:51] Command cleared from JSON file.
+[2025-12-09 01:19:57] Command received: get-model-path
+[2025-12-09 01:19:57] IMPORTING: get_model_path
+[2025-12-09 01:19:57] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:19:57] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:19:57] Command cleared from JSON file.
+[2025-12-09 01:20:00] Command received: select-pipes-in-current-view
+[2025-12-09 01:20:00] IMPORTING: select_pipes_in_current_view
+[2025-12-09 01:20:00] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-09 01:20:00] FAST MODE: selecting visible pipes from [1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168]
+[2025-12-09 01:20:00] FAST MODE: selected 13 pipe(s)
+[2025-12-09 01:20:00] Command cleared from JSON file.
+[2025-12-09 01:20:45] Command received: get-model-path
+[2025-12-09 01:20:45] IMPORTING: get_model_path
+[2025-12-09 01:20:45] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:20:45] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:20:45] Command cleared from JSON file.
+[2025-12-09 01:20:57] Command received: get-pipes
+[2025-12-09 01:20:57] IMPORTING: get_pipes
+[2025-12-09 01:20:57] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipes.py
+[2025-12-09 01:20:57] [DEBUG get_pipes] === get_pipes.py START ===
+[2025-12-09 01:20:57] [DEBUG get_pipes] ActiveView: Cover
+[2025-12-09 01:20:57] [DEBUG get_pipes] About to call PickObjects...
+[2025-12-09 01:21:08] [DEBUG get_pipes] PickObjects returned 3 references
+[2025-12-09 01:21:08] [DEBUG get_pipes]   - Picked Pipe ID: 1406497
+[2025-12-09 01:21:08] [DEBUG get_pipes]   - Picked Pipe ID: 1590929
+[2025-12-09 01:21:08] [DEBUG get_pipes]   - Picked Pipe ID: 1590941
+[2025-12-09 01:21:08] [DEBUG get_pipes] Response written successfully.
+[2025-12-09 01:21:08] [DEBUG get_pipes] Pipe IDs: [1406497, 1590929, 1590941]
+[2025-12-09 01:21:08] [DEBUG get_pipes] Revit selection cleared successfully.
+[2025-12-09 01:21:08] [DEBUG get_pipes] === get_pipes.py END ===
+[2025-12-09 01:21:08] Command cleared from JSON file.
+[2025-12-09 01:21:09] Command received: clear-pipe-highlights
+[2025-12-09 01:21:09] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:21:09] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:21:09] CLEAR HIGHLIGHT: removing overrides for pipes: [1507136, 1509156, 1509158, 1504487, 1489964, 1509166, 1509168, 1489681, 1508018, 1490902, 1507382, 1492985, 1490778]
+[2025-12-09 01:21:09] CLEAR HIGHLIGHT: completed for 13 pipe(s)
+[2025-12-09 01:21:09] Command cleared from JSON file.
+[2025-12-09 01:21:12] Command received: get-model-path
+[2025-12-09 01:21:12] IMPORTING: get_model_path
+[2025-12-09 01:21:12] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:21:12] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:21:12] Command cleared from JSON file.
+[2025-12-09 01:21:15] Command received: get-model-path
+[2025-12-09 01:21:15] IMPORTING: get_model_path
+[2025-12-09 01:21:15] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:21:15] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:21:15] Command cleared from JSON file.
+[2025-12-09 01:21:18] Command received: highlight-pipes-temp
+[2025-12-09 01:21:18] IMPORTING: highlight_pipes_temp
+[2025-12-09 01:21:18] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
+[2025-12-09 01:21:18] HIGHLIGHT: Applying view overrides to pipes: [1406497, 1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168, 1590929, 1590941]
+[2025-12-09 01:21:18] HIGHLIGHT: Completed for 16 pipe(s)
+[2025-12-09 01:21:18] Command cleared from JSON file.
+[2025-12-09 01:21:24] Command received: get-model-path
+[2025-12-09 01:21:24] IMPORTING: get_model_path
+[2025-12-09 01:21:24] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:21:24] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:21:24] Command cleared from JSON file.
+[2025-12-09 01:21:28] Command received: clear-pipe-highlights
+[2025-12-09 01:21:28] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:21:28] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:21:28] CLEAR HIGHLIGHT: removing overrides for pipes: [1406497, 1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168, 1590929, 1590941]
+[2025-12-09 01:21:28] CLEAR HIGHLIGHT: completed for 16 pipe(s)
+[2025-12-09 01:21:28] Command cleared from JSON file.
+[2025-12-09 01:21:31] Command received: get-model-path
+[2025-12-09 01:21:31] IMPORTING: get_model_path
+[2025-12-09 01:21:31] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:21:31] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:21:31] Command cleared from JSON file.
+[2025-12-09 01:21:34] Command received: clear-pipe-highlights
+[2025-12-09 01:21:34] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:21:34] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:21:34] CLEAR HIGHLIGHT: removing overrides for pipes: [1406497, 1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168, 1590929, 1590941]
+[2025-12-09 01:21:34] CLEAR HIGHLIGHT: completed for 16 pipe(s)
+[2025-12-09 01:21:34] Command cleared from JSON file.
+[2025-12-09 01:21:46] Command received: get-model-path
+[2025-12-09 01:21:46] IMPORTING: get_model_path
+[2025-12-09 01:21:46] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:21:46] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:21:46] Command cleared from JSON file.
+[2025-12-09 01:21:49] Command received: clear-pipe-highlights
+[2025-12-09 01:21:49] IMPORTING: clear_pipe_highlights
+[2025-12-09 01:21:49] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-09 01:21:49] CLEAR HIGHLIGHT: removing overrides for pipes: [1406497, 1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168, 1590929, 1590941]
+[2025-12-09 01:21:49] CLEAR HIGHLIGHT: completed for 16 pipe(s)
+[2025-12-09 01:21:49] Command cleared from JSON file.
+[2025-12-09 01:22:01] Command received: get-model-path
+[2025-12-09 01:22:01] IMPORTING: get_model_path
+[2025-12-09 01:22:01] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:22:01] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:22:01] Command cleared from JSON file.
+[2025-12-09 01:22:28] Command received: get-model-path
+[2025-12-09 01:22:28] IMPORTING: get_model_path
+[2025-12-09 01:22:28] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:22:28] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:22:28] Command cleared from JSON file.
+[2025-12-09 01:22:31] Command received: select-pipes-in-current-view
+[2025-12-09 01:22:31] IMPORTING: select_pipes_in_current_view
+[2025-12-09 01:22:31] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-09 01:22:31] FAST MODE: selecting visible pipes from [1406497, 1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168, 1590929, 1590941]
+[2025-12-09 01:22:31] FAST MODE: selected 16 pipe(s)
+[2025-12-09 01:22:31] Command cleared from JSON file.
+[2025-12-09 01:23:13] Command received: get-model-path
+[2025-12-09 01:23:13] IMPORTING: get_model_path
+[2025-12-09 01:23:13] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-09 01:23:13] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-09 01:23:13] Command cleared from JSON file.
+[2025-12-09 01:23:16] Command received: select-pipes-in-current-view
+[2025-12-09 01:23:16] IMPORTING: select_pipes_in_current_view
+[2025-12-09 01:23:16] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-09 01:23:16] FAST MODE: selecting visible pipes from [1406497, 1489681, 1489964, 1490778, 1490902, 1492985, 1504487, 1507136, 1507382, 1508018, 1509156, 1509158, 1509166, 1509168, 1590929, 1590941]
+[2025-12-09 01:23:16] FAST MODE: selected 16 pipe(s)
+[2025-12-09 01:23:16] Command cleared from JSON file.

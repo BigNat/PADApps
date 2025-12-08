@@ -1,0 +1,12 @@
+{
+    "tests": [
+        "Doc",
+        "Export",
+        "Family",
+        "Link",
+        "Pipe",
+        "Selection",
+        "Sheet",
+        "View"
+    ]
+}

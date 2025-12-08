@@ -1,0 +1,40 @@
+{
+    "Doc": {
+        "test_01": "Run document-level Revit tests",
+        "test_02": "Inspect active Revit document info"
+    },
+    "Export": {
+        "test_01": "Export selected sheets to PDF",
+        "test_02": "Export selected sheets to DWG",
+        "test_03": "Export views to Navisworks (NWC)"
+    },
+    "Family": {
+        "test_01": "List loaded families",
+        "test_02": "Detect missing family types"
+    },
+    "Link": {
+        "test_01": "List Revit links",
+        "test_02": "Check link status and paths"
+    },
+    "Pipe": {
+        "test_01": "build_invert_chain",
+        "test_02": "highlight_chain",
+        "test_03": "clear_chain_highlights",
+        "test_04": "select_chain_in_view"
+    },
+    "Selection": {
+        "test_01": "Resolve selected sheet",
+        "test_02": "Resolve selected view",
+        "test_03": "Resolve element → RP object"
+    },
+    "Sheet": {
+        "test_01": "List sheets in project",
+        "test_02": "Check duplicate sheet numbers",
+        "test_03": "Extract titleblock metadata"
+    },
+    "View": {
+        "test_01": "List views",
+        "test_02": "Find unplaced views",
+        "test_03": "Extract view metadata"
+    }
+}

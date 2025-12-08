@@ -30,6 +30,8 @@ installers/
 *.rvt
 *.xls
 *.csv
+*.rfa
+
 
 # Logs
 logs/
