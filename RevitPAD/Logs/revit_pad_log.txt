@@ -216,3 +216,30 @@
 [2025-11-30 22:25:09] Watcher lock file removed.
 [2025-11-30 22:25:09] stop_watcher cleared from JSON file.
 [2025-11-30 22:25:09] Watcher loop stopping during sleep.
+[2025-12-02 23:44:37] Command Watcher active.
+[2025-12-02 23:44:37] Cached UIApplication
+[2025-12-02 23:44:37] Command received: get-sheet-data
+[2025-12-02 23:44:37] IMPORTING: get_sheet_data
+[2025-12-02 23:44:37] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-12-02 23:44:37] Returned sheet data: 27 sheets
+[2025-12-02 23:44:37] Command cleared from JSON file.
+[2025-12-02 23:44:46] Command received: get-3d-views
+[2025-12-02 23:44:46] IMPORTING: get_3d_views
+[2025-12-02 23:44:46] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_3d_views.py
+[2025-12-02 23:44:46] Returned 3D views: 5
+[2025-12-02 23:44:46] Command cleared from JSON file.
+[2025-12-02 23:44:52] Command received: get-sheet-data
+[2025-12-02 23:44:52] IMPORTING: get_sheet_data
+[2025-12-02 23:44:52] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-12-02 23:44:52] Returned sheet data: 27 sheets
+[2025-12-02 23:44:52] Command cleared from JSON file.
+[2025-12-02 23:44:55] Command received: get-model-path
+[2025-12-02 23:44:55] IMPORTING: get_model_path
+[2025-12-02 23:44:55] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_model_path.py
+[2025-12-02 23:44:55] Returned model path → C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\2. Project Inputs\2.2 Revit\Snowdon Towers Sample Plumbing.rvt
+[2025-12-02 23:44:55] Command cleared from JSON file.
+[2025-12-02 23:45:01] Command received: get-sheet-data
+[2025-12-02 23:45:01] IMPORTING: get_sheet_data
+[2025-12-02 23:45:01] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_sheet_data.py
+[2025-12-02 23:45:01] Returned sheet data: 27 sheets
+[2025-12-02 23:45:01] Command cleared from JSON file.

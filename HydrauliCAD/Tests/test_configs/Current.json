@@ -1,0 +1,10 @@
+{
+    "tests": [
+        "Blocks",
+        "Layer",
+        "Geometry",
+        "Utility",  
+        "Xref",
+        "Annotation"
+    ]
+}

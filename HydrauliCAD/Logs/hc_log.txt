@@ -124,3 +124,1355 @@
 [2025-48-01 17:48:52] ✅ Current layer set → Hyd_Pipe_Water_CW
 [2025-48-01 17:48:52] 📏 Drawing pipe line...
 [2025-48-01 17:48:52] ✅ Designer_Pipe command completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-11-02 17:11:46
+============================================================
+[2025-11-02 17:11:46] 🚀 Starting HydrauliCAD Loader...
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup_text.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_create_layer.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_designer_commands.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_get_current_layer.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_get_layers.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_json.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_layer.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_service.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_test.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_xref.lsp
+[2025-11-02 17:11:46] ✅ Loaded hc_xref_bridge.lsp
+[2025-11-02 17:11:46] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-11-02 17:11:55
+============================================================
+[2025-11-02 17:11:55] 🚀 Starting HydrauliCAD Loader...
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup_text.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_create_layer.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_designer_commands.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_get_current_layer.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_get_layers.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_json.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_layer.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_service.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_test.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_xref.lsp
+[2025-11-02 17:11:55] ✅ Loaded hc_xref_bridge.lsp
+[2025-11-02 17:11:55] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-12-02 17:12:10
+============================================================
+[2025-12-02 17:12:10] 🚀 Starting HydrauliCAD Loader...
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup_text.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_create_layer.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_designer_commands.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_get_current_layer.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_get_layers.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_json.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_layer.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_service.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_test.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_xref.lsp
+[2025-12-02 17:12:10] ✅ Loaded hc_xref_bridge.lsp
+[2025-12-02 17:12:10] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-12-02 17:12:15
+============================================================
+[2025-12-02 17:12:15] 🚀 Starting HydrauliCAD Loader...
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup_text.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_create_layer.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_designer_commands.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_get_current_layer.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_get_layers.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_json.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_layer.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_service.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_test.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_xref.lsp
+[2025-12-02 17:12:15] ✅ Loaded hc_xref_bridge.lsp
+[2025-12-02 17:12:15] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-12-02 17:12:19
+============================================================
+[2025-12-02 17:12:19] 🚀 Starting HydrauliCAD Loader...
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup_text.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_create_layer.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_designer_commands.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_get_current_layer.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_get_layers.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_json.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_layer.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_service.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_test.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_xref.lsp
+[2025-12-02 17:12:19] ✅ Loaded hc_xref_bridge.lsp
+[2025-12-02 17:12:19] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-19-02 19:19:53
+============================================================
+[2025-19-02 19:19:53] 🚀 Starting HydrauliCAD Loader...
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup_text.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_create_layer.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_designer_commands.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_get_current_layer.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_get_layers.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_json.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_layer.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_service.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_test.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_xref.lsp
+[2025-19-02 19:19:53] ✅ Loaded hc_xref_bridge.lsp
+[2025-19-02 19:19:53] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-27-02 19:27:24
+============================================================
+[2025-27-02 19:27:24] 🚀 Starting HydrauliCAD Loader...
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup_text.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_create_layer.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_designer_commands.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_get_current_layer.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_get_layers.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_json.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_layer.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_service.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_test.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_xref.lsp
+[2025-27-02 19:27:24] ✅ Loaded hc_xref_bridge.lsp
+[2025-27-02 19:27:24] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-35-02 22:35:11
+============================================================
+[2025-35-02 22:35:11] 🚀 Starting HydrauliCAD Loader...
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup_text.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_create_layer.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_designer_commands.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_get_current_layer.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_get_layers.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_json.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_layer.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_service.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_test.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_xref.lsp
+[2025-35-02 22:35:11] ✅ Loaded hc_xref_bridge.lsp
+[2025-35-02 22:35:11] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-35-02 22:35:28
+============================================================
+[2025-35-02 22:35:28] 🚀 Starting HydrauliCAD Loader...
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup_text.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_create_layer.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_designer_commands.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_get_current_layer.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_get_layers.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_json.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_layer.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_service.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_test.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_xref.lsp
+[2025-35-02 22:35:28] ✅ Loaded hc_xref_bridge.lsp
+[2025-35-02 22:35:28] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-02 23:34:13
+============================================================
+[2025-34-02 23:34:13] 🚀 Starting HydrauliCAD Loader...
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_create_layer.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_designer_commands.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_get_current_layer.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_get_layers.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_json.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_layer.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_service.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_test.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_xref.lsp
+[2025-34-02 23:34:13] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-02 23:34:13] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-02 23:34:21
+============================================================
+[2025-34-02 23:34:21] 🚀 Starting HydrauliCAD Loader...
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_create_layer.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_designer_commands.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_get_current_layer.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_get_layers.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_json.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_layer.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_service.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_test.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_xref.lsp
+[2025-34-02 23:34:21] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-02 23:34:21] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-02 23:34:25
+============================================================
+[2025-34-02 23:34:25] 🚀 Starting HydrauliCAD Loader...
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_create_layer.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_designer_commands.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_get_current_layer.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_get_layers.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_json.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_layer.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_service.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_test.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_xref.lsp
+[2025-34-02 23:34:25] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-02 23:34:25] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-02 23:34:40
+============================================================
+[2025-34-02 23:34:40] 🚀 Starting HydrauliCAD Loader...
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_create_layer.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_designer_commands.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_get_current_layer.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_get_layers.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_json.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_layer.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_service.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_test.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_xref.lsp
+[2025-34-02 23:34:40] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-02 23:34:40] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-34-02 23:34:55
+============================================================
+[2025-34-02 23:34:55] 🚀 Starting HydrauliCAD Loader...
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup_text.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_create_layer.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_designer_commands.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_get_current_layer.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_get_layers.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_json.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_layer.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_service.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_test.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_xref.lsp
+[2025-34-02 23:34:55] ✅ Loaded hc_xref_bridge.lsp
+[2025-34-02 23:34:55] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:08
+============================================================
+[2025-40-02 23:40:08] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:08] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:08] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:12
+============================================================
+[2025-40-02 23:40:12] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:12] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:12] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:19
+============================================================
+[2025-40-02 23:40:19] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:19] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:19] ✅ HydrauliCAD startup complete.
+[2025-40-02 23:40:19] 🧹 MakeByLayer started.
+[2025-40-02 23:40:19] ✅ MakeByLayer completed.
+[2025-40-02 23:40:21] 🧹 ChangeLineWeight started.
+[2025-40-02 23:40:21] ✅ ChangeLineWeight completed.
+[2025-40-02 23:40:21] 🧹 DeleteDimensions started.
+[2025-40-02 23:40:21] ✅ DeleteDimensions completed.
+[2025-40-02 23:40:21] 🧹 DeleteHatching started.
+[2025-40-02 23:40:21] ✅ DeleteHatching completed.
+[2025-40-02 23:40:21] 🧹 DeleteUCS started.
+[2025-40-02 23:40:21] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:23
+============================================================
+[2025-40-02 23:40:23] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:23] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:23] ✅ HydrauliCAD startup complete.
+[2025-40-02 23:40:24] 🧹 MakeByLayer started.
+[2025-40-02 23:40:24] ✅ MakeByLayer completed.
+[2025-40-02 23:40:24] 🧹 ChangeLineWeight started.
+[2025-40-02 23:40:24] ✅ ChangeLineWeight completed.
+[2025-40-02 23:40:24] 🧹 DeleteDimensions started.
+[2025-40-02 23:40:24] ✅ DeleteDimensions completed.
+[2025-40-02 23:40:26] 🧹 DeleteHatching started.
+[2025-40-02 23:40:26] ✅ DeleteHatching completed.
+[2025-40-02 23:40:26] 🧹 DeleteUCS started.
+[2025-40-02 23:40:26] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:28
+============================================================
+[2025-40-02 23:40:28] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:28] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:28] ✅ HydrauliCAD startup complete.
+[2025-40-02 23:40:29] 🧹 MakeByLayer started.
+[2025-40-02 23:40:29] ✅ MakeByLayer completed.
+[2025-40-02 23:40:29] 🧹 ChangeLineWeight started.
+[2025-40-02 23:40:29] ✅ ChangeLineWeight completed.
+[2025-40-02 23:40:29] 🧹 DeleteDimensions started.
+[2025-40-02 23:40:29] ✅ DeleteDimensions completed.
+[2025-40-02 23:40:29] 🧹 DeleteHatching started.
+[2025-40-02 23:40:29] ✅ DeleteHatching completed.
+[2025-40-02 23:40:29] 🧹 DeleteUCS started.
+[2025-40-02 23:40:29] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:31
+============================================================
+[2025-40-02 23:40:31] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:31] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:31] ✅ HydrauliCAD startup complete.
+[2025-40-02 23:40:33] 🧹 MakeByLayer started.
+[2025-40-02 23:40:33] ✅ MakeByLayer completed.
+[2025-40-02 23:40:34] 🧹 ChangeLineWeight started.
+[2025-40-02 23:40:34] ✅ ChangeLineWeight completed.
+[2025-40-02 23:40:34] 🧹 DeleteDimensions started.
+[2025-40-02 23:40:34] ✅ DeleteDimensions completed.
+[2025-40-02 23:40:34] 🧹 DeleteHatching started.
+[2025-40-02 23:40:34] ✅ DeleteHatching completed.
+[2025-40-02 23:40:35] 🧹 DeleteUCS started.
+[2025-40-02 23:40:35] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:36
+============================================================
+[2025-40-02 23:40:36] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:36] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:36] ✅ HydrauliCAD startup complete.
+[2025-40-02 23:40:36] 🧹 MakeByLayer started.
+[2025-40-02 23:40:36] ✅ MakeByLayer completed.
+[2025-40-02 23:40:38] 🧹 ChangeLineWeight started.
+[2025-40-02 23:40:38] ✅ ChangeLineWeight completed.
+[2025-40-02 23:40:38] 🧹 DeleteDimensions started.
+[2025-40-02 23:40:38] ✅ DeleteDimensions completed.
+[2025-40-02 23:40:38] 🧹 DeleteHatching started.
+[2025-40-02 23:40:38] ✅ DeleteHatching completed.
+[2025-40-02 23:40:38] 🧹 DeleteUCS started.
+[2025-40-02 23:40:38] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:40
+============================================================
+[2025-40-02 23:40:40] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:40] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:40] ✅ HydrauliCAD startup complete.
+[2025-40-02 23:40:41] 🧹 MakeByLayer started.
+[2025-40-02 23:40:41] ✅ MakeByLayer completed.
+[2025-40-02 23:40:41] 🧹 ChangeLineWeight started.
+[2025-40-02 23:40:41] ✅ ChangeLineWeight completed.
+[2025-40-02 23:40:41] 🧹 DeleteDimensions started.
+[2025-40-02 23:40:41] ✅ DeleteDimensions completed.
+[2025-40-02 23:40:41] 🧹 DeleteHatching started.
+[2025-40-02 23:40:41] ✅ DeleteHatching completed.
+[2025-40-02 23:40:41] 🧹 DeleteUCS started.
+[2025-40-02 23:40:41] ✅ DeleteUCS completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-02 23:40:43
+============================================================
+[2025-40-02 23:40:43] 🚀 Starting HydrauliCAD Loader...
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_create_layer.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_designer_commands.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_get_layers.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_json.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_layer.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_service.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_test.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_xref.lsp
+[2025-40-02 23:40:43] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-02 23:40:43] ✅ HydrauliCAD startup complete.
+[2025-40-02 23:40:45] 🧹 MakeByLayer started.
+[2025-40-02 23:40:45] ✅ MakeByLayer completed.
+[2025-40-02 23:40:45] 🧹 ChangeLineWeight started.
+[2025-40-02 23:40:45] ✅ ChangeLineWeight completed.
+[2025-40-02 23:40:46] 🧹 DeleteDimensions started.
+[2025-40-02 23:40:46] ✅ DeleteDimensions completed.
+[2025-40-02 23:40:46] 🧹 DeleteHatching started.
+[2025-40-02 23:40:46] ✅ DeleteHatching completed.
+[2025-40-02 23:40:46] 🧹 DeleteUCS started.
+[2025-40-02 23:40:46] ✅ DeleteUCS completed.
+[2025-41-02 23:41:45] 🧹 MakeByLayer started.
+[2025-41-02 23:41:45] ✅ MakeByLayer completed.
+[2025-41-02 23:41:47] 🧹 MakeByLayer started.
+[2025-41-02 23:41:47] ✅ MakeByLayer completed.
+[2025-41-02 23:41:50] 🧹 MakeByLayer started.
+[2025-41-02 23:41:50] ✅ MakeByLayer completed.
+[2025-41-02 23:41:50] 🧹 ChangeLineWeight started.
+[2025-41-02 23:41:52] ✅ ChangeLineWeight completed.
+[2025-41-02 23:41:52] 🧹 DeleteDimensions started.
+[2025-41-02 23:41:52] ✅ DeleteDimensions completed.
+[2025-41-02 23:41:52] 🧹 DeleteHatching started.
+[2025-41-02 23:41:52] ✅ DeleteHatching completed.
+[2025-41-02 23:41:52] 🧹 DeleteUCS started.
+[2025-41-02 23:41:52] ✅ DeleteUCS completed.
+[2025-42-02 23:42:17] 🧹 ChangeLineWeight started.
+[2025-42-02 23:42:17] ✅ ChangeLineWeight completed.
+[2025-42-02 23:42:33] 🧹 MakeByLayer started.
+[2025-42-02 23:42:33] ✅ MakeByLayer completed.
+[2025-43-02 23:43:01] 🧩 Designer_Pipe command started.
+[2025-43-02 23:43:01] 📏 Linetype loaded → HYD_COLD_WATER
+[2025-43-02 23:43:01] 🎨 Created new layer: Hyd_Pipe_Water_CW  [Color: 140 | Weight: 50 | Linetype: HYD_COLD_WATER]
+[2025-43-02 23:43:01] ✅ Current layer set → Hyd_Pipe_Water_CW
+[2025-43-02 23:43:01] 📏 Drawing pipe line...
+[2025-43-02 23:43:01] ✅ Designer_Pipe command completed.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-06-07 13:06:11
+============================================================
+[2025-06-07 13:06:11] 🚀 Starting HydrauliCAD Loader...
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup_text.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_create_layer.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_designer_commands.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_get_current_layer.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_get_layers.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_json.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_layer.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_service.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_test.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_xref.lsp
+[2025-06-07 13:06:11] ✅ Loaded hc_xref_bridge.lsp
+[2025-06-07 13:06:11] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-06-07 13:06:25
+============================================================
+[2025-06-07 13:06:25] 🚀 Starting HydrauliCAD Loader...
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup_text.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_create_layer.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_designer_commands.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_get_current_layer.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_get_layers.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_json.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_layer.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_service.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_test.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_xref.lsp
+[2025-06-07 13:06:25] ✅ Loaded hc_xref_bridge.lsp
+[2025-06-07 13:06:25] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-07-07 13:07:12
+============================================================
+[2025-07-07 13:07:12] 🚀 Starting HydrauliCAD Loader...
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup_text.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_create_layer.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_designer_commands.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_get_current_layer.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_get_layers.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_json.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_layer.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_service.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_test.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_xref.lsp
+[2025-07-07 13:07:12] ✅ Loaded hc_xref_bridge.lsp
+[2025-07-07 13:07:12] ✅ HydrauliCAD startup complete.
+[2025-34-07 13:34:37] 🔎 HC_GETBLOCKATTRS started...
+[2025-34-07 13:34:39] 🧱 Selected entity: AcDbBlockReference
+[2025-34-07 13:34:39] 📥 Block has attributes — retrieving...
+[2025-36-07 13:36:20] 🔎 HC_GETBLOCKATTRS started...
+[2025-36-07 13:36:20] 🧱 Selected entity: AcDbBlockReference
+[2025-36-07 13:36:20] 📥 Block has attributes — retrieving...
+[2025-36-07 13:36:20]    → COMMENT_1 = 
+[2025-36-07 13:36:20]    → INVERT = IL 82.000
+[2025-36-07 13:36:20]    → HEIGHT = -300
+[2025-36-07 13:36:20]    → COMMENT_2 = 
+[2025-36-07 13:36:20]    → TXT_PIPE_TOP_RL = 82.100 (TOP)
+[2025-36-07 13:36:20]    → TXT_GRADE = 1.65%  (FALL)
+[2025-36-07 13:36:20]    → TXT_PIPE_OD = 100mm (PIPE)
+[2025-36-07 13:36:20]    → TXT_FFL = 82.300 (FLOOR RL)
+[2025-36-07 13:36:20]    → TXT_SPACE_ABOVE = 200mm (SPACE ABOVE)
+[2025-36-07 13:36:20]    → TXT_SOFFIT_RL = 82.300 (SOFFIT RL)
+[2025-36-07 13:36:20]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025; 8:39:03 AM
+[2025-36-07 13:36:20] 💾 Writing attribute dictionary to JSON bridge...
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-49-07 13:49:42
+============================================================
+[2025-49-07 13:49:42] 🚀 Starting HydrauliCAD Loader...
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup_text.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_create_layer.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_designer_commands.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_get_current_layer.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_get_layers.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_get_selected_block.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_json.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_layer.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_service.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_test.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_xref.lsp
+[2025-49-07 13:49:42] ✅ Loaded hc_xref_bridge.lsp
+[2025-49-07 13:49:42] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-50-07 13:50:32
+============================================================
+[2025-50-07 13:50:32] 🚀 Starting HydrauliCAD Loader...
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup_text.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_create_layer.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_designer_commands.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_get_current_layer.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_get_layers.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_get_selected_block.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_json.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_layer.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_service.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_test.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_xref.lsp
+[2025-50-07 13:50:32] ✅ Loaded hc_xref_bridge.lsp
+[2025-50-07 13:50:32] ✅ HydrauliCAD startup complete.
+[2025-50-07 13:50:49] 🔎 HC_GETBLOCKATTRS started...
+[2025-50-07 13:50:51] 🧱 Selected entity: AcDbBlockReference
+[2025-50-07 13:50:51] 📥 Block has attributes — retrieving...
+[2025-50-07 13:50:51]    → COMMENT_1 = 
+[2025-50-07 13:50:51]    → INVERT = IL 82.000
+[2025-50-07 13:50:51]    → HEIGHT = -300
+[2025-50-07 13:50:51]    → COMMENT_2 = 
+[2025-50-07 13:50:51]    → TXT_PIPE_TOP_RL = 82.100 (TOP)
+[2025-50-07 13:50:51]    → TXT_GRADE = 1.65%  (FALL)
+[2025-50-07 13:50:51]    → TXT_PIPE_OD = 100mm (PIPE)
+[2025-50-07 13:50:51]    → TXT_FFL = 82.300 (FLOOR RL)
+[2025-50-07 13:50:51]    → TXT_SPACE_ABOVE = 200mm (SPACE ABOVE)
+[2025-50-07 13:50:51]    → TXT_SOFFIT_RL = 82.300 (SOFFIT RL)
+[2025-50-07 13:50:51]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025; 8:39:03 AM
+[2025-50-07 13:50:51] 💾 Writing attribute dictionary to JSON bridge...
+[2025-53-07 13:53:51] 🔎 HC_GETBLOCKATTRS started...
+[2025-53-07 13:53:52] 🧱 Selected entity: AcDbBlockReference
+[2025-53-07 13:53:52] 📥 Block has attributes — retrieving...
+[2025-53-07 13:53:52]    → COMMENT_1 = 
+[2025-53-07 13:53:52]    → INVERT = IL 82.000
+[2025-53-07 13:53:52]    → HEIGHT = -300
+[2025-53-07 13:53:52]    → COMMENT_2 = 
+[2025-53-07 13:53:52]    → TXT_PIPE_TOP_RL = 82.100 (TOP)
+[2025-53-07 13:53:52]    → TXT_GRADE = 1.65%  (FALL)
+[2025-53-07 13:53:52]    → TXT_PIPE_OD = 100mm (PIPE)
+[2025-53-07 13:53:52]    → TXT_FFL = 82.300 (FLOOR RL)
+[2025-53-07 13:53:52]    → TXT_SPACE_ABOVE = 200mm (SPACE ABOVE)
+[2025-53-07 13:53:52]    → TXT_SOFFIT_RL = 82.300 (SOFFIT RL)
+[2025-53-07 13:53:52]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-53-07 13:53:52] 💾 Writing attribute dictionary to JSON bridge...
+[2025-00-07 14:00:15] 🔎 HC_GETBLOCKATTRS started...
+[2025-00-07 14:00:16] 🧱 Selected entity: AcDbBlockReference
+[2025-00-07 14:00:16] 📥 Block has attributes — retrieving...
+[2025-00-07 14:00:16]    → COMMENT_1 = 
+[2025-00-07 14:00:16]    → INVERT = IL 82.000
+[2025-00-07 14:00:16]    → HEIGHT = -300
+[2025-00-07 14:00:16]    → COMMENT_2 = 
+[2025-00-07 14:00:16]    → TXT_PIPE_TOP_RL = 82.100 (TOP)
+[2025-00-07 14:00:16]    → TXT_GRADE = 1.65%  (FALL)
+[2025-00-07 14:00:16]    → TXT_PIPE_OD = 100mm (PIPE)
+[2025-00-07 14:00:16]    → TXT_FFL = 82.300 (FLOOR RL)
+[2025-00-07 14:00:16]    → TXT_SPACE_ABOVE = 200mm (SPACE ABOVE)
+[2025-00-07 14:00:16]    → TXT_SOFFIT_RL = 82.300 (SOFFIT RL)
+[2025-00-07 14:00:16]    → DATE attribute skipped.
+[2025-00-07 14:00:16] 💾 Writing attribute dictionary to JSON bridge...
+[2025-02-07 14:02:31] 🔎 HC_GETBLOCKATTRS started...
+[2025-02-07 14:02:33] 🧱 Selected entity: AcDbBlockReference
+[2025-02-07 14:02:33] 📥 Block has attributes — retrieving...
+[2025-04-07 14:04:29] 🔎 HC_GETBLOCKATTRS started...
+[2025-04-07 14:04:31] 🧱 Selected entity: AcDbBlockReference
+[2025-04-07 14:04:31] 📥 Block has attributes — retrieving...
+[2025-04-07 14:04:31]    → COMMENT_1 = 
+[2025-04-07 14:04:31]    → INVERT = IL 82.000
+[2025-04-07 14:04:31]    → HEIGHT = -300
+[2025-04-07 14:04:31]    → COMMENT_2 = 
+[2025-04-07 14:04:31]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-04-07 14:04:31]    → TXT_GRADE = 1.65%  FALL
+[2025-04-07 14:04:31]    → TXT_PIPE_OD = 10 0mm PIPE
+[2025-04-07 14:04:31]    → TXT_FFL = 82.300 FLOOR RL
+[2025-04-07 14:04:31]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-04-07 14:04:31]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-04-07 14:04:31]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-04-07 14:04:31] 💾 Writing attribute dictionary to JSON bridge...
+[2025-04-07 14:04:31] ✅ HC_GETBLOCKATTRS completed.
+[2025-07-07 14:07:50] 🔎 HC_GETBLOCKATTRS started...
+[2025-07-07 14:07:52] 🧱 Selected entity: AcDbBlockReference
+[2025-07-07 14:07:52] 📥 Block has attributes — retrieving...
+[2025-07-07 14:07:52]    → COMMENT_1 = 
+[2025-07-07 14:07:52]    → INVERT = IL 82.000
+[2025-07-07 14:07:52]    → HEIGHT = -300
+[2025-07-07 14:07:52]    → COMMENT_2 = 
+[2025-07-07 14:07:52]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-07-07 14:07:52]    → TXT_GRADE = 1.65%  FALL
+[2025-07-07 14:07:52]    → TXT_PIPE_OD = 100mm PIPE
+[2025-07-07 14:07:52]    → TXT_FFL = 82.300 FLOOR RL
+[2025-07-07 14:07:52]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-07-07 14:07:52]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-07-07 14:07:52]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-07-07 14:07:52] 💾 Writing attribute dictionary to JSON bridge...
+[2025-07-07 14:07:52] ✅ HC_GETBLOCKATTRS completed.
+[2025-09-07 14:09:04] 🔎 HC_GETBLOCKATTRS started...
+[2025-09-07 14:09:05] 🧱 Selected entity: AcDbBlockReference
+[2025-09-07 14:09:05] 📥 Block has attributes — retrieving...
+[2025-09-07 14:09:05]    → COMMENT_1 = 
+[2025-09-07 14:09:05]    → INVERT = IL 82.000
+[2025-09-07 14:09:05]    → HEIGHT = -300
+[2025-09-07 14:09:05]    → COMMENT_2 = 
+[2025-09-07 14:09:05]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-09-07 14:09:05]    → TXT_GRADE = 1.65%  FALL
+[2025-09-07 14:09:05]    → TXT_PIPE_OD = 100mm PIPE
+[2025-09-07 14:09:05]    → TXT_FFL = 82.300 FLOOR RL
+[2025-09-07 14:09:05]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-09-07 14:09:05]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-09-07 14:09:05]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-09-07 14:09:05] 💾 Writing attribute dictionary to JSON bridge...
+[2025-09-07 14:09:05] ✅ HC_GETBLOCKATTRS completed.
+[2025-14-07 14:14:35] 🔎 HC_GETBLOCKATTRS started...
+[2025-14-07 14:14:37] 🧱 Selected entity: AcDbBlockReference
+[2025-14-07 14:14:37] 📥 Block has attributes — retrieving...
+[2025-14-07 14:14:37]    → COMMENT_1 = 
+[2025-14-07 14:14:37]    → INVERT = IL 82.000
+[2025-14-07 14:14:37]    → HEIGHT = -300
+[2025-14-07 14:14:37]    → COMMENT_2 = 
+[2025-14-07 14:14:37]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-14-07 14:14:37]    → TXT_GRADE = 1.65%  FALL
+[2025-14-07 14:14:37]    → TXT_PIPE_OD = 100mm PIPE
+[2025-14-07 14:14:37]    → TXT_FFL = 82.300 FLOOR RL
+[2025-14-07 14:14:37]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-14-07 14:14:37]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-14-07 14:14:37]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-14-07 14:14:37] 💾 Writing attribute dictionary to JSON bridge...
+[2025-15-07 14:15:39] 🔎 HC_GETBLOCKATTRS started...
+[2025-15-07 14:15:41] 🧱 Selected entity: AcDbBlockReference
+[2025-15-07 14:15:41] 📥 Block has attributes — retrieving...
+[2025-15-07 14:15:41]    → COMMENT_1 = 
+[2025-15-07 14:15:41]    → INVERT = IL 82.000
+[2025-15-07 14:15:41]    → HEIGHT = -300
+[2025-15-07 14:15:41]    → COMMENT_2 = 
+[2025-15-07 14:15:41]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-15-07 14:15:41]    → TXT_GRADE = 1.65%  FALL
+[2025-15-07 14:15:41]    → TXT_PIPE_OD = 100mm PIPE
+[2025-15-07 14:15:41]    → TXT_FFL = 82.300 FLOOR RL
+[2025-15-07 14:15:41]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-15-07 14:15:41]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-15-07 14:15:41]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-18-07 14:18:04] 🔎 HC_GETBLOCKATTRS started...
+[2025-18-07 14:18:05] 🧱 Selected entity: AcDbBlockReference
+[2025-18-07 14:18:05] 📥 Block has attributes — retrieving...
+[2025-18-07 14:18:05]    → COMMENT_1 = 
+[2025-18-07 14:18:05]    → INVERT = IL 82.000
+[2025-18-07 14:18:05]    → HEIGHT = -300
+[2025-18-07 14:18:05]    → COMMENT_2 = 
+[2025-18-07 14:18:05]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-18-07 14:18:05]    → TXT_GRADE = 1.65%  FALL
+[2025-18-07 14:18:05]    → TXT_PIPE_OD = 100mm PIPE
+[2025-18-07 14:18:05]    → TXT_FFL = 82.300 FLOOR RL
+[2025-18-07 14:18:05]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-18-07 14:18:05]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-18-07 14:18:05]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-20-07 14:20:48] 🔎 HC_GETBLOCKATTRS started...
+[2025-20-07 14:20:48] 🧱 Selected entity: AcDbBlockReference
+[2025-20-07 14:20:48] 📥 Block has attributes — retrieving...
+[2025-20-07 14:20:48]    → COMMENT_1 = 
+[2025-20-07 14:20:48]    → INVERT = IL 82.000
+[2025-20-07 14:20:48]    → HEIGHT = -300
+[2025-20-07 14:20:48]    → COMMENT_2 = 
+[2025-20-07 14:20:48]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-20-07 14:20:48]    → TXT_GRADE = 1.65%  FALL
+[2025-20-07 14:20:48]    → TXT_PIPE_OD = 100mm PIPE
+[2025-20-07 14:20:48]    → TXT_FFL = 82.300 FLOOR RL
+[2025-20-07 14:20:48]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-20-07 14:20:48]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-20-07 14:20:48]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-25-07 14:25:35
+============================================================
+[2025-25-07 14:25:35] 🚀 Starting HydrauliCAD Loader...
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup_text.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_create_layer.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_designer_commands.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_get_current_layer.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_get_layers.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_get_selected_block.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_json.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_layer.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_service.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_test.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_xref.lsp
+[2025-25-07 14:25:35] ✅ Loaded hc_xref_bridge.lsp
+[2025-25-07 14:25:35] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-25-07 14:25:45
+============================================================
+[2025-25-07 14:25:45] 🚀 Starting HydrauliCAD Loader...
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup_text.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_create_layer.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_designer_commands.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_get_current_layer.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_get_layers.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_get_selected_block.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_json.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_layer.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_service.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_test.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_xref.lsp
+[2025-25-07 14:25:45] ✅ Loaded hc_xref_bridge.lsp
+[2025-25-07 14:25:45] ✅ HydrauliCAD startup complete.
+[2025-25-07 14:25:47] 🔎 HC_GETBLOCKATTRS started...
+[2025-25-07 14:25:49] 🧱 Selected entity: AcDbBlockReference
+[2025-25-07 14:25:49] 🔤 Block name: INVERTLEVEL_FFL
+[2025-25-07 14:25:49] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-25-07 14:25:49] 📥 Block has attributes — retrieving...
+[2025-25-07 14:25:49]    → COMMENT_1 = 
+[2025-25-07 14:25:49]    → INVERT = IL 82.000
+[2025-25-07 14:25:49]    → HEIGHT = -300
+[2025-25-07 14:25:49]    → COMMENT_2 = 
+[2025-25-07 14:25:49]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-25-07 14:25:49]    → TXT_GRADE = 1.65%  FALL
+[2025-25-07 14:25:49]    → TXT_PIPE_OD = 100mm PIPE
+[2025-25-07 14:25:49]    → TXT_FFL = 82.300 FLOOR RL
+[2025-25-07 14:25:49]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-25-07 14:25:49]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-25-07 14:25:49]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-25-07 14:25:49] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-31-07 14:31:55] 🔎 HC_GETBLOCKATTRS started...
+[2025-31-07 14:31:56] 🧱 Selected entity: AcDbBlockReference
+[2025-31-07 14:31:56] 🔤 Block name: INVERTLEVEL_FFL
+[2025-31-07 14:31:56] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-31-07 14:31:56] 📥 Block has attributes — retrieving...
+[2025-31-07 14:31:56]    → COMMENT_1 = 
+[2025-31-07 14:31:56]    → INVERT = IL 82.000
+[2025-31-07 14:31:56]    → HEIGHT = -300
+[2025-31-07 14:31:56]    → COMMENT_2 = 
+[2025-31-07 14:31:56]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-31-07 14:31:56]    → TXT_GRADE = 1.65%  FALL
+[2025-31-07 14:31:56]    → TXT_PIPE_OD = 100mm PIPE
+[2025-31-07 14:31:56]    → TXT_FFL = 82.300 FLOOR RL
+[2025-31-07 14:31:56]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-31-07 14:31:56]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-31-07 14:31:56]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-31-07 14:31:56] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-33-07 14:33:46] 🔎 HC_GETBLOCKATTRS started...
+[2025-33-07 14:33:46] 🧱 Selected entity: AcDbBlockReference
+[2025-33-07 14:33:46] 🔤 Block name: INVERTLEVEL_FFL
+[2025-33-07 14:33:46] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-33-07 14:33:46] 📥 Block has attributes — retrieving...
+[2025-33-07 14:33:46]    → COMMENT_1 = 
+[2025-33-07 14:33:46]    → INVERT = IL 82.000
+[2025-33-07 14:33:46]    → HEIGHT = -300
+[2025-33-07 14:33:46]    → COMMENT_2 = 
+[2025-33-07 14:33:46]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-33-07 14:33:46]    → TXT_GRADE = 1.65%  FALL
+[2025-33-07 14:33:46]    → TXT_PIPE_OD = 100mm PIPE
+[2025-33-07 14:33:46]    → TXT_FFL = 82.300 FLOOR RL
+[2025-33-07 14:33:46]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-33-07 14:33:46]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-33-07 14:33:46]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-33-07 14:33:46] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-41-07 14:41:12] 🔎 HC_GETBLOCKATTRS started...
+[2025-41-07 14:41:13] 🧱 Selected entity: AcDbBlockReference
+[2025-41-07 14:41:13] 🔤 Block name: INVERTLEVEL_FFL
+[2025-41-07 14:41:13] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-41-07 14:41:13] 📥 Block has attributes — retrieving...
+[2025-41-07 14:41:13]    → COMMENT_1 = 
+[2025-41-07 14:41:13]    → INVERT = IL 82.000
+[2025-41-07 14:41:13]    → HEIGHT = -300
+[2025-41-07 14:41:13]    → COMMENT_2 = 
+[2025-41-07 14:41:13]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-41-07 14:41:13]    → TXT_GRADE = 1.65%  FALL
+[2025-41-07 14:41:13]    → TXT_PIPE_OD = 100mm PIPE
+[2025-41-07 14:41:13]    → TXT_FFL = 82.300 FLOOR RL
+[2025-41-07 14:41:13]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-41-07 14:41:13]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-41-07 14:41:13]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-41-07 14:41:13] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-08 16:40:05
+============================================================
+[2025-40-08 16:40:05] 🚀 Starting HydrauliCAD Loader...
+[2025-40-08 16:40:05] ✅ Loaded hc_cleanup.lsp
+[2025-40-08 16:40:05] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_create_layer.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_designer_commands.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_get_layers.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_get_selected_block.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_json.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_layer.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_service.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_test.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_xref.lsp
+[2025-40-08 16:40:06] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-08 16:40:06] ✅ HydrauliCAD startup complete.
+
+============================================================
+🕓 New HydrauliCAD Session: 2025-40-08 16:40:22
+============================================================
+[2025-40-08 16:40:22] 🚀 Starting HydrauliCAD Loader...
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup_blocks.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup_bylayer.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup_dimensions.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup_hatching.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup_lineweight.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup_text.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_cleanup_ucs.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_create_layer.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_designer_commands.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_get_current_layer.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_get_layers.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_get_selected_block.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_json.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_layer.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_service.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_test.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_xref.lsp
+[2025-40-08 16:40:22] ✅ Loaded hc_xref_bridge.lsp
+[2025-40-08 16:40:22] ✅ HydrauliCAD startup complete.
+[2025-59-08 16:59:07] 📄 HC_GETLAYERS started.
+[2025-59-08 16:59:07] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-59-08 16:59:07] 📄 HC_GETLAYERS completed successfully.
+[2025-59-08 16:59:12] 📄 HC_GETLAYERS started.
+[2025-59-08 16:59:12] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-59-08 16:59:12] 📄 HC_GETLAYERS completed successfully.
+[2025-11-08 17:11:14] 🔎 HC_GETBLOCKATTRS started...
+[2025-11-08 17:11:16] 🧱 Selected entity: AcDbBlockReference
+[2025-11-08 17:11:16] 🔤 Block name: INVERTLEVEL_FFL
+[2025-11-08 17:11:16] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-11-08 17:11:16] 📥 Block has attributes — retrieving...
+[2025-11-08 17:11:16]    → COMMENT_1 = 
+[2025-11-08 17:11:16]    → INVERT = IL 82.000
+[2025-11-08 17:11:16]    → HEIGHT = -300
+[2025-11-08 17:11:16]    → COMMENT_2 = 
+[2025-11-08 17:11:16]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-11-08 17:11:16]    → TXT_GRADE = 1.65%  FALL
+[2025-11-08 17:11:16]    → TXT_PIPE_OD = 100mm PIPE
+[2025-11-08 17:11:16]    → TXT_FFL = 82.300 FLOOR RL
+[2025-11-08 17:11:16]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-11-08 17:11:16]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-11-08 17:11:16]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-11-08 17:11:16] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-11-08 17:11:19] 📄 HC_GETLAYERS started.
+[2025-11-08 17:11:19] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-11-08 17:11:19] 📄 HC_GETLAYERS completed successfully.
+[2025-11-08 17:11:24] 📄 HC_GETLAYERS started.
+[2025-11-08 17:11:24] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-11-08 17:11:24] 📄 HC_GETLAYERS completed successfully.
+[2025-11-08 17:11:26] 📄 HC_GETLAYERS started.
+[2025-11-08 17:11:26] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-11-08 17:11:26] 📄 HC_GETLAYERS completed successfully.
+[2025-13-08 17:13:09] 🔎 HC_GETBLOCKATTRS started...
+[2025-13-08 17:13:11] 🧱 Selected entity: AcDbBlockReference
+[2025-13-08 17:13:11] 🔤 Block name: INVERTLEVEL_FFL
+[2025-13-08 17:13:11] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-13-08 17:13:11] 📥 Block has attributes — retrieving...
+[2025-13-08 17:13:11]    → COMMENT_1 = 
+[2025-13-08 17:13:11]    → INVERT = IL 82.000
+[2025-13-08 17:13:11]    → HEIGHT = -300
+[2025-13-08 17:13:11]    → COMMENT_2 = 
+[2025-13-08 17:13:11]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-13-08 17:13:11]    → TXT_GRADE = 1.65%  FALL
+[2025-13-08 17:13:11]    → TXT_PIPE_OD = 100mm PIPE
+[2025-13-08 17:13:11]    → TXT_FFL = 82.300 FLOOR RL
+[2025-13-08 17:13:11]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-13-08 17:13:11]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-13-08 17:13:11]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-13-08 17:13:11] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-13-08 17:13:21] 📄 HC_GETLAYERS started.
+[2025-13-08 17:13:21] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-13-08 17:13:21] 📄 HC_GETLAYERS completed successfully.
+[2025-13-08 17:13:23] 📄 HC_GETLAYERS started.
+[2025-13-08 17:13:23] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-13-08 17:13:23] 📄 HC_GETLAYERS completed successfully.
+[2025-13-08 17:13:23] 📄 HC_GETLAYERS started.
+[2025-13-08 17:13:23] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-13-08 17:13:23] 📄 HC_GETLAYERS completed successfully.
+[2025-35-08 17:35:26] 🔎 HC_GETBLOCKATTRS started...
+[2025-35-08 17:35:27] 🧱 Selected entity: AcDbBlockReference
+[2025-35-08 17:35:27] 🔤 Block name: INVERTLEVEL_FFL
+[2025-35-08 17:35:27] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-35-08 17:35:27] 📥 Block has attributes — retrieving...
+[2025-35-08 17:35:27]    → COMMENT_1 = 
+[2025-35-08 17:35:27]    → INVERT = IL 82.000
+[2025-35-08 17:35:27]    → HEIGHT = -300
+[2025-35-08 17:35:27]    → COMMENT_2 = 
+[2025-35-08 17:35:27]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-35-08 17:35:27]    → TXT_GRADE = 1.65%  FALL
+[2025-35-08 17:35:27]    → TXT_PIPE_OD = 100mm PIPE
+[2025-35-08 17:35:27]    → TXT_FFL = 82.300 FLOOR RL
+[2025-35-08 17:35:27]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-35-08 17:35:27]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-35-08 17:35:27]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-35-08 17:35:27] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-49-08 17:49:36] 📄 HC_GETLAYERS started.
+[2025-49-08 17:49:36] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-49-08 17:49:36] 📄 HC_GETLAYERS completed successfully.
+[2025-49-08 17:49:41] 📄 HC_GETLAYERS started.
+[2025-49-08 17:49:41] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-49-08 17:49:41] 📄 HC_GETLAYERS completed successfully.
+[2025-49-08 17:49:45] 📄 HC_GETLAYERS started.
+[2025-49-08 17:49:45] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-49-08 17:49:46] 📄 HC_GETLAYERS completed successfully.
+[2025-49-08 17:49:48] 🔎 HC_GETBLOCKATTRS started...
+[2025-49-08 17:49:48] 🧱 Selected entity: AcDbBlockReference
+[2025-49-08 17:49:48] 🔤 Block name: INVERTLEVEL_FFL
+[2025-49-08 17:49:48] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-49-08 17:49:48] 📥 Block has attributes — retrieving...
+[2025-49-08 17:49:48]    → COMMENT_1 = 
+[2025-49-08 17:49:48]    → INVERT = IL 82.000
+[2025-49-08 17:49:48]    → HEIGHT = -300
+[2025-49-08 17:49:48]    → COMMENT_2 = 
+[2025-49-08 17:49:48]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-49-08 17:49:48]    → TXT_GRADE = 1.65%  FALL
+[2025-49-08 17:49:48]    → TXT_PIPE_OD = 100mm PIPE
+[2025-49-08 17:49:48]    → TXT_FFL = 82.300 FLOOR RL
+[2025-49-08 17:49:48]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-49-08 17:49:48]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-49-08 17:49:48]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-49-08 17:49:48] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-49-08 17:49:53] 📄 HC_GETLAYERS started.
+[2025-49-08 17:49:53] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-49-08 17:49:53] 📄 HC_GETLAYERS completed successfully.
+[2025-49-08 17:49:53] 📄 HC_GETLAYERS started.
+[2025-49-08 17:49:53] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-49-08 17:49:53] 📄 HC_GETLAYERS completed successfully.
+[2025-49-08 17:49:56] 📄 HC_GETLAYERS started.
+[2025-49-08 17:49:56] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-49-08 17:49:56] 📄 HC_GETLAYERS completed successfully.
+[2025-53-08 17:53:09] 🔎 HC_GETBLOCKATTRS started...
+[2025-53-08 17:53:12] 🧱 Selected entity: AcDbBlockReference
+[2025-53-08 17:53:12] 🔤 Block name: INVERTLEVEL_FFL
+[2025-53-08 17:53:12] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-53-08 17:53:12] 📥 Block has attributes — retrieving...
+[2025-53-08 17:53:12]    → COMMENT_1 = 
+[2025-53-08 17:53:12]    → INVERT = IL 82.000
+[2025-53-08 17:53:12]    → HEIGHT = -300
+[2025-53-08 17:53:12]    → COMMENT_2 = 
+[2025-53-08 17:53:12]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-53-08 17:53:12]    → TXT_GRADE = 1.65%  FALL
+[2025-53-08 17:53:12]    → TXT_PIPE_OD = 100mm PIPE
+[2025-53-08 17:53:12]    → TXT_FFL = 82.300 FLOOR RL
+[2025-53-08 17:53:12]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-53-08 17:53:12]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-53-08 17:53:12]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-53-08 17:53:12] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-53-08 17:53:14] 📄 HC_GETLAYERS started.
+[2025-53-08 17:53:14] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-53-08 17:53:14] 📄 HC_GETLAYERS completed successfully.
+[2025-53-08 17:53:22] 📄 HC_GETLAYERS started.
+[2025-53-08 17:53:22] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-53-08 17:53:22] 📄 HC_GETLAYERS completed successfully.
+[2025-53-08 17:53:34] 📄 HC_GETLAYERS started.
+[2025-53-08 17:53:34] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-53-08 17:53:34] 📄 HC_GETLAYERS completed successfully.
+[2025-07-08 18:07:46] 🔎 HC_GETBLOCKATTRS started...
+[2025-07-08 18:07:46] 🧱 Selected entity: AcDbBlockReference
+[2025-07-08 18:07:46] 🔤 Block name: INVERTLEVEL_FFL
+[2025-07-08 18:07:46] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-07-08 18:07:46] 📥 Block has attributes — retrieving...
+[2025-07-08 18:07:46]    → COMMENT_1 = 
+[2025-07-08 18:07:46]    → INVERT = IL 82.000
+[2025-07-08 18:07:46]    → HEIGHT = -300
+[2025-07-08 18:07:46]    → COMMENT_2 = 
+[2025-07-08 18:07:46]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-07-08 18:07:46]    → TXT_GRADE = 1.65%  FALL
+[2025-07-08 18:07:46]    → TXT_PIPE_OD = 100mm PIPE
+[2025-07-08 18:07:46]    → TXT_FFL = 82.300 FLOOR RL
+[2025-07-08 18:07:46]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-07-08 18:07:46]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-07-08 18:07:46]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-07-08 18:07:46] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-13-08 18:13:46] 🔎 HC_GETBLOCKATTRS started...
+[2025-13-08 18:13:47] 🧱 Selected entity: AcDbBlockReference
+[2025-13-08 18:13:47] 🔤 Block name: INVERTLEVEL_FFL
+[2025-13-08 18:13:47] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-13-08 18:13:47] 📥 Block has attributes — retrieving...
+[2025-13-08 18:13:47]    → COMMENT_1 = 
+[2025-13-08 18:13:47]    → INVERT = IL 82.000
+[2025-13-08 18:13:47]    → HEIGHT = -300
+[2025-13-08 18:13:47]    → COMMENT_2 = 
+[2025-13-08 18:13:47]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-13-08 18:13:47]    → TXT_GRADE = 1.65%  FALL
+[2025-13-08 18:13:47]    → TXT_PIPE_OD = 100mm PIPE
+[2025-13-08 18:13:47]    → TXT_FFL = 82.300 FLOOR RL
+[2025-13-08 18:13:47]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-13-08 18:13:47]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-13-08 18:13:47]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-13-08 18:13:47] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-15-08 18:15:59] 🔎 HC_GETBLOCKATTRS started...
+[2025-16-08 18:16:07] 🧱 Selected entity: AcDbBlockReference
+[2025-16-08 18:16:07] 🔤 Block name: INVERTLEVEL_FFL
+[2025-16-08 18:16:07] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-16-08 18:16:07] 📥 Block has attributes — retrieving...
+[2025-16-08 18:16:07]    → COMMENT_1 = 
+[2025-16-08 18:16:07]    → INVERT = IL 82.000
+[2025-16-08 18:16:07]    → HEIGHT = -300
+[2025-16-08 18:16:07]    → COMMENT_2 = 
+[2025-16-08 18:16:07]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-16-08 18:16:07]    → TXT_GRADE = 1.65%  FALL
+[2025-16-08 18:16:07]    → TXT_PIPE_OD = 100mm PIPE
+[2025-16-08 18:16:07]    → TXT_FFL = 82.300 FLOOR RL
+[2025-16-08 18:16:07]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-16-08 18:16:07]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-16-08 18:16:07]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-16-08 18:16:07] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-16-08 18:16:14] 📄 HC_GETLAYERS started.
+[2025-16-08 18:16:14] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-16-08 18:16:14] 📄 HC_GETLAYERS completed successfully.
+[2025-16-08 18:16:19] 📄 HC_GETLAYERS started.
+[2025-16-08 18:16:19] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-16-08 18:16:19] 📄 HC_GETLAYERS completed successfully.
+[2025-21-08 18:21:52] 🔎 HC_GETBLOCKATTRS started...
+[2025-21-08 18:21:53] 🧱 Selected entity: AcDbBlockReference
+[2025-21-08 18:21:53] 🔤 Block name: INVERTLEVEL_FFL
+[2025-21-08 18:21:53] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-21-08 18:21:53] 📥 Block has attributes — retrieving...
+[2025-21-08 18:21:53]    → COMMENT_1 = 
+[2025-21-08 18:21:53]    → INVERT = IL 82.000
+[2025-21-08 18:21:53]    → HEIGHT = -300
+[2025-21-08 18:21:53]    → COMMENT_2 = 
+[2025-21-08 18:21:53]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-21-08 18:21:53]    → TXT_GRADE = 1.65%  FALL
+[2025-21-08 18:21:53]    → TXT_PIPE_OD = 100mm PIPE
+[2025-21-08 18:21:53]    → TXT_FFL = 82.300 FLOOR RL
+[2025-21-08 18:21:53]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-21-08 18:21:53]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-21-08 18:21:53]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-21-08 18:21:53] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-22-08 18:22:00] 📄 HC_GETLAYERS started.
+[2025-22-08 18:22:00] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-22-08 18:22:00] 📄 HC_GETLAYERS completed successfully.
+[2025-22-08 18:22:02] 📄 HC_GETLAYERS started.
+[2025-22-08 18:22:02] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-22-08 18:22:02] 📄 HC_GETLAYERS completed successfully.
+[2025-22-08 18:22:05] 📄 HC_GETLAYERS started.
+[2025-22-08 18:22:05] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-22-08 18:22:05] 📄 HC_GETLAYERS completed successfully.
+[2025-26-08 18:26:52] 🔎 HC_GETBLOCKATTRS started...
+[2025-26-08 18:26:55] 🧱 Selected entity: AcDbBlockReference
+[2025-26-08 18:26:55] 🔤 Block name: INVERTLEVEL_FFL
+[2025-26-08 18:26:55] 📄 DWG path: C:\Users\nweck\Dropbox\BlueTree\Demo\Projects\2501 - Snowdon Towers\3. Project Outputs\3.1 Drawings\AH-SITE1.dwg
+[2025-26-08 18:26:55] 📥 Block has attributes — retrieving...
+[2025-26-08 18:26:55]    → COMMENT_1 = 
+[2025-26-08 18:26:55]    → INVERT = IL 82.000
+[2025-26-08 18:26:55]    → HEIGHT = -300
+[2025-26-08 18:26:55]    → COMMENT_2 = 
+[2025-26-08 18:26:55]    → TXT_PIPE_TOP_RL = 82.100 TOP
+[2025-26-08 18:26:55]    → TXT_GRADE = 1.65%  FALL
+[2025-26-08 18:26:55]    → TXT_PIPE_OD = 100mm PIPE
+[2025-26-08 18:26:55]    → TXT_FFL = 82.300 FLOOR RL
+[2025-26-08 18:26:55]    → TXT_SPACE_ABOVE = 200mm SPACE ABOVE
+[2025-26-08 18:26:55]    → TXT_SOFFIT_RL = 82.300 SOFFIT RL
+[2025-26-08 18:26:55]    → DATE = UPDATED: FRIDAY, 14 MARCH 2025- 8:39:03 AM
+[2025-26-08 18:26:55] 💾 HC_GETBLOCKATTRS → attributes written via BuildBlockAttributeList.
+[2025-26-08 18:26:59] 📄 HC_GETLAYERS started.
+[2025-26-08 18:26:59] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-26-08 18:26:59] 📄 HC_GETLAYERS completed successfully.
+[2025-27-08 18:27:02] 📄 HC_GETLAYERS started.
+[2025-27-08 18:27:02] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-27-08 18:27:02] 📄 HC_GETLAYERS completed successfully.
+[2025-27-08 18:27:02] 📄 HC_GETLAYERS started.
+[2025-27-08 18:27:02] ✅ hc_write_layer_bridge → layer bridge JSON written successfully.
+[2025-27-08 18:27:02] 📄 HC_GETLAYERS completed successfully.
