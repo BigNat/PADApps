@@ -17,10 +17,10 @@
         "test_02": "Check link status and paths"
     },
     "Pipe": {
-        "test_01": "build_invert_chain",
-        "test_02": "highlight_chain",
-        "test_03": "clear_chain_highlights",
-        "test_04": "select_chain_in_view"
+        "test_01": "Calculate selected pipe ILs",
+        "test_02": "Detect and highlight Incorrect ILs",
+        "test_03": "clear_all_pipe_highlights",
+        "test_04": "Reset selected pipes to default ILs"
     },
     "Selection": {
         "test_01": "Resolve selected sheet",
