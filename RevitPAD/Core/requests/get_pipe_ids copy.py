@@ -26,13 +26,13 @@ class PipeSelectionFilter(ISelectionFilter):
 
 def write_debug(log, msg):
     try:
-        log("[DEBUG get_pipes] " + msg)
+        log("[DEBUG get_pipe_ids] " + msg)
     except:
         pass
 
 
 def run(uiapp, data, log):
-    write_debug(log, "=== get_pipes.py START ===")
+    write_debug(log, "=== get_pipe_ids.py START ===")
 
     uidoc = uiapp.ActiveUIDocument
     doc = uidoc.Document
@@ -100,6 +100,6 @@ def run(uiapp, data, log):
         with open(RESPONSE_PATH, "w") as f:
             json.dump(err, f, indent=2)
 
-        log("Error in get_pipes: {}".format(e))
+        log("Error in get_pipe_ids: {}".format(e))
 
-    write_debug(log, "=== get_pipes.py END ===")
+    write_debug(log, "=== get_pipe_ids.py END ===")

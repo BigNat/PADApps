@@ -1,1061 +1,544 @@
-[2025-12-09 22:26:06] Command received: get-highlighted-pipes
-[2025-12-09 22:26:06] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:26:06] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:26:06] GET HIGHLIGHTED PIPES: scanning active view...
-[2025-12-09 22:26:06] GET HIGHLIGHTED PIPES: found 2 highlighted
-[2025-12-09 22:26:06] Command cleared from JSON file.
-[2025-12-09 22:29:32] Command received: get-highlighted-pipes
-[2025-12-09 22:29:32] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:29:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:29:32] GET HIGHLIGHTED PIPES: scanning active view...
-[2025-12-09 22:29:32] GET HIGHLIGHTED PIPES: found 2 highlighted
-[2025-12-09 22:29:32] Command cleared from JSON file.
-[2025-12-09 22:32:50] Command received: get-highlighted-pipes
-[2025-12-09 22:32:50] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:32:50] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:32:50] Reload warning: invalid syntax
-[2025-12-09 22:32:50] GET HIGHLIGHTED PIPES: scanning active view...
-[2025-12-09 22:32:50] GET HIGHLIGHTED PIPES: found 2 highlighted
-[2025-12-09 22:32:50] Command cleared from JSON file.
-[2025-12-09 22:35:43] Command received: get-highlighted-pipes
-[2025-12-09 22:35:43] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:35:43] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:35:43] === GET HIGHLIGHTED PIPES: DIAGNOSTIC MODE START ===
-[2025-12-09 22:35:43] Error in get_highlighted_pipes: The color represents an invalid or uninitialized color.
-[2025-12-09 22:35:43] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py", line 44, in run
-    color_str = "({0}, {1}, {2})".format(color.Red, color.Green, color.Blue)
-Exception: The color represents an invalid or uninitialized color.
-
-[2025-12-09 22:35:43] Command cleared from JSON file.
-[2025-12-09 22:38:13] Command received: get-highlighted-pipes
-[2025-12-09 22:38:13] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:38:13] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:38:13] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 22:38:13] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 22:38:13] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 22:38:13] === GET HIGHLIGHTED PIPES: FOUND 1 ===
-[2025-12-09 22:38:13] Command cleared from JSON file.
-[2025-12-09 22:39:08] Command received: get-pipe-elevations
-[2025-12-09 22:39:08] IMPORTING: get_pipe_elevations
-[2025-12-09 22:39:08] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:39:08] Starting get_pipe_elevations...
-[2025-12-09 22:39:08] Selected items: 1
-[2025-12-09 22:39:08] Processing pipe ID: 749479
-[2025-12-09 22:39:08] Pipe elevation data written successfully.
-[2025-12-09 22:39:08] Completed get_pipe_elevations.
-[2025-12-09 22:39:08] Command cleared from JSON file.
-[2025-12-09 22:39:11] Command received: get-highlighted-pipes
-[2025-12-09 22:39:11] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:39:11] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:39:11] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 22:39:11] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 22:39:11] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 22:39:11] === GET HIGHLIGHTED PIPES: FOUND 1 ===
-[2025-12-09 22:39:11] Command cleared from JSON file.
-[2025-12-09 22:39:23] Command received: clear-all-pipe-highlights
-[2025-12-09 22:39:23] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 22:39:23] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 22:39:23] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 22:39:23] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 22:39:23] Command cleared from JSON file.
-[2025-12-09 22:39:26] Command received: get-pipe-elevations
-[2025-12-09 22:39:26] IMPORTING: get_pipe_elevations
-[2025-12-09 22:39:26] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:39:26] Starting get_pipe_elevations...
-[2025-12-09 22:39:26] Collecting ALL visible pipes in current view...
-[2025-12-09 22:39:26] Found 2 visible pipes.
-[2025-12-09 22:39:26] Processing pipe ID: 744018
-[2025-12-09 22:39:26] Processing pipe ID: 749479
-[2025-12-09 22:39:26] Pipe elevation data written successfully.
-[2025-12-09 22:39:26] Completed get_pipe_elevations.
-[2025-12-09 22:39:26] Command cleared from JSON file.
-[2025-12-09 22:39:29] Command received: clear-all-pipe-highlights
-[2025-12-09 22:39:29] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 22:39:29] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 22:39:29] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 22:39:29] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 22:39:29] Command cleared from JSON file.
-[2025-12-09 22:39:32] Command received: get-pipe-elevations
-[2025-12-09 22:39:32] IMPORTING: get_pipe_elevations
-[2025-12-09 22:39:32] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:39:32] Starting get_pipe_elevations...
-[2025-12-09 22:39:32] Collecting ALL visible pipes in current view...
-[2025-12-09 22:39:32] Found 2 visible pipes.
-[2025-12-09 22:39:32] Processing pipe ID: 744018
-[2025-12-09 22:39:32] Processing pipe ID: 749479
-[2025-12-09 22:39:32] Pipe elevation data written successfully.
-[2025-12-09 22:39:32] Completed get_pipe_elevations.
-[2025-12-09 22:39:32] Command cleared from JSON file.
-[2025-12-09 22:39:35] Command received: highlight-pipes-temp
-[2025-12-09 22:39:35] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:39:35] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:39:35] HIGHLIGHT: Applying view overrides to pipes: [749479]
-[2025-12-09 22:39:35] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 22:39:35] Command cleared from JSON file.
-[2025-12-09 22:39:41] Command received: get-pipe-elevations
-[2025-12-09 22:39:41] IMPORTING: get_pipe_elevations
-[2025-12-09 22:39:41] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:39:41] Starting get_pipe_elevations...
-[2025-12-09 22:39:41] Selected items: 1
-[2025-12-09 22:39:41] Processing pipe ID: 749479
-[2025-12-09 22:39:41] Pipe elevation data written successfully.
-[2025-12-09 22:39:41] Completed get_pipe_elevations.
-[2025-12-09 22:39:41] Command cleared from JSON file.
-[2025-12-09 22:39:44] Command received: get-highlighted-pipes
-[2025-12-09 22:39:44] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:39:44] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:39:44] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 22:39:44] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 22:39:44] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 22:39:44] === GET HIGHLIGHTED PIPES: FOUND 1 ===
-[2025-12-09 22:39:44] Command cleared from JSON file.
-[2025-12-09 22:39:47] Command received: set-pipe-il
-[2025-12-09 22:39:47] IMPORTING: set_pipe_il
-[2025-12-09 22:39:47] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 22:39:47] === set_pipe_il.py START ===
-[2025-12-09 22:39:47] Updating IL parameters for pipe 749479...
-[2025-12-09 22:39:47] Set IL Lower (ft) = 9.35039370079
-[2025-12-09 22:39:47] Set IL Upper (ft) = 9.51770669291
-[2025-12-09 22:39:47] Set IL Height Lower (ft) = 9.85039370079
-[2025-12-09 22:39:47] Set IL Height Upper (ft) = 10.0177066929
-[2025-12-09 22:39:47] Set Floor RL Below (ft) = 0.0
-[2025-12-09 22:39:47] IL update completed and confirmed for pipe 749479.
-[2025-12-09 22:39:47] === set_pipe_il.py END ===
-[2025-12-09 22:39:47] Command cleared from JSON file.
-[2025-12-09 22:39:50] Command received: clear-pipe-highlights
-[2025-12-09 22:39:50] IMPORTING: clear_pipe_highlights
-[2025-12-09 22:39:50] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 22:39:50] CLEAR HIGHLIGHT: removing overrides for pipes: [749479]
-[2025-12-09 22:39:50] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 22:39:50] Command cleared from JSON file.
-[2025-12-09 22:43:02] Command received: clear-all-pipe-highlights
-[2025-12-09 22:43:02] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 22:43:02] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 22:43:02] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 22:43:02] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 22:43:02] Command cleared from JSON file.
-[2025-12-09 22:43:05] Command received: get-pipe-elevations
-[2025-12-09 22:43:05] IMPORTING: get_pipe_elevations
-[2025-12-09 22:43:05] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:43:05] Starting get_pipe_elevations...
-[2025-12-09 22:43:05] Collecting ALL visible pipes in current view...
-[2025-12-09 22:43:05] Found 2 visible pipes.
-[2025-12-09 22:43:05] Processing pipe ID: 744018
-[2025-12-09 22:43:05] Processing pipe ID: 749479
-[2025-12-09 22:43:05] Pipe elevation data written successfully.
-[2025-12-09 22:43:05] Completed get_pipe_elevations.
-[2025-12-09 22:43:05] Command cleared from JSON file.
-[2025-12-09 22:43:08] Command received: highlight-pipes-temp
-[2025-12-09 22:43:08] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:43:08] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:43:08] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 22:43:08] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 22:43:08] Command cleared from JSON file.
-[2025-12-09 22:43:27] Command received: get-pipe-elevations
-[2025-12-09 22:43:27] IMPORTING: get_pipe_elevations
-[2025-12-09 22:43:27] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:43:27] Starting get_pipe_elevations...
-[2025-12-09 22:43:27] Selected items: 1
-[2025-12-09 22:43:27] Processing pipe ID: 749479
-[2025-12-09 22:43:27] Pipe elevation data written successfully.
-[2025-12-09 22:43:27] Completed get_pipe_elevations.
-[2025-12-09 22:43:27] Command cleared from JSON file.
-[2025-12-09 22:43:30] Command received: get-highlighted-pipes
-[2025-12-09 22:43:30] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:43:30] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:43:30] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 22:43:30] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 22:43:30] Pipe 749479 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 22:43:30] === GET HIGHLIGHTED PIPES: FOUND 0 ===
-[2025-12-09 22:43:30] Command cleared from JSON file.
-[2025-12-09 22:43:33] Command received: set-pipe-il
-[2025-12-09 22:43:33] IMPORTING: set_pipe_il
-[2025-12-09 22:43:33] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 22:43:33] === set_pipe_il.py START ===
-[2025-12-09 22:43:33] Updating IL parameters for pipe 749479...
-[2025-12-09 22:43:33] Set IL Lower (ft) = 9.31758530184
-[2025-12-09 22:43:33] Set IL Upper (ft) = 9.51770669291
-[2025-12-09 22:43:33] Set IL Height Lower (ft) = 9.81758530184
-[2025-12-09 22:43:33] Set IL Height Upper (ft) = 10.0177066929
-[2025-12-09 22:43:33] Set Floor RL Below (ft) = 0.0
-[2025-12-09 22:43:33] IL update completed and confirmed for pipe 749479.
-[2025-12-09 22:43:33] === set_pipe_il.py END ===
-[2025-12-09 22:43:33] Command cleared from JSON file.
-[2025-12-09 22:43:48] Command received: clear-all-pipe-highlights
-[2025-12-09 22:43:48] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 22:43:48] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 22:43:48] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 22:43:48] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 22:43:48] Command cleared from JSON file.
-[2025-12-09 22:43:51] Command received: get-pipe-elevations
-[2025-12-09 22:43:51] IMPORTING: get_pipe_elevations
-[2025-12-09 22:43:51] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:43:51] Starting get_pipe_elevations...
-[2025-12-09 22:43:51] Collecting ALL visible pipes in current view...
-[2025-12-09 22:43:51] Found 2 visible pipes.
-[2025-12-09 22:43:51] Processing pipe ID: 744018
-[2025-12-09 22:43:51] Processing pipe ID: 749479
-[2025-12-09 22:43:51] Pipe elevation data written successfully.
-[2025-12-09 22:43:51] Completed get_pipe_elevations.
-[2025-12-09 22:43:51] Command cleared from JSON file.
-[2025-12-09 22:43:54] Command received: highlight-pipes-temp
-[2025-12-09 22:43:54] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:43:54] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:43:54] HIGHLIGHT: Applying view overrides to pipes: [749479]
-[2025-12-09 22:43:54] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 22:43:54] Command cleared from JSON file.
-[2025-12-09 22:44:03] Command received: get-pipe-elevations
-[2025-12-09 22:44:03] IMPORTING: get_pipe_elevations
-[2025-12-09 22:44:03] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:44:03] Starting get_pipe_elevations...
-[2025-12-09 22:44:03] Collecting ALL visible pipes in current view...
-[2025-12-09 22:44:03] Found 2 visible pipes.
-[2025-12-09 22:44:03] Processing pipe ID: 744018
-[2025-12-09 22:44:03] Processing pipe ID: 749479
-[2025-12-09 22:44:03] Pipe elevation data written successfully.
-[2025-12-09 22:44:03] Completed get_pipe_elevations.
-[2025-12-09 22:44:03] Command cleared from JSON file.
-[2025-12-09 22:44:06] Command received: highlight-pipes-temp
-[2025-12-09 22:44:06] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:44:06] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:44:06] HIGHLIGHT: Applying view overrides to pipes: [744018, 749479]
-[2025-12-09 22:44:06] HIGHLIGHT: Completed for 2 pipe(s)
-[2025-12-09 22:44:06] Command cleared from JSON file.
-[2025-12-09 22:44:12] Command received: get-pipe-elevations
-[2025-12-09 22:44:12] IMPORTING: get_pipe_elevations
-[2025-12-09 22:44:12] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:44:12] Starting get_pipe_elevations...
-[2025-12-09 22:44:12] Selected items: 2
-[2025-12-09 22:44:12] Processing pipe ID: 744018
-[2025-12-09 22:44:12] Processing pipe ID: 749479
-[2025-12-09 22:44:12] Pipe elevation data written successfully.
-[2025-12-09 22:44:12] Completed get_pipe_elevations.
-[2025-12-09 22:44:12] Command cleared from JSON file.
-[2025-12-09 22:44:15] Command received: get-highlighted-pipes
-[2025-12-09 22:44:15] IMPORTING: get_highlighted_pipes
-[2025-12-09 22:44:15] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 22:44:15] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 22:44:15] Pipe 744018 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 22:44:15] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 22:44:15] === GET HIGHLIGHTED PIPES: FOUND 2 ===
-[2025-12-09 22:44:15] Command cleared from JSON file.
-[2025-12-09 22:44:18] Command received: set-pipe-il
-[2025-12-09 22:44:18] IMPORTING: set_pipe_il
-[2025-12-09 22:44:18] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 22:44:18] === set_pipe_il.py START ===
-[2025-12-09 22:44:18] Updating IL parameters for pipe 744018...
-[2025-12-09 22:44:18] Set IL Lower (ft) = 9.35039370079
-[2025-12-09 22:44:18] Set IL Upper (ft) = 10.0097112861
-[2025-12-09 22:44:18] Set IL Height Lower (ft) = 9.85039370079
-[2025-12-09 22:44:18] Set IL Height Upper (ft) = 10.5097112861
-[2025-12-09 22:44:18] Set Floor RL Below (ft) = 0.0
-[2025-12-09 22:44:18] IL update completed and confirmed for pipe 744018.
-[2025-12-09 22:44:18] === set_pipe_il.py END ===
-[2025-12-09 22:44:18] Command cleared from JSON file.
-[2025-12-09 22:44:21] Command received: clear-pipe-highlights
-[2025-12-09 22:44:21] IMPORTING: clear_pipe_highlights
-[2025-12-09 22:44:21] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 22:44:21] CLEAR HIGHLIGHT: removing overrides for pipes: [744018]
-[2025-12-09 22:44:21] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 22:44:21] Command cleared from JSON file.
-[2025-12-09 22:44:24] Command received: set-pipe-il
-[2025-12-09 22:44:24] IMPORTING: set_pipe_il
-[2025-12-09 22:44:24] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 22:44:24] === set_pipe_il.py START ===
-[2025-12-09 22:44:24] Updating IL parameters for pipe 749479...
-[2025-12-09 22:44:24] Set IL Lower (ft) = 9.31758530184
-[2025-12-09 22:44:24] Set IL Upper (ft) = 9.91794947507
-[2025-12-09 22:44:24] Set IL Height Lower (ft) = 9.81758530184
-[2025-12-09 22:44:24] Set IL Height Upper (ft) = 10.4179494751
-[2025-12-09 22:44:24] Set Floor RL Below (ft) = 0.0
-[2025-12-09 22:44:24] IL update completed and confirmed for pipe 749479.
-[2025-12-09 22:44:24] === set_pipe_il.py END ===
-[2025-12-09 22:44:24] Command cleared from JSON file.
-[2025-12-09 22:44:27] Command received: clear-pipe-highlights
-[2025-12-09 22:44:27] IMPORTING: clear_pipe_highlights
-[2025-12-09 22:44:27] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 22:44:27] CLEAR HIGHLIGHT: removing overrides for pipes: [749479]
-[2025-12-09 22:44:27] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 22:44:27] Command cleared from JSON file.
-[2025-12-09 22:48:28] Command received: clear-all-pipe-highlights
-[2025-12-09 22:48:28] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 22:48:28] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 22:48:28] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 22:48:28] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 22:48:28] Command cleared from JSON file.
-[2025-12-09 22:49:11] Command received: clear-all-pipe-highlights
-[2025-12-09 22:49:11] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 22:49:11] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 22:49:11] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 22:49:11] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 22:49:11] Command cleared from JSON file.
-[2025-12-09 22:49:14] Command received: get-pipe-elevations
-[2025-12-09 22:49:14] IMPORTING: get_pipe_elevations
-[2025-12-09 22:49:14] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:49:14] Starting get_pipe_elevations...
-[2025-12-09 22:49:14] Collecting ALL visible pipes in current view...
-[2025-12-09 22:49:14] Found 2 visible pipes.
-[2025-12-09 22:49:14] Processing pipe ID: 744018
-[2025-12-09 22:49:14] Processing pipe ID: 749479
-[2025-12-09 22:49:14] Pipe elevation data written successfully.
-[2025-12-09 22:49:14] Completed get_pipe_elevations.
-[2025-12-09 22:49:14] Command cleared from JSON file.
-[2025-12-09 22:49:17] Command received: highlight-pipes-temp
-[2025-12-09 22:49:17] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:49:17] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:49:17] HIGHLIGHT: Applying view overrides to pipes: [749479]
-[2025-12-09 22:49:17] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 22:49:17] Command cleared from JSON file.
-[2025-12-09 22:49:52] Command received: get-pipe-elevations
-[2025-12-09 22:49:52] IMPORTING: get_pipe_elevations
-[2025-12-09 22:49:52] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:49:52] Starting get_pipe_elevations...
-[2025-12-09 22:49:52] Collecting ALL visible pipes in current view...
-[2025-12-09 22:49:52] Found 2 visible pipes.
-[2025-12-09 22:49:52] Processing pipe ID: 744018
-[2025-12-09 22:49:52] Processing pipe ID: 749479
-[2025-12-09 22:49:52] Pipe elevation data written successfully.
-[2025-12-09 22:49:52] Completed get_pipe_elevations.
-[2025-12-09 22:49:52] Command cleared from JSON file.
-[2025-12-09 22:49:55] Command received: highlight-pipes-temp
-[2025-12-09 22:49:55] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:49:55] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:49:55] HIGHLIGHT: Applying view overrides to pipes: [749479]
-[2025-12-09 22:49:55] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 22:49:55] Command cleared from JSON file.
-[2025-12-09 22:50:27] Command received: get-pipe-elevations
-[2025-12-09 22:50:27] IMPORTING: get_pipe_elevations
-[2025-12-09 22:50:27] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:50:27] Starting get_pipe_elevations...
-[2025-12-09 22:50:27] Collecting ALL visible pipes in current view...
-[2025-12-09 22:50:27] Found 2 visible pipes.
-[2025-12-09 22:50:27] Processing pipe ID: 744018
-[2025-12-09 22:50:27] Processing pipe ID: 749479
-[2025-12-09 22:50:27] Pipe elevation data written successfully.
-[2025-12-09 22:50:27] Completed get_pipe_elevations.
-[2025-12-09 22:50:27] Command cleared from JSON file.
-[2025-12-09 22:50:30] Command received: highlight-pipes-temp
-[2025-12-09 22:50:30] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:50:30] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:50:30] HIGHLIGHT: Applying view overrides to pipes: [749479]
-[2025-12-09 22:50:30] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 22:50:30] Command cleared from JSON file.
-[2025-12-09 22:50:39] Command received: get-pipe-elevations
-[2025-12-09 22:50:39] IMPORTING: get_pipe_elevations
-[2025-12-09 22:50:39] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:50:39] Starting get_pipe_elevations...
-[2025-12-09 22:50:39] Collecting ALL visible pipes in current view...
-[2025-12-09 22:50:39] Found 2 visible pipes.
-[2025-12-09 22:50:39] Processing pipe ID: 744018
-[2025-12-09 22:50:39] Processing pipe ID: 749479
-[2025-12-09 22:50:39] Pipe elevation data written successfully.
-[2025-12-09 22:50:39] Completed get_pipe_elevations.
-[2025-12-09 22:50:39] Command cleared from JSON file.
-[2025-12-09 22:50:42] Command received: highlight-pipes-temp
-[2025-12-09 22:50:42] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:50:42] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:50:42] HIGHLIGHT: Applying view overrides to pipes: [744018, 749479]
-[2025-12-09 22:50:42] HIGHLIGHT: Completed for 2 pipe(s)
-[2025-12-09 22:50:42] Command cleared from JSON file.
-[2025-12-09 22:50:48] Command received: get-pipe-elevations
-[2025-12-09 22:50:48] IMPORTING: get_pipe_elevations
-[2025-12-09 22:50:48] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:50:48] Starting get_pipe_elevations...
-[2025-12-09 22:50:48] Selected items: 2
-[2025-12-09 22:50:48] Processing pipe ID: 744018
-[2025-12-09 22:50:48] Processing pipe ID: 749479
-[2025-12-09 22:50:48] Pipe elevation data written successfully.
-[2025-12-09 22:50:48] Completed get_pipe_elevations.
-[2025-12-09 22:50:48] Command cleared from JSON file.
-[2025-12-09 22:51:36] Command received: set-pipe-il
-[2025-12-09 22:51:36] IMPORTING: set_pipe_il
-[2025-12-09 22:51:36] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 22:51:36] === set_pipe_il.py START ===
-[2025-12-09 22:51:36] Updating IL parameters for pipe 744018...
-[2025-12-09 22:51:36] Set IL Lower (ft) = 9.38966207349
-[2025-12-09 22:51:36] Set IL Upper (ft) = 10.0097112861
-[2025-12-09 22:51:36] Set IL Height Lower (ft) = 9.88966207349
-[2025-12-09 22:51:36] Set IL Height Upper (ft) = 10.5097112861
-[2025-12-09 22:51:36] Set Floor RL Below (ft) = 0.0
-[2025-12-09 22:51:36] IL update completed and confirmed for pipe 744018.
-[2025-12-09 22:51:36] === set_pipe_il.py END ===
-[2025-12-09 22:51:36] Command cleared from JSON file.
-[2025-12-09 22:51:39] Command received: set-pipe-il
-[2025-12-09 22:51:39] IMPORTING: set_pipe_il
-[2025-12-09 22:51:39] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 22:51:39] === set_pipe_il.py START ===
-[2025-12-09 22:51:39] Updating IL parameters for pipe 749479...
-[2025-12-09 22:51:39] Set IL Lower (ft) = 9.31758530184
-[2025-12-09 22:51:39] Set IL Upper (ft) = 10.2423654856
-[2025-12-09 22:51:39] Set IL Height Lower (ft) = 9.81758530184
-[2025-12-09 22:51:39] Set IL Height Upper (ft) = 10.7423654856
-[2025-12-09 22:51:39] Set Floor RL Below (ft) = 0.0
-[2025-12-09 22:51:39] IL update completed and confirmed for pipe 749479.
-[2025-12-09 22:51:39] === set_pipe_il.py END ===
-[2025-12-09 22:51:39] Command cleared from JSON file.
-[2025-12-09 22:51:57] Command received: clear-all-pipe-highlights
-[2025-12-09 22:51:57] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 22:51:57] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 22:51:57] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 22:51:57] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 22:51:57] Command cleared from JSON file.
-[2025-12-09 22:52:00] Command received: get-pipe-elevations
-[2025-12-09 22:52:00] IMPORTING: get_pipe_elevations
-[2025-12-09 22:52:00] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:52:00] Starting get_pipe_elevations...
-[2025-12-09 22:52:00] Collecting ALL visible pipes in current view...
-[2025-12-09 22:52:00] Found 2 visible pipes.
-[2025-12-09 22:52:00] Processing pipe ID: 744018
-[2025-12-09 22:52:00] Processing pipe ID: 749479
-[2025-12-09 22:52:00] Pipe elevation data written successfully.
-[2025-12-09 22:52:00] Completed get_pipe_elevations.
-[2025-12-09 22:52:00] Command cleared from JSON file.
-[2025-12-09 22:52:03] Command received: highlight-pipes-temp
-[2025-12-09 22:52:03] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:52:03] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:52:03] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 22:52:03] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 22:52:03] Command cleared from JSON file.
-[2025-12-09 22:52:29] Command received: get-pipe-elevations
-[2025-12-09 22:52:29] IMPORTING: get_pipe_elevations
-[2025-12-09 22:52:29] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:52:29] Starting get_pipe_elevations...
-[2025-12-09 22:52:29] Collecting ALL visible pipes in current view...
-[2025-12-09 22:52:29] Found 2 visible pipes.
-[2025-12-09 22:52:29] Processing pipe ID: 744018
-[2025-12-09 22:52:29] Processing pipe ID: 749479
-[2025-12-09 22:52:29] Pipe elevation data written successfully.
-[2025-12-09 22:52:29] Completed get_pipe_elevations.
-[2025-12-09 22:52:29] Command cleared from JSON file.
-[2025-12-09 22:52:32] Command received: highlight-pipes-temp
-[2025-12-09 22:52:32] IMPORTING: highlight_pipes_temp
-[2025-12-09 22:52:32] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 22:52:32] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 22:52:32] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 22:52:32] Command cleared from JSON file.
-[2025-12-09 22:56:12] Command received: get-pipe-elevations
-[2025-12-09 22:56:12] IMPORTING: get_pipe_elevations
-[2025-12-09 22:56:12] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 22:56:12] Starting get_pipe_elevations...
-[2025-12-09 22:56:12] Selected items: 1
-[2025-12-09 22:56:12] Processing pipe ID: 749859
-[2025-12-09 22:56:12] Pipe elevation data written successfully.
-[2025-12-09 22:56:12] Completed get_pipe_elevations.
-[2025-12-09 22:56:12] Command cleared from JSON file.
-[2025-12-09 22:56:15] Command received: set-pipe-il
-[2025-12-09 22:56:15] IMPORTING: set_pipe_il
-[2025-12-09 22:56:15] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 22:56:15] === set_pipe_il.py START ===
-[2025-12-09 22:56:15] Updating IL parameters for pipe 749859...
-[2025-12-09 22:56:15] Set IL Lower (ft) = 0.0
-[2025-12-09 22:56:15] Set IL Upper (ft) = 0.0
-[2025-12-09 22:56:15] Set IL Height Lower (ft) = 0.0
-[2025-12-09 22:56:15] Set IL Height Upper (ft) = 0.0
-[2025-12-09 22:56:15] Set Floor RL Below (ft) = 0.0
-[2025-12-09 22:56:15] IL update completed and confirmed for pipe 749859.
-[2025-12-09 22:56:15] === set_pipe_il.py END ===
-[2025-12-09 22:56:15] Command cleared from JSON file.
-[2025-12-09 23:06:50] Command received: get-pipe-elevations
-[2025-12-09 23:06:50] IMPORTING: get_pipe_elevations
-[2025-12-09 23:06:50] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:06:50] Starting get_pipe_elevations...
-[2025-12-09 23:06:50] Selected items: 3
-[2025-12-09 23:06:50] Processing pipe ID: 744018
-[2025-12-09 23:06:50] Processing pipe ID: 749479
-[2025-12-09 23:06:50] Processing pipe ID: 749859
-[2025-12-09 23:06:50] Pipe elevation data written successfully.
-[2025-12-09 23:06:50] Completed get_pipe_elevations.
-[2025-12-09 23:06:50] Command cleared from JSON file.
-[2025-12-09 23:11:43] Command received: clear-all-pipe-highlights
-[2025-12-09 23:11:43] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:11:43] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:11:43] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:11:43] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
-[2025-12-09 23:11:43] Command cleared from JSON file.
-[2025-12-09 23:11:46] Command received: get-pipe-elevations
-[2025-12-09 23:11:46] IMPORTING: get_pipe_elevations
-[2025-12-09 23:11:46] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:11:46] Starting get_pipe_elevations...
-[2025-12-09 23:11:46] Collecting ALL visible pipes in current view...
-[2025-12-09 23:11:46] Found 3 visible pipes.
-[2025-12-09 23:11:46] Processing pipe ID: 744018
-[2025-12-09 23:11:46] Processing pipe ID: 749479
-[2025-12-09 23:11:46] Processing pipe ID: 749859
-[2025-12-09 23:11:46] Pipe elevation data written successfully.
-[2025-12-09 23:11:46] Completed get_pipe_elevations.
-[2025-12-09 23:11:46] Command cleared from JSON file.
-[2025-12-09 23:11:49] Command received: highlight-pipes-temp
-[2025-12-09 23:11:49] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:11:49] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:11:49] HIGHLIGHT: Applying view overrides to pipes: [749479]
-[2025-12-09 23:11:49] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 23:11:49] Command cleared from JSON file.
-[2025-12-09 23:12:04] Command received: get-pipe-elevations
-[2025-12-09 23:12:04] IMPORTING: get_pipe_elevations
-[2025-12-09 23:12:04] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:12:04] Starting get_pipe_elevations...
-[2025-12-09 23:12:04] Selected items: 3
-[2025-12-09 23:12:04] Processing pipe ID: 744018
-[2025-12-09 23:12:04] Processing pipe ID: 749479
-[2025-12-09 23:12:04] Processing pipe ID: 749859
-[2025-12-09 23:12:04] Pipe elevation data written successfully.
-[2025-12-09 23:12:04] Completed get_pipe_elevations.
-[2025-12-09 23:12:04] Command cleared from JSON file.
-[2025-12-09 23:12:07] Command received: get-highlighted-pipes
-[2025-12-09 23:12:07] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:12:07] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:12:07] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:12:07] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:12:07] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:12:07] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:12:07] === GET HIGHLIGHTED PIPES: FOUND 1 ===
-[2025-12-09 23:12:07] Command cleared from JSON file.
-[2025-12-09 23:12:10] Command received: set-pipe-il
-[2025-12-09 23:12:10] IMPORTING: set_pipe_il
-[2025-12-09 23:12:10] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:12:10] === set_pipe_il.py START ===
-[2025-12-09 23:12:10] Updating IL parameters for pipe 749479...
-[2025-12-09 23:12:10] Set IL Lower (ft) = 9.31758530184
-[2025-12-09 23:12:10] Set IL Upper (ft) = 10.5375098425
-[2025-12-09 23:12:10] Set IL Height Lower (ft) = 9.81758530184
-[2025-12-09 23:12:10] Set IL Height Upper (ft) = 11.0375098425
-[2025-12-09 23:12:10] Set Floor RL Below (ft) = 0.0
-[2025-12-09 23:12:10] IL update completed and confirmed for pipe 749479.
-[2025-12-09 23:12:10] === set_pipe_il.py END ===
-[2025-12-09 23:12:10] Command cleared from JSON file.
-[2025-12-09 23:12:13] Command received: clear-pipe-highlights
-[2025-12-09 23:12:13] IMPORTING: clear_pipe_highlights
-[2025-12-09 23:12:13] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 23:12:13] CLEAR HIGHLIGHT: removing overrides for pipes: [749479]
-[2025-12-09 23:12:13] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 23:12:13] Command cleared from JSON file.
-[2025-12-09 23:13:02] Command received: clear-all-pipe-highlights
-[2025-12-09 23:13:02] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:13:02] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:13:02] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:13:02] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
-[2025-12-09 23:13:02] Command cleared from JSON file.
-[2025-12-09 23:13:05] Command received: get-pipe-elevations
-[2025-12-09 23:13:05] IMPORTING: get_pipe_elevations
-[2025-12-09 23:13:05] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:13:05] Starting get_pipe_elevations...
-[2025-12-09 23:13:05] Collecting ALL visible pipes in current view...
-[2025-12-09 23:13:05] Found 3 visible pipes.
-[2025-12-09 23:13:05] Processing pipe ID: 744018
-[2025-12-09 23:13:05] Processing pipe ID: 749479
-[2025-12-09 23:13:05] Processing pipe ID: 749859
-[2025-12-09 23:13:05] Pipe elevation data written successfully.
-[2025-12-09 23:13:05] Completed get_pipe_elevations.
-[2025-12-09 23:13:05] Command cleared from JSON file.
-[2025-12-09 23:13:08] Command received: highlight-pipes-temp
-[2025-12-09 23:13:08] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:13:08] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:13:08] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 23:13:08] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 23:13:08] Command cleared from JSON file.
-[2025-12-09 23:16:43] Command received: get-pipe-elevations
-[2025-12-09 23:16:43] IMPORTING: get_pipe_elevations
-[2025-12-09 23:16:43] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:16:43] Starting get_pipe_elevations...
-[2025-12-09 23:16:43] Collecting ALL visible pipes in current view...
-[2025-12-09 23:16:43] Found 4 visible pipes.
-[2025-12-09 23:16:43] Processing pipe ID: 744018
-[2025-12-09 23:16:43] Processing pipe ID: 749479
-[2025-12-09 23:16:43] Processing pipe ID: 749859
-[2025-12-09 23:16:43] Processing pipe ID: 749956
-[2025-12-09 23:16:43] Pipe elevation data written successfully.
-[2025-12-09 23:16:43] Completed get_pipe_elevations.
-[2025-12-09 23:16:43] Command cleared from JSON file.
-[2025-12-09 23:16:46] Command received: highlight-pipes-temp
-[2025-12-09 23:16:46] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:16:46] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:16:46] HIGHLIGHT: Applying view overrides to pipes: [744018, 749479, 749956]
-[2025-12-09 23:16:46] HIGHLIGHT: Completed for 3 pipe(s)
-[2025-12-09 23:16:46] Command cleared from JSON file.
-[2025-12-09 23:16:58] Command received: get-pipe-elevations
-[2025-12-09 23:16:58] IMPORTING: get_pipe_elevations
-[2025-12-09 23:16:58] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:16:58] Starting get_pipe_elevations...
-[2025-12-09 23:16:58] Selected items: 11
-[2025-12-09 23:16:58] Processing pipe ID: 744018
-[2025-12-09 23:16:58] Processing pipe ID: 749479
-[2025-12-09 23:16:58] Processing pipe ID: 749859
-[2025-12-09 23:16:58] Processing pipe ID: 749956
-[2025-12-09 23:16:58] Pipe elevation data written successfully.
-[2025-12-09 23:16:58] Completed get_pipe_elevations.
-[2025-12-09 23:16:58] Command cleared from JSON file.
-[2025-12-09 23:17:01] Command received: get-highlighted-pipes
-[2025-12-09 23:17:01] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:17:01] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:17:01] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:17:01] Pipe 744018 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:17:01] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:17:01] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:17:01] Pipe 749956 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:17:01] === GET HIGHLIGHTED PIPES: FOUND 3 ===
-[2025-12-09 23:17:01] Command cleared from JSON file.
-[2025-12-09 23:17:04] Command received: set-pipe-il
-[2025-12-09 23:17:04] IMPORTING: set_pipe_il
-[2025-12-09 23:17:04] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:17:04] === set_pipe_il.py START ===
-[2025-12-09 23:17:04] Updating IL parameters for pipe 744018...
-[2025-12-09 23:17:04] Set IL Lower (ft) = 9.38966207349
-[2025-12-09 23:17:04] Set IL Upper (ft) = 9.74397637795
-[2025-12-09 23:17:04] Set IL Height Lower (ft) = 9.88966207349
-[2025-12-09 23:17:04] Set IL Height Upper (ft) = 10.2439763780
-[2025-12-09 23:17:04] Set Floor RL Below (ft) = 0.0
-[2025-12-09 23:17:04] IL update completed and confirmed for pipe 744018.
-[2025-12-09 23:17:04] === set_pipe_il.py END ===
-[2025-12-09 23:17:04] Command cleared from JSON file.
-[2025-12-09 23:17:07] Error in Execute: Extra data: line 2 column 3 - line 6 column 2 (char 5 - 68)
-[2025-12-09 23:17:22] Command received: set-pipe-il
-[2025-12-09 23:17:22] IMPORTING: set_pipe_il
-[2025-12-09 23:17:22] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:17:22] === set_pipe_il.py START ===
-[2025-12-09 23:17:22] Updating IL parameters for pipe 749479...
-[2025-12-09 23:17:22] Set IL Lower (ft) = 9.31758530184
-[2025-12-09 23:17:22] Set IL Upper (ft) = 10.7834612861
-[2025-12-09 23:17:22] Set IL Height Lower (ft) = 9.81758530184
-[2025-12-09 23:17:22] Set IL Height Upper (ft) = 11.2834612861
-[2025-12-09 23:17:22] Set Floor RL Below (ft) = 0.0
-[2025-12-09 23:17:22] IL update completed and confirmed for pipe 749479.
-[2025-12-09 23:17:22] === set_pipe_il.py END ===
-[2025-12-09 23:17:22] Command cleared from JSON file.
-[2025-12-09 23:17:25] Command received: clear-pipe-highlights
-[2025-12-09 23:17:25] IMPORTING: clear_pipe_highlights
-[2025-12-09 23:17:25] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 23:17:25] CLEAR HIGHLIGHT: removing overrides for pipes: [749479]
-[2025-12-09 23:17:25] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 23:17:25] Command cleared from JSON file.
-[2025-12-09 23:17:28] Command received: set-pipe-il
-[2025-12-09 23:17:28] IMPORTING: set_pipe_il
-[2025-12-09 23:17:28] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:17:28] === set_pipe_il.py START ===
-[2025-12-09 23:17:28] Updating IL parameters for pipe 749956...
-[2025-12-09 23:17:28] Set IL Lower (ft) = 9.31758530184
-[2025-12-09 23:17:28] Set IL Upper (ft) = 9.31758530184
-[2025-12-09 23:17:28] Set IL Height Lower (ft) = 9.81758530184
-[2025-12-09 23:17:28] Set IL Height Upper (ft) = 9.81758530184
-[2025-12-09 23:17:28] Set Floor RL Below (ft) = 0.0
-[2025-12-09 23:17:28] IL update completed and confirmed for pipe 749956.
-[2025-12-09 23:17:28] === set_pipe_il.py END ===
-[2025-12-09 23:17:28] Command cleared from JSON file.
-[2025-12-09 23:17:31] Command received: clear-pipe-highlights
-[2025-12-09 23:17:31] IMPORTING: clear_pipe_highlights
-[2025-12-09 23:17:31] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 23:17:31] CLEAR HIGHLIGHT: removing overrides for pipes: [749956]
-[2025-12-09 23:17:31] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 23:17:31] Command cleared from JSON file.
-[2025-12-09 23:17:52] Command received: clear-all-pipe-highlights
-[2025-12-09 23:17:52] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:17:52] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:17:52] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:17:52] CLEAR ALL HIGHLIGHTS: completed for 4 pipes
-[2025-12-09 23:17:52] Command cleared from JSON file.
-[2025-12-09 23:17:55] Command received: get-pipe-elevations
-[2025-12-09 23:17:55] IMPORTING: get_pipe_elevations
-[2025-12-09 23:17:55] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:17:55] Starting get_pipe_elevations...
-[2025-12-09 23:17:55] Collecting ALL visible pipes in current view...
-[2025-12-09 23:17:55] Found 4 visible pipes.
-[2025-12-09 23:17:55] Processing pipe ID: 744018
-[2025-12-09 23:17:55] Processing pipe ID: 749479
-[2025-12-09 23:17:55] Processing pipe ID: 749859
-[2025-12-09 23:17:55] Processing pipe ID: 749956
-[2025-12-09 23:17:55] Pipe elevation data written successfully.
-[2025-12-09 23:17:55] Completed get_pipe_elevations.
-[2025-12-09 23:17:55] Command cleared from JSON file.
-[2025-12-09 23:17:58] Command received: highlight-pipes-temp
-[2025-12-09 23:17:58] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:17:58] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:17:58] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 23:17:58] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 23:17:58] Command cleared from JSON file.
-[2025-12-09 23:18:38] Command received: get-pipe-elevations
-[2025-12-09 23:18:38] IMPORTING: get_pipe_elevations
-[2025-12-09 23:18:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:18:38] Starting get_pipe_elevations...
-[2025-12-09 23:18:38] Collecting ALL visible pipes in current view...
-[2025-12-09 23:18:38] Found 4 visible pipes.
-[2025-12-09 23:18:38] Processing pipe ID: 744018
-[2025-12-09 23:18:38] Processing pipe ID: 749479
-[2025-12-09 23:18:38] Processing pipe ID: 749859
-[2025-12-09 23:18:38] Processing pipe ID: 749956
-[2025-12-09 23:18:38] Pipe elevation data written successfully.
-[2025-12-09 23:18:38] Completed get_pipe_elevations.
-[2025-12-09 23:18:38] Command cleared from JSON file.
-[2025-12-09 23:18:41] Command received: highlight-pipes-temp
-[2025-12-09 23:18:41] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:18:41] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:18:41] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 23:18:41] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 23:18:41] Command cleared from JSON file.
-[2025-12-09 23:18:47] Command received: get-pipe-elevations
-[2025-12-09 23:18:47] IMPORTING: get_pipe_elevations
-[2025-12-09 23:18:47] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:18:47] Starting get_pipe_elevations...
-[2025-12-09 23:18:47] Selected items: 1
-[2025-12-09 23:18:47] Processing pipe ID: 749956
-[2025-12-09 23:18:47] Pipe elevation data written successfully.
-[2025-12-09 23:18:47] Completed get_pipe_elevations.
-[2025-12-09 23:18:47] Command cleared from JSON file.
-[2025-12-09 23:18:50] Command received: get-highlighted-pipes
-[2025-12-09 23:18:50] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:18:50] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:18:50] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:18:50] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:18:50] Pipe 749479 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:18:50] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:18:50] Pipe 749956 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:18:50] === GET HIGHLIGHTED PIPES: FOUND 0 ===
-[2025-12-09 23:18:50] Command cleared from JSON file.
-[2025-12-09 23:19:23] Command received: clear-all-pipe-highlights
-[2025-12-09 23:19:23] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:19:23] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:19:23] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:19:23] CLEAR ALL HIGHLIGHTS: completed for 4 pipes
-[2025-12-09 23:19:23] Command cleared from JSON file.
-[2025-12-09 23:19:26] Command received: get-pipe-elevations
-[2025-12-09 23:19:26] IMPORTING: get_pipe_elevations
-[2025-12-09 23:19:26] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:19:26] Starting get_pipe_elevations...
-[2025-12-09 23:19:26] Collecting ALL visible pipes in current view...
-[2025-12-09 23:19:26] Found 4 visible pipes.
-[2025-12-09 23:19:26] Processing pipe ID: 744018
-[2025-12-09 23:19:26] Processing pipe ID: 749479
-[2025-12-09 23:19:26] Processing pipe ID: 749859
-[2025-12-09 23:19:26] Processing pipe ID: 749956
-[2025-12-09 23:19:26] Pipe elevation data written successfully.
-[2025-12-09 23:19:26] Completed get_pipe_elevations.
-[2025-12-09 23:19:26] Command cleared from JSON file.
-[2025-12-09 23:19:29] Command received: highlight-pipes-temp
-[2025-12-09 23:19:29] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:19:29] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:19:29] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 23:19:29] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 23:19:29] Command cleared from JSON file.
-[2025-12-09 23:19:35] Command received: get-pipe-elevations
-[2025-12-09 23:19:35] IMPORTING: get_pipe_elevations
-[2025-12-09 23:19:35] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:19:35] Starting get_pipe_elevations...
-[2025-12-09 23:19:35] Selected items: 1
-[2025-12-09 23:19:35] Processing pipe ID: 749956
-[2025-12-09 23:19:35] Pipe elevation data written successfully.
-[2025-12-09 23:19:35] Completed get_pipe_elevations.
-[2025-12-09 23:19:35] Command cleared from JSON file.
-[2025-12-09 23:19:38] Command received: get-highlighted-pipes
-[2025-12-09 23:19:38] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:19:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:19:38] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:19:38] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:19:38] Pipe 749479 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:19:38] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:19:38] Pipe 749956 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:19:38] === GET HIGHLIGHTED PIPES: FOUND 0 ===
-[2025-12-09 23:19:38] Command cleared from JSON file.
-[2025-12-09 23:20:26] Command received: clear-all-pipe-highlights
-[2025-12-09 23:20:26] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:20:26] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:20:26] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:20:26] CLEAR ALL HIGHLIGHTS: completed for 4 pipes
-[2025-12-09 23:20:26] Command cleared from JSON file.
-[2025-12-09 23:21:06] Command received: clear-all-pipe-highlights
-[2025-12-09 23:21:06] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:21:06] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:21:06] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:21:06] CLEAR ALL HIGHLIGHTS: completed for 4 pipes
-[2025-12-09 23:21:06] Command cleared from JSON file.
-[2025-12-09 23:21:09] Command received: get-pipe-elevations
-[2025-12-09 23:21:09] IMPORTING: get_pipe_elevations
-[2025-12-09 23:21:09] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:21:09] Starting get_pipe_elevations...
-[2025-12-09 23:21:09] Collecting ALL visible pipes in current view...
-[2025-12-09 23:21:09] Found 4 visible pipes.
-[2025-12-09 23:21:09] Processing pipe ID: 744018
-[2025-12-09 23:21:09] Processing pipe ID: 749479
-[2025-12-09 23:21:09] Processing pipe ID: 749859
-[2025-12-09 23:21:09] Processing pipe ID: 749956
-[2025-12-09 23:21:09] Pipe elevation data written successfully.
-[2025-12-09 23:21:09] Completed get_pipe_elevations.
-[2025-12-09 23:21:09] Command cleared from JSON file.
-[2025-12-09 23:21:12] Command received: highlight-pipes-temp
-[2025-12-09 23:21:12] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:21:12] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:21:12] HIGHLIGHT: Applying view overrides to pipes: [749956]
-[2025-12-09 23:21:12] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 23:21:12] Command cleared from JSON file.
-[2025-12-09 23:21:18] Command received: get-pipe-elevations
-[2025-12-09 23:21:18] IMPORTING: get_pipe_elevations
-[2025-12-09 23:21:18] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:21:18] Starting get_pipe_elevations...
-[2025-12-09 23:21:18] Selected items: 1
-[2025-12-09 23:21:18] Processing pipe ID: 749956
-[2025-12-09 23:21:18] Pipe elevation data written successfully.
-[2025-12-09 23:21:18] Completed get_pipe_elevations.
-[2025-12-09 23:21:18] Command cleared from JSON file.
-[2025-12-09 23:21:21] Command received: get-highlighted-pipes
-[2025-12-09 23:21:21] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:21:21] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:21:21] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:21:21] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:21:21] Pipe 749479 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:21:21] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:21:21] Pipe 749956 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:21:21] === GET HIGHLIGHTED PIPES: FOUND 1 ===
-[2025-12-09 23:21:21] Command cleared from JSON file.
-[2025-12-09 23:21:24] Command received: set-pipe-il
-[2025-12-09 23:21:24] IMPORTING: set_pipe_il
-[2025-12-09 23:21:24] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:21:24] === set_pipe_il.py START ===
-[2025-12-09 23:21:24] Updating IL parameters for pipe 749956...
-[2025-12-09 23:21:24] Set IL Lower (ft) = 11.4389468504
-[2025-12-09 23:21:24] Set IL Upper (ft) = 11.4389468504
-[2025-12-09 23:21:24] Set IL Height Lower (ft) = 11.9389468504
-[2025-12-09 23:21:24] Set IL Height Upper (ft) = 11.9389468504
-[2025-12-09 23:21:24] Set Floor RL Below (ft) = 13.1233595801
-[2025-12-09 23:21:24] IL update completed and confirmed for pipe 749956.
-[2025-12-09 23:21:24] === set_pipe_il.py END ===
-[2025-12-09 23:21:24] Command cleared from JSON file.
-[2025-12-09 23:21:27] Command received: clear-pipe-highlights
-[2025-12-09 23:21:27] IMPORTING: clear_pipe_highlights
-[2025-12-09 23:21:27] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 23:21:27] CLEAR HIGHLIGHT: removing overrides for pipes: [749956]
-[2025-12-09 23:21:27] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 23:21:27] Command cleared from JSON file.
-[2025-12-09 23:22:12] Command received: clear-all-pipe-highlights
-[2025-12-09 23:22:12] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:22:12] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:22:12] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:22:12] CLEAR ALL HIGHLIGHTS: completed for 2 pipes
-[2025-12-09 23:22:12] Command cleared from JSON file.
-[2025-12-09 23:22:15] Command received: get-pipe-elevations
-[2025-12-09 23:22:15] IMPORTING: get_pipe_elevations
-[2025-12-09 23:22:15] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:22:15] Starting get_pipe_elevations...
-[2025-12-09 23:22:15] Collecting ALL visible pipes in current view...
-[2025-12-09 23:22:15] Found 2 visible pipes.
-[2025-12-09 23:22:15] Processing pipe ID: 749364
-[2025-12-09 23:22:15] Processing pipe ID: 749956
-[2025-12-09 23:22:15] Pipe elevation data written successfully.
-[2025-12-09 23:22:15] Completed get_pipe_elevations.
-[2025-12-09 23:22:15] Command cleared from JSON file.
-[2025-12-09 23:22:18] Command received: highlight-pipes-temp
-[2025-12-09 23:22:18] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:22:18] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:22:18] HIGHLIGHT: Applying view overrides to pipes: [749364, 749956]
-[2025-12-09 23:22:18] HIGHLIGHT: Completed for 2 pipe(s)
-[2025-12-09 23:22:18] Command cleared from JSON file.
-[2025-12-09 23:22:24] Command received: get-pipe-elevations
-[2025-12-09 23:22:24] IMPORTING: get_pipe_elevations
-[2025-12-09 23:22:24] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:22:24] Starting get_pipe_elevations...
-[2025-12-09 23:22:24] Selected items: 1
-[2025-12-09 23:22:24] Processing pipe ID: 749956
-[2025-12-09 23:22:24] Pipe elevation data written successfully.
-[2025-12-09 23:22:24] Completed get_pipe_elevations.
-[2025-12-09 23:22:24] Command cleared from JSON file.
-[2025-12-09 23:22:27] Command received: get-highlighted-pipes
-[2025-12-09 23:22:27] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:22:27] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:22:27] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:22:27] Pipe 749364 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:22:27] Pipe 749956 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:22:27] === GET HIGHLIGHTED PIPES: FOUND 2 ===
-[2025-12-09 23:22:27] Command cleared from JSON file.
-[2025-12-09 23:22:30] Command received: set-pipe-il
-[2025-12-09 23:22:30] IMPORTING: set_pipe_il
-[2025-12-09 23:22:30] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:22:30] === set_pipe_il.py START ===
-[2025-12-09 23:22:30] Updating IL parameters for pipe 749956...
-[2025-12-09 23:22:30] Set IL Lower (ft) = 18.5518208661
-[2025-12-09 23:22:30] Set IL Upper (ft) = 18.5518208661
-[2025-12-09 23:22:30] Set IL Height Lower (ft) = 19.0518208661
-[2025-12-09 23:22:30] Set IL Height Upper (ft) = 19.0518208661
-[2025-12-09 23:22:30] Set Floor RL Below (ft) = 13.1233595801
-[2025-12-09 23:22:30] IL update completed and confirmed for pipe 749956.
-[2025-12-09 23:22:30] === set_pipe_il.py END ===
-[2025-12-09 23:22:30] Command cleared from JSON file.
-[2025-12-09 23:22:33] Command received: clear-pipe-highlights
-[2025-12-09 23:22:33] IMPORTING: clear_pipe_highlights
-[2025-12-09 23:22:33] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 23:22:33] CLEAR HIGHLIGHT: removing overrides for pipes: [749956]
-[2025-12-09 23:22:33] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 23:22:33] Command cleared from JSON file.
-[2025-12-09 23:23:22] Command received: get-pipe-elevations
-[2025-12-09 23:23:22] IMPORTING: get_pipe_elevations
-[2025-12-09 23:23:22] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:23:22] Starting get_pipe_elevations...
-[2025-12-09 23:23:22] Selected items: 1
-[2025-12-09 23:23:22] Processing pipe ID: 749364
-[2025-12-09 23:23:22] Pipe elevation data written successfully.
-[2025-12-09 23:23:22] Completed get_pipe_elevations.
-[2025-12-09 23:23:22] Command cleared from JSON file.
-[2025-12-09 23:23:25] Command received: get-highlighted-pipes
-[2025-12-09 23:23:25] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:23:25] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:23:25] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:23:25] Pipe 749364 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:23:25] Pipe 749956 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:23:25] === GET HIGHLIGHTED PIPES: FOUND 1 ===
-[2025-12-09 23:23:25] Command cleared from JSON file.
-[2025-12-09 23:23:28] Command received: set-pipe-il
-[2025-12-09 23:23:28] IMPORTING: set_pipe_il
-[2025-12-09 23:23:28] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:23:28] === set_pipe_il.py START ===
-[2025-12-09 23:23:28] Updating IL parameters for pipe 749364...
-[2025-12-09 23:23:28] Set IL Lower (ft) = 22.4737532808
-[2025-12-09 23:23:28] Set IL Upper (ft) = 23.5890157480
-[2025-12-09 23:23:28] Set IL Height Lower (ft) = 22.9737532808
-[2025-12-09 23:23:28] Set IL Height Upper (ft) = 24.0890157480
-[2025-12-09 23:23:28] Set Floor RL Below (ft) = 0.0
-[2025-12-09 23:23:28] IL update completed and confirmed for pipe 749364.
-[2025-12-09 23:23:28] === set_pipe_il.py END ===
-[2025-12-09 23:23:28] Command cleared from JSON file.
-[2025-12-09 23:23:31] Command received: clear-pipe-highlights
-[2025-12-09 23:23:31] IMPORTING: clear_pipe_highlights
-[2025-12-09 23:23:31] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 23:23:31] CLEAR HIGHLIGHT: removing overrides for pipes: [749364]
-[2025-12-09 23:23:31] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 23:23:31] Command cleared from JSON file.
-[2025-12-09 23:24:07] Command received: get-pipe-elevations
-[2025-12-09 23:24:07] IMPORTING: get_pipe_elevations
-[2025-12-09 23:24:07] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:24:07] Starting get_pipe_elevations...
-[2025-12-09 23:24:07] Selected items: 1
-[2025-12-09 23:24:07] Processing pipe ID: 749364
-[2025-12-09 23:24:07] Pipe elevation data written successfully.
-[2025-12-09 23:24:07] Completed get_pipe_elevations.
-[2025-12-09 23:24:07] Command cleared from JSON file.
-[2025-12-09 23:24:10] Command received: get-highlighted-pipes
-[2025-12-09 23:24:10] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:24:10] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:24:10] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:24:10] Pipe 749364 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:24:10] Pipe 749956 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:24:10] === GET HIGHLIGHTED PIPES: FOUND 0 ===
-[2025-12-09 23:24:10] Command cleared from JSON file.
-[2025-12-09 23:24:13] Command received: set-pipe-il
-[2025-12-09 23:24:13] IMPORTING: set_pipe_il
-[2025-12-09 23:24:13] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:24:13] === set_pipe_il.py START ===
-[2025-12-09 23:24:13] Updating IL parameters for pipe 749364...
-[2025-12-09 23:24:13] Set IL Lower (ft) = 22.5721587927
-[2025-12-09 23:24:13] Set IL Upper (ft) = 23.5890157480
-[2025-12-09 23:24:13] Set IL Height Lower (ft) = 23.0721587927
-[2025-12-09 23:24:13] Set IL Height Upper (ft) = 24.0890157480
-[2025-12-09 23:24:13] Set Floor RL Below (ft) = 13.1233595801
-[2025-12-09 23:24:13] IL update completed and confirmed for pipe 749364.
-[2025-12-09 23:24:13] === set_pipe_il.py END ===
-[2025-12-09 23:24:13] Command cleared from JSON file.
-[2025-12-09 23:26:05] Command received: clear-all-pipe-highlights
-[2025-12-09 23:26:05] IMPORTING: clear_all_pipe_highlights
-[2025-12-09 23:26:05] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
-[2025-12-09 23:26:05] CLEAR ALL HIGHLIGHTS: scanning active view...
-[2025-12-09 23:26:05] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
-[2025-12-09 23:26:05] Command cleared from JSON file.
-[2025-12-09 23:26:08] Command received: get-pipe-elevations
-[2025-12-09 23:26:08] IMPORTING: get_pipe_elevations
-[2025-12-09 23:26:08] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:26:08] Starting get_pipe_elevations...
-[2025-12-09 23:26:08] Collecting ALL visible pipes in current view...
-[2025-12-09 23:26:08] Found 3 visible pipes.
-[2025-12-09 23:26:08] Processing pipe ID: 744018
-[2025-12-09 23:26:08] Processing pipe ID: 749479
-[2025-12-09 23:26:08] Processing pipe ID: 749859
-[2025-12-09 23:26:08] Pipe elevation data written successfully.
-[2025-12-09 23:26:08] Completed get_pipe_elevations.
-[2025-12-09 23:26:08] Command cleared from JSON file.
-[2025-12-09 23:26:11] Command received: highlight-pipes-temp
-[2025-12-09 23:26:11] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:26:11] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:26:11] Error in highlight_pipes_temp: No pipe IDs provided to highlight.
-[2025-12-09 23:26:11] Traceback (most recent call last):
-  File "C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py", line 27, in run
-    raise Exception("No pipe IDs provided to highlight.")
-Exception: No pipe IDs provided to highlight.
-
-[2025-12-09 23:26:11] Command cleared from JSON file.
-[2025-12-09 23:26:23] Command received: get-pipe-elevations
-[2025-12-09 23:26:23] IMPORTING: get_pipe_elevations
-[2025-12-09 23:26:23] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:26:23] Starting get_pipe_elevations...
-[2025-12-09 23:26:23] Collecting ALL visible pipes in current view...
-[2025-12-09 23:26:23] Found 3 visible pipes.
-[2025-12-09 23:26:23] Processing pipe ID: 744018
-[2025-12-09 23:26:23] Processing pipe ID: 749479
-[2025-12-09 23:26:23] Processing pipe ID: 749859
-[2025-12-09 23:26:23] Pipe elevation data written successfully.
-[2025-12-09 23:26:23] Completed get_pipe_elevations.
-[2025-12-09 23:26:23] Command cleared from JSON file.
-[2025-12-09 23:26:26] Command received: highlight-pipes-temp
-[2025-12-09 23:26:26] IMPORTING: highlight_pipes_temp
-[2025-12-09 23:26:26] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes_temp.py
-[2025-12-09 23:26:26] HIGHLIGHT: Applying view overrides to pipes: [749479]
-[2025-12-09 23:26:26] HIGHLIGHT: Completed for 1 pipe(s)
-[2025-12-09 23:26:26] Command cleared from JSON file.
-[2025-12-09 23:26:38] Command received: get-pipe-elevations
-[2025-12-09 23:26:38] IMPORTING: get_pipe_elevations
-[2025-12-09 23:26:38] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
-[2025-12-09 23:26:38] Starting get_pipe_elevations...
-[2025-12-09 23:26:38] Selected items: 1
-[2025-12-09 23:26:38] Processing pipe ID: 749479
-[2025-12-09 23:26:38] Pipe elevation data written successfully.
-[2025-12-09 23:26:38] Completed get_pipe_elevations.
-[2025-12-09 23:26:38] Command cleared from JSON file.
-[2025-12-09 23:26:41] Command received: get-highlighted-pipes
-[2025-12-09 23:26:41] IMPORTING: get_highlighted_pipes
-[2025-12-09 23:26:41] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
-[2025-12-09 23:26:41] === GET HIGHLIGHTED PIPES: START ===
-[2025-12-09 23:26:41] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:26:41] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
-[2025-12-09 23:26:41] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
-[2025-12-09 23:26:41] === GET HIGHLIGHTED PIPES: FOUND 1 ===
-[2025-12-09 23:26:41] Command cleared from JSON file.
-[2025-12-09 23:26:44] Command received: set-pipe-il
-[2025-12-09 23:26:44] IMPORTING: set_pipe_il
-[2025-12-09 23:26:44] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
-[2025-12-09 23:26:44] === set_pipe_il.py START ===
-[2025-12-09 23:26:44] Updating IL parameters for pipe 749479...
-[2025-12-09 23:26:44] Set IL Lower (ft) = 9.77997703412
-[2025-12-09 23:26:44] Set IL Upper (ft) = 10.7834612861
-[2025-12-09 23:26:44] Set IL Height Lower (ft) = 10.2799770341
-[2025-12-09 23:26:44] Set IL Height Upper (ft) = 11.2834612861
-[2025-12-09 23:26:44] Set Floor RL Below (ft) = 0.0
-[2025-12-09 23:26:44] IL update completed and confirmed for pipe 749479.
-[2025-12-09 23:26:44] === set_pipe_il.py END ===
-[2025-12-09 23:26:44] Command cleared from JSON file.
-[2025-12-09 23:26:47] Command received: clear-pipe-highlights
-[2025-12-09 23:26:47] IMPORTING: clear_pipe_highlights
-[2025-12-09 23:26:47] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
-[2025-12-09 23:26:47] CLEAR HIGHLIGHT: removing overrides for pipes: [749479]
-[2025-12-09 23:26:47] CLEAR HIGHLIGHT: completed for 1 pipe(s)
-[2025-12-09 23:26:47] Command cleared from JSON file.
+[2025-12-11 00:19:27] Command received: get_pipe_ids
+[2025-12-11 00:19:27] IMPORTING: get_pipe_ids
+[2025-12-11 00:19:27] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:19:27] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:19:27] [DEBUG get_pipe_ids] Requested mode: pick
+[2025-12-11 00:19:27] [DEBUG get_pipe_ids] Mode = PICK
+[2025-12-11 00:19:29] [DEBUG get_pipe_ids]   - Picked Pipe: 744018
+[2025-12-11 00:19:29] [DEBUG get_pipe_ids] Returned 1 pipe IDs
+[2025-12-11 00:19:29] [DEBUG get_pipe_ids] Cleared Revit selection after PICK
+[2025-12-11 00:19:29] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:19:29] Command cleared from JSON file.
+[2025-12-11 00:19:39] Command received: select-pipes-in-current-view
+[2025-12-11 00:19:39] IMPORTING: select_pipes_in_current_view
+[2025-12-11 00:19:39] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-11 00:19:39] FAST MODE: selecting visible pipes from [744018]
+[2025-12-11 00:19:39] FAST MODE: selected 1 pipe(s)
+[2025-12-11 00:19:39] Command cleared from JSON file.
+[2025-12-11 00:19:54] Command received: get_pipe_ids
+[2025-12-11 00:19:54] IMPORTING: get_pipe_ids
+[2025-12-11 00:19:54] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:19:54] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:19:54] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:19:54] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:19:54] [DEBUG get_pipe_ids]   - Selected Pipe: 744018
+[2025-12-11 00:19:54] [DEBUG get_pipe_ids]   - Selected Pipe: 749479
+[2025-12-11 00:19:54] [DEBUG get_pipe_ids] Returned 2 pipe IDs
+[2025-12-11 00:19:54] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:19:54] Command cleared from JSON file.
+[2025-12-11 00:20:00] Command received: highlight-pipes
+[2025-12-11 00:20:00] IMPORTING: highlight_pipes
+[2025-12-11 00:20:00] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes.py
+[2025-12-11 00:20:00] HIGHLIGHT: Applying view overrides to pipes: [744018, 749479]
+[2025-12-11 00:20:00] HIGHLIGHT: Completed for 2 pipe(s)
+[2025-12-11 00:20:00] Command cleared from JSON file.
+[2025-12-11 00:21:43] Command received: clear-all-pipe-highlights
+[2025-12-11 00:21:43] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:21:43] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:21:43] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:21:43] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:21:43] Command cleared from JSON file.
+[2025-12-11 00:21:49] Command received: get_pipe_ids
+[2025-12-11 00:21:49] IMPORTING: get_pipe_ids
+[2025-12-11 00:21:49] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:21:49] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:21:49] [DEBUG get_pipe_ids] Requested mode: pick
+[2025-12-11 00:21:49] [DEBUG get_pipe_ids] Mode = PICK
+[2025-12-11 00:21:51] [DEBUG get_pipe_ids]   - Picked Pipe: 744018
+[2025-12-11 00:21:51] [DEBUG get_pipe_ids] Returned 1 pipe IDs
+[2025-12-11 00:21:51] [DEBUG get_pipe_ids] Cleared Revit selection after PICK
+[2025-12-11 00:21:51] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:21:51] Command cleared from JSON file.
+[2025-12-11 00:21:58] Command received: select-pipes-in-current-view
+[2025-12-11 00:21:58] IMPORTING: select_pipes_in_current_view
+[2025-12-11 00:21:58] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-11 00:21:58] FAST MODE: selecting visible pipes from [744018]
+[2025-12-11 00:21:58] FAST MODE: selected 1 pipe(s)
+[2025-12-11 00:21:58] Command cleared from JSON file.
+[2025-12-11 00:22:07] Command received: get_pipe_ids
+[2025-12-11 00:22:07] IMPORTING: get_pipe_ids
+[2025-12-11 00:22:07] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids] Requested mode: visible_in_view
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids] Mode = VISIBLE_IN_VIEW
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids]   - Visible Pipe: 744018
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids]   - Visible Pipe: 749479
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids]   - Visible Pipe: 749859
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids] Returned 3 pipe IDs
+[2025-12-11 00:22:07] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:22:07] Command cleared from JSON file.
+[2025-12-11 00:22:16] Command received: select-pipes-in-current-view
+[2025-12-11 00:22:16] IMPORTING: select_pipes_in_current_view
+[2025-12-11 00:22:16] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\select_pipes_in_current_view.py
+[2025-12-11 00:22:16] FAST MODE: selecting visible pipes from [744018, 749479, 749859]
+[2025-12-11 00:22:16] FAST MODE: selected 3 pipe(s)
+[2025-12-11 00:22:16] Command cleared from JSON file.
+[2025-12-11 00:22:22] Command received: highlight-pipes
+[2025-12-11 00:22:22] IMPORTING: highlight_pipes
+[2025-12-11 00:22:22] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes.py
+[2025-12-11 00:22:22] HIGHLIGHT: Applying view overrides to pipes: [744018, 749479, 749859]
+[2025-12-11 00:22:22] HIGHLIGHT: Completed for 3 pipe(s)
+[2025-12-11 00:22:22] Command cleared from JSON file.
+[2025-12-11 00:22:25] Command received: clear-pipe-highlights
+[2025-12-11 00:22:25] IMPORTING: clear_pipe_highlights
+[2025-12-11 00:22:25] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-11 00:22:25] CLEAR HIGHLIGHT: removing overrides for pipes: [744018, 749479, 749859]
+[2025-12-11 00:22:25] CLEAR HIGHLIGHT: completed for 3 pipe(s)
+[2025-12-11 00:22:25] Command cleared from JSON file.
+[2025-12-11 00:22:34] Command received: highlight-pipes
+[2025-12-11 00:22:34] IMPORTING: highlight_pipes
+[2025-12-11 00:22:34] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes.py
+[2025-12-11 00:22:34] HIGHLIGHT: Applying view overrides to pipes: [744018, 749479, 749859]
+[2025-12-11 00:22:34] HIGHLIGHT: Completed for 3 pipe(s)
+[2025-12-11 00:22:34] Command cleared from JSON file.
+[2025-12-11 00:22:40] Command received: clear-all-pipe-highlights
+[2025-12-11 00:22:40] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:22:40] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:22:40] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:22:41] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:22:41] Command cleared from JSON file.
+[2025-12-11 00:22:43] Command received: get-highlighted-pipes
+[2025-12-11 00:22:43] IMPORTING: get_highlighted_pipes
+[2025-12-11 00:22:43] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
+[2025-12-11 00:22:43] === GET HIGHLIGHTED PIPES: START ===
+[2025-12-11 00:22:43] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:22:43] Pipe 749479 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:22:43] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:22:44] === GET HIGHLIGHTED PIPES: FOUND 0 ===
+[2025-12-11 00:22:44] Command cleared from JSON file.
+[2025-12-11 00:25:31] Command received: get_pipe_ids
+[2025-12-11 00:25:31] IMPORTING: get_pipe_ids
+[2025-12-11 00:25:31] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids] Requested mode: visible_in_view
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids] Mode = VISIBLE_IN_VIEW
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids]   - Visible Pipe: 744018
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids]   - Visible Pipe: 749479
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids]   - Visible Pipe: 749859
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids] Returned 3 pipe IDs
+[2025-12-11 00:25:31] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:25:31] Command cleared from JSON file.
+[2025-12-11 00:25:40] Command received: highlight-pipes
+[2025-12-11 00:25:40] IMPORTING: highlight_pipes
+[2025-12-11 00:25:40] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes.py
+[2025-12-11 00:25:40] HIGHLIGHT: Applying view overrides to pipes: [744018, 749479, 749859]
+[2025-12-11 00:25:40] HIGHLIGHT: Completed for 3 pipe(s)
+[2025-12-11 00:25:40] Command cleared from JSON file.
+[2025-12-11 00:25:49] Command received: get-highlighted-pipes
+[2025-12-11 00:25:49] IMPORTING: get_highlighted_pipes
+[2025-12-11 00:25:49] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
+[2025-12-11 00:25:49] === GET HIGHLIGHTED PIPES: START ===
+[2025-12-11 00:25:49] Pipe 744018 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
+[2025-12-11 00:25:49] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
+[2025-12-11 00:25:49] Pipe 749859 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
+[2025-12-11 00:25:49] === GET HIGHLIGHTED PIPES: FOUND 3 ===
+[2025-12-11 00:25:49] Command cleared from JSON file.
+[2025-12-11 00:26:13] Command received: clear-all-pipe-highlights
+[2025-12-11 00:26:13] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:26:13] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:26:13] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:26:13] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:26:13] Command cleared from JSON file.
+[2025-12-11 00:31:15] Command received: get_pipe_ids
+[2025-12-11 00:31:15] IMPORTING: get_pipe_ids
+[2025-12-11 00:31:15] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:31:15] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:31:15] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:31:15] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:31:15] [DEBUG get_pipe_ids] Returned 0 pipe IDs
+[2025-12-11 00:31:15] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:31:15] Command cleared from JSON file.
+[2025-12-11 00:31:24] Command received: get_pipe_ids
+[2025-12-11 00:31:24] IMPORTING: get_pipe_ids
+[2025-12-11 00:31:24] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:31:24] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:31:24] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:31:24] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:31:24] [DEBUG get_pipe_ids]   - Selected Pipe: 744018
+[2025-12-11 00:31:24] [DEBUG get_pipe_ids] Returned 1 pipe IDs
+[2025-12-11 00:31:24] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:31:24] Command cleared from JSON file.
+[2025-12-11 00:31:27] Command received: get-pipe-elevations
+[2025-12-11 00:31:27] IMPORTING: get_pipe_elevations
+[2025-12-11 00:31:27] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:31:27] Starting get_pipe_elevations...
+[2025-12-11 00:31:27] Received 1 pipe IDs
+[2025-12-11 00:31:27] Processing pipe ID: 744018
+[2025-12-11 00:31:27] Pipe elevation data written successfully.
+[2025-12-11 00:31:27] Completed get_pipe_elevations.
+[2025-12-11 00:31:27] Command cleared from JSON file.
+[2025-12-11 00:31:30] Command received: get-highlighted-pipes
+[2025-12-11 00:31:30] IMPORTING: get_highlighted_pipes
+[2025-12-11 00:31:30] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
+[2025-12-11 00:31:30] === GET HIGHLIGHTED PIPES: START ===
+[2025-12-11 00:31:30] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:31:30] Pipe 749479 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:31:30] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:31:30] === GET HIGHLIGHTED PIPES: FOUND 0 ===
+[2025-12-11 00:31:30] Command cleared from JSON file.
+[2025-12-11 00:37:00] Command received: get_pipe_ids
+[2025-12-11 00:37:00] IMPORTING: get_pipe_ids
+[2025-12-11 00:37:00] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids] Requested mode: visible_in_view
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids] Mode = VISIBLE_IN_VIEW
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids]   - Visible Pipe: 744018
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids]   - Visible Pipe: 749479
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids]   - Visible Pipe: 749859
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids] Returned 3 pipe IDs
+[2025-12-11 00:37:00] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:37:00] Command cleared from JSON file.
+[2025-12-11 00:37:03] Command received: clear-all-pipe-highlights
+[2025-12-11 00:37:03] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:37:03] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:37:03] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:37:03] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:37:03] Command cleared from JSON file.
+[2025-12-11 00:37:06] Command received: get-pipe-elevations
+[2025-12-11 00:37:06] IMPORTING: get_pipe_elevations
+[2025-12-11 00:37:06] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:37:06] Starting get_pipe_elevations...
+[2025-12-11 00:37:06] Received 3 pipe IDs
+[2025-12-11 00:37:06] Processing pipe ID: 744018
+[2025-12-11 00:37:06] Processing pipe ID: 749479
+[2025-12-11 00:37:06] Processing pipe ID: 749859
+[2025-12-11 00:37:06] Pipe elevation data written successfully.
+[2025-12-11 00:37:06] Completed get_pipe_elevations.
+[2025-12-11 00:37:06] Command cleared from JSON file.
+[2025-12-11 00:37:53] Command received: get_pipe_ids
+[2025-12-11 00:37:53] IMPORTING: get_pipe_ids
+[2025-12-11 00:37:53] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids] Requested mode: visible_in_view
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids] Mode = VISIBLE_IN_VIEW
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids]   - Visible Pipe: 744018
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids]   - Visible Pipe: 749479
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids]   - Visible Pipe: 749859
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids] Returned 3 pipe IDs
+[2025-12-11 00:37:54] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:37:54] Command cleared from JSON file.
+[2025-12-11 00:37:56] Command received: clear-all-pipe-highlights
+[2025-12-11 00:37:56] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:37:56] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:37:56] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:37:56] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:37:56] Command cleared from JSON file.
+[2025-12-11 00:38:00] Command received: get-pipe-elevations
+[2025-12-11 00:38:00] IMPORTING: get_pipe_elevations
+[2025-12-11 00:38:00] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:38:00] Starting get_pipe_elevations...
+[2025-12-11 00:38:00] Received 3 pipe IDs
+[2025-12-11 00:38:00] Processing pipe ID: 744018
+[2025-12-11 00:38:00] Processing pipe ID: 749479
+[2025-12-11 00:38:00] Processing pipe ID: 749859
+[2025-12-11 00:38:00] Pipe elevation data written successfully.
+[2025-12-11 00:38:00] Completed get_pipe_elevations.
+[2025-12-11 00:38:00] Command cleared from JSON file.
+[2025-12-11 00:38:03] Command received: highlight-pipes
+[2025-12-11 00:38:03] IMPORTING: highlight_pipes
+[2025-12-11 00:38:03] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes.py
+[2025-12-11 00:38:03] HIGHLIGHT: Applying view overrides to pipes: [744018]
+[2025-12-11 00:38:03] HIGHLIGHT: Completed for 1 pipe(s)
+[2025-12-11 00:38:03] Command cleared from JSON file.
+[2025-12-11 00:38:12] Command received: get_pipe_ids
+[2025-12-11 00:38:12] IMPORTING: get_pipe_ids
+[2025-12-11 00:38:12] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:38:12] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:38:12] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:38:12] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:38:12] [DEBUG get_pipe_ids] Returned 0 pipe IDs
+[2025-12-11 00:38:12] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:38:12] Command cleared from JSON file.
+[2025-12-11 00:38:21] Command received: get_pipe_ids
+[2025-12-11 00:38:21] IMPORTING: get_pipe_ids
+[2025-12-11 00:38:21] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:38:21] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:38:21] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:38:21] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:38:21] [DEBUG get_pipe_ids]   - Selected Pipe: 744018
+[2025-12-11 00:38:21] [DEBUG get_pipe_ids] Returned 1 pipe IDs
+[2025-12-11 00:38:21] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:38:21] Command cleared from JSON file.
+[2025-12-11 00:38:24] Command received: get-pipe-elevations
+[2025-12-11 00:38:24] IMPORTING: get_pipe_elevations
+[2025-12-11 00:38:24] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:38:24] Starting get_pipe_elevations...
+[2025-12-11 00:38:24] Received 1 pipe IDs
+[2025-12-11 00:38:24] Processing pipe ID: 744018
+[2025-12-11 00:38:24] Pipe elevation data written successfully.
+[2025-12-11 00:38:24] Completed get_pipe_elevations.
+[2025-12-11 00:38:24] Command cleared from JSON file.
+[2025-12-11 00:38:27] Command received: get-highlighted-pipes
+[2025-12-11 00:38:27] IMPORTING: get_highlighted_pipes
+[2025-12-11 00:38:27] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
+[2025-12-11 00:38:27] === GET HIGHLIGHTED PIPES: START ===
+[2025-12-11 00:38:27] Pipe 744018 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
+[2025-12-11 00:38:27] Pipe 749479 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:38:27] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:38:27] === GET HIGHLIGHTED PIPES: FOUND 1 ===
+[2025-12-11 00:38:27] Command cleared from JSON file.
+[2025-12-11 00:38:30] Command received: set-pipe-il
+[2025-12-11 00:38:30] IMPORTING: set_pipe_il
+[2025-12-11 00:38:30] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
+[2025-12-11 00:38:30] === set_pipe_il.py START ===
+[2025-12-11 00:38:30] Updating IL parameters for pipe 744018...
+[2025-12-11 00:38:30] Set IL Lower (ft) = 9.38966207349
+[2025-12-11 00:38:30] Set IL Upper (ft) = 9.58322178478
+[2025-12-11 00:38:30] Set IL Height Lower (ft) = 9.88966207349
+[2025-12-11 00:38:30] Set IL Height Upper (ft) = 10.0832217848
+[2025-12-11 00:38:30] Set Floor RL Below (ft) = 0.0
+[2025-12-11 00:38:30] IL update completed and confirmed for pipe 744018.
+[2025-12-11 00:38:30] === set_pipe_il.py END ===
+[2025-12-11 00:38:30] Command cleared from JSON file.
+[2025-12-11 00:38:33] Command received: clear-pipe-highlights
+[2025-12-11 00:38:33] IMPORTING: clear_pipe_highlights
+[2025-12-11 00:38:33] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-11 00:38:33] CLEAR HIGHLIGHT: removing overrides for pipes: [744018]
+[2025-12-11 00:38:33] CLEAR HIGHLIGHT: completed for 1 pipe(s)
+[2025-12-11 00:38:33] Command cleared from JSON file.
+[2025-12-11 00:38:57] Command received: get_pipe_ids
+[2025-12-11 00:38:57] IMPORTING: get_pipe_ids
+[2025-12-11 00:38:57] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:38:57] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:38:57] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:38:57] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:38:57] [DEBUG get_pipe_ids] Returned 0 pipe IDs
+[2025-12-11 00:38:57] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:38:57] Command cleared from JSON file.
+[2025-12-11 00:39:06] Command received: get_pipe_ids
+[2025-12-11 00:39:06] IMPORTING: get_pipe_ids
+[2025-12-11 00:39:06] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:39:06] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:39:06] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:39:06] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:39:06] [DEBUG get_pipe_ids]   - Selected Pipe: 749859
+[2025-12-11 00:39:06] [DEBUG get_pipe_ids] Returned 1 pipe IDs
+[2025-12-11 00:39:06] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:39:06] Command cleared from JSON file.
+[2025-12-11 00:39:09] Command received: get-pipe-elevations
+[2025-12-11 00:39:09] IMPORTING: get_pipe_elevations
+[2025-12-11 00:39:09] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:39:09] Starting get_pipe_elevations...
+[2025-12-11 00:39:09] Received 1 pipe IDs
+[2025-12-11 00:39:09] Processing pipe ID: 749859
+[2025-12-11 00:39:09] Pipe elevation data written successfully.
+[2025-12-11 00:39:09] Completed get_pipe_elevations.
+[2025-12-11 00:39:09] Command cleared from JSON file.
+[2025-12-11 00:39:12] Command received: set-pipe-il
+[2025-12-11 00:39:12] IMPORTING: set_pipe_il
+[2025-12-11 00:39:12] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
+[2025-12-11 00:39:12] === set_pipe_il.py START ===
+[2025-12-11 00:39:12] Updating IL parameters for pipe 749859...
+[2025-12-11 00:39:12] Set IL Lower (ft) = 0.0
+[2025-12-11 00:39:12] Set IL Upper (ft) = 0.0
+[2025-12-11 00:39:12] Set IL Height Lower (ft) = 0.0
+[2025-12-11 00:39:12] Set IL Height Upper (ft) = 0.0
+[2025-12-11 00:39:12] Set Floor RL Below (ft) = 0.0
+[2025-12-11 00:39:12] IL update completed and confirmed for pipe 749859.
+[2025-12-11 00:39:12] === set_pipe_il.py END ===
+[2025-12-11 00:39:12] Command cleared from JSON file.
+[2025-12-11 00:53:54] Command received: get_pipe_ids
+[2025-12-11 00:53:54] IMPORTING: get_pipe_ids
+[2025-12-11 00:53:54] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids] Requested mode: visible_in_view
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids] Mode = VISIBLE_IN_VIEW
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids]   - Visible Pipe: 744018
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids]   - Visible Pipe: 749479
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids]   - Visible Pipe: 749859
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids] Returned 3 pipe IDs
+[2025-12-11 00:53:54] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:53:54] Command cleared from JSON file.
+[2025-12-11 00:53:57] Command received: clear-all-pipe-highlights
+[2025-12-11 00:53:57] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:53:57] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:53:57] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:53:57] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:53:57] Command cleared from JSON file.
+[2025-12-11 00:54:00] Command received: get-pipe-elevations
+[2025-12-11 00:54:00] IMPORTING: get_pipe_elevations
+[2025-12-11 00:54:00] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:54:00] Starting get_pipe_elevations...
+[2025-12-11 00:54:00] Received 3 pipe IDs
+[2025-12-11 00:54:00] Processing pipe ID: 744018
+[2025-12-11 00:54:00] Processing pipe ID: 749479
+[2025-12-11 00:54:00] Processing pipe ID: 749859
+[2025-12-11 00:54:00] Pipe elevation data written successfully.
+[2025-12-11 00:54:00] Completed get_pipe_elevations.
+[2025-12-11 00:54:00] Command cleared from JSON file.
+[2025-12-11 00:54:03] Command received: highlight-pipes
+[2025-12-11 00:54:03] IMPORTING: highlight_pipes
+[2025-12-11 00:54:03] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\highlight_pipes.py
+[2025-12-11 00:54:03] HIGHLIGHT: Applying view overrides to pipes: [749479]
+[2025-12-11 00:54:03] HIGHLIGHT: Completed for 1 pipe(s)
+[2025-12-11 00:54:03] Command cleared from JSON file.
+[2025-12-11 00:54:12] Command received: get_pipe_ids
+[2025-12-11 00:54:12] IMPORTING: get_pipe_ids
+[2025-12-11 00:54:12] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:54:12] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:54:12] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:54:12] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:54:12] [DEBUG get_pipe_ids] Returned 0 pipe IDs
+[2025-12-11 00:54:12] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:54:12] Command cleared from JSON file.
+[2025-12-11 00:54:21] Command received: get_pipe_ids
+[2025-12-11 00:54:21] IMPORTING: get_pipe_ids
+[2025-12-11 00:54:21] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:54:21] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:54:21] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:54:21] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:54:21] [DEBUG get_pipe_ids]   - Selected Pipe: 744018
+[2025-12-11 00:54:21] [DEBUG get_pipe_ids]   - Selected Pipe: 749479
+[2025-12-11 00:54:21] [DEBUG get_pipe_ids] Returned 2 pipe IDs
+[2025-12-11 00:54:21] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:54:21] Command cleared from JSON file.
+[2025-12-11 00:56:41] Command received: get_pipe_ids
+[2025-12-11 00:56:41] IMPORTING: get_pipe_ids
+[2025-12-11 00:56:41] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:56:42] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:56:42] [DEBUG get_pipe_ids] Requested mode: pick
+[2025-12-11 00:56:42] [DEBUG get_pipe_ids] Mode = PICK
+[2025-12-11 00:57:55] [DEBUG get_pipe_ids] PickObjects cancelled or failed: The user aborted the pick operation.
+[2025-12-11 00:57:55] [DEBUG get_pipe_ids] Returned 0 pipe IDs
+[2025-12-11 00:57:55] [DEBUG get_pipe_ids] Cleared Revit selection after PICK
+[2025-12-11 00:57:55] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:57:55] Command cleared from JSON file.
+[2025-12-11 00:58:07] Command received: get_pipe_ids
+[2025-12-11 00:58:07] IMPORTING: get_pipe_ids
+[2025-12-11 00:58:07] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:58:07] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:58:07] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:58:07] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:58:07] [DEBUG get_pipe_ids]   - Selected Pipe: 744018
+[2025-12-11 00:58:07] [DEBUG get_pipe_ids]   - Selected Pipe: 749479
+[2025-12-11 00:58:07] [DEBUG get_pipe_ids] Returned 2 pipe IDs
+[2025-12-11 00:58:07] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:58:07] Command cleared from JSON file.
+[2025-12-11 00:58:10] Command received: get-pipe-elevations
+[2025-12-11 00:58:10] IMPORTING: get_pipe_elevations
+[2025-12-11 00:58:10] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:58:10] Starting get_pipe_elevations...
+[2025-12-11 00:58:10] Received 2 pipe IDs
+[2025-12-11 00:58:10] Processing pipe ID: 744018
+[2025-12-11 00:58:10] Processing pipe ID: 749479
+[2025-12-11 00:58:10] Pipe elevation data written successfully.
+[2025-12-11 00:58:10] Completed get_pipe_elevations.
+[2025-12-11 00:58:10] Command cleared from JSON file.
+[2025-12-11 00:58:13] Command received: get-highlighted-pipes
+[2025-12-11 00:58:13] IMPORTING: get_highlighted_pipes
+[2025-12-11 00:58:13] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_highlighted_pipes.py
+[2025-12-11 00:58:13] === GET HIGHLIGHTED PIPES: START ===
+[2025-12-11 00:58:13] Pipe 744018 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:58:13] Pipe 749479 → proj:(255, 0, 0) surf:(255, 200, 200) lw:10 highlighted:True
+[2025-12-11 00:58:13] Pipe 749859 → proj:None surf:None lw:-1 highlighted:False
+[2025-12-11 00:58:13] === GET HIGHLIGHTED PIPES: FOUND 1 ===
+[2025-12-11 00:58:13] Command cleared from JSON file.
+[2025-12-11 00:58:16] Command received: set-pipe-il
+[2025-12-11 00:58:16] IMPORTING: set_pipe_il
+[2025-12-11 00:58:16] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
+[2025-12-11 00:58:16] === set_pipe_il.py START ===
+[2025-12-11 00:58:16] Updating IL parameters for pipe 749479...
+[2025-12-11 00:58:16] Set IL Lower (ft) = 9.77997703412
+[2025-12-11 00:58:16] Set IL Upper (ft) = 10.5276706037
+[2025-12-11 00:58:16] Set IL Height Lower (ft) = 10.2799770341
+[2025-12-11 00:58:16] Set IL Height Upper (ft) = 11.0276706037
+[2025-12-11 00:58:16] Set Floor RL Below (ft) = 0.0
+[2025-12-11 00:58:16] IL update completed and confirmed for pipe 749479.
+[2025-12-11 00:58:16] === set_pipe_il.py END ===
+[2025-12-11 00:58:16] Command cleared from JSON file.
+[2025-12-11 00:58:19] Command received: clear-pipe-highlights
+[2025-12-11 00:58:19] IMPORTING: clear_pipe_highlights
+[2025-12-11 00:58:19] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_pipe_highlights.py
+[2025-12-11 00:58:19] CLEAR HIGHLIGHT: removing overrides for pipes: [749479]
+[2025-12-11 00:58:19] CLEAR HIGHLIGHT: completed for 1 pipe(s)
+[2025-12-11 00:58:19] Command cleared from JSON file.
+[2025-12-11 00:58:29] Command received: get_pipe_ids
+[2025-12-11 00:58:29] IMPORTING: get_pipe_ids
+[2025-12-11 00:58:29] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids] Requested mode: visible_in_view
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids] Mode = VISIBLE_IN_VIEW
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids]   - Visible Pipe: 744018
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids]   - Visible Pipe: 749479
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids]   - Visible Pipe: 749859
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids] Returned 3 pipe IDs
+[2025-12-11 00:58:29] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:58:29] Command cleared from JSON file.
+[2025-12-11 00:58:32] Command received: clear-all-pipe-highlights
+[2025-12-11 00:58:32] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:58:32] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:58:32] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:58:32] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:58:32] Command cleared from JSON file.
+[2025-12-11 00:58:35] Command received: get-pipe-elevations
+[2025-12-11 00:58:35] IMPORTING: get_pipe_elevations
+[2025-12-11 00:58:35] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:58:35] Starting get_pipe_elevations...
+[2025-12-11 00:58:35] Received 3 pipe IDs
+[2025-12-11 00:58:35] Processing pipe ID: 744018
+[2025-12-11 00:58:35] Processing pipe ID: 749479
+[2025-12-11 00:58:35] Processing pipe ID: 749859
+[2025-12-11 00:58:35] Pipe elevation data written successfully.
+[2025-12-11 00:58:35] Completed get_pipe_elevations.
+[2025-12-11 00:58:35] Command cleared from JSON file.
+[2025-12-11 00:58:50] Command received: get_pipe_ids
+[2025-12-11 00:58:50] IMPORTING: get_pipe_ids
+[2025-12-11 00:58:50] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids] Requested mode: visible_in_view
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids] Mode = VISIBLE_IN_VIEW
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids]   - Visible Pipe: 744018
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids]   - Visible Pipe: 749479
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids]   - Visible Pipe: 749859
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids] Returned 3 pipe IDs
+[2025-12-11 00:58:50] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:58:50] Command cleared from JSON file.
+[2025-12-11 00:58:53] Command received: clear-all-pipe-highlights
+[2025-12-11 00:58:53] IMPORTING: clear_all_pipe_highlights
+[2025-12-11 00:58:53] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\clear_all_pipe_highlights.py
+[2025-12-11 00:58:53] CLEAR ALL HIGHLIGHTS: scanning active view...
+[2025-12-11 00:58:53] CLEAR ALL HIGHLIGHTS: completed for 3 pipes
+[2025-12-11 00:58:53] Command cleared from JSON file.
+[2025-12-11 00:58:56] Command received: get-pipe-elevations
+[2025-12-11 00:58:56] IMPORTING: get_pipe_elevations
+[2025-12-11 00:58:56] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:58:56] Starting get_pipe_elevations...
+[2025-12-11 00:58:56] Received 3 pipe IDs
+[2025-12-11 00:58:56] Processing pipe ID: 744018
+[2025-12-11 00:58:56] Processing pipe ID: 749479
+[2025-12-11 00:58:56] Processing pipe ID: 749859
+[2025-12-11 00:58:56] Pipe elevation data written successfully.
+[2025-12-11 00:58:56] Completed get_pipe_elevations.
+[2025-12-11 00:58:56] Command cleared from JSON file.
+[2025-12-11 00:59:26] Command received: get_pipe_ids
+[2025-12-11 00:59:26] IMPORTING: get_pipe_ids
+[2025-12-11 00:59:26] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_ids.py
+[2025-12-11 00:59:26] [DEBUG get_pipe_ids] === get_pipe_ids.py START ===
+[2025-12-11 00:59:26] [DEBUG get_pipe_ids] Requested mode: selected
+[2025-12-11 00:59:26] [DEBUG get_pipe_ids] Mode = SELECTED
+[2025-12-11 00:59:26] [DEBUG get_pipe_ids]   - Selected Pipe: 749859
+[2025-12-11 00:59:26] [DEBUG get_pipe_ids] Returned 1 pipe IDs
+[2025-12-11 00:59:26] [DEBUG get_pipe_ids] === get_pipe_ids.py END ===
+[2025-12-11 00:59:26] Command cleared from JSON file.
+[2025-12-11 00:59:29] Command received: get-pipe-elevations
+[2025-12-11 00:59:29] IMPORTING: get_pipe_elevations
+[2025-12-11 00:59:29] LOADED FROM: C:\PADApps\RevitPAD\Core\requests\get_pipe_elevations.py
+[2025-12-11 00:59:29] Starting get_pipe_elevations...
+[2025-12-11 00:59:29] Received 1 pipe IDs
+[2025-12-11 00:59:29] Processing pipe ID: 749859
+[2025-12-11 00:59:29] Pipe elevation data written successfully.
+[2025-12-11 00:59:29] Completed get_pipe_elevations.
+[2025-12-11 00:59:29] Command cleared from JSON file.
+[2025-12-11 00:59:32] Command received: set-pipe-il
+[2025-12-11 00:59:32] IMPORTING: set_pipe_il
+[2025-12-11 00:59:32] LOADED FROM: C:\PADApps\RevitPAD\Core\commands\set_pipe_il.py
+[2025-12-11 00:59:32] === set_pipe_il.py START ===
+[2025-12-11 00:59:32] Updating IL parameters for pipe 749859...
+[2025-12-11 00:59:32] Set IL Lower (ft) = 0.0
+[2025-12-11 00:59:32] Set IL Upper (ft) = 0.0
+[2025-12-11 00:59:32] Set IL Height Lower (ft) = 0.0
+[2025-12-11 00:59:32] Set IL Height Upper (ft) = 0.0
+[2025-12-11 00:59:32] Set Floor RL Below (ft) = 0.0
+[2025-12-11 00:59:32] IL update completed and confirmed for pipe 749859.
+[2025-12-11 00:59:32] === set_pipe_il.py END ===
+[2025-12-11 00:59:32] Command cleared from JSON file.

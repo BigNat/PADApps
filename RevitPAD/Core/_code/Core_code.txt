@@ -1,18 +1,162 @@
 INDEX
 =====
 
+commands\clear_all_pipe_highlights.py
+commands\clear_pipe_highlights.py
 commands\export_sheets_to_cad.py
 commands\export_sheets_to_pdf.py
 commands\export_views_to_nwc.py
+commands\highlight_pipes.py
 commands\open_view_by_id.py
+commands\select_elements.py
+commands\select_pipes_in_current_view.py
+commands\set_pipe_il.py
 commands\test_command.py
 CommandWatcherHelper.py
 requests\get_3d_views.py
 requests\get_active_view.py
 requests\get_all_views.py
+requests\get_highlighted_pipes.py
 requests\get_model_path.py
+requests\get_pipe_elevations.py
+requests\get_pipe_ids.py
+requests\get_pipe_info.py
+requests\get_pipes_with_tags.py
 requests\get_sheet_data.py
 ──────────────────────────────────────────────────────────────────────
+################################################################################
+### commands\clear_all_pipe_highlights.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+import Autodesk.Revit.DB as DB
+from Autodesk.Revit.DB import ElementId, OverrideGraphicSettings, Transaction
+from Autodesk.Revit.DB.Plumbing import Pipe
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Removes ALL highlight overrides for ALL pipes visible in the active view.
+    """
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+
+        log("CLEAR ALL HIGHLIGHTS: scanning active view...")
+
+        collector = DB.FilteredElementCollector(doc, view.Id).OfClass(Pipe)
+        pipes = list(collector)
+
+        ogs_clear = OverrideGraphicSettings()
+
+        t = Transaction(doc, "Clear All Pipe Highlights")
+        t.Start()
+
+        for p in pipes:
+            try:
+                view.SetElementOverrides(p.Id, ogs_clear)
+            except Exception as inner:
+                log(" - ERROR clearing {0}: {1}".format(p.Id.IntegerValue, inner))
+
+        t.Commit()
+
+        result = {
+            "status": "ok",
+            "cleared_count": len(pipes)
+        }
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("CLEAR ALL HIGHLIGHTS: completed for {0} pipes".format(len(pipes)))
+
+    except Exception as e:
+        log("Error in clear_all_pipe_highlights: {0}".format(e))
+        log(traceback.format_exc())
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+################################################################################
+### commands\clear_pipe_highlights.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+import Autodesk.Revit.DB as DB
+from Autodesk.Revit.DB import ElementId, OverrideGraphicSettings, Transaction
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Clears highlight overrides for a list of pipe IDs.
+    """
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+
+        ids = data.get("ids", [])
+
+        if not ids:
+            raise Exception("No pipe IDs provided to clear highlights.")
+
+        log("CLEAR HIGHLIGHT: removing overrides for pipes: {0}".format(ids))
+
+        # Convert to ElementId list
+        element_ids = [ElementId(int(x)) for x in ids]
+
+        ogs_clear = OverrideGraphicSettings()
+
+        t = Transaction(doc, "Clear Pipe Highlights")
+        t.Start()
+
+        for eid in element_ids:
+            try:
+                view.SetElementOverrides(eid, ogs_clear)
+            except Exception as inner:
+                log(" - ERROR clearing {0}: {1}".format(eid.IntegerValue, inner))
+
+        t.Commit()
+
+        # JSON Response
+        result = {
+            "status": "ok",
+            "cleared_ids": ids,
+            "count": len(ids)
+        }
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("CLEAR HIGHLIGHT: completed for {0} pipe(s)".format(len(ids)))
+
+    except Exception as e:
+        log("Error in clear_pipe_highlights: {0}".format(e))
+        log(traceback.format_exc())
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
 ################################################################################
 ### commands\export_sheets_to_cad.py
 ################################################################################
@@ -395,6 +539,79 @@ def run(uiapp, data, log):
         write_response({"error": err}, log)
 
 ################################################################################
+### commands\highlight_pipes.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+import Autodesk.Revit.DB as DB
+from Autodesk.Revit.DB import ElementId, OverrideGraphicSettings, Color, Transaction
+
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Highlights pipes using view overrides.
+    Requires a transaction in Revit 2020–2024.
+    """
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+
+        ids = data.get("ids", [])
+        if not ids:
+            raise Exception("No pipe IDs provided to highlight.")
+
+        log("HIGHLIGHT: Applying view overrides to pipes: {0}".format(ids))
+
+        element_ids = [ElementId(int(x)) for x in ids]
+
+        # Highlight graphics
+        ogs = OverrideGraphicSettings()
+        ogs.SetProjectionLineColor(Color(255, 0, 0))
+        ogs.SetProjectionLineWeight(10)
+        ogs.SetSurfaceForegroundPatternColor(Color(255, 200, 200))
+
+        # OPEN TRANSACTION
+        t = Transaction(doc, "Highlight Pipes")
+        t.Start()
+
+        for eid in element_ids:
+            try:
+                view.SetElementOverrides(eid, ogs)
+            except Exception as inner_e:
+                log(" - ERROR highlight {0}: {1}".format(eid.IntegerValue, inner_e))
+
+        t.Commit()
+
+        # RESULT JSON
+        result = {
+            "status": "ok",
+            "highlighted_ids": ids,
+            "count": len(ids)
+        }
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("HIGHLIGHT: Completed for {0} pipe(s)".format(len(ids)))
+
+    except Exception as e:
+        log("Error in highlight_pipes: {0}".format(e))
+        log(traceback.format_exc())
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+################################################################################
 ### commands\open_view_by_id.py
 ################################################################################
 # -*- coding: utf-8 -*-
@@ -446,6 +663,273 @@ def run(uiapp, data, log):
         with open(RESPONSE_PATH, "w") as f:
             json.dump({"error": str(e)}, f, indent=2)
         log("Error in open_view_by_id: {0}".format(e))
+
+################################################################################
+### commands\select_elements.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+from Autodesk.Revit.DB import ElementId
+from System.Collections.Generic import List
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Selects one or more elements in Revit based on a list of element IDs.
+    Expected JSON from BlueTree:
+    {
+        "ids": [123456, 234567, 345678]
+    }
+    """
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+
+        ids = data.get("ids")
+
+        if not ids or not isinstance(ids, list):
+            raise Exception("Missing or invalid 'ids' list for select-elements")
+
+        log("Selecting elements: {}".format(ids))
+
+        # Convert Python list -> .NET List[ElementId]
+        dotnet_ids = List[ElementId]()
+        for i in ids:
+            try:
+                eid = ElementId(int(i))
+                if doc.GetElement(eid):
+                    dotnet_ids.Add(eid)
+                    log(" - Valid element selected: {}".format(i))
+                else:
+                    log(" - WARNING: No element found with ID {}".format(i))
+            except Exception as single_e:
+                log(" - ERROR converting ID {}: {}".format(i, single_e))
+
+        # Apply selection
+        uidoc.Selection.SetElementIds(dotnet_ids)
+
+        result = {
+            "status": "ok",
+            "selected_ids": ids,
+            "count": len(dotnet_ids)
+        }
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Selection applied: {} element(s)".format(len(dotnet_ids)))
+
+    except Exception as e:
+        tb = traceback.format_exc()
+        log("Error in select_elements: {}".format(e))
+        log(tb)
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+################################################################################
+### commands\select_pipes_in_current_view.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+from Autodesk.Revit.DB import ElementId, FilteredElementCollector
+from Autodesk.Revit.DB import VisibleInViewFilter
+from Autodesk.Revit.DB.Plumbing import Pipe
+from System.Collections.Generic import List
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def run(uiapp, data, log):
+    """
+    Fast version:
+    - Collect only visible Pipes in the current view
+    - Intersect with provided IDs
+    - Select instantly
+    """
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+        
+        ids = data.get("ids", [])
+        if not ids:
+            raise Exception("No pipe IDs provided.")
+
+        log("FAST MODE: selecting visible pipes from {0}".format(ids))
+
+        # Convert provided IDs into integer set
+        target_ids = set(int(x) for x in ids)
+
+        # Build visibility filter
+        vis_filter = VisibleInViewFilter(doc, view.Id)
+
+        # Collect ONLY visible pipes (super fast)
+        visible_pipes = FilteredElementCollector(doc, view.Id) \
+            .OfClass(Pipe) \
+            .WherePasses(vis_filter) \
+            .ToElements()
+
+        # Extract only matching IDs
+        matching_ids = []
+        dotnet_ids = List[ElementId]()
+
+        for p in visible_pipes:
+            pid = p.Id.IntegerValue
+            if pid in target_ids:
+                matching_ids.append(pid)
+                dotnet_ids.Add(p.Id)
+
+        # Apply selection
+        uidoc.Selection.SetElementIds(dotnet_ids)
+
+        result = {
+            "status": "ok",
+            "selected_ids": matching_ids,
+            "count": len(matching_ids)
+        }
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("FAST MODE: selected {0} pipe(s)".format(len(matching_ids)))
+
+    except Exception as e:
+        log("FAST ERROR: {0}".format(e))
+        log(traceback.format_exc())
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+################################################################################
+### commands\set_pipe_il.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+from Autodesk.Revit.DB import Transaction, ElementId
+from Autodesk.Revit.DB.Plumbing import Pipe
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+MM_TO_FT = 1.0 / 304.8      # mm → feet
+FT_TO_MM = 304.8            # feet → mm
+
+
+def to_ft(val):
+    if val is None:
+        return None
+    return float(val) * MM_TO_FT
+
+
+def to_mm(val):
+    if val is None:
+        return None
+    return round(val * FT_TO_MM, 3)
+
+
+def run(uiapp, data, log):
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        log("=== set_pipe_il.py START ===")
+
+        pipe_id = data.get("pipe_id")
+        if not pipe_id:
+            raise Exception("No pipe_id provided.")
+
+        # incoming mm values from BlueTree
+        il_lower_mm_in = data.get("il_lower_mm")
+        il_upper_mm_in = data.get("il_upper_mm")
+        h_lower_mm_in = data.get("il_height_lower_mm")
+        h_upper_mm_in = data.get("il_height_upper_mm")
+        floor_rl_mm_in = data.get("floor_rl_below")
+
+        # convert inputs to feet for Revit
+        il_lower_ft = to_ft(il_lower_mm_in)
+        il_upper_ft = to_ft(il_upper_mm_in)
+        h_lower_ft = to_ft(h_lower_mm_in)
+        h_upper_ft = to_ft(h_upper_mm_in)
+        floor_rl_ft = to_ft(floor_rl_mm_in)
+
+        log("Updating IL parameters for pipe {}...".format(pipe_id))
+
+        el = doc.GetElement(ElementId(int(pipe_id)))
+        if not isinstance(el, Pipe):
+            raise Exception("Element {} is not a Pipe.".format(pipe_id))
+
+        applied_feet = {}   # track feet values internally
+
+        t = Transaction(doc, "Set IL Parameters")
+        t.Start()
+
+        def set_param(name, ft_value):
+            if ft_value is None:
+                return
+            p = el.LookupParameter(name)
+            if p:
+                p.Set(ft_value)
+                applied_feet[name] = ft_value
+                log("Set {} (ft) = {}".format(name, ft_value))
+            else:
+                log("Parameter '{}' not found.".format(name))
+
+        # update in Revit
+        set_param("IL Lower", il_lower_ft)
+        set_param("IL Upper", il_upper_ft)
+        set_param("IL Height Lower", h_lower_ft)
+        set_param("IL Height Upper", h_upper_ft)
+        set_param("Floor RL Below", floor_rl_ft)
+
+        t.Commit()
+
+        # Convert all applied feet → mm for return result
+        applied_mm = {name: to_mm(val) for name, val in applied_feet.items()}
+
+        result = {
+            "status": "ok",
+            "pipe_id": int(pipe_id),
+            "message": "IL update confirmed",
+            "applied_mm": applied_mm
+        }
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("IL update completed and confirmed for pipe {}.".format(pipe_id))
+        log("=== set_pipe_il.py END ===")
+
+    except Exception as e:
+        log("EXCEPTION: {}".format(e))
+        log(traceback.format_exc())
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
 
 ################################################################################
 ### commands\test_command.py
@@ -831,6 +1315,104 @@ def run(uiapp, data, log):
         log("Error in get_all_views: {0}".format(e))
 
 ################################################################################
+### requests\get_highlighted_pipes.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+import Autodesk.Revit.DB as DB
+from Autodesk.Revit.DB.Plumbing import Pipe
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def safe_color_tuple(c):
+    """
+    Safely returns (R,G,B) or None if color is invalid/uninitialized.
+    """
+    try:
+        return (c.Red, c.Green, c.Blue)
+    except:
+        return None
+
+
+def run(uiapp, data, log):
+    """
+    Detects ONLY pipes highlighted using your highlight_pipes_temp overrides.
+    """
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+
+        log("=== GET HIGHLIGHTED PIPES: START ===")
+
+        highlighted_ids = []
+
+        # Values used by highlight command
+        HL_LINE_COLOR = (255, 0, 0)
+        HL_SURF_COLOR = (255, 200, 200)
+        HL_LINE_WEIGHT = 10
+
+        collector = DB.FilteredElementCollector(doc, view.Id).OfClass(Pipe)
+
+        for p in collector:
+            eid = p.Id
+            ogs = view.GetElementOverrides(eid)
+
+            # Extract overrides safely
+            proj_color = safe_color_tuple(ogs.ProjectionLineColor)
+            surf_color = safe_color_tuple(ogs.SurfaceForegroundPatternColor)
+            lw = ogs.ProjectionLineWeight
+
+            # A pipe is highlighted if ANY of the applied override values match
+            is_highlighted = False
+
+            if proj_color == HL_LINE_COLOR:
+                is_highlighted = True
+
+            if surf_color == HL_SURF_COLOR:
+                is_highlighted = True
+
+            if lw == HL_LINE_WEIGHT:
+                is_highlighted = True
+
+            if is_highlighted:
+                highlighted_ids.append(eid.IntegerValue)
+
+            # DEBUG LOGGING
+            log("Pipe {0} → proj:{1} surf:{2} lw:{3} highlighted:{4}"
+                .format(eid.IntegerValue, proj_color, surf_color, lw, is_highlighted))
+
+        # Output result JSON
+        result = {
+            "status": "ok",
+            "highlighted_ids": highlighted_ids,
+            "count": len(highlighted_ids)
+        }
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("=== GET HIGHLIGHTED PIPES: FOUND {0} ===".format(len(highlighted_ids)))
+
+    except Exception as e:
+        log("Error in get_highlighted_pipes: {0}".format(e))
+        log(traceback.format_exc())
+        try:
+            with open(RESPONSE_PATH, "w") as f:
+                json.dump({"error": str(e)}, f, indent=2)
+        except:
+            pass
+
+################################################################################
 ### requests\get_model_path.py
 ################################################################################
 # -*- coding: utf-8 -*-
@@ -866,6 +1448,632 @@ def run(uiapp, data, log):
 
     except Exception as e:
         log("Error in get_model_path: {0}".format(e))
+
+################################################################################
+### requests\get_pipe_elevations.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    VisibleInViewFilter,
+    BuiltInCategory
+)
+from Autodesk.Revit.DB.Plumbing import Pipe
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+FT_TO_MM = 304.8   # Revit internal → mm
+
+
+def mm(val):
+    """Convert feet → mm with 3-decimal rounding."""
+    if val is None:
+        return None
+    return round(val * FT_TO_MM, 3)
+
+
+def run(uiapp, data, log):
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        log("Starting get_pipe_elevations...")
+
+        # ================================================================
+        # MODE SELECTION
+        # ================================================================
+        mode = data.get("mode", "selected")  # "selected" or "all_in_view"
+        pipes_data = []
+        pipe_elements = []
+
+        # ---------------------------------------------------------------
+        # MODE 1 — GET ALL VISIBLE PIPES IN VIEW
+        # ---------------------------------------------------------------
+        if mode == "all_in_view":
+            log("Collecting ALL visible pipes in current view...")
+
+            vis_filter = VisibleInViewFilter(doc, view.Id)
+
+            pipe_elements = (
+                FilteredElementCollector(doc, view.Id)
+                .OfCategory(BuiltInCategory.OST_PipeCurves)
+                .WherePasses(vis_filter)
+                .ToElements()
+            )
+
+            log("Found {} visible pipes.".format(len(pipe_elements)))
+
+        # ---------------------------------------------------------------
+        # MODE 2 — GET SELECTED PIPES (original behavior)
+        # ---------------------------------------------------------------
+        else:
+            sel_ids = uidoc.Selection.GetElementIds()
+            if not sel_ids or len(sel_ids) == 0:
+                raise Exception("No pipes selected.")
+
+            log("Selected items: {}".format(len(sel_ids)))
+            pipe_elements = [doc.GetElement(x) for x in sel_ids]
+
+        # ================================================================
+        # ITERATE AND EXTRACT PIPE DATA
+        # ================================================================
+        for el in pipe_elements:
+            if not isinstance(el, Pipe):
+                continue
+
+            eid = el.Id.IntegerValue
+            log("Processing pipe ID: {}".format(eid))
+
+            # ------------------------------------------------------------
+            # 1. GEOMETRIC START/END ELEVATIONS
+            # ------------------------------------------------------------
+            conns = el.ConnectorManager.Connectors
+            all_conns = [c for c in conns]
+
+            if len(all_conns) < 2:
+                log("Pipe has <2 connectors. Skipping.")
+                continue
+
+            start = all_conns[0].Origin
+            end = all_conns[1].Origin
+
+            start_z = mm(start.Z)
+            end_z = mm(end.Z)
+
+            # ------------------------------------------------------------
+            # 2. DIAMETERS
+            # ------------------------------------------------------------
+            od = idm = wt = None
+
+            p_od = el.LookupParameter("Outside Diameter")
+            if p_od:
+                od = mm(p_od.AsDouble())
+
+            p_id = el.LookupParameter("Inside Diameter")
+            if p_id:
+                idm = mm(p_id.AsDouble())
+
+            if od is not None and idm is not None:
+                wt = round((od - idm) / 2.0, 3)
+
+            # ------------------------------------------------------------
+            # 3. LENGTH (mm)
+            # ------------------------------------------------------------
+            length = None
+            p_len = el.LookupParameter("Length")
+            if p_len:
+                length = mm(p_len.AsDouble())
+
+            # ------------------------------------------------------------
+            # 4. SLOPE (%)
+            # ------------------------------------------------------------
+            slope_percent = None
+            if length and length != 0:
+                slope_percent = round(((start_z - end_z) / length) * 100, 2)
+
+            # ------------------------------------------------------------
+            # 5. SYSTEM TYPE / NAME
+            # ------------------------------------------------------------
+            system_type = None
+            system_name = None
+            if el.MEPSystem:
+                system_type = el.MEPSystem.SystemType.ToString()
+                system_name = el.MEPSystem.Name
+
+            # ------------------------------------------------------------
+            # 6. MATERIAL
+            # ------------------------------------------------------------
+            material = None
+            p_mat = el.LookupParameter("Material")
+            if p_mat:
+                material = p_mat.AsString()
+
+            # ------------------------------------------------------------
+            # 7. REFERENCE LEVEL + RL
+            # ------------------------------------------------------------
+            reference_level_name = None
+            reference_level_rl_mm = None
+
+            ref_level = el.ReferenceLevel
+            if ref_level:
+                reference_level_name = ref_level.Name
+                reference_level_rl_mm = mm(ref_level.Elevation)
+
+            # ------------------------------------------------------------
+            # 8. INVERT PARAMETERS
+            # ------------------------------------------------------------
+            def get_param_mm(name):
+                p = el.LookupParameter(name)
+                return mm(p.AsDouble()) if p else None
+
+            il_lower = get_param_mm("IL Lower")
+            il_upper = get_param_mm("IL Upper")
+            il_height_lower = get_param_mm("IL Height Lower")
+            il_height_upper = get_param_mm("IL Height Upper")
+            floor_rl_below = get_param_mm("Floor RL Below")
+
+            # ------------------------------------------------------------
+            # STORE RESULT
+            # ------------------------------------------------------------
+            pipes_data.append({
+                "element_id": eid,
+                "start_elev_mm": start_z,
+                "end_elev_mm": end_z,
+                "slope_percent": slope_percent,
+                "outside_diameter_mm": od,
+                "inside_diameter_mm": idm,
+                "wall_thickness_mm": wt,
+                "length_mm": length,
+                "system_type": system_type,
+                "system_name": system_name,
+                "material": material,
+                "reference_level_name": reference_level_name,
+                "reference_level_rl_mm": reference_level_rl_mm,
+
+                "il_lower_mm": il_lower,
+                "il_upper_mm": il_upper,
+                "il_height_lower_mm": il_height_lower,
+                "il_height_upper_mm": il_height_upper,
+                "floor_rl_below_mm": floor_rl_below,
+            })
+
+        # ================================================================
+        # WRITE RESULT
+        # ================================================================
+        result = {"status": "ok", "pipes": pipes_data}
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Pipe elevation data written successfully.")
+        log("Completed get_pipe_elevations.")
+
+    except Exception as e:
+        log("EXCEPTION in get_pipe_elevations: {}".format(e))
+        log(traceback.format_exc())
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+################################################################################
+### requests\get_pipe_ids.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+from Autodesk.Revit.DB import *
+from Autodesk.Revit.UI.Selection import ObjectType, ISelectionFilter
+
+# Needed to use .NET List for SetElementIds
+import clr
+clr.AddReference("System")
+from System.Collections.Generic import List
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+class PipeSelectionFilter(ISelectionFilter):
+    def AllowElement(self, e):
+        from Autodesk.Revit.DB.Plumbing import Pipe
+        return isinstance(e, Pipe)
+
+    def AllowReference(self, ref, point):
+        return True
+
+
+def write_debug(log, msg):
+    try:
+        log("[DEBUG get_pipe_ids] " + msg)
+    except:
+        pass
+
+
+def run(uiapp, data, log):
+    write_debug(log, "=== get_pipe_ids.py START ===")
+
+    uidoc = uiapp.ActiveUIDocument
+    doc = uidoc.Document
+
+    try:
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        write_debug(log, "ActiveView: {}".format(uidoc.ActiveView.Name))
+        write_debug(log, "About to call PickObjects...")
+
+        # ======================================================================
+        # MULTI-SELECTION
+        # ======================================================================
+        refs = uidoc.Selection.PickObjects(
+            ObjectType.Element,
+            PipeSelectionFilter(),
+            "Select one or more pipes"
+        )
+
+        write_debug(log, "PickObjects returned {} references".format(len(refs)))
+
+        pipe_ids = []
+        for r in refs:
+            try:
+                eid = r.ElementId
+                el = doc.GetElement(eid)
+                if el:
+                    pid = el.Id.IntegerValue
+                    pipe_ids.append(pid)
+                    write_debug(log, "  - Picked Pipe ID: {}".format(pid))
+                else:
+                    write_debug(log, "  - WARNING: doc.GetElement returned None")
+            except Exception as inner_e:
+                write_debug(log, "  - ERROR processing reference: {}".format(inner_e))
+
+        # ======================================================================
+        # WRITE RESPONSE
+        # ======================================================================
+        result = {"status": "ok", "pipe_ids": pipe_ids}
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        write_debug(log, "Response written successfully.")
+        write_debug(log, "Pipe IDs: {}".format(pipe_ids))
+
+        # ======================================================================
+        # CLEAR REVIT SELECTION
+        # ======================================================================
+        try:
+            empty = List[ElementId]()   # empty .NET list
+            uidoc.Selection.SetElementIds(empty)
+            write_debug(log, "Revit selection cleared successfully.")
+        except Exception as clear_e:
+            write_debug(log, "ERROR clearing selection: {}".format(clear_e))
+
+    except Exception as e:
+        tb = traceback.format_exc()
+        write_debug(log, "EXCEPTION TRIGGERED DURING PICK")
+        write_debug(log, "Exception: {}".format(e))
+        write_debug(log, "Traceback: {}".format(tb))
+
+        # Write error response
+        err = {"error": str(e)}
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(err, f, indent=2)
+
+        log("Error in get_pipe_ids: {}".format(e))
+
+    write_debug(log, "=== get_pipe_ids.py END ===")
+
+################################################################################
+### requests\get_pipe_info.py
+################################################################################
+# -*- coding: utf-8 -*-
+import os
+import json
+import traceback
+
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    VisibleInViewFilter,
+    BuiltInCategory
+)
+from Autodesk.Revit.DB.Plumbing import Pipe
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+FT_TO_MM = 304.8   # Revit internal → mm
+
+
+def mm(val):
+    """Convert feet → mm with 3-decimal rounding."""
+    if val is None:
+        return None
+    return round(val * FT_TO_MM, 3)
+
+
+def run(uiapp, data, log):
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        log("Starting get_pipe_info...")
+
+        # ================================================================
+        # MODE SELECTION
+        # ================================================================
+        mode = data.get("mode", "selected")  # "selected" or "all_in_view"
+        pipes_data = []
+        pipe_elements = []
+
+        # ---------------------------------------------------------------
+        # MODE 1 — GET ALL VISIBLE PIPES IN VIEW
+        # ---------------------------------------------------------------
+        if mode == "all_in_view":
+            log("Collecting ALL visible pipes in current view...")
+
+            vis_filter = VisibleInViewFilter(doc, view.Id)
+
+            pipe_elements = (
+                FilteredElementCollector(doc, view.Id)
+                .OfCategory(BuiltInCategory.OST_PipeCurves)
+                .WherePasses(vis_filter)
+                .ToElements()
+            )
+
+            log("Found {} visible pipes.".format(len(pipe_elements)))
+
+        # ---------------------------------------------------------------
+        # MODE 2 — GET SELECTED PIPES (original behavior)
+        # ---------------------------------------------------------------
+        else:
+            sel_ids = uidoc.Selection.GetElementIds()
+            if not sel_ids or len(sel_ids) == 0:
+                raise Exception("No pipes selected.")
+
+            log("Selected items: {}".format(len(sel_ids)))
+            pipe_elements = [doc.GetElement(x) for x in sel_ids]
+
+        # ================================================================
+        # ITERATE AND EXTRACT PIPE DATA
+        # ================================================================
+        for el in pipe_elements:
+            if not isinstance(el, Pipe):
+                continue
+
+            eid = el.Id.IntegerValue
+            log("Processing pipe ID: {}".format(eid))
+
+            # ------------------------------------------------------------
+            # 1. GEOMETRIC START/END ELEVATIONS
+            # ------------------------------------------------------------
+            conns = el.ConnectorManager.Connectors
+            all_conns = [c for c in conns]
+
+            if len(all_conns) < 2:
+                log("Pipe has <2 connectors. Skipping.")
+                continue
+
+            start = all_conns[0].Origin
+            end = all_conns[1].Origin
+
+            start_z = mm(start.Z)
+            end_z = mm(end.Z)
+
+            # ------------------------------------------------------------
+            # 2. DIAMETERS
+            # ------------------------------------------------------------
+            od = idm = wt = None
+
+            p_od = el.LookupParameter("Outside Diameter")
+            if p_od:
+                od = mm(p_od.AsDouble())
+
+            p_id = el.LookupParameter("Inside Diameter")
+            if p_id:
+                idm = mm(p_id.AsDouble())
+
+            if od is not None and idm is not None:
+                wt = round((od - idm) / 2.0, 3)
+
+            # ------------------------------------------------------------
+            # 3. LENGTH (mm)
+            # ------------------------------------------------------------
+            length = None
+            p_len = el.LookupParameter("Length")
+            if p_len:
+                length = mm(p_len.AsDouble())
+
+            # ------------------------------------------------------------
+            # 4. SLOPE (%)
+            # ------------------------------------------------------------
+            slope_percent = None
+            if length and length != 0:
+                slope_percent = round(((start_z - end_z) / length) * 100, 2)
+
+            # ------------------------------------------------------------
+            # 5. SYSTEM TYPE / NAME
+            # ------------------------------------------------------------
+            system_type = None
+            system_name = None
+            if el.MEPSystem:
+                system_type = el.MEPSystem.SystemType.ToString()
+                system_name = el.MEPSystem.Name
+
+            # ------------------------------------------------------------
+            # 6. MATERIAL
+            # ------------------------------------------------------------
+            material = None
+            p_mat = el.LookupParameter("Material")
+            if p_mat:
+                material = p_mat.AsString()
+
+            # ------------------------------------------------------------
+            # STORE RESULT
+            # ------------------------------------------------------------
+            pipes_data.append({
+                "element_id": eid,
+                "slope_percent": slope_percent,
+                "outside_diameter_mm": od,
+                "inside_diameter_mm": idm,
+                "wall_thickness_mm": wt,
+                "length_mm": length,
+                "system_type": system_type,
+                "system_name": system_name,
+                "material": material,
+
+            })
+
+        # ================================================================
+        # WRITE RESULT
+        # ================================================================
+        result = {"status": "ok", "pipes": pipes_data}
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        log("Pipe info data written successfully.")
+        log("Completed get_pipe_info.")
+
+    except Exception as e:
+        log("EXCEPTION in get_pipe_info: {}".format(e))
+        log(traceback.format_exc())
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+################################################################################
+### requests\get_pipes_with_tags.py
+################################################################################
+# coding: utf-8
+
+import os
+import json
+import traceback
+
+from Autodesk.Revit.DB import (
+    FilteredElementCollector,
+    IndependentTag,
+    ElementId,
+    VisibleInViewFilter,
+    LinkElementId
+)
+from Autodesk.Revit.DB.Plumbing import Pipe
+
+REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
+DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
+RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
+
+
+def write_debug(log, msg):
+    try:
+        log("[DEBUG get_pipes_with_tags] " + msg)
+    except:
+        pass
+
+
+def resolve_tagged_element_ids(tag, doc, log):
+    """Return a list of ElementId objects referenced by a tag."""
+    ids = []
+
+    if not hasattr(tag, "GetTaggedElementIds"):
+        return ids
+
+    try:
+        refs = tag.GetTaggedElementIds()
+    except:
+        return ids
+
+    for ref in refs:
+        # Try linked element id first
+        try:
+            linked_id = ref.LinkedElementId
+            if linked_id and linked_id.IntegerValue > 0:
+                ids.append(linked_id)
+                continue
+        except:
+            pass
+
+        # Try ElementId next
+        try:
+            eid = ref.ElementId
+            if eid and eid.IntegerValue > 0:
+                ids.append(eid)
+                continue
+        except:
+            pass
+
+        write_debug(log, "Unhandled reference: {}".format(ref))
+
+    return ids
+
+
+def run(uiapp, data, log):
+    write_debug(log, "=== get_pipes_with_tags.py START ===")
+
+    try:
+        uidoc = uiapp.ActiveUIDocument
+        doc = uidoc.Document
+        view = uidoc.ActiveView
+
+        if not os.path.exists(DATA_FOLDER):
+            os.makedirs(DATA_FOLDER)
+
+        write_debug(log, "Scanning current view for pipe tags...")
+
+        vis_filter = VisibleInViewFilter(doc, view.Id)
+
+        tags = FilteredElementCollector(doc, view.Id) \
+            .OfClass(IndependentTag) \
+            .WherePasses(vis_filter) \
+            .ToElements()
+
+        write_debug(log, "Found {} tags visible in current view".format(len(tags)))
+
+        pipe_ids = set()
+
+        for tag in tags:
+            ids = resolve_tagged_element_ids(tag, doc, log)
+
+            for eid in ids:
+                if eid and eid.IntegerValue > 0:
+                    el = doc.GetElement(eid)
+                    if isinstance(el, Pipe):
+                        pipe_ids.add(eid.IntegerValue)
+
+        final_ids = sorted(pipe_ids)
+        write_debug(log, "Pipes with tags in current view: {}".format(final_ids))
+
+        result = {"status": "ok", "pipe_ids": final_ids}
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump(result, f, indent=2)
+
+        write_debug(log, "Response written successfully.")
+
+    except Exception as e:
+        write_debug(log, "EXCEPTION: {}".format(e))
+        write_debug(log, traceback.format_exc())
+
+        with open(RESPONSE_PATH, "w") as f:
+            json.dump({"error": str(e)}, f, indent=2)
+
+    write_debug(log, "=== get_pipes_with_tags.py END ===")
 
 ################################################################################
 ### requests\get_sheet_data.py

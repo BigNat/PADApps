@@ -1,5 +1,6 @@
 {
     "tests": [
+        "Invert",
         "Doc",
         "Export",
         "Family",

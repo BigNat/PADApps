@@ -63,7 +63,7 @@ def run(uiapp, data, log):
         log("HIGHLIGHT: Completed for {0} pipe(s)".format(len(ids)))
 
     except Exception as e:
-        log("Error in highlight_pipes_temp: {0}".format(e))
+        log("Error in highlight_pipes: {0}".format(e))
         log(traceback.format_exc())
         with open(RESPONSE_PATH, "w") as f:
             json.dump({"error": str(e)}, f, indent=2)

@@ -33,7 +33,7 @@ def run(uiapp, data, log):
         if not os.path.exists(DATA_FOLDER):
             os.makedirs(DATA_FOLDER)
 
-        log("Starting get_pipe_elevations...")
+        log("Starting get_pipe_info...")
 
         # ================================================================
         # MODE SELECTION
@@ -145,36 +145,10 @@ def run(uiapp, data, log):
                 material = p_mat.AsString()
 
             # ------------------------------------------------------------
-            # 7. REFERENCE LEVEL + RL
-            # ------------------------------------------------------------
-            reference_level_name = None
-            reference_level_rl_mm = None
-
-            ref_level = el.ReferenceLevel
-            if ref_level:
-                reference_level_name = ref_level.Name
-                reference_level_rl_mm = mm(ref_level.Elevation)
-
-            # ------------------------------------------------------------
-            # 8. INVERT PARAMETERS
-            # ------------------------------------------------------------
-            def get_param_mm(name):
-                p = el.LookupParameter(name)
-                return mm(p.AsDouble()) if p else None
-
-            il_lower = get_param_mm("IL Lower")
-            il_upper = get_param_mm("IL Upper")
-            il_height_lower = get_param_mm("IL Height Lower")
-            il_height_upper = get_param_mm("IL Height Upper")
-            floor_rl_below = get_param_mm("Floor RL Below")
-
-            # ------------------------------------------------------------
             # STORE RESULT
             # ------------------------------------------------------------
             pipes_data.append({
                 "element_id": eid,
-                "start_elev_mm": start_z,
-                "end_elev_mm": end_z,
                 "slope_percent": slope_percent,
                 "outside_diameter_mm": od,
                 "inside_diameter_mm": idm,
@@ -183,14 +157,7 @@ def run(uiapp, data, log):
                 "system_type": system_type,
                 "system_name": system_name,
                 "material": material,
-                "reference_level_name": reference_level_name,
-                "reference_level_rl_mm": reference_level_rl_mm,
 
-                "il_lower_mm": il_lower,
-                "il_upper_mm": il_upper,
-                "il_height_lower_mm": il_height_lower,
-                "il_height_upper_mm": il_height_upper,
-                "floor_rl_below_mm": floor_rl_below,
             })
 
         # ================================================================
@@ -201,11 +168,11 @@ def run(uiapp, data, log):
         with open(RESPONSE_PATH, "w") as f:
             json.dump(result, f, indent=2)
 
-        log("Pipe elevation data written successfully.")
-        log("Completed get_pipe_elevations.")
+        log("Pipe info data written successfully.")
+        log("Completed get_pipe_info.")
 
     except Exception as e:
-        log("EXCEPTION in get_pipe_elevations: {}".format(e))
+        log("EXCEPTION in get_pipe_info: {}".format(e))
         log(traceback.format_exc())
 
         with open(RESPONSE_PATH, "w") as f:

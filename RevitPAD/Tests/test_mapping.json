@@ -1,4 +1,10 @@
 {
+    "Invert": {
+        "test_01": "Calculate Inverts",
+        "test_02": "Check Inverts",
+        "test_03": "Reset Inverts",
+        "test_04": "Clear Highlights"
+    },
     "Doc": {
         "test_01": "Run document-level Revit tests",
         "test_02": "Inspect active Revit document info"
@@ -17,10 +23,19 @@
         "test_02": "Check link status and paths"
     },
     "Pipe": {
-        "test_01": "Calculate selected pipe ILs",
-        "test_02": "Detect and highlight Incorrect ILs",
-        "test_03": "clear_all_pipe_highlights",
-        "test_04": "Reset selected pipes to default ILs"
+        "test_01": "Get pipe IDs (PICK)",
+        "test_02": "Get pipe IDs (SELECTED)",
+        "test_03": "Get pipe IDs (VISIBLE_IN_VIEW)",
+        "test_04": "Get pipe IDs (ALL_IN_MODEL)",
+        "test_05": "Get pipe IDs (TAGGED_IN_VIEW)",
+        "test_06": "Get pipe IDs (PROVIDED)",
+        "test_07": "get_pipe_info",
+        "test_08": "get_pipe_elevations",
+        "test_09": "select_pipes_in_current_view",
+        "test_10": "highlight_pipes",
+        "test_11": "clear_highlights",
+        "test_12": "clear_all_pipe_highlights",
+        "test_13": "get_highlighted_pipe_ids"
     },
     "Selection": {
         "test_01": "Resolve selected sheet",

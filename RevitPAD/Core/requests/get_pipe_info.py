@@ -3,22 +3,17 @@ import os
 import json
 import traceback
 
-from Autodesk.Revit.DB import (
-    FilteredElementCollector,
-    VisibleInViewFilter,
-    BuiltInCategory
-)
+from Autodesk.Revit.DB import FilteredElementCollector, BuiltInCategory, ElementId
 from Autodesk.Revit.DB.Plumbing import Pipe
 
 REVIT_PAD_FOLDER = r"C:\PADApps\RevitPAD"
 DATA_FOLDER = os.path.join(REVIT_PAD_FOLDER, "Data")
 RESPONSE_PATH = os.path.join(DATA_FOLDER, "response.json")
 
-FT_TO_MM = 304.8   # Revit internal → mm
+FT_TO_MM = 304.8
 
 
 def mm(val):
-    """Convert feet → mm with 3-decimal rounding."""
     if val is None:
         return None
     return round(val * FT_TO_MM, 3)
@@ -28,66 +23,42 @@ def run(uiapp, data, log):
     try:
         uidoc = uiapp.ActiveUIDocument
         doc = uidoc.Document
-        view = uidoc.ActiveView
 
         if not os.path.exists(DATA_FOLDER):
             os.makedirs(DATA_FOLDER)
 
-        log("Starting get_pipe_elevations...")
+        log("Starting get_pipe_info...")
 
         # ================================================================
-        # MODE SELECTION
+        # REQUIRED FIELD: pipe_ids
         # ================================================================
-        mode = data.get("mode", "selected")  # "selected" or "all_in_view"
+        pipe_ids = data.get("pipe_ids") or []
+        if not pipe_ids:
+            raise Exception("No pipe IDs provided.")
+
+        log("Received {} pipe IDs".format(len(pipe_ids)))
+
         pipes_data = []
-        pipe_elements = []
-
-        # ---------------------------------------------------------------
-        # MODE 1 — GET ALL VISIBLE PIPES IN VIEW
-        # ---------------------------------------------------------------
-        if mode == "all_in_view":
-            log("Collecting ALL visible pipes in current view...")
-
-            vis_filter = VisibleInViewFilter(doc, view.Id)
-
-            pipe_elements = (
-                FilteredElementCollector(doc, view.Id)
-                .OfCategory(BuiltInCategory.OST_PipeCurves)
-                .WherePasses(vis_filter)
-                .ToElements()
-            )
-
-            log("Found {} visible pipes.".format(len(pipe_elements)))
-
-        # ---------------------------------------------------------------
-        # MODE 2 — GET SELECTED PIPES (original behavior)
-        # ---------------------------------------------------------------
-        else:
-            sel_ids = uidoc.Selection.GetElementIds()
-            if not sel_ids or len(sel_ids) == 0:
-                raise Exception("No pipes selected.")
-
-            log("Selected items: {}".format(len(sel_ids)))
-            pipe_elements = [doc.GetElement(x) for x in sel_ids]
 
         # ================================================================
-        # ITERATE AND EXTRACT PIPE DATA
+        # ITERATE USING ONLY PROVIDED IDS
         # ================================================================
-        for el in pipe_elements:
+        for pid in pipe_ids:
+            el = doc.GetElement(ElementId(pid))
             if not isinstance(el, Pipe):
+                log("Skipping non-pipe element ID: {}".format(pid))
                 continue
 
-            eid = el.Id.IntegerValue
-            log("Processing pipe ID: {}".format(eid))
+            log("Processing pipe ID: {}".format(pid))
 
             # ------------------------------------------------------------
-            # 1. GEOMETRIC START/END ELEVATIONS
+            # GET CONNECTORS (start/end elevations)
             # ------------------------------------------------------------
             conns = el.ConnectorManager.Connectors
             all_conns = [c for c in conns]
 
             if len(all_conns) < 2:
-                log("Pipe has <2 connectors. Skipping.")
+                log("Pipe {} has <2 connectors. Skipping.".format(pid))
                 continue
 
             start = all_conns[0].Origin
@@ -97,7 +68,7 @@ def run(uiapp, data, log):
             end_z = mm(end.Z)
 
             # ------------------------------------------------------------
-            # 2. DIAMETERS
+            # DIAMETERS
             # ------------------------------------------------------------
             od = idm = wt = None
 
@@ -113,7 +84,7 @@ def run(uiapp, data, log):
                 wt = round((od - idm) / 2.0, 3)
 
             # ------------------------------------------------------------
-            # 3. LENGTH (mm)
+            # LENGTH
             # ------------------------------------------------------------
             length = None
             p_len = el.LookupParameter("Length")
@@ -121,23 +92,24 @@ def run(uiapp, data, log):
                 length = mm(p_len.AsDouble())
 
             # ------------------------------------------------------------
-            # 4. SLOPE (%)
+            # SLOPE
             # ------------------------------------------------------------
             slope_percent = None
             if length and length != 0:
                 slope_percent = round(((start_z - end_z) / length) * 100, 2)
 
             # ------------------------------------------------------------
-            # 5. SYSTEM TYPE / NAME
+            # SYSTEM INFO
             # ------------------------------------------------------------
             system_type = None
             system_name = None
+
             if el.MEPSystem:
                 system_type = el.MEPSystem.SystemType.ToString()
                 system_name = el.MEPSystem.Name
 
             # ------------------------------------------------------------
-            # 6. MATERIAL
+            # MATERIAL
             # ------------------------------------------------------------
             material = None
             p_mat = el.LookupParameter("Material")
@@ -145,34 +117,10 @@ def run(uiapp, data, log):
                 material = p_mat.AsString()
 
             # ------------------------------------------------------------
-            # 7. REFERENCE LEVEL + RL
-            # ------------------------------------------------------------
-            reference_level_name = None
-            reference_level_rl_mm = None
-
-            ref_level = el.ReferenceLevel
-            if ref_level:
-                reference_level_name = ref_level.Name
-                reference_level_rl_mm = mm(ref_level.Elevation)
-
-            # ------------------------------------------------------------
-            # 8. INVERT PARAMETERS
-            # ------------------------------------------------------------
-            def get_param_mm(name):
-                p = el.LookupParameter(name)
-                return mm(p.AsDouble()) if p else None
-
-            il_lower = get_param_mm("IL Lower")
-            il_upper = get_param_mm("IL Upper")
-            il_height_lower = get_param_mm("IL Height Lower")
-            il_height_upper = get_param_mm("IL Height Upper")
-            floor_rl_below = get_param_mm("Floor RL Below")
-
-            # ------------------------------------------------------------
             # STORE RESULT
             # ------------------------------------------------------------
             pipes_data.append({
-                "element_id": eid,
+                "element_id": pid,
                 "start_elev_mm": start_z,
                 "end_elev_mm": end_z,
                 "slope_percent": slope_percent,
@@ -183,14 +131,6 @@ def run(uiapp, data, log):
                 "system_type": system_type,
                 "system_name": system_name,
                 "material": material,
-                "reference_level_name": reference_level_name,
-                "reference_level_rl_mm": reference_level_rl_mm,
-
-                "il_lower_mm": il_lower,
-                "il_upper_mm": il_upper,
-                "il_height_lower_mm": il_height_lower,
-                "il_height_upper_mm": il_height_upper,
-                "floor_rl_below_mm": floor_rl_below,
             })
 
         # ================================================================
@@ -201,11 +141,11 @@ def run(uiapp, data, log):
         with open(RESPONSE_PATH, "w") as f:
             json.dump(result, f, indent=2)
 
-        log("Pipe elevation data written successfully.")
-        log("Completed get_pipe_elevations.")
+        log("Pipe info data written successfully.")
+        log("Completed get_pipe_info.")
 
     except Exception as e:
-        log("EXCEPTION in get_pipe_elevations: {}".format(e))
+        log("EXCEPTION in get_pipe_info: {}".format(e))
         log(traceback.format_exc())
 
         with open(RESPONSE_PATH, "w") as f:
