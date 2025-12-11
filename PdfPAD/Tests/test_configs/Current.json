@@ -1,0 +1,7 @@
+{
+    "tests": [
+        "Invert",
+        "Doc",
+        "Bind"
+    ]
+}

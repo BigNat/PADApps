@@ -1,0 +1,41 @@
+INDEX
+=====
+
+test_configs\Current.json
+test_mapping.json
+──────────────────────────────────────────────────────────────────────
+################################################################################
+### test_configs\Current.json
+################################################################################
+{
+    "tests": [
+        "Blocks",
+        "Layer",
+        "Geometry",
+        "Utility",  
+        "Xref",
+        "Annotation"
+    ]
+}
+
+################################################################################
+### test_mapping.json
+################################################################################
+ {
+    "Blocks": {
+        "test_01": "Dump selected invert block attributes"
+    },
+    "Layer": {
+        "test_01": "List all layers in current drawing",
+        "test_02": "Check that base layer '0' exists",
+        "test_03": "Check that base layer '0' is unlocked"
+    },
+    "Geometry": {},
+    "Utility": {},
+    "Xref": {},
+    "Annotation": {},
+    "CAD": {},
+    "Doc": {},
+    "Lisp": {},
+    "Pipe": {}
+}
