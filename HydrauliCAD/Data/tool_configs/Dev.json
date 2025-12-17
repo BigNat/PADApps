@@ -4,6 +4,7 @@
     "description": "HydrauliCAD Tool configuration"
   },
   "tools": [
+    "DOC",
     "DESIGNER",
     "LIGHT_TABLE",
     "CLEAN_UP",

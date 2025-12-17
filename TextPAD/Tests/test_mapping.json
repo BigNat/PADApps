@@ -1,0 +1,18 @@
+{
+   
+    "Doc": {
+        "test_01": "Run document-level Revit tests",
+        "test_02": "Inspect active Revit document info"
+    },
+    "Biner": {
+        "test_01": "List views",
+        "test_02": "Find unplaced views",
+        "test_03": "Extract view metadata"
+    },
+     "Invert": {
+        "test_01": "Calculate Inverts",
+        "test_02": "Check Inverts",
+        "test_03": "Reset Inverts",
+        "test_04": "Clear Highlights"
+    }
+}
