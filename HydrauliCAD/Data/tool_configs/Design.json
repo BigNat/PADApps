@@ -6,8 +6,8 @@
   "tools": [
     "DESIGNER",
     "LIGHT_TABLE",
-    "INVERTS",
-    "LEVELS",
+    "INVERT",
+    "LEVEL",
     "SETTINGS"
   ]
 }

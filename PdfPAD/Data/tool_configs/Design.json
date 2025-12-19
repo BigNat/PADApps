@@ -6,7 +6,8 @@
   "tools": [
     "DOC",
     "BIND",
-    "INVERTS",
+    "INVERT",
+    "SETTINGS",
     "TEST"
   ]
 }

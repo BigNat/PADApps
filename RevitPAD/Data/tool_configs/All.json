@@ -1,16 +1,18 @@
 {
   "meta": {
     "version": "1.1",
-    "description": "Revit Pad Tool configuration"
+    "description": "Tool configuration"
   },
   "tools": [
+    "DOC",
     "DESIGNER",
     "LIGHT_TABLE",
     "CLEAN_UP",
-    "DRAWINGS",
-    "INVERTS",
-    "LEVELS",
-    "PENOS",
+    "DRAWING",
+    "EXPORT",
+    "INVERT",
+    "LEVEL",
+    "PENO",
     "SETTINGS",
     "TEST"
   ]
