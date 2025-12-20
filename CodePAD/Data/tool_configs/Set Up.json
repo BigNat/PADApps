@@ -4,8 +4,6 @@
     "description": "Tool configuration"
   },
   "tools": [
-    "DOC",
-    "SETTINGS",
-    "TEST"
+    "SETTINGS"
   ]
 }
