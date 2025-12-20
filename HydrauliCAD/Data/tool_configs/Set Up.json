@@ -4,10 +4,6 @@
     "description": "Tool configuration"
   },
   "tools": [
-    "DOC",
-    "LIGHT_TABLE",
-    "CLEAN_UP",
-    "DRAWING",
     "SETTINGS"
   ]
 }
