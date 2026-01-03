@@ -1,5 +1,3 @@
 {
-  "request": "get_pipe_ids",
-  "mode": "selected",
-  "pipe_ids": null
+  "command": "stop_watcher"
 }
